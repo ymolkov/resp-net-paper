@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "a28218a2c7866977b615b38e361f223aa3425123",
+  "source_commit": "8bdb1ef058353a6c06a62f9b83f5ce20f5cddf16",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1164,11 +1164,6 @@
       "source_sha256": "62b79a749404222a0553c43c3bf98235e96102ab437063588b0b1b86bcfffd21",
       "transformation": "byte-identical copy"
     },
-    ".github/workflows/pages.yml": {
-      "source_path": "release/paper/templates/.github/workflows/pages.yml",
-      "source_sha256": "75f303b74d9b8620a8ecd62a5521287c6fc294f69e67a0774758136ba0a9ac0d",
-      "transformation": "byte-identical copy"
-    },
     ".gitignore": {
       "source_path": "release/paper/templates/.gitignore",
       "source_sha256": "69af059587130dd96cc870cbabdca6b3abfa6544419f79223830562e9392e490",
@@ -1206,7 +1201,7 @@
     },
     "apps/connectome-explorer/README.md": {
       "source_path": "release/paper/templates/apps/connectome-explorer/README.md",
-      "source_sha256": "800bcf47616ed05e16b86713da54f6fad781ba877fd0076e29116d6b931023cb",
+      "source_sha256": "b48cb8199d5c76cc2f80aff0cbf8ab1b83aa08822aeab584ae00f6cd1deafb16",
       "transformation": "byte-identical copy"
     },
     "docs/data_dictionary.md": {
@@ -1219,9 +1214,14 @@
       "source_sha256": "421197a0e95b1b7f376b740f1151be8b20283e07aa222712c6e33c784e43eee2",
       "transformation": "byte-identical copy"
     },
+    "docs/pages-workflow.yml.example": {
+      "source_path": "release/paper/templates/docs/pages-workflow.yml.example",
+      "source_sha256": "75f303b74d9b8620a8ecd62a5521287c6fc294f69e67a0774758136ba0a9ac0d",
+      "transformation": "byte-identical copy"
+    },
     "docs/reproduction.md": {
       "source_path": "release/paper/templates/docs/reproduction.md",
-      "source_sha256": "87930401b81561f45c6cbc2a248be3f80d444b472d0c56ecfe8d86b33884ab21",
+      "source_sha256": "bcc22cff764229e64feae85a74b043223fd2a403594987db36b7285cb139f433",
       "transformation": "byte-identical copy"
     },
     "docs/verification.md": {

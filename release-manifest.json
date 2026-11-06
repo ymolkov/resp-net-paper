@@ -4,11 +4,6 @@
   "cells": 150,
   "files": [
     {
-      "path": ".github/workflows/pages.yml",
-      "bytes": 1902,
-      "sha256": "75f303b74d9b8620a8ecd62a5521287c6fc294f69e67a0774758136ba0a9ac0d"
-    },
-    {
       "path": ".gitignore",
       "bytes": 75,
       "sha256": "69af059587130dd96cc870cbabdca6b3abfa6544419f79223830562e9392e490"
@@ -45,8 +40,8 @@
     },
     {
       "path": "apps/connectome-explorer/README.md",
-      "bytes": 5741,
-      "sha256": "800bcf47616ed05e16b86713da54f6fad781ba877fd0076e29116d6b931023cb"
+      "bytes": 5903,
+      "sha256": "b48cb8199d5c76cc2f80aff0cbf8ab1b83aa08822aeab584ae00f6cd1deafb16"
     },
     {
       "path": "apps/connectome-explorer/app.js",
@@ -1129,9 +1124,14 @@
       "sha256": "421197a0e95b1b7f376b740f1151be8b20283e07aa222712c6e33c784e43eee2"
     },
     {
+      "path": "docs/pages-workflow.yml.example",
+      "bytes": 1902,
+      "sha256": "75f303b74d9b8620a8ecd62a5521287c6fc294f69e67a0774758136ba0a9ac0d"
+    },
+    {
       "path": "docs/reproduction.md",
-      "bytes": 4856,
-      "sha256": "87930401b81561f45c6cbc2a248be3f80d444b472d0c56ecfe8d86b33884ab21"
+      "bytes": 5060,
+      "sha256": "bcc22cff764229e64feae85a74b043223fd2a403594987db36b7285cb139f433"
     },
     {
       "path": "docs/verification.md",
@@ -1220,8 +1220,8 @@
     },
     {
       "path": "release-origin.json",
-      "bytes": 73744,
-      "sha256": "e70d80b62c93838a5a89c590161cd583857bd478c19f73e87c2c7b6c38f7b628"
+      "bytes": 73752,
+      "sha256": "89209b194e9274f308e7c30c13293641dd763beff1416177a636a40b555d1758"
     },
     {
       "path": "requirements.txt",

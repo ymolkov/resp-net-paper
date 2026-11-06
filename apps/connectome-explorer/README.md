@@ -86,8 +86,10 @@ python3 -m http.server 8768 --bind 127.0.0.1 --directory apps/connectome-explore
 Open `http://127.0.0.1:8768/`. Any static host can serve the generated
 `index.html`; retain the vendor license files alongside a distributed copy.
 
-The optional GitHub Pages workflow is manual. Configure this repository's
-Pages publishing source as **GitHub Actions**, then explicitly run **Publish
+The optional [GitHub Pages workflow template](../../docs/pages-workflow.yml.example)
+is inactive during private preparation. For public release, copy it to
+`.github/workflows/pages.yml` with workflow-authorized access. Configure this
+repository's Pages publishing source as **GitHub Actions**, then run **Publish
 circuit atlas** from the Actions tab. It builds and tests the atlas before
 publishing only the generated page and license notices. Pushing commits
 does not trigger deployment. No hosting identity or deployment credentials

@@ -99,9 +99,12 @@ the browser. The build verifies all 80 group-mean retained-set predictions;
 13 Node tests check the saved fits, alternatives, transformations, and packaging.
 
 The site source, builder, browser regression script, and licenses are included.
-The GitHub Pages workflow is manual: after configuring Pages to use GitHub
-Actions, run **Publish circuit atlas** from the Actions tab. A normal push does
-not publish the site. Preserve the vendor notices when redistributing the
+An inactive [GitHub Pages workflow template](pages-workflow.yml.example) is
+included for the public release. When ready to publish, copy it to
+`.github/workflows/pages.yml` using an account authorized to manage workflows,
+configure Pages to use GitHub Actions, and run **Publish circuit atlas** from
+the Actions tab. Its trigger is manual; a normal push does not publish the site.
+Preserve the vendor notices when redistributing the
 standalone HTML. The existing hosted companion is managed separately; this
 repository does not contain its service credentials or deployment identity.
 
