@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite this data/software release and the accompanying paper. A permanent archive DOI has not yet been assigned."
 type: software
+repository-code: "https://github.com/ymolkov/resp-net-paper"
 title: "Resp-net: data and code for population-level respiratory circuit inference"
 authors:
   - family-names: Molkov

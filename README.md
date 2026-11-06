@@ -4,6 +4,9 @@ This repository accompanies **From cellular synaptic input profiles to
 population-level respiratory circuitry**, by Yaroslav I. Molkov, Ilya A.
 Rybak, and Jeffrey C. Smith.
 
+The [GitHub repository](https://github.com/ymolkov/resp-net-paper) is private
+during preparation and will be made public with the preprint.
+
 It contains the **168 archived recordings from 150 cells** used in the paper,
 the accepted preprocessing settings, conductance reconstruction and source
 inference code, frozen results, figure code, and the companion interactive site.

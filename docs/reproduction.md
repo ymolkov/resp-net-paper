@@ -111,7 +111,8 @@ Verification means reproduction of the selected computation, not validation of
 the fixed-template, reversal, independence, or sampling assumptions. See
 [methods.md](methods.md) and [data_dictionary.md](data_dictionary.md).
 
-The package is prepared for a versioned public Git release. A permanent archive
+The repository is private during preparation and will be made public with the
+preprint, together with a versioned release. A permanent archive
 DOI and the paper's final bibliographic citation should be added when assigned;
 none is fabricated in `CITATION.cff`. Retain versioned checksums when archiving a
 release so readers can identify exactly which inputs and outputs they used.

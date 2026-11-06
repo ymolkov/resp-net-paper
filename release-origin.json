@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "fe1babd6d40eefb708277ff51d6b89ab0afeb98f",
+  "source_commit": "a28218a2c7866977b615b38e361f223aa3425123",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1176,7 +1176,7 @@
     },
     "CITATION.cff": {
       "source_path": "release/paper/templates/CITATION.cff",
-      "source_sha256": "6131cf8a15490bc898be118713e4dee3c83d32e309ac31da3af7b9cd5144ed48",
+      "source_sha256": "6a810200c82b37aa1a20f59a6fb66c334884ded89e1f9c39f71abcf9aa6eeeb1",
       "transformation": "byte-identical copy"
     },
     "LICENSE": {
@@ -1196,7 +1196,7 @@
     },
     "README.md": {
       "source_path": "release/paper/templates/README.md",
-      "source_sha256": "8867d050056b0f8cef98dca2b91e4c0ad11bf95fffea0966bea02e62b230168e",
+      "source_sha256": "39d2ac9bb20eb3fb1998795d2e52f64ea4e0de618f9278529794efd712084a0d",
       "transformation": "byte-identical copy"
     },
     "THIRD_PARTY_NOTICES.md": {
@@ -1221,7 +1221,7 @@
     },
     "docs/reproduction.md": {
       "source_path": "release/paper/templates/docs/reproduction.md",
-      "source_sha256": "23a211d27ead83445ec0ffec610553dcdd57bd637ff1249ddf36f876220a9cba",
+      "source_sha256": "87930401b81561f45c6cbc2a248be3f80d444b472d0c56ecfe8d86b33884ab21",
       "transformation": "byte-identical copy"
     },
     "docs/verification.md": {

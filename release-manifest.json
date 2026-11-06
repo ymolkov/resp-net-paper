@@ -15,8 +15,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 773,
-      "sha256": "6131cf8a15490bc898be118713e4dee3c83d32e309ac31da3af7b9cd5144ed48"
+      "bytes": 834,
+      "sha256": "6a810200c82b37aa1a20f59a6fb66c334884ded89e1f9c39f71abcf9aa6eeeb1"
     },
     {
       "path": "LICENSE",
@@ -35,8 +35,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3118,
-      "sha256": "8867d050056b0f8cef98dca2b91e4c0ad11bf95fffea0966bea02e62b230168e"
+      "bytes": 3259,
+      "sha256": "39d2ac9bb20eb3fb1998795d2e52f64ea4e0de618f9278529794efd712084a0d"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -1130,8 +1130,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 4793,
-      "sha256": "23a211d27ead83445ec0ffec610553dcdd57bd637ff1249ddf36f876220a9cba"
+      "bytes": 4856,
+      "sha256": "87930401b81561f45c6cbc2a248be3f80d444b472d0c56ecfe8d86b33884ab21"
     },
     {
       "path": "docs/verification.md",
@@ -1221,7 +1221,7 @@
     {
       "path": "release-origin.json",
       "bytes": 73744,
-      "sha256": "b1a88a239e57fc908969fbdc6ffc780d23767488ad3fc9fb6688e73e3abe4b76"
+      "sha256": "e70d80b62c93838a5a89c590161cd583857bd478c19f73e87c2c7b6c38f7b628"
     },
     {
       "path": "requirements.txt",
