@@ -1,0 +1,4708 @@
+{
+  "configs": [
+    {
+      "source_path": "int0/29091001_a5550",
+      "source_sha256": "a73f489b070cb71ba198f30e210ef4f364c8409a553084048e7606cfc361ba88",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/29091001_a6750",
+      "source_sha256": "7cd7101fd98b85085adda74ba7692a6b07d2189d263d98546a1c414f1a8e103b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_b1774",
+      "source_sha256": "a69201900c51738bbf362b15fea8e900c362b78ffec250f8fd3f11d49e20eb7b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_b2142",
+      "source_sha256": "d85dad6e7eedb8d80d5efeb8548271f1bf0d15d200803574513b7263825839f9",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_c647",
+      "source_sha256": "a9b4ebab5afeba6fda4bf405dd7c40109003c2144a7bb88e63a7998a11435492",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_c1122",
+      "source_sha256": "8050638427a195560874a52ba7d5e16f532ef30c49d84bdfc0ddcf0d8ba4d31c",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_c1412",
+      "source_sha256": "99a8b4beefd1ce52156bda645a0a2e88e48d03d4317efbedf838b8813a471ba9",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.4,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_c1594",
+      "source_sha256": "4a405ee705c0ad9c5b4d0506bf4c9df2210981933f946bbe30af615d70b595cf",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.4,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_c1806",
+      "source_sha256": "6097b32d1aaf9abeca0187089d5fe153fc38889caa87b23c999ad2fda5854c56",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_d1198",
+      "source_sha256": "d4e276537de1aea1969e5d14b4fa6513be83e28625dc5e855f7e4723aafbd031",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/14101001_d1650",
+      "source_sha256": "e6c6938323b0bf4d8556c6b1cbb1496946c35268b0b3fedfb7d35e396abe6904",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int0/15101001_a2703",
+      "source_sha256": "cf560f78637f567b4ae525c3c6d7cb0906b61cc491990296de52fc1f9c0f4ad7",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int1/12011101_e856",
+      "source_sha256": "b9fb235d5b11f7bdf6f61b429dd9e1c29baca4854763a5facf31a82fc9060e4a",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.13,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int1/12011101_d711",
+      "source_sha256": "963823dd99890bba1cff73ec6c0ab9a0f9ace6f3b2beb4fba0b291eabee5ce39",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.13,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int1/12011101_d1107",
+      "source_sha256": "2fec2ae9608173fc2121bce5dea398982ffaaa7f0fe1a61a2d1de0df532a2191",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.13,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int1/13011101_b2846",
+      "source_sha256": "944f2f23d689250a5f2082883f84adc20e07b5a6fc2ac5d8c8e2f6d077caf4e0",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int1/19011101_c516",
+      "source_sha256": "ca572085bf25e4ed7afa70618c46dfbc71792793386f10577159280b5af3b64e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int1/20011101_b4403",
+      "source_sha256": "672b2411ca19a2ae87e900a6d6aff3292b2b5cef1a9cb436cbda1810d961354f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_a6213",
+      "source_sha256": "fd0880d437c5a250fc0fb14e026ccc607ccd44635a72b2a5273e1625ef94c462",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_b592",
+      "source_sha256": "40b0cbef9ae6d684d85f029926dc29fd48b1320d4248be8938ba44f3c260fd90",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_c122",
+      "source_sha256": "7ce2797d81e3cc0d9988c93fd0e82692b3d9250d47a06205e9d550c3a5acb666",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_c5092",
+      "source_sha256": "c3e9080e637508b2dd7d04c2f80e21d74cdeaae2e4941c3a0b11583ae27d79a6",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_c5402",
+      "source_sha256": "ecc4ffbbda72bdd515900cc9b097cc71997d262ca46129cd8526376fb0a0c2db",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_d1223",
+      "source_sha256": "fcf05a18dcfc52a35513fc047a10bd86edcde64deadf5afc83a0f28d9c756332",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/02021101_d1361",
+      "source_sha256": "bed6b39feebb8113749c92c95f10d91badafa817857ae7145bf47de3395603ea",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/17021101_b2493",
+      "source_sha256": "0c05ec758258a616ab21dc9cb0db175d42e8afa1bca18f6f19d6b49f8c9c9095",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.06,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/17021101_b2830",
+      "source_sha256": "4f11fb323a6d225331ecb65abed0596279b0f8d94b4d75fb4e0b12edc9311267",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.06,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/17021101_c9",
+      "source_sha256": "4d2b92ffdd8d0fb7b467e1aa2ab7cffa2556a8e3bf8d1334036a309867d479b9",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/17021101_c1964",
+      "source_sha256": "61c745e4b3c4aff4730b0fe2c90e4fa6e601a42292100e32ae86a8116573d90e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/17021101_c2058",
+      "source_sha256": "e7572e39f5e716eefa8e8714b763e228c09bd62e8c709d847eb1c7ea2818eac3",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int2/17021101_c2352",
+      "source_sha256": "08b1671eecc311ee806b41d5db18f072217d36a529eb3a585fc262e716a0c578",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int3/15031101_a898",
+      "source_sha256": "3771d3cf77ec7eae5de12a18582050469151d9b406adf6931ddf6e136f483506",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int3/15031101_b1020",
+      "source_sha256": "0822e029c3ef4f4f134df4df9cc2730bb3599774a7818d54501d2db4540c5934",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int3/15031101_b588",
+      "source_sha256": "32372a880f2dd571510a47fd12747ef288334e6c0d264b68bfdd75fbb03e0a72",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int3/15031101_c3974",
+      "source_sha256": "d7af598327d56d097ae16e91e8eeb74d61f382d907d8607f28158b30b52b2d56",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.010000000000218279,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int3/16031101_b1078",
+      "source_sha256": "85db6f27ffba2cbb7fbc611eefae27070903b1e5de3e6b8c4190a1b0425ba56a",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120416-Post-I",
+      "source_sha256": "be9b0806dabe155ddb9c642c47a16d6fd700b132137406777c50e0057b2b7471",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120420-Post-I",
+      "source_sha256": "3761e3150cfc58cd9bef9faa1ec9be25f9c193af9affcdc026c956225d78668e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120424-Post-I-3",
+      "source_sha256": "5c258d944f5c9d42fe34ce4ba851d3cccdfe6337183431cf209007e3cd91f2a1",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.3,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120426-Pre-I",
+      "source_sha256": "a5284c4433131c5b19980e8a26b821962a92b546645973f408efec2545cf7422",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.17,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120417-Post-I",
+      "source_sha256": "9a193c93337f5635d03352e68b21b4bfdf20ca2b8f36b6c242689fbc61c51bc0",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120424-Post-I-1",
+      "source_sha256": "53a48fc3902a9ad0c412f41b31109fc7a720eb22cd4f10df953ec687bdc1658b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.32,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120419-Pre-I",
+      "source_sha256": "5206b8ae27bb5553d9cdb217fd2fd5b7255461ea9a8539cbaed895e318f2cd53",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 20,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120424-Post-I-2",
+      "source_sha256": "431a72c2aaebe49f303e19578b55177ab2f9e8f82169b28d39e5de2b4eabe8df",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.32,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int4/120426-Aug-E",
+      "source_sha256": "aba70f5d1e2c2f37570a916b87439cb08976afeea4101d5471ca6f5d8a2d641b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.12,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120424-Aug-E",
+      "source_sha256": "71a6efe50af0260459a01f7bb05c1aa92c5a1fe08cec5ebca2770cecc424cc1e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.4,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120425-I",
+      "source_sha256": "9235d21ba195948dae0bf4b38e9a7578fc8a42ddb75ad71f3343492113e425a5",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120425-Post-I",
+      "source_sha256": "e36b22a64796346ec330d6750caa74258e881962247d89c3db6876bc6e6edb07",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120426-I",
+      "source_sha256": "72100fa473ef0646e579d78bab0a04a0b060659400e82a79c1300c7a50fc488e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120427-Aug-E",
+      "source_sha256": "bb6313d9b5e971bf2722a354e9275da5eb9a790f33cbfc112441b64e5ced6c76",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120427-Post-I",
+      "source_sha256": "59e7a296986ee4148b44a5246e64023990806bede45dd5ffce8b046dea261405",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.17,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120430-I-Post-I",
+      "source_sha256": "ad410efb18ac46e772655dd7859c1f80508c477db8038880e8ea9800e1920b41",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120430-Post-I",
+      "source_sha256": "3e27a33c5842314650807484d33042e79af154609c30cb51704b566d94d2cef3",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120430-Ramp-I",
+      "source_sha256": "296aac1646bc45166ea78bde6b22820d3bcb92691e33e9fa726861d10110eda2",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120502-I",
+      "source_sha256": "e701f6d8cc828de62cbc1e4c0b14806950dbc63ba8a64058235a1ef2819009b5",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.17,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120502-Post-I",
+      "source_sha256": "996ccac88d9b14261e4e9a367cea8f5dfd8fabea87e3c812b4c7646c2290b9e7",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120504-I-Cont",
+      "source_sha256": "a8eade3685a019293f3477e8266d937082a3ad3988ca160efd17cdde8100b218",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.12,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120504-Post-I-1",
+      "source_sha256": "417afad047ee9dd75af1cca6239bb792515f411178be955876582e75c8e47153",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.17,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120504-Post-I-2",
+      "source_sha256": "ad03f2ade4955166dc345c14c91838b9e4c3158a51ccd7bc786626e3ac0daad6",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.17,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120504-Pre-I",
+      "source_sha256": "a06b728d2079f8e42a4747438eeef34223b0e2099d6162e1ddfd7463f8e44cbe",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.17,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120504-Pre-I-I",
+      "source_sha256": "4cba99a5d64bc0164f8783f72446af8cff611def8aa8e8180ed79287b6dc7c12",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120514-Aug-E-cVRG",
+      "source_sha256": "646a89da2cee3901bc8830b4d444ec6d07cb9fa5d904f19c4a0dac9386fd5ebc",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120515-Post-I",
+      "source_sha256": "9cd138e0ea9b6d74cfb784ce5e99e303656fe3525b1f56ad94195d281c27e2d0",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.08,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120515-Pre-I-2",
+      "source_sha256": "c76779454b6463b91684319c752cb12cfcd89630caaacd020d9cdb6766c01bb2",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.31,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120515-Ramp-Late-I",
+      "source_sha256": "6ee81ad8a74faec82c2731d56df0bd513a506f2313709d0aa216f85c89ceacb3",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.085,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120516-I-Cont",
+      "source_sha256": "04acc64a3a9d8585d28af1e4557095bad6e054952434389574373d286e67d387",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.13,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120516-Post-I",
+      "source_sha256": "30062b20f1ef98d70b462fc1a8ac2515a238e49cf7d46f311c5a100907bfc684",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120517-Post-I-cVRG",
+      "source_sha256": "8348df11ba6ba77926ef0ca723cf367a6b87cbf69996f7bacd5e604296deba77",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120524-Aug-E-1",
+      "source_sha256": "dbb278628e78f5236d67668d49b52cbdfb9ce65885be4ef69bc50534024b692f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.11,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120524-Aug-E-2",
+      "source_sha256": "adb4eed15f962c15729876262bb8a74babb4b4a9964eff4f032495363f0dec8a",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.12,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120524-I-Cont",
+      "source_sha256": "c1abc402d1c091e02cbb5ff68f15df2f8db1d9a12ac97c967530d93c24813476",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.11,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120524-Post-I",
+      "source_sha256": "d93881b281d97ac3d46457b22a34d165d5983d0595a9c8729990940fa31e906b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.11,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120525-Aug-E-1",
+      "source_sha256": "393e16a5a1a3c7c83cb1975830fff5813f2872b0f9482d003e0ce9c88efda284",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.09,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120525-Aug-E-2",
+      "source_sha256": "b545dbba86f1c26786a4da574a74039be1d83e7819b16f198b7c9487fe5ef6c0",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.09,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120525-Post-I-1",
+      "source_sha256": "340f724e6f4ab50aab9c31b2238122b00ed1e31c4b2abe1ff0d0781aee01c7be",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int5/120525-Post-I-2",
+      "source_sha256": "d7a505351f39dc6d5ced941b1742dd387e529c12a17d20f140f29a0335edf93c",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.085,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-Post-I-161123",
+      "source_sha256": "cfe105eddd2ead96c7e2e42e8b5a961dbcd52410aca9b833f8e25aae6db2f1f6",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-Post-I-161118",
+      "source_sha256": "0e9dadcf8227c79875f276faee66b2917fad14e554c8698fadb06ba4e7916439",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-Post-I-161228",
+      "source_sha256": "35d6c27b9bb000dd0a3d133f3bf2bfb6c85f5b3e017d54903f0415af2f97786a",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-I-161123-1",
+      "source_sha256": "f21e528f0567e5088346830829ba459f962f1564df9b7e118353f0ed4adb87d9",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-I-161123-2",
+      "source_sha256": "4d955a2b73c0f137df219aa99cc4052311361b30dd47d442eb15f0e39dc03ff6",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-Post-I-161130",
+      "source_sha256": "90916afdfb7769e629f4e73d0e794726976e2952cca55a2d4b4fa2cc0daabd4d",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-pre-I-161120",
+      "source_sha256": "a87e17b3edfe96c1e0712445307e880568ce27c420106184901e96491b30c440",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-aug-E-170201-3",
+      "source_sha256": "4efc184d4a4e1ce81368510d38d255b13b5bb85371b7b5e90895ee2ea458aaf8",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-aug-E-170202-1",
+      "source_sha256": "b52e1cc6480415fe379c0013756a9927332eaacc90b9730e77f6f28a3a8f9bf6",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-post-I-170202-2",
+      "source_sha256": "5d6522143da762a0667174e2e9748fb248e68dd2c3ff20f4c962de667b7ccb8f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-E-170127",
+      "source_sha256": "9a9a5b5125c8d8f4649726bd5ed221ad4744605f34e1658107b73a77d81b34b7",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-E-170201-1",
+      "source_sha256": "30744899de19980b2a8110734b85f11552cb79027177ff8c11eccc34669727b3",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.08,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-I-170117",
+      "source_sha256": "615937be4c3b13f9b347e5e309cf93c923ff3ced536cc6dbe24c83d2a888573a",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-I-170118",
+      "source_sha256": "4c06cf77281890d315e8767f1f66edb4caaf464cc774722e88bae097efa9735b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-post-I-170104",
+      "source_sha256": "27595f24cecaa2df08fc0440af507d03c99a862dbe509c08459b9978e810cf7b",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-post-I-170201-2",
+      "source_sha256": "613bcfd9e6006c707eecd9895fc38e0141eebf446f696da1209edf7a95d6aecb",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-post-I-170202-3",
+      "source_sha256": "d56472f8e41dccebdf702f3f5bbc22af2d989467378590df4ebc9c01bfab9029",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/BC-aug-E-170210-1",
+      "source_sha256": "ab6f4404eb8eed0d82c3c4c4aa213ca4a0fb29e504f04fc8a3297f76ba196a2a",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-I-170207",
+      "source_sha256": "4d2400e22dec83594d81d5e30bf06e104b3f717c11c659f5b1365fcc6b7ec868",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-I-170214",
+      "source_sha256": "e43473f9c50a1d719565c957143920d3b28264f92da4da9a289150bd42d3ec94",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-post-I-170210-3",
+      "source_sha256": "631357ac9a457d1ba1172a88dbcd4b5ef719ad0627aff3527bc50361d0dce1a7",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-post-I-170213-1",
+      "source_sha256": "d7c116c8d8e195658f0ac1918d12a9de51ae68a501c9820aab4ad66bb5641981",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/pBC-post-I-170213-2",
+      "source_sha256": "2b04515690e67e885aab91433074ca9d8ad766e7b6220218f2126247f3a986da",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/rVRG-aug-E-170210-4",
+      "source_sha256": "cf97f76572e3ba33b6189ba5513b88f4db840ce8ddd5e313060f8c6865c1be35",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int6/rVRG-post-I-170203-3",
+      "source_sha256": "da05069a23e51ab5a17d382599b965debcd53035f05ceaa45dea6f181301888d",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-aug-E-170410-2-CC",
+      "source_sha256": "6967376b51af9332c76943ae60c5d196e69c902b39d9d4a8432b2e156e267d37",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-aug-E-170410-2-VC",
+      "source_sha256": "1cbc08ab94db38f55edeed2f0c6b47dd2b901fdfac4dc668fc21490e7b9bdf65",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-aug-E-170412-2-CC",
+      "source_sha256": "53c720151ea86ce4ce332df4407e7be3c789e20150f84c8c7ebd99394ca3fb3f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-aug-E-170412-2-VC",
+      "source_sha256": "0feac03fd08f398944b8bb4972af84a96eed7f1fb97893b306c7fbb7576e9541",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-E-170331-2-CC",
+      "source_sha256": "d84f2c769b982604a952e206b26cba015dfa147221a1dbd240996bcdeeb8d4ff",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-E-170331-2-VC",
+      "source_sha256": "05a01d11bb75379ba60ef6d0013db517809b204f72a2a4d53f1b75a85a64bf34",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-I-170328-4-CC",
+      "source_sha256": "ab6cfeb9f1581e65bd1187d18e6f0bd0ec4fc49ee3627535f9201333ff9523d8",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.07,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-I-170328-4-VC",
+      "source_sha256": "893de0a5f3f488e3048b6429015d9ba9cfd075c3cb44bb7d87be4568b77172f2",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.11,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-I-170412-1-CC",
+      "source_sha256": "fbd632a85c1ac0793e2436a72d00d2fb5b526dd78fc30269f7b7495ca1cdebfc",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-I-170412-1-VC",
+      "source_sha256": "e8571ca0f9a09430a07465467cbdc4a9b0ba2bd5653f805a83bf3ac6b2807321",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-I-170413-1-CC",
+      "source_sha256": "391b564f0684843655dc044b07a980948389d8a6b896a871bb624f6712631bfe",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-I-170413-1-VC",
+      "source_sha256": "6aa1f083eb92ebf6e4d74d138be7887e0a48a0bded6bc8186de03ab7eef0308d",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170328-3-CC",
+      "source_sha256": "cd652d091c9b8083e84bb250b2095ad6a955d7ee8ec015451ee1b9d81fd0ab63",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170410-1-CC",
+      "source_sha256": "35493030095afc38365244e9f6ac0735b1c8cb9c0541de944415955777f5cccc",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170410-1-VC",
+      "source_sha256": "cf53d3912989863102e76fa2b046e25a092fb465fa52c41a6218fd974cc9fc26",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.3,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170411-1-CC",
+      "source_sha256": "1ca766ed3ce834892ceb81d9ef60f08893acc64dd16ec679591f810400b6db03",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170411-1-VC",
+      "source_sha256": "0976e977385eb54b1fc59c664c27daf9b1472d466b87bf9778b89b351f79af9f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170413-2-CC",
+      "source_sha256": "c85bd32bb94d994ece88012514bafc89378eb8a3acb993ded08088ecdb166031",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int7/pBC-post-I-170413-2-VC",
+      "source_sha256": "6dc1fe135bf730e565eca4cb8ae0328507bd3b5e4fb757fe293c6ed296190689",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-aug-E-170424-5-CC",
+      "source_sha256": "5ba00893fe265dc01af18c8059cec6318e09b57cd18da1c41a95b27e8ed67490",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-aug-E-170424-5-VC",
+      "source_sha256": "73cd43515a17296bbe91d8857e214be79bc0b478a87a5a4694e8a1f054e5393f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-early-I-170425-CC",
+      "source_sha256": "8dd7898ca97ffd824578247a5fd58b68c192ee20477e3b8137c38888cc629158",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-early-I-170425-VC",
+      "source_sha256": "db7ef47bca572ccd506802a4ea19985843882c09eadd090e6228000823da9992",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-I-170417-4-CC",
+      "source_sha256": "0c53638f54b39222ae09511358504dfc5aa801b26cd60cad90709da5a0120be2",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-I-170417-4-VC",
+      "source_sha256": "9bfd74f9b95a660ea655f11790df279382ec5c5a99a184d23fe7489fb3308db8",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-I-170420-2-CC",
+      "source_sha256": "1e682e900d7da2f7241f35b7bc4a4e3a22dab07f18cc5096517046f4da29b04c",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-I-170420-2-VC",
+      "source_sha256": "f5ef4654612b6524625acdd90e53ce05fb053023c19406bc4e28f9cda555ee6f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-I-170424-2-CC",
+      "source_sha256": "c69ec61207d18c3eec8fda9de32ce3bc3c52abc53ccd313d68775ff0ab4b6523",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.3,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-I-170424-2-VC",
+      "source_sha256": "bfe6c1c4dea52b6d7371b787729ef595153baec16e667e388517467aead56af9",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.3,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-post-I-170417-1-CC",
+      "source_sha256": "2251db62695f5ba4af80422a60d3fe272a2bdde46a13d02652681f27c55f015d",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-post-I-170417-1-VC",
+      "source_sha256": "3d9be5d3c252baf85943e6a589a0581c44324d733a1653189b807e27d0e38d39",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-ramp-I-170417-2-CC",
+      "source_sha256": "19bf6c5bb750afd8d8744b074158ec99f3d99c67a3e3b9eb37d0ea0c47b404f9",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-ramp-I-170417-2-VC",
+      "source_sha256": "4a3b28c6836c1a99550199cc3ce2b53bd948642343e8a11f7a1e6b1ad5d935f2",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-ramp-I-170420-1-CC",
+      "source_sha256": "a0bdf4206a41c41085ff8d2a8e787681e9334abf46ec5820e76c7a210a5ff474",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/pBC-ramp-I-170420-1-VC",
+      "source_sha256": "fd438e9de64ba31073170b597eb75c4dd73d66e02d7e63f81e7dfcd91bf3c221",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/rVRG-aug-I-170424-3-CC",
+      "source_sha256": "b2a7717f77a6390d46a2bab38c9822a21731e7fcf93543d77788b74d034deb50",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int8/rVRG-aug-I-170424-3-VC",
+      "source_sha256": "ed74bfb9a8c7125b4f825391a5ea1e7b4835f60d3c18baf5594ad3a63e2ed167",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "VC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/BC-aug-E-170323",
+      "source_sha256": "b6e9ab447f90d1ec5fef83e6336657845a6ea222d1fac59af5e8545f02410fb0",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-aug-E-170327",
+      "source_sha256": "48401c1288eaad2ae677d0605da6c817a88012af7e36f08db04956eac9d8b08d",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-E-170328-1",
+      "source_sha256": "8e88f62b5539ff1e97fbbe075906812f1d436cec873316c0531a41ac8dbb9bf4",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-early-I-170324",
+      "source_sha256": "3b37b5579b621b5a330e523244159af8fd1a4e95ce860636b48fccddec7dba84",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-I-170328-2",
+      "source_sha256": "44faa79388fb7d9ff4372ceee0a7f226f0191fe5bbcbaeaca6f550ce5e685628",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-I-170331-1",
+      "source_sha256": "3f66c1d6da3892359b54adf13a6b9a89065f5c0532d54840991fa7b035339088",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-post-I-170320",
+      "source_sha256": "7021be3fe785ed4ac3e55a349f34905f97a6ea69761e75713310890b7204c35e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-post-I-170321-1",
+      "source_sha256": "a24c4a54713555fabc9949c5703d6e1e174dcd51c8c532bf3b7012a578a2c4a1",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-post-I-170321-3",
+      "source_sha256": "2538ae84e51335c0e10280cf2c4b69b9b0de7dff4db75bf7b9bd8059a43f942d",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-post-I-170330-1",
+      "source_sha256": "150937119a51a1c5f846e382cec1802bbca727ce1a04d3ca9f1761cd4c1a9dec",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-post-I-170330-2",
+      "source_sha256": "c2665a33ca73286a86404931fd296da57222164a446fed242c0f6a620e192e93",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int9/pBC-post-I-170330-3",
+      "source_sha256": "4ebf9015f1c79cbdb1f923a27c9f60857c9683f0c98610c96a7bd0cf396ee645",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/BC-aug-E-170403-1",
+      "source_sha256": "f6ee21e45330658aad4d25a0d6eb07ee3c3c7db203c63f4961b513b35ece022c",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "unknown",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-aug-E-170411-2",
+      "source_sha256": "e16b2dcbcab2f4c08d0b3c2e8f613bbc4e52f3089ef0fe339fc6694680cc4224",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-early-I-170407-1",
+      "source_sha256": "ef43a81e7142729b5d7b6da52d04a92a97dc92f2708f11cdd8d138001999cf87",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170403-2",
+      "source_sha256": "a9654b32c1386761dc6de7b599471a791f557e8a035b18f65cea7c24de1a4b21",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170406-2",
+      "source_sha256": "33a0635f264a8326cc838d0d2213cd0e987d94a6ec36bd783fc6b81773bacb4e",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.075,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170407-2",
+      "source_sha256": "e76c1edc3e7c843671b4eead99b2976e0673766f917514ee914115d2d9302cee",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170410-3",
+      "source_sha256": "cc6ede3c9233c852bd5c476c87103df25b8d98e9d35e6edcb0b95978e4be493c",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.2,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170410-4",
+      "source_sha256": "5792e6a90f561726d6c3b4e0d3fd1a31979c12ad7fd67c446fc34bcb4b89160f",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170412-3",
+      "source_sha256": "f495489f0665e471cee94a7e8acc7bbcdc3a64ed9da5ff3c2a891a350c730680",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170414-1",
+      "source_sha256": "9c283995dd69d038f5d41e7a53871df6619d8846fe8efe02e48144e952fe84e5",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170414-2",
+      "source_sha256": "ed8ab45d97bc98f34934f30687f81aa078976ee49cea0a87fea4afb9ea23b271",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170417-3",
+      "source_sha256": "e092e5a56749e67cda74ccf152000d9d3790fda8f5c903150efd9c34382a3712",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.15,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-I-170424-1",
+      "source_sha256": "a9f3bb1365f9240fb46f7a6b6eaea803230d711770f04827421aac5f15751001",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.3,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-post-I-170403-3",
+      "source_sha256": "b6500d2c24fff8288e0384a6aff4dd1c464747e99ed7251fa973b962df339b25",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-post-I-170413-4",
+      "source_sha256": "ff835fe1800f63acfc1cc4aace8556189d7bcde967824bd33ca390764e41da9c",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.00999999999999801,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-pre-I-170413-3",
+      "source_sha256": "ee79743e05086c8c428f264fae8f6def9a117c19cf280418d3e4351f484c95ad",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.1,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999990905,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/pBC-ramp-I-170417-5",
+      "source_sha256": "ff7b38c64d92786c8b0238d81a6281fcbfdb6889d6e27bf152a32663e1dfddeb",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.08,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    },
+    {
+      "source_path": "int10/rVRG-aug-I-170424-4",
+      "source_sha256": "cd8bfb87ccd4d638f8a13be5077775c8a1c8745b88ff3aef54d1a1e0e4c89ca8",
+      "canonical_columns_0based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "electrical_half_width_samples": 10,
+      "reference_half_width_samples": 10,
+      "ie_supported": true,
+      "minimum_period": 0.0,
+      "mode": "CC",
+      "q": 0.25,
+      "reference_kind": "phrenic",
+      "relative_offset_fraction": 0.5,
+      "relative_onset_fraction": 0.2,
+      "sample_interval_native": 0.009999999999999787,
+      "calibration_status": "No conversion applied; any proposed multiplier remains provisional.",
+      "canonical_column_roles": [
+        "time",
+        "current",
+        "voltage",
+        "respiratory_reference"
+      ],
+      "native_time_interpretation": "Historical seconds convention; no time conversion applied or acquisition-unit certification."
+    }
+  ]
+}

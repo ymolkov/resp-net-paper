@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this data/software release and the accompanying paper. A permanent archive DOI has not yet been assigned."
+type: software
+title: "Resp-net: data and code for population-level respiratory circuit inference"
+authors:
+  - family-names: Molkov
+    given-names: Yaroslav I.
+  - family-names: Rybak
+    given-names: Ilya A.
+  - family-names: Smith
+    given-names: Jeffrey C.
+license: MIT
+abstract: "Paper-specific archive of 168 recordings from 150 cells, conductance reconstruction, fixed-template source inference, and an interactive atlas. Data and original scientific documentation are CC BY 4.0; see LICENSE-DATA.md."
+keywords:
+  - respiratory network
+  - synaptic conductance
+  - functional connectivity
+  - reproducible research
+

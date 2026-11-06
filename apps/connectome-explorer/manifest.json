@@ -1,0 +1,38 @@
+{
+  "analysis_run": false,
+  "source_sha256": {
+    "data/model_analyses/inspiratory_subset_contrasts/summary.json": "4baa09d462b79a3be65761507c1144376e62a13c589442759532c83cd1db9433",
+    "data/model_analyses/inspiratory_subset_contrasts/cells.json": "f98ff995a5cbf5be0a686ecf4c3229da8092adb4ccbc39583fef056e0efa2130",
+    "data/model_analyses/coarse_connection_contrasts/contrasts.json": "c95ee759e9d3fafa8d301149099f60c1fd8cabcde8f30cb02a77ffdaff3181d6",
+    "output/circuit_previews/six_population_2026-09-26/manifest.json": "c298ca6a92afdd43788e0b9fce0960b36973676c955c9f6f09613344b5bbd032"
+  },
+  "builder_sha256": "c6d952c55549fe8d028764fe6cb7c70c3a9cb5891c5a457c9d06116056b59e93",
+  "output_sha256": "f439ab9e3829af4d43146b4b122def857c9adc7b118b11d769129230623ee046",
+  "license_sha256": {
+    "LICENSE": "da041068e555105508e1f55668796656140471d2f93fe71c88d36083ad847a4c"
+  },
+  "assets_sha256": {
+    "app.js": "1a6f93f92d822e68a3241721826fc703db9054cc5acf3c222591f2e7bb61f20e",
+    "core.js": "eeb43fb9dd95bc1388ee9a7d11dda0145ae46b0d8d036b48b0daeacb86baab9d",
+    "style.css": "993d33b2853b25f7b5318a4c467a21c2a0180630d0c16a2cc5816485d034a189",
+    "index.template.html": "7ee2d624dad24362a8cc35ed0655152ac21761023919680bffbf37682c364d39",
+    "vendor/d3/d3.min.js": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539",
+    "vendor/lucide/arrow-left.svg": "e31ed0af85ffbed2b54f78f37af197c3b84b24e776cba1d27613d6a9ad555a16",
+    "vendor/lucide/download.svg": "f68a21e11115edc0aef51ac6f8f4618e14d2b92055f1cb9f5d670efc696bea85",
+    "vendor/lucide/grid-2x2.svg": "6ebbb8145ed4e96f4d2b6cd20a0fd55cd14fe82179d1e5f3ae5598185e124e83",
+    "vendor/lucide/info.svg": "8b0a0b5641a875a2e0d8c04080c55cf6c1808c1f76477acb89958e8da00ba5a1",
+    "vendor/lucide/maximize.svg": "0864b30f3a6b95b49375c93ad874db47474a56bd2d6276c51e938f0b5e4ade9e",
+    "vendor/lucide/minimize.svg": "043ddac5e95b96c443d42d15a4444f70fc24aa57d7642ce7c782bb2644ed5be4",
+    "vendor/lucide/minus.svg": "116a64e7f95fe2c31490f084d4abbf49dc15af8e7fab4a29ed5b84bb3c26c00b",
+    "vendor/lucide/pause.svg": "7babb01e85dae42b66c9b1e399cd1c50380d3d9a586ff025685bcc45e726fea9",
+    "vendor/lucide/play.svg": "f0cab5b458fdf5e5d5d1a8aeb3d368ccab337cc578b1f8081807b8e39f68f1a1",
+    "vendor/lucide/plus.svg": "b29207ee8f5cc0e829c0bab2e5b223fc88687599c6bd40b94ba35f52327615d6",
+    "vendor/lucide/rotate-ccw.svg": "33c3670d65cad6b5f21d042e1629988c0cedd1ab8f8aba2fefe036a464e0246b",
+    "vendor/lucide/scan.svg": "252bb60f31ebac5fd351c5297093fa79334406a56483e55bade8636643064a00",
+    "vendor/lucide/x.svg": "0f38855d9d5775c10960ae53e46b745f77914b43f78c43bf8abc39f4d5e06de1",
+    "vendor/lucide/zoom-in.svg": "65813791afc5163534b46f2c06404bff7ab0cc2aaecd40908855c690ff480a5d",
+    "vendor/lucide/zoom-out.svg": "62b79a749404222a0553c43c3bf98235e96102ab437063588b0b1b86bcfffd21",
+    "vendor/d3/LICENSE": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+    "vendor/lucide/LICENSE": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+  }
+}

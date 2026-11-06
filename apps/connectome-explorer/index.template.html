@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resp-net | Circuit atlas</title>
+    <link rel="icon" href="data:," />
+    <style>
+      <!--STYLE-->
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">resp-net <span>Circuit atlas</span></div>
+      <div class="header-tools">
+        <label class="sr-only" for="find">Find a population</label>
+        <select id="find" title="Find a population">
+          <option value="">Find a population</option>
+          <option>Inspiratory</option>
+          <option>pre-I</option>
+          <option>ramp-I</option>
+          <option>early-I</option>
+          <option>post-I</option>
+          <option>aug-E</option>
+        </select>
+        <button
+          class="icon"
+          id="download"
+          data-icon="download"
+          title="Download current graph"
+          aria-label="Download current graph"
+        ></button>
+        <button
+          class="icon"
+          id="about"
+          data-icon="info"
+          title="Evidence and methods"
+          aria-label="Evidence and methods"
+        ></button>
+      </div>
+    </header>
+    <main id="workspace">
+      <svg
+        id="atlas"
+        role="group"
+        aria-label="Expandable respiratory circuit"
+        tabindex="0"
+      >
+        <defs>
+          <marker
+            id="arrowE"
+            viewBox="0 0 10 10"
+            refX="9"
+            refY="5"
+            markerWidth="9"
+            markerHeight="9"
+            markerUnits="userSpaceOnUse"
+            orient="auto"
+          >
+            <path d="M0 0L10 5L0 10Z" fill="#b83e3d" />
+          </marker>
+        </defs>
+        <g id="world">
+          <g id="family-layer"></g>
+          <g id="edges"></g>
+          <g id="nodes"></g>
+          <g id="evidence-layer"></g>
+          <g id="cells-layer"></g>
+        </g>
+      </svg>
+      <nav class="breadcrumbs" aria-label="Graph context">
+        <button
+          id="back"
+          class="icon"
+          data-icon="arrow-left"
+          title="Back one expansion"
+          aria-label="Back one expansion"
+          disabled
+        ></button>
+        <button id="home">Whole circuit</button><span id="context"></span>
+      </nav>
+      <div class="zoom-tools" role="group" aria-label="Graph navigation">
+        <button
+          class="icon"
+          id="zoom-in"
+          data-icon="zoom-in"
+          title="Zoom in"
+          aria-label="Zoom in"
+        ></button>
+        <output id="zoom-level">100%</output>
+        <button
+          class="icon"
+          id="zoom-out"
+          data-icon="zoom-out"
+          title="Zoom out and fold detail"
+          aria-label="Zoom out and fold detail"
+        ></button>
+        <span class="tool-divider"></span>
+        <button
+          class="icon"
+          id="fit"
+          data-icon="scan"
+          title="Fit expanded graph"
+          aria-label="Fit expanded graph"
+        ></button>
+        <button
+          class="icon"
+          id="fullscreen"
+          data-icon="maximize"
+          title="Full screen"
+          aria-label="Full screen"
+        ></button>
+      </div>
+      <svg
+        id="minimap"
+        viewBox="-260 -70 1680 980"
+        role="button"
+        tabindex="0"
+        aria-label="Recenter on the whole graph"
+      >
+        <rect
+          class="map-ground"
+          x="-260"
+          y="-70"
+          width="1680"
+          height="980"
+          rx="6"
+        />
+        <g id="map-nodes"></g>
+        <rect id="map-window" />
+      </svg>
+      <div id="selection-caption" aria-live="polite"></div>
+    </main>
+    <footer>
+      <div class="legend">
+        <span><i class="red line"></i>Excitation</span
+        ><span><i class="blue line"></i>Inhibition</span
+        ><span id="detail-legend">Width: full-fit area</span
+        ><span class="cohort">150 cells · 168 recordings</span>
+      </div>
+      <div class="playback">
+        <button
+          id="play"
+          class="icon"
+          data-icon="play"
+          title="Play empirical phase replay"
+          aria-label="Play empirical phase replay"
+        ></button
+        ><span id="phase-name">Inspiration</span
+        ><input
+          id="phase"
+          aria-label="Respiratory phase"
+          type="range"
+          min="0"
+          max="99"
+          value="12"
+        /><output id="phase-readout">0.12</output
+        ><span class="replay-label">Empirical phase replay</span>
+      </div>
+    </footer>
+    <dialog id="methods">
+      <div class="dialog-heading">
+        <h2>Evidence and methods</h2>
+        <button
+          id="close-methods"
+          class="icon"
+          data-icon="x"
+          title="Close"
+          aria-label="Close methods"
+        ></button>
+      </div>
+      <div id="methods-body"></div>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <script id="dataset" type="application/json">
+      <!--DATA-->
+    </script>
+    <script id="icons" type="application/json">
+      <!--ICONS-->
+    </script>
+    <script>
+      <!--VENDOR-->
+    </script>
+    <script>
+      <!--CORE-->
+    </script>
+    <script>
+      <!--APP-->
+    </script>
+  </body>
+</html>

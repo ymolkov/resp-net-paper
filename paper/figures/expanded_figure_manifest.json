@@ -1,0 +1,426 @@
+{
+  "analysis_run": false,
+  "input_sha256": {
+    "data/model_analyses/inspiratory_subset_contrasts/summary.json": "4baa09d462b79a3be65761507c1144376e62a13c589442759532c83cd1db9433",
+    "data/model_analyses/coarse_connection_contrasts/cells.json": "55fc292fffb9633df3b73a9e9aae324b94ec7dfe549df171fe40e1f436d2b797",
+    "data/model_analyses/coarse_connection_contrasts/records.json": "24281d89334e8e5134467db95b09a8a3b1cd8d78acce38b2bb53f3e6b779780f",
+    "data/model_analyses/coarse_connection_contrasts/contrasts.json": "c95ee759e9d3fafa8d301149099f60c1fd8cabcde8f30cb02a77ffdaff3181d6",
+    "output/circuit_previews/six_population_2026-09-26/manifest.json": "c298ca6a92afdd43788e0b9fce0960b36973676c955c9f6f09613344b5bbd032",
+    "data/model_analyses/inspiratory_subset_contrasts/cells.json": "f98ff995a5cbf5be0a686ecf4c3229da8092adb4ccbc39583fef056e0efa2130",
+    "data/model_analyses/inspiratory_subset_contrasts/contrasts.json": "942d02fc94097e8b79253cf00a89703143acc56cee15135e24671a57a99b526d",
+    "data/model_analyses/coarse_connection_contrasts/summary.json": "5d7dd4fa884479f28d45d5c4002d2b012a458d10a5d2e8ad7be2f601b9d0a949",
+    "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json": "73eb997391eebe26188ff1ab98c4621f901858425481fc9ee0c7d14336ca7918",
+    "data/extended_dataset/full_qc/run_config.json": "70e6d86e68789a8186fe98289ab3c26d4200340c89f4ae1987243cf8c3fa2601",
+    "data/model_analyses/postI_figure_registration/results.json": "0fab77a0f174fc253c97b83089de659e96377663ecb01736007163c95b1c10b4"
+  },
+  "builder_sha256": "0560eb32cab8d436350e0cee6b989b8748bd79a56c2c9d46643e9379fd52ad6d",
+  "scenario": "fixed_fall50",
+  "prior_comparison": {
+    "reference": "Smith et al. 2007 Figure 7 / Table 3; pattern-level projection",
+    "rows": [
+      {
+        "source": "pre-I",
+        "target": "pre-I",
+        "sign": "E",
+        "coarse_source": "Inspiratory",
+        "coarse_supported": true,
+        "individually_supported": false,
+        "p_joint_coarse": 3.3681030432383696e-08
+      },
+      {
+        "source": "pre-I",
+        "target": "ramp-I",
+        "sign": "E",
+        "coarse_source": "Inspiratory",
+        "coarse_supported": true,
+        "individually_supported": false,
+        "p_joint_coarse": 4.2083265533856584e-17
+      },
+      {
+        "source": "pre-I",
+        "target": "early-I",
+        "sign": "E",
+        "coarse_source": "Inspiratory",
+        "coarse_supported": true,
+        "individually_supported": false,
+        "p_joint_coarse": 0.007646852818442913
+      },
+      {
+        "source": "aug-E",
+        "target": "pre-I",
+        "sign": "I",
+        "coarse_source": "aug-E",
+        "coarse_supported": false,
+        "individually_supported": false,
+        "p_joint_coarse": 1.0
+      },
+      {
+        "source": "post-I",
+        "target": "pre-I",
+        "sign": "I",
+        "coarse_source": "post-I",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 3.759527350104535e-05
+      },
+      {
+        "source": "aug-E",
+        "target": "early-I",
+        "sign": "I",
+        "coarse_source": "aug-E",
+        "coarse_supported": false,
+        "individually_supported": false,
+        "p_joint_coarse": 1.0
+      },
+      {
+        "source": "post-I",
+        "target": "early-I",
+        "sign": "I",
+        "coarse_source": "post-I",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 0.0068024614781709404
+      },
+      {
+        "source": "early-I",
+        "target": "aug-E",
+        "sign": "I",
+        "coarse_source": "Inspiratory",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 6.496908240552449e-23
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "I",
+        "coarse_source": "post-I",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 3.9328237596589626e-07
+      },
+      {
+        "source": "early-I",
+        "target": "post-I",
+        "sign": "I",
+        "coarse_source": "Inspiratory",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 1.0229148132649413e-41
+      },
+      {
+        "source": "aug-E",
+        "target": "post-I",
+        "sign": "I",
+        "coarse_source": "aug-E",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 4.258335595130249e-09
+      },
+      {
+        "source": "early-I",
+        "target": "ramp-I",
+        "sign": "I",
+        "coarse_source": "Inspiratory",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 6.442350326842955e-07
+      },
+      {
+        "source": "aug-E",
+        "target": "ramp-I",
+        "sign": "I",
+        "coarse_source": "aug-E",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 4.436473013181754e-07
+      },
+      {
+        "source": "post-I",
+        "target": "ramp-I",
+        "sign": "I",
+        "coarse_source": "post-I",
+        "coarse_supported": true,
+        "individually_supported": true,
+        "p_joint_coarse": 1.6027166690436348e-16
+      }
+    ],
+    "additional_coarse_relations": [
+      {
+        "target": "pre-I",
+        "sign": "E",
+        "source": "aug-E",
+        "old_p_holm": 2.1850138383998775e-05,
+        "old_supported": true,
+        "p_joint": 4.09690094699977e-05,
+        "supported": true,
+        "share_mean": 0.08896677178895977
+      },
+      {
+        "target": "pre-I",
+        "sign": "I",
+        "source": "Inspiratory",
+        "old_p_holm": 0.008398242674557027,
+        "old_supported": true,
+        "p_joint": 0.022904298203337347,
+        "supported": true,
+        "share_mean": 0.12997633976557943
+      },
+      {
+        "target": "post-I",
+        "sign": "E",
+        "source": "Inspiratory",
+        "old_p_holm": 3.5801878179556054e-12,
+        "old_supported": true,
+        "p_joint": 4.13098594379493e-12,
+        "supported": true,
+        "share_mean": 0.05497693950973041
+      },
+      {
+        "target": "post-I",
+        "sign": "E",
+        "source": "post-I",
+        "old_p_holm": 8.194106338289993e-07,
+        "old_supported": true,
+        "p_joint": 1.229115950743499e-06,
+        "supported": true,
+        "share_mean": 0.1442239332187409
+      },
+      {
+        "target": "post-I",
+        "sign": "I",
+        "source": "post-I",
+        "old_p_holm": 1.880608978721898e-05,
+        "old_supported": true,
+        "p_joint": 3.1343482978698296e-05,
+        "supported": true,
+        "share_mean": 0.11469807264072666
+      },
+      {
+        "target": "aug-E",
+        "sign": "E",
+        "source": "Inspiratory",
+        "old_p_holm": 0.00033640015432790315,
+        "old_supported": true,
+        "p_joint": 0.0006728003086558063,
+        "supported": true,
+        "share_mean": 0.04273777753792963
+      },
+      {
+        "target": "aug-E",
+        "sign": "E",
+        "source": "post-I",
+        "old_p_holm": 0.002534195495601109,
+        "old_supported": true,
+        "p_joint": 0.005430418919145233,
+        "supported": true,
+        "share_mean": 0.09128892456549048
+      },
+      {
+        "target": "aug-E",
+        "sign": "E",
+        "source": "aug-E",
+        "old_p_holm": 2.581085914115793e-06,
+        "old_supported": true,
+        "p_joint": 4.075398811761778e-06,
+        "supported": true,
+        "share_mean": 0.15136843947514864
+      }
+    ],
+    "counts": {
+      "projected_relations": 14,
+      "coarse_supported": 12,
+      "individually_supported": 9,
+      "additional": 8
+    }
+  },
+  "counts": {
+    "cells": 150,
+    "recordings": 168,
+    "coarse_supported": 20
+  },
+  "inspiratory_connections": [
+    {
+      "source": "pre-I",
+      "target": "pre-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "pre-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "pre-I",
+      "sign": "E",
+      "style": "solid"
+    },
+    {
+      "source": "pre-I",
+      "target": "pre-I",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "pre-I",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "pre-I",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "pre-I",
+      "target": "ramp-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "ramp-I",
+      "sign": "E",
+      "style": "solid"
+    },
+    {
+      "source": "early-I",
+      "target": "ramp-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "ramp-I",
+      "sign": "I",
+      "style": "solid"
+    },
+    {
+      "source": "pre-I",
+      "target": "early-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "early-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "early-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "pre-I",
+      "target": "post-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "post-I",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "pre-I",
+      "target": "post-I",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "post-I",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "post-I",
+      "sign": "I",
+      "style": "solid"
+    },
+    {
+      "source": "pre-I",
+      "target": "aug-E",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "aug-E",
+      "sign": "E",
+      "style": "dashed"
+    },
+    {
+      "source": "pre-I",
+      "target": "aug-E",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "ramp-I",
+      "target": "aug-E",
+      "sign": "I",
+      "style": "dashed"
+    },
+    {
+      "source": "early-I",
+      "target": "aug-E",
+      "sign": "I",
+      "style": "solid"
+    }
+  ],
+  "group_fit_median_rmse": {
+    "pre-I": [
+      0.08766625815565178,
+      0.11881897695117212
+    ],
+    "ramp-I": [
+      0.07007964816120892,
+      0.13004905115945692
+    ],
+    "early-I": [
+      0.07260527553307447,
+      0.13239996118464514
+    ],
+    "post-I": [
+      0.03216570443578519,
+      0.11030961567936473
+    ],
+    "aug-E": [
+      0.07295572162335076,
+      0.09848050856729976
+    ]
+  },
+  "output_sha256": {
+    "expanded_profiles.pdf": "e7ccdf758cb5865afff810cb1ccda543cbf25793cc02fe5438fac77a0124276d",
+    "expanded_fits.pdf": "311e82ea0d5e4a35631a25bdcfa0e52a9e1350afeca74e323b577864bf6d6a5f",
+    "expanded_circuit.pdf": "9cd2bc0b98c91d81b65e207eb003af149f06985d983586bc1190608bcc44e7af",
+    "expanded_prior_circuit.pdf": "f0b6cd4e13a88572a56e404e6e9c8fef42e6a3848e13ef8b3eca2a6337e75167",
+    "expanded_evidence.pdf": "0a8d8dc7e6b736ca334623de93a0d5ba8869c0446fb3fa46c1c9346109dea794",
+    "expanded_score_diagnostics.pdf": "b6cea01d788f9aa0dedf491460fbc25d54372b841102df7d0ae73288b48afe43",
+    "expanded_alternatives.pdf": "1a0eb0fac814038c72c11722e76e0d70b44db837ab120c529af54a5e4cfb306e",
+    "expanded_template_alignment.pdf": "4551d1297583503fca989bf8ad72702c4a4b30032dbbf5fbeae453ec3f28ee95"
+  },
+  "table_sha256": {
+    "inspiratory_alternatives.tex": "17d020c96a51f4e62f18256239e78ceccb068ebdd004a6e21c6e78075c30d7eb",
+    "archive_summary.tex": "3d17c0e61b18fdffcd3262037d8f64e6d2c6cfb8acb4ea793e25ef8dfa824123",
+    "omission_tests.tex": "c696cb4b6f0b89379108ed9ebaeead675873c237acca45c13dd2c27a6d55271f",
+    "contribution_variation.tex": "936d4ad0cb315824481dc5908911f736cca62c294db32a965593659e520f64a6"
+  },
+  "reporting_sha256": {
+    "records": "52e0379fea1ba274e3084a4f23bc090b5b6f48122da474cfb8489288efa8b749",
+    "tests": "8e8fedf88d298535c83c23a1b802a0f900c2a3130874b8746fdce4dcc9ce7442",
+    "elementary": "cca556e6566cbade69e415e0c9c0cb02b87d111224d0569c110837540535a823",
+    "magnitudes": "67657531b215d98c290491d9d338e885ada0819d84d11b638b76b28bee581181"
+  }
+}

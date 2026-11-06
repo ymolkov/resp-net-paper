@@ -1,0 +1,3270 @@
+{
+  "input_sha256": {
+    "data/model_analyses/inspiratory_subset_contrasts/summary.json": "4baa09d462b79a3be65761507c1144376e62a13c589442759532c83cd1db9433",
+    "data/model_analyses/expanded_baseline_sensitivity/summary.json": "50168cf32c94d0635cbeba6ec5683de4074a3d66615afeac8bde001bb6cee59f"
+  },
+  "grouped": {
+    "overview": [
+      {
+        "source": "Inspiratory",
+        "target": "Inspiratory",
+        "sign": "E",
+        "members": [
+          {
+            "source": "Inspiratory",
+            "target": "pre-I",
+            "sign": "E",
+            "share_mean": 0.3237048458119825,
+            "width_points": 3.5133436123078425,
+            "supported_primary": true,
+            "p_primary": 3.3681030432383696e-08
+          },
+          {
+            "source": "Inspiratory",
+            "target": "ramp-I",
+            "sign": "E",
+            "share_mean": 0.2715279602326565,
+            "width_points": 3.0437516420939086,
+            "supported_primary": true,
+            "p_primary": 4.2083265533856584e-17
+          },
+          {
+            "source": "Inspiratory",
+            "target": "early-I",
+            "sign": "E",
+            "share_mean": 0.3120754583705575,
+            "width_points": 3.4086791253350177,
+            "supported_primary": true,
+            "p_primary": 0.007646852818442913
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "Inspiratory",
+            "target": "pre-I",
+            "sign": "E",
+            "share_mean": 0.3237048458119825,
+            "width_points": 3.5133436123078425,
+            "supported_primary": true,
+            "p_primary": 3.3681030432383696e-08
+          },
+          {
+            "source": "Inspiratory",
+            "target": "ramp-I",
+            "sign": "E",
+            "share_mean": 0.2715279602326565,
+            "width_points": 3.0437516420939086,
+            "supported_primary": true,
+            "p_primary": 4.2083265533856584e-17
+          },
+          {
+            "source": "Inspiratory",
+            "target": "early-I",
+            "sign": "E",
+            "share_mean": 0.3120754583705575,
+            "width_points": 3.4086791253350177,
+            "supported_primary": true,
+            "p_primary": 0.007646852818442913
+          }
+        ],
+        "target_average_share": 0.30243608813839884,
+        "width_points": 3.3219247932455898
+      },
+      {
+        "source": "aug-E",
+        "target": "Inspiratory",
+        "sign": "E",
+        "members": [
+          {
+            "source": "aug-E",
+            "target": "pre-I",
+            "sign": "E",
+            "share_mean": 0.08896677178895977,
+            "width_points": 1.400700946100638,
+            "supported_primary": true,
+            "p_primary": 4.09690094699977e-05
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "aug-E",
+            "target": "pre-I",
+            "sign": "E",
+            "share_mean": 0.08896677178895977,
+            "width_points": 1.400700946100638,
+            "supported_primary": true,
+            "p_primary": 4.09690094699977e-05
+          },
+          {
+            "source": "aug-E",
+            "target": "ramp-I",
+            "sign": "E",
+            "share_mean": 0.023147421576680198,
+            "width_points": 0.8083267941901218,
+            "supported_primary": false,
+            "p_primary": 1.0
+          },
+          {
+            "source": "aug-E",
+            "target": "early-I",
+            "sign": "E",
+            "share_mean": 0.04436332228623891,
+            "width_points": 0.9992699005761502,
+            "supported_primary": false,
+            "p_primary": 1.0
+          }
+        ],
+        "target_average_share": 0.05215917188395963,
+        "width_points": 1.0694325469556367
+      },
+      {
+        "source": "Inspiratory",
+        "target": "Inspiratory",
+        "sign": "I",
+        "members": [
+          {
+            "source": "Inspiratory",
+            "target": "pre-I",
+            "sign": "I",
+            "share_mean": 0.12997633976557943,
+            "width_points": 1.7697870578902148,
+            "supported_primary": true,
+            "p_primary": 0.022904298203337347
+          },
+          {
+            "source": "Inspiratory",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.13568724063886908,
+            "width_points": 1.8211851657498217,
+            "supported_primary": true,
+            "p_primary": 6.442350326842955e-07
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "Inspiratory",
+            "target": "pre-I",
+            "sign": "I",
+            "share_mean": 0.12997633976557943,
+            "width_points": 1.7697870578902148,
+            "supported_primary": true,
+            "p_primary": 0.022904298203337347
+          },
+          {
+            "source": "Inspiratory",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.13568724063886908,
+            "width_points": 1.8211851657498217,
+            "supported_primary": true,
+            "p_primary": 6.442350326842955e-07
+          },
+          {
+            "source": "Inspiratory",
+            "target": "early-I",
+            "sign": "I",
+            "share_mean": 0.13442250168259404,
+            "width_points": 1.8098025151433461,
+            "supported_primary": false,
+            "p_primary": 0.4839839513924446
+          }
+        ],
+        "target_average_share": 0.1333620273623475,
+        "width_points": 1.8002582462611274
+      },
+      {
+        "source": "post-I",
+        "target": "Inspiratory",
+        "sign": "I",
+        "members": [
+          {
+            "source": "post-I",
+            "target": "pre-I",
+            "sign": "I",
+            "share_mean": 0.4018434897696659,
+            "width_points": 4.216591407926993,
+            "supported_primary": true,
+            "p_primary": 3.759527350104535e-05
+          },
+          {
+            "source": "post-I",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.44443562007645127,
+            "width_points": 4.599920580688061,
+            "supported_primary": true,
+            "p_primary": 1.6027166690436348e-16
+          },
+          {
+            "source": "post-I",
+            "target": "early-I",
+            "sign": "I",
+            "share_mean": 0.4395855853513686,
+            "width_points": 4.556270268162317,
+            "supported_primary": true,
+            "p_primary": 0.0068024614781709404
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "post-I",
+            "target": "pre-I",
+            "sign": "I",
+            "share_mean": 0.4018434897696659,
+            "width_points": 4.216591407926993,
+            "supported_primary": true,
+            "p_primary": 3.759527350104535e-05
+          },
+          {
+            "source": "post-I",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.44443562007645127,
+            "width_points": 4.599920580688061,
+            "supported_primary": true,
+            "p_primary": 1.6027166690436348e-16
+          },
+          {
+            "source": "post-I",
+            "target": "early-I",
+            "sign": "I",
+            "share_mean": 0.4395855853513686,
+            "width_points": 4.556270268162317,
+            "supported_primary": true,
+            "p_primary": 0.0068024614781709404
+          }
+        ],
+        "target_average_share": 0.42862156506582855,
+        "width_points": 4.457594085592457
+      },
+      {
+        "source": "aug-E",
+        "target": "Inspiratory",
+        "sign": "I",
+        "members": [
+          {
+            "source": "aug-E",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.10177859371394149,
+            "width_points": 1.5160073434254735,
+            "supported_primary": true,
+            "p_primary": 4.436473013181754e-07
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "aug-E",
+            "target": "pre-I",
+            "sign": "I",
+            "share_mean": 0.035758285898074726,
+            "width_points": 0.9218245730826725,
+            "supported_primary": false,
+            "p_primary": 1.0
+          },
+          {
+            "source": "aug-E",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.10177859371394149,
+            "width_points": 1.5160073434254735,
+            "supported_primary": true,
+            "p_primary": 4.436473013181754e-07
+          },
+          {
+            "source": "aug-E",
+            "target": "early-I",
+            "sign": "I",
+            "share_mean": 0.05799683673370706,
+            "width_points": 1.1219715306033635,
+            "supported_primary": false,
+            "p_primary": 1.0
+          }
+        ],
+        "target_average_share": 0.06517790544857442,
+        "width_points": 1.1866011490371697
+      },
+      {
+        "source": "Inspiratory",
+        "target": "post-I",
+        "sign": "E",
+        "members": [
+          {
+            "source": "Inspiratory",
+            "target": "post-I",
+            "sign": "E",
+            "share_mean": 0.05497693950973041,
+            "width_points": 1.0947924555875737,
+            "supported_primary": true,
+            "p_primary": 4.13098594379493e-12
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "Inspiratory",
+            "target": "post-I",
+            "sign": "E",
+            "share_mean": 0.05497693950973041,
+            "width_points": 1.0947924555875737,
+            "supported_primary": true,
+            "p_primary": 4.13098594379493e-12
+          }
+        ],
+        "target_average_share": 0.05497693950973041,
+        "width_points": 1.0947924555875737
+      },
+      {
+        "source": "post-I",
+        "target": "post-I",
+        "sign": "E",
+        "members": [
+          {
+            "source": "post-I",
+            "target": "post-I",
+            "sign": "E",
+            "share_mean": 0.1442239332187409,
+            "width_points": 1.8980153989686683,
+            "supported_primary": true,
+            "p_primary": 1.229115950743499e-06
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "post-I",
+            "target": "post-I",
+            "sign": "E",
+            "share_mean": 0.1442239332187409,
+            "width_points": 1.8980153989686683,
+            "supported_primary": true,
+            "p_primary": 1.229115950743499e-06
+          }
+        ],
+        "target_average_share": 0.1442239332187409,
+        "width_points": 1.8980153989686683
+      },
+      {
+        "source": "Inspiratory",
+        "target": "post-I",
+        "sign": "I",
+        "members": [
+          {
+            "source": "Inspiratory",
+            "target": "post-I",
+            "sign": "I",
+            "share_mean": 0.5128099808441944,
+            "width_points": 5.215289827597749,
+            "supported_primary": true,
+            "p_primary": 1.0229148132649413e-41
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "Inspiratory",
+            "target": "post-I",
+            "sign": "I",
+            "share_mean": 0.5128099808441944,
+            "width_points": 5.215289827597749,
+            "supported_primary": true,
+            "p_primary": 1.0229148132649413e-41
+          }
+        ],
+        "target_average_share": 0.5128099808441944,
+        "width_points": 5.215289827597749
+      },
+      {
+        "source": "post-I",
+        "target": "post-I",
+        "sign": "I",
+        "members": [
+          {
+            "source": "post-I",
+            "target": "post-I",
+            "sign": "I",
+            "share_mean": 0.11469807264072666,
+            "width_points": 1.63228265376654,
+            "supported_primary": true,
+            "p_primary": 3.1343482978698296e-05
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "post-I",
+            "target": "post-I",
+            "sign": "I",
+            "share_mean": 0.11469807264072666,
+            "width_points": 1.63228265376654,
+            "supported_primary": true,
+            "p_primary": 3.1343482978698296e-05
+          }
+        ],
+        "target_average_share": 0.11469807264072666,
+        "width_points": 1.63228265376654
+      },
+      {
+        "source": "aug-E",
+        "target": "post-I",
+        "sign": "I",
+        "members": [
+          {
+            "source": "aug-E",
+            "target": "post-I",
+            "sign": "I",
+            "share_mean": 0.1626870912120441,
+            "width_points": 2.064183820908397,
+            "supported_primary": true,
+            "p_primary": 4.258335595130249e-09
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "aug-E",
+            "target": "post-I",
+            "sign": "I",
+            "share_mean": 0.1626870912120441,
+            "width_points": 2.064183820908397,
+            "supported_primary": true,
+            "p_primary": 4.258335595130249e-09
+          }
+        ],
+        "target_average_share": 0.1626870912120441,
+        "width_points": 2.064183820908397
+      },
+      {
+        "source": "Inspiratory",
+        "target": "aug-E",
+        "sign": "E",
+        "members": [
+          {
+            "source": "Inspiratory",
+            "target": "aug-E",
+            "sign": "E",
+            "share_mean": 0.04273777753792963,
+            "width_points": 0.9846399978413667,
+            "supported_primary": true,
+            "p_primary": 0.0006728003086558063
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "Inspiratory",
+            "target": "aug-E",
+            "sign": "E",
+            "share_mean": 0.04273777753792963,
+            "width_points": 0.9846399978413667,
+            "supported_primary": true,
+            "p_primary": 0.0006728003086558063
+          }
+        ],
+        "target_average_share": 0.04273777753792963,
+        "width_points": 0.9846399978413667
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "E",
+        "members": [
+          {
+            "source": "post-I",
+            "target": "aug-E",
+            "sign": "E",
+            "share_mean": 0.09128892456549048,
+            "width_points": 1.4216003210894144,
+            "supported_primary": true,
+            "p_primary": 0.005430418919145233
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "post-I",
+            "target": "aug-E",
+            "sign": "E",
+            "share_mean": 0.09128892456549048,
+            "width_points": 1.4216003210894144,
+            "supported_primary": true,
+            "p_primary": 0.005430418919145233
+          }
+        ],
+        "target_average_share": 0.09128892456549048,
+        "width_points": 1.4216003210894144
+      },
+      {
+        "source": "aug-E",
+        "target": "aug-E",
+        "sign": "E",
+        "members": [
+          {
+            "source": "aug-E",
+            "target": "aug-E",
+            "sign": "E",
+            "share_mean": 0.15136843947514864,
+            "width_points": 1.9623159552763378,
+            "supported_primary": true,
+            "p_primary": 4.075398811761778e-06
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "aug-E",
+            "target": "aug-E",
+            "sign": "E",
+            "share_mean": 0.15136843947514864,
+            "width_points": 1.9623159552763378,
+            "supported_primary": true,
+            "p_primary": 4.075398811761778e-06
+          }
+        ],
+        "target_average_share": 0.15136843947514864,
+        "width_points": 1.9623159552763378
+      },
+      {
+        "source": "Inspiratory",
+        "target": "aug-E",
+        "sign": "I",
+        "members": [
+          {
+            "source": "Inspiratory",
+            "target": "aug-E",
+            "sign": "I",
+            "share_mean": 0.4566389125174309,
+            "width_points": 4.7097502126568775,
+            "supported_primary": true,
+            "p_primary": 6.496908240552449e-23
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "Inspiratory",
+            "target": "aug-E",
+            "sign": "I",
+            "share_mean": 0.4566389125174309,
+            "width_points": 4.7097502126568775,
+            "supported_primary": true,
+            "p_primary": 6.496908240552449e-23
+          }
+        ],
+        "target_average_share": 0.4566389125174309,
+        "width_points": 4.7097502126568775
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "I",
+        "members": [
+          {
+            "source": "post-I",
+            "target": "aug-E",
+            "sign": "I",
+            "share_mean": 0.22270640815930814,
+            "width_points": 2.6043576734337734,
+            "supported_primary": true,
+            "p_primary": 3.9328237596589626e-07
+          }
+        ],
+        "magnitude_members": [
+          {
+            "source": "post-I",
+            "target": "aug-E",
+            "sign": "I",
+            "share_mean": 0.22270640815930814,
+            "width_points": 2.6043576734337734,
+            "supported_primary": true,
+            "p_primary": 3.9328237596589626e-07
+          }
+        ],
+        "target_average_share": 0.22270640815930814,
+        "width_points": 2.6043576734337734
+      }
+    ],
+    "incoming": [
+      {
+        "source": "aug-E",
+        "target": "pre-I",
+        "sign": "E",
+        "share_mean": 0.08896677178895977,
+        "width_points": 1.400700946100638,
+        "supported_primary": true,
+        "p_primary": 4.09690094699977e-05
+      },
+      {
+        "source": "post-I",
+        "target": "pre-I",
+        "sign": "I",
+        "share_mean": 0.4018434897696659,
+        "width_points": 4.216591407926993,
+        "supported_primary": true,
+        "p_primary": 3.759527350104535e-05
+      },
+      {
+        "source": "post-I",
+        "target": "ramp-I",
+        "sign": "I",
+        "share_mean": 0.44443562007645127,
+        "width_points": 4.599920580688061,
+        "supported_primary": true,
+        "p_primary": 1.6027166690436348e-16
+      },
+      {
+        "source": "aug-E",
+        "target": "ramp-I",
+        "sign": "I",
+        "share_mean": 0.10177859371394149,
+        "width_points": 1.5160073434254735,
+        "supported_primary": true,
+        "p_primary": 4.436473013181754e-07
+      },
+      {
+        "source": "post-I",
+        "target": "early-I",
+        "sign": "I",
+        "share_mean": 0.4395855853513686,
+        "width_points": 4.556270268162317,
+        "supported_primary": true,
+        "p_primary": 0.0068024614781709404
+      }
+    ],
+    "outgoing": [
+      {
+        "source": "Inspiratory",
+        "target": "post-I",
+        "sign": "E",
+        "share_mean": 0.05497693950973041,
+        "width_points": 1.0947924555875737,
+        "supported_primary": true,
+        "p_primary": 4.13098594379493e-12
+      },
+      {
+        "source": "Inspiratory",
+        "target": "post-I",
+        "sign": "I",
+        "share_mean": 0.5128099808441944,
+        "width_points": 5.215289827597749,
+        "supported_primary": true,
+        "p_primary": 1.0229148132649413e-41
+      },
+      {
+        "source": "Inspiratory",
+        "target": "aug-E",
+        "sign": "E",
+        "share_mean": 0.04273777753792963,
+        "width_points": 0.9846399978413667,
+        "supported_primary": true,
+        "p_primary": 0.0006728003086558063
+      },
+      {
+        "source": "Inspiratory",
+        "target": "aug-E",
+        "sign": "I",
+        "share_mean": 0.4566389125174309,
+        "width_points": 4.7097502126568775,
+        "supported_primary": true,
+        "p_primary": 6.496908240552449e-23
+      }
+    ],
+    "internal": [
+      {
+        "source": "Inspiratory",
+        "target": "pre-I",
+        "sign": "E",
+        "share_mean": 0.3237048458119825,
+        "width_points": 3.5133436123078425,
+        "supported_primary": true,
+        "p_primary": 3.3681030432383696e-08
+      },
+      {
+        "source": "Inspiratory",
+        "target": "pre-I",
+        "sign": "I",
+        "share_mean": 0.12997633976557943,
+        "width_points": 1.7697870578902148,
+        "supported_primary": true,
+        "p_primary": 0.022904298203337347
+      },
+      {
+        "source": "Inspiratory",
+        "target": "ramp-I",
+        "sign": "E",
+        "share_mean": 0.2715279602326565,
+        "width_points": 3.0437516420939086,
+        "supported_primary": true,
+        "p_primary": 4.2083265533856584e-17
+      },
+      {
+        "source": "Inspiratory",
+        "target": "ramp-I",
+        "sign": "I",
+        "share_mean": 0.13568724063886908,
+        "width_points": 1.8211851657498217,
+        "supported_primary": true,
+        "p_primary": 6.442350326842955e-07
+      },
+      {
+        "source": "Inspiratory",
+        "target": "early-I",
+        "sign": "E",
+        "share_mean": 0.3120754583705575,
+        "width_points": 3.4086791253350177,
+        "supported_primary": true,
+        "p_primary": 0.007646852818442913
+      }
+    ],
+    "expiratory": [
+      {
+        "source": "post-I",
+        "target": "post-I",
+        "sign": "E",
+        "share_mean": 0.1442239332187409,
+        "width_points": 1.8980153989686683,
+        "supported_primary": true,
+        "p_primary": 1.229115950743499e-06
+      },
+      {
+        "source": "post-I",
+        "target": "post-I",
+        "sign": "I",
+        "share_mean": 0.11469807264072666,
+        "width_points": 1.63228265376654,
+        "supported_primary": true,
+        "p_primary": 3.1343482978698296e-05
+      },
+      {
+        "source": "aug-E",
+        "target": "post-I",
+        "sign": "I",
+        "share_mean": 0.1626870912120441,
+        "width_points": 2.064183820908397,
+        "supported_primary": true,
+        "p_primary": 4.258335595130249e-09
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "E",
+        "share_mean": 0.09128892456549048,
+        "width_points": 1.4216003210894144,
+        "supported_primary": true,
+        "p_primary": 0.005430418919145233
+      },
+      {
+        "source": "aug-E",
+        "target": "aug-E",
+        "sign": "E",
+        "share_mean": 0.15136843947514864,
+        "width_points": 1.9623159552763378,
+        "supported_primary": true,
+        "p_primary": 4.075398811761778e-06
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "I",
+        "share_mean": 0.22270640815930814,
+        "width_points": 2.6043576734337734,
+        "supported_primary": true,
+        "p_primary": 3.9328237596589626e-07
+      }
+    ],
+    "outgoing_motifs": [
+      {
+        "target": "post-I",
+        "sign": "E",
+        "n_cells": 54,
+        "minimal_unexcluded_masks": [
+          1,
+          2
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "post-I",
+        "sign": "I",
+        "n_cells": 54,
+        "minimal_unexcluded_masks": [
+          5,
+          6
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      },
+      {
+        "target": "aug-E",
+        "sign": "E",
+        "n_cells": 30,
+        "minimal_unexcluded_masks": [
+          1,
+          4
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "aug-E",
+        "sign": "I",
+        "n_cells": 30,
+        "minimal_unexcluded_masks": [
+          5,
+          6
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      }
+    ],
+    "internal_motifs": [
+      {
+        "target": "pre-I",
+        "sign": "E",
+        "n_cells": 17,
+        "minimal_unexcluded_masks": [
+          5,
+          6
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      },
+      {
+        "target": "pre-I",
+        "sign": "I",
+        "n_cells": 17,
+        "minimal_unexcluded_masks": [
+          1,
+          2,
+          4
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "ramp-I",
+        "sign": "E",
+        "n_cells": 41,
+        "minimal_unexcluded_masks": [
+          3,
+          6
+        ],
+        "individually_required": [
+          "ramp-I"
+        ]
+      },
+      {
+        "target": "ramp-I",
+        "sign": "I",
+        "n_cells": 41,
+        "minimal_unexcluded_masks": [
+          4
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      },
+      {
+        "target": "early-I",
+        "sign": "E",
+        "n_cells": 8,
+        "minimal_unexcluded_masks": [
+          1,
+          6
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "early-I",
+        "sign": "I",
+        "n_cells": 8,
+        "minimal_unexcluded_masks": [
+          0
+        ],
+        "individually_required": []
+      }
+    ]
+  },
+  "pages": [
+    {
+      "overview": {
+        "origin": [
+          40,
+          615
+        ],
+        "centers": {
+          "Inspiratory": [
+            370,
+            350
+          ],
+          "post-I": [
+            175,
+            130
+          ],
+          "aug-E": [
+            565,
+            130
+          ]
+        },
+        "pair_radii": [
+          98,
+          59
+        ],
+        "node_radius": 23,
+        "nodes": [
+          {
+            "group": "Inspiratory",
+            "sign": "E",
+            "center": [
+              331,
+              342
+            ]
+          },
+          {
+            "group": "Inspiratory",
+            "sign": "I",
+            "center": [
+              409,
+              342
+            ]
+          },
+          {
+            "group": "post-I",
+            "sign": "E",
+            "center": [
+              136,
+              122
+            ]
+          },
+          {
+            "group": "post-I",
+            "sign": "I",
+            "center": [
+              214,
+              122
+            ]
+          },
+          {
+            "group": "aug-E",
+            "sign": "E",
+            "center": [
+              526,
+              122
+            ]
+          },
+          {
+            "group": "aug-E",
+            "sign": "I",
+            "center": [
+              604,
+              122
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "source": "Inspiratory",
+            "target": "Inspiratory",
+            "sign": "E",
+            "members": [
+              {
+                "source": "Inspiratory",
+                "target": "pre-I",
+                "sign": "E",
+                "share_mean": 0.3237048458119825,
+                "width_points": 3.5133436123078425,
+                "supported_primary": true,
+                "p_primary": 3.3681030432383696e-08
+              },
+              {
+                "source": "Inspiratory",
+                "target": "ramp-I",
+                "sign": "E",
+                "share_mean": 0.2715279602326565,
+                "width_points": 3.0437516420939086,
+                "supported_primary": true,
+                "p_primary": 4.2083265533856584e-17
+              },
+              {
+                "source": "Inspiratory",
+                "target": "early-I",
+                "sign": "E",
+                "share_mean": 0.3120754583705575,
+                "width_points": 3.4086791253350177,
+                "supported_primary": true,
+                "p_primary": 0.007646852818442913
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "Inspiratory",
+                "target": "pre-I",
+                "sign": "E",
+                "share_mean": 0.3237048458119825,
+                "width_points": 3.5133436123078425,
+                "supported_primary": true,
+                "p_primary": 3.3681030432383696e-08
+              },
+              {
+                "source": "Inspiratory",
+                "target": "ramp-I",
+                "sign": "E",
+                "share_mean": 0.2715279602326565,
+                "width_points": 3.0437516420939086,
+                "supported_primary": true,
+                "p_primary": 4.2083265533856584e-17
+              },
+              {
+                "source": "Inspiratory",
+                "target": "early-I",
+                "sign": "E",
+                "share_mean": 0.3120754583705575,
+                "width_points": 3.4086791253350177,
+                "supported_primary": true,
+                "p_primary": 0.007646852818442913
+              }
+            ],
+            "target_average_share": 0.30243608813839884,
+            "width_points": 3.3219247932455898,
+            "path_local": [
+              [
+                309.3870697219241,
+                349.8664632964904
+              ],
+              [
+                198,
+                388
+              ],
+              [
+                224,
+                463
+              ],
+              [
+                294.92764457434015,
+                387.9244689715058
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "aug-E",
+            "target": "Inspiratory",
+            "sign": "E",
+            "members": [
+              {
+                "source": "aug-E",
+                "target": "pre-I",
+                "sign": "E",
+                "share_mean": 0.08896677178895977,
+                "width_points": 1.400700946100638,
+                "supported_primary": true,
+                "p_primary": 4.09690094699977e-05
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "aug-E",
+                "target": "pre-I",
+                "sign": "E",
+                "share_mean": 0.08896677178895977,
+                "width_points": 1.400700946100638,
+                "supported_primary": true,
+                "p_primary": 4.09690094699977e-05
+              },
+              {
+                "source": "aug-E",
+                "target": "ramp-I",
+                "sign": "E",
+                "share_mean": 0.023147421576680198,
+                "width_points": 0.8083267941901218,
+                "supported_primary": false,
+                "p_primary": 1.0
+              },
+              {
+                "source": "aug-E",
+                "target": "early-I",
+                "sign": "E",
+                "share_mean": 0.04436332228623891,
+                "width_points": 0.9992699005761502,
+                "supported_primary": false,
+                "p_primary": 1.0
+              }
+            ],
+            "target_average_share": 0.05215917188395963,
+            "width_points": 1.0694325469556367,
+            "path_local": [
+              [
+                511.2158849772096,
+                139.6190221917365
+              ],
+              [
+                472,
+                216
+              ],
+              [
+                428,
+                251
+              ],
+              [
+                378.5412627892705,
+                291.224512812587
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "Inspiratory",
+            "target": "Inspiratory",
+            "sign": "I",
+            "members": [
+              {
+                "source": "Inspiratory",
+                "target": "pre-I",
+                "sign": "I",
+                "share_mean": 0.12997633976557943,
+                "width_points": 1.7697870578902148,
+                "supported_primary": true,
+                "p_primary": 0.022904298203337347
+              },
+              {
+                "source": "Inspiratory",
+                "target": "ramp-I",
+                "sign": "I",
+                "share_mean": 0.13568724063886908,
+                "width_points": 1.8211851657498217,
+                "supported_primary": true,
+                "p_primary": 6.442350326842955e-07
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "Inspiratory",
+                "target": "pre-I",
+                "sign": "I",
+                "share_mean": 0.12997633976557943,
+                "width_points": 1.7697870578902148,
+                "supported_primary": true,
+                "p_primary": 0.022904298203337347
+              },
+              {
+                "source": "Inspiratory",
+                "target": "ramp-I",
+                "sign": "I",
+                "share_mean": 0.13568724063886908,
+                "width_points": 1.8211851657498217,
+                "supported_primary": true,
+                "p_primary": 6.442350326842955e-07
+              },
+              {
+                "source": "Inspiratory",
+                "target": "early-I",
+                "sign": "I",
+                "share_mean": 0.13442250168259404,
+                "width_points": 1.8098025151433461,
+                "supported_primary": false,
+                "p_primary": 0.4839839513924446
+              }
+            ],
+            "target_average_share": 0.1333620273623475,
+            "width_points": 1.8002582462611274,
+            "path_local": [
+              [
+                430.6129302780759,
+                349.8664632964904
+              ],
+              [
+                533,
+                388
+              ],
+              [
+                519,
+                461
+              ],
+              [
+                445.07235542565985,
+                387.9244689715058
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "post-I",
+            "target": "Inspiratory",
+            "sign": "I",
+            "members": [
+              {
+                "source": "post-I",
+                "target": "pre-I",
+                "sign": "I",
+                "share_mean": 0.4018434897696659,
+                "width_points": 4.216591407926993,
+                "supported_primary": true,
+                "p_primary": 3.759527350104535e-05
+              },
+              {
+                "source": "post-I",
+                "target": "ramp-I",
+                "sign": "I",
+                "share_mean": 0.44443562007645127,
+                "width_points": 4.599920580688061,
+                "supported_primary": true,
+                "p_primary": 1.6027166690436348e-16
+              },
+              {
+                "source": "post-I",
+                "target": "early-I",
+                "sign": "I",
+                "share_mean": 0.4395855853513686,
+                "width_points": 4.556270268162317,
+                "supported_primary": true,
+                "p_primary": 0.0068024614781709404
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "post-I",
+                "target": "pre-I",
+                "sign": "I",
+                "share_mean": 0.4018434897696659,
+                "width_points": 4.216591407926993,
+                "supported_primary": true,
+                "p_primary": 3.759527350104535e-05
+              },
+              {
+                "source": "post-I",
+                "target": "ramp-I",
+                "sign": "I",
+                "share_mean": 0.44443562007645127,
+                "width_points": 4.599920580688061,
+                "supported_primary": true,
+                "p_primary": 1.6027166690436348e-16
+              },
+              {
+                "source": "post-I",
+                "target": "early-I",
+                "sign": "I",
+                "share_mean": 0.4395855853513686,
+                "width_points": 4.556270268162317,
+                "supported_primary": true,
+                "p_primary": 0.0068024614781709404
+              }
+            ],
+            "target_average_share": 0.42862156506582855,
+            "width_points": 4.457594085592457,
+            "path_local": [
+              [
+                228.78411502279042,
+                139.6190221917365
+              ],
+              [
+                255,
+                257
+              ],
+              [
+                220,
+                314
+              ],
+              [
+                273.48884020480364,
+                339.7547575176511
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "aug-E",
+            "target": "Inspiratory",
+            "sign": "I",
+            "members": [
+              {
+                "source": "aug-E",
+                "target": "ramp-I",
+                "sign": "I",
+                "share_mean": 0.10177859371394149,
+                "width_points": 1.5160073434254735,
+                "supported_primary": true,
+                "p_primary": 4.436473013181754e-07
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "aug-E",
+                "target": "pre-I",
+                "sign": "I",
+                "share_mean": 0.035758285898074726,
+                "width_points": 0.9218245730826725,
+                "supported_primary": false,
+                "p_primary": 1.0
+              },
+              {
+                "source": "aug-E",
+                "target": "ramp-I",
+                "sign": "I",
+                "share_mean": 0.10177859371394149,
+                "width_points": 1.5160073434254735,
+                "supported_primary": true,
+                "p_primary": 4.436473013181754e-07
+              },
+              {
+                "source": "aug-E",
+                "target": "early-I",
+                "sign": "I",
+                "share_mean": 0.05799683673370706,
+                "width_points": 1.1219715306033635,
+                "supported_primary": false,
+                "p_primary": 1.0
+              }
+            ],
+            "target_average_share": 0.06517790544857442,
+            "width_points": 1.1866011490371697,
+            "path_local": [
+              [
+                618.7841150227904,
+                139.6190221917365
+              ],
+              [
+                659,
+                267
+              ],
+              [
+                565,
+                320
+              ],
+              [
+                467.62708041299106,
+                344.85781117788815
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "Inspiratory",
+            "target": "post-I",
+            "sign": "E",
+            "members": [
+              {
+                "source": "Inspiratory",
+                "target": "post-I",
+                "sign": "E",
+                "share_mean": 0.05497693950973041,
+                "width_points": 1.0947924555875737,
+                "supported_primary": true,
+                "p_primary": 4.13098594379493e-12
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "Inspiratory",
+                "target": "post-I",
+                "sign": "E",
+                "share_mean": 0.05497693950973041,
+                "width_points": 1.0947924555875737,
+                "supported_primary": true,
+                "p_primary": 4.13098594379493e-12
+              }
+            ],
+            "target_average_share": 0.05497693950973041,
+            "width_points": 1.0947924555875737,
+            "path_local": [
+              [
+                314.7365440327094,
+                325.7365440327094
+              ],
+              [
+                269,
+                280
+              ],
+              [
+                189,
+                249
+              ],
+              [
+                157.98247858864084,
+                188.10365742772026
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "post-I",
+            "target": "post-I",
+            "sign": "E",
+            "members": [
+              {
+                "source": "post-I",
+                "target": "post-I",
+                "sign": "E",
+                "share_mean": 0.1442239332187409,
+                "width_points": 1.8980153989686683,
+                "supported_primary": true,
+                "p_primary": 1.229115950743499e-06
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "post-I",
+                "target": "post-I",
+                "sign": "E",
+                "share_mean": 0.1442239332187409,
+                "width_points": 1.8980153989686683,
+                "supported_primary": true,
+                "p_primary": 1.229115950743499e-06
+              }
+            ],
+            "target_average_share": 0.1442239332187409,
+            "width_points": 1.8980153989686683,
+            "path_local": [
+              [
+                116.08141571295792,
+                110.5
+              ],
+              [
+                42,
+                62
+              ],
+              [
+                47,
+                18
+              ],
+              [
+                157.98247858864082,
+                71.89634257227974
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "Inspiratory",
+            "target": "post-I",
+            "sign": "I",
+            "members": [
+              {
+                "source": "Inspiratory",
+                "target": "post-I",
+                "sign": "I",
+                "share_mean": 0.5128099808441944,
+                "width_points": 5.215289827597749,
+                "supported_primary": true,
+                "p_primary": 1.0229148132649413e-41
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "Inspiratory",
+                "target": "post-I",
+                "sign": "I",
+                "share_mean": 0.5128099808441944,
+                "width_points": 5.215289827597749,
+                "supported_primary": true,
+                "p_primary": 1.0229148132649413e-41
+              }
+            ],
+            "target_average_share": 0.5128099808441944,
+            "width_points": 5.215289827597749,
+            "path_local": [
+              [
+                397.5,
+                322.0814157129579
+              ],
+              [
+                365,
+                265
+              ],
+              [
+                292,
+                233
+              ],
+              [
+                244.29646455628165,
+                171.7193000900063
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "post-I",
+            "target": "post-I",
+            "sign": "I",
+            "members": [
+              {
+                "source": "post-I",
+                "target": "post-I",
+                "sign": "I",
+                "share_mean": 0.11469807264072666,
+                "width_points": 1.63228265376654,
+                "supported_primary": true,
+                "p_primary": 3.1343482978698296e-05
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "post-I",
+                "target": "post-I",
+                "sign": "I",
+                "share_mean": 0.11469807264072666,
+                "width_points": 1.63228265376654,
+                "supported_primary": true,
+                "p_primary": 3.1343482978698296e-05
+              }
+            ],
+            "target_average_share": 0.11469807264072666,
+            "width_points": 1.63228265376654,
+            "path_local": [
+              [
+                231.6190221917365,
+                107.21588497720958
+              ],
+              [
+                308,
+                66
+              ],
+              [
+                267,
+                34
+              ],
+              [
+                231.21049076240251,
+                81.6700293869495
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "aug-E",
+            "target": "post-I",
+            "sign": "I",
+            "members": [
+              {
+                "source": "aug-E",
+                "target": "post-I",
+                "sign": "I",
+                "share_mean": 0.1626870912120441,
+                "width_points": 2.064183820908397,
+                "supported_primary": true,
+                "p_primary": 4.258335595130249e-09
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "aug-E",
+                "target": "post-I",
+                "sign": "I",
+                "share_mean": 0.1626870912120441,
+                "width_points": 2.064183820908397,
+                "supported_primary": true,
+                "p_primary": 4.258335595130249e-09
+              }
+            ],
+            "target_average_share": 0.1626870912120441,
+            "width_points": 2.064183820908397,
+            "path_local": [
+              [
+                621.6190221917365,
+                107.21588497720958
+              ],
+              [
+                723,
+                -15
+              ],
+              [
+                327,
+                -20
+              ],
+              [
+                263.8181631295917,
+                105.06552255729875
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "Inspiratory",
+            "target": "aug-E",
+            "sign": "E",
+            "members": [
+              {
+                "source": "Inspiratory",
+                "target": "aug-E",
+                "sign": "E",
+                "share_mean": 0.04273777753792963,
+                "width_points": 0.9846399978413667,
+                "supported_primary": true,
+                "p_primary": 0.0006728003086558063
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "Inspiratory",
+                "target": "aug-E",
+                "sign": "E",
+                "share_mean": 0.04273777753792963,
+                "width_points": 0.9846399978413667,
+                "supported_primary": true,
+                "p_primary": 0.0006728003086558063
+              }
+            ],
+            "target_average_share": 0.04273777753792963,
+            "width_points": 0.9846399978413667,
+            "path_local": [
+              [
+                342.5,
+                322.0814157129579
+              ],
+              [
+                365,
+                269
+              ],
+              [
+                454,
+                222
+              ],
+              [
+                489.92764457434015,
+                167.92446897150583
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "post-I",
+            "target": "aug-E",
+            "sign": "E",
+            "members": [
+              {
+                "source": "post-I",
+                "target": "aug-E",
+                "sign": "E",
+                "share_mean": 0.09128892456549048,
+                "width_points": 1.4216003210894144,
+                "supported_primary": true,
+                "p_primary": 0.005430418919145233
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "post-I",
+                "target": "aug-E",
+                "sign": "E",
+                "share_mean": 0.09128892456549048,
+                "width_points": 1.4216003210894144,
+                "supported_primary": true,
+                "p_primary": 0.005430418919145233
+              }
+            ],
+            "target_average_share": 0.09128892456549048,
+            "width_points": 1.4216003210894144,
+            "path_local": [
+              [
+                158.65057831928078,
+                125.9939080863394
+              ],
+              [
+                310,
+                221
+              ],
+              [
+                430,
+                231
+              ],
+              [
+                472.910123162981,
+                150.17918845621446
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "aug-E",
+            "target": "aug-E",
+            "sign": "E",
+            "members": [
+              {
+                "source": "aug-E",
+                "target": "aug-E",
+                "sign": "E",
+                "share_mean": 0.15136843947514864,
+                "width_points": 1.9623159552763378,
+                "supported_primary": true,
+                "p_primary": 4.075398811761778e-06
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "aug-E",
+                "target": "aug-E",
+                "sign": "E",
+                "share_mean": 0.15136843947514864,
+                "width_points": 1.9623159552763378,
+                "supported_primary": true,
+                "p_primary": 4.075398811761778e-06
+              }
+            ],
+            "target_average_share": 0.15136843947514864,
+            "width_points": 1.9623159552763378,
+            "path_local": [
+              [
+                514.5,
+                102.08141571295792
+              ],
+              [
+                470,
+                10
+              ],
+              [
+                645,
+                5
+              ],
+              [
+                627.9931857492809,
+                84.8033778559803
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "Inspiratory",
+            "target": "aug-E",
+            "sign": "I",
+            "members": [
+              {
+                "source": "Inspiratory",
+                "target": "aug-E",
+                "sign": "I",
+                "share_mean": 0.4566389125174309,
+                "width_points": 4.7097502126568775,
+                "supported_primary": true,
+                "p_primary": 6.496908240552449e-23
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "Inspiratory",
+                "target": "aug-E",
+                "sign": "I",
+                "share_mean": 0.4566389125174309,
+                "width_points": 4.7097502126568775,
+                "supported_primary": true,
+                "p_primary": 6.496908240552449e-23
+              }
+            ],
+            "target_average_share": 0.4566389125174309,
+            "width_points": 4.7097502126568775,
+            "path_local": [
+              [
+                423.7841150227904,
+                324.3809778082635
+              ],
+              [
+                471,
+                283
+              ],
+              [
+                533,
+                248
+              ],
+              [
+                547.9824785886408,
+                188.10365742772026
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          },
+          {
+            "source": "post-I",
+            "target": "aug-E",
+            "sign": "I",
+            "members": [
+              {
+                "source": "post-I",
+                "target": "aug-E",
+                "sign": "I",
+                "share_mean": 0.22270640815930814,
+                "width_points": 2.6043576734337734,
+                "supported_primary": true,
+                "p_primary": 3.9328237596589626e-07
+              }
+            ],
+            "magnitude_members": [
+              {
+                "source": "post-I",
+                "target": "aug-E",
+                "sign": "I",
+                "share_mean": 0.22270640815930814,
+                "width_points": 2.6043576734337734,
+                "supported_primary": true,
+                "p_primary": 3.9328237596589626e-07
+              }
+            ],
+            "target_average_share": 0.22270640815930814,
+            "width_points": 2.6043576734337734,
+            "path_local": [
+              [
+                237.0,
+                122.0
+              ],
+              [
+                333,
+                145
+              ],
+              [
+                397,
+                155
+              ],
+              [
+                467.0,
+                130.0
+              ]
+            ],
+            "source_attachment": "sign_component",
+            "target_attachment": "unresolved_group_enclosure"
+          }
+        ]
+      },
+      "incoming": {
+        "origin": [
+          820,
+          617
+        ],
+        "edges": [
+          {
+            "source": "aug-E",
+            "target": "pre-I",
+            "sign": "E",
+            "share_mean": 0.08896677178895977,
+            "width_points": 1.400700946100638,
+            "supported_primary": true,
+            "p_primary": 4.09690094699977e-05,
+            "path_local": [
+              [
+                160,
+                188
+              ],
+              [
+                295,
+                188
+              ],
+              [
+                392,
+                323
+              ],
+              [
+                527.1855352407539,
+                308.6309791008162
+              ]
+            ],
+            "target_attachment": "recorded_phenotype"
+          },
+          {
+            "source": "post-I",
+            "target": "pre-I",
+            "sign": "I",
+            "share_mean": 0.4018434897696659,
+            "width_points": 4.216591407926993,
+            "supported_primary": true,
+            "p_primary": 3.759527350104535e-05,
+            "path_local": [
+              [
+                160,
+                323
+              ],
+              [
+                295,
+                323
+              ],
+              [
+                392,
+                323
+              ],
+              [
+                527.1855352407539,
+                337.3690208991838
+              ]
+            ],
+            "target_attachment": "recorded_phenotype"
+          },
+          {
+            "source": "post-I",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.44443562007645127,
+            "width_points": 4.599920580688061,
+            "supported_primary": true,
+            "p_primary": 1.6027166690436348e-16,
+            "path_local": [
+              [
+                160,
+                323
+              ],
+              [
+                295,
+                323
+              ],
+              [
+                392,
+                188
+              ],
+              [
+                527.1855352407539,
+                202.3690208991838
+              ]
+            ],
+            "target_attachment": "recorded_phenotype"
+          },
+          {
+            "source": "aug-E",
+            "target": "ramp-I",
+            "sign": "I",
+            "share_mean": 0.10177859371394149,
+            "width_points": 1.5160073434254735,
+            "supported_primary": true,
+            "p_primary": 4.436473013181754e-07,
+            "path_local": [
+              [
+                160,
+                53
+              ],
+              [
+                295,
+                53
+              ],
+              [
+                392,
+                188
+              ],
+              [
+                527.1855352407539,
+                173.63097910081623
+              ]
+            ],
+            "target_attachment": "recorded_phenotype"
+          },
+          {
+            "source": "post-I",
+            "target": "early-I",
+            "sign": "I",
+            "share_mean": 0.4395855853513686,
+            "width_points": 4.556270268162317,
+            "supported_primary": true,
+            "p_primary": 0.0068024614781709404,
+            "path_local": [
+              [
+                160,
+                323
+              ],
+              [
+                295,
+                323
+              ],
+              [
+                392,
+                53
+              ],
+              [
+                524.0,
+                53.00000000000001
+              ]
+            ],
+            "target_attachment": "recorded_phenotype"
+          }
+        ]
+      },
+      "outgoing_motifs": [
+        {
+          "target": "post-I",
+          "sign": "E",
+          "n_cells": 54,
+          "minimal_unexcluded_masks": [
+            1,
+            2
+          ],
+          "individually_required": [],
+          "alternatives": [
+            {
+              "mask": 1,
+              "sources": [
+                "pre-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "post-I",
+                  "path": [
+                    [
+                      160.0,
+                      419
+                    ],
+                    [
+                      174.0,
+                      419
+                    ],
+                    [
+                      197.5,
+                      419.0
+                    ],
+                    [
+                      211.5,
+                      419.0
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 2,
+              "sources": [
+                "ramp-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "post-I",
+                  "path": [
+                    [
+                      331.0,
+                      419
+                    ],
+                    [
+                      345.0,
+                      419
+                    ],
+                    [
+                      368.5,
+                      419.0
+                    ],
+                    [
+                      382.5,
+                      419.0
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "post-I",
+          "sign": "I",
+          "n_cells": 54,
+          "minimal_unexcluded_masks": [
+            5,
+            6
+          ],
+          "individually_required": [
+            "early-I"
+          ],
+          "alternatives": [
+            {
+              "mask": 5,
+              "sources": [
+                "pre-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "post-I",
+                  "path": [
+                    [
+                      507.0,
+                      446
+                    ],
+                    [
+                      521.0,
+                      446
+                    ],
+                    [
+                      547.9163522034968,
+                      431.75
+                    ],
+                    [
+                      561.9163522034968,
+                      431.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "post-I",
+                  "path": [
+                    [
+                      507.0,
+                      392
+                    ],
+                    [
+                      521.0,
+                      392
+                    ],
+                    [
+                      547.9163522034968,
+                      406.25
+                    ],
+                    [
+                      561.9163522034968,
+                      406.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 6,
+              "sources": [
+                "ramp-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "post-I",
+                  "path": [
+                    [
+                      678.0,
+                      446
+                    ],
+                    [
+                      692.0,
+                      446
+                    ],
+                    [
+                      718.9163522034968,
+                      431.75
+                    ],
+                    [
+                      732.9163522034968,
+                      431.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "post-I",
+                  "path": [
+                    [
+                      678.0,
+                      392
+                    ],
+                    [
+                      692.0,
+                      392
+                    ],
+                    [
+                      718.9163522034968,
+                      406.25
+                    ],
+                    [
+                      732.9163522034968,
+                      406.25
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "aug-E",
+          "sign": "E",
+          "n_cells": 30,
+          "minimal_unexcluded_masks": [
+            1,
+            4
+          ],
+          "individually_required": [],
+          "alternatives": [
+            {
+              "mask": 1,
+              "sources": [
+                "pre-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "aug-E",
+                  "path": [
+                    [
+                      160.0,
+                      277
+                    ],
+                    [
+                      174.0,
+                      277
+                    ],
+                    [
+                      197.5,
+                      277.0
+                    ],
+                    [
+                      211.5,
+                      277.0
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 4,
+              "sources": [
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "early-I",
+                  "target": "aug-E",
+                  "path": [
+                    [
+                      331.0,
+                      277
+                    ],
+                    [
+                      345.0,
+                      277
+                    ],
+                    [
+                      368.5,
+                      277.0
+                    ],
+                    [
+                      382.5,
+                      277.0
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "aug-E",
+          "sign": "I",
+          "n_cells": 30,
+          "minimal_unexcluded_masks": [
+            5,
+            6
+          ],
+          "individually_required": [
+            "early-I"
+          ],
+          "alternatives": [
+            {
+              "mask": 5,
+              "sources": [
+                "pre-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "aug-E",
+                  "path": [
+                    [
+                      507.0,
+                      304
+                    ],
+                    [
+                      521.0,
+                      304
+                    ],
+                    [
+                      547.9163522034968,
+                      289.75
+                    ],
+                    [
+                      561.9163522034968,
+                      289.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "aug-E",
+                  "path": [
+                    [
+                      507.0,
+                      250
+                    ],
+                    [
+                      521.0,
+                      250
+                    ],
+                    [
+                      547.9163522034968,
+                      264.25
+                    ],
+                    [
+                      561.9163522034968,
+                      264.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 6,
+              "sources": [
+                "ramp-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "aug-E",
+                  "path": [
+                    [
+                      678.0,
+                      304
+                    ],
+                    [
+                      692.0,
+                      304
+                    ],
+                    [
+                      718.9163522034968,
+                      289.75
+                    ],
+                    [
+                      732.9163522034968,
+                      289.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "aug-E",
+                  "path": [
+                    [
+                      678.0,
+                      250
+                    ],
+                    [
+                      692.0,
+                      250
+                    ],
+                    [
+                      718.9163522034968,
+                      264.25
+                    ],
+                    [
+                      732.9163522034968,
+                      264.25
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "internal_motifs": [
+        {
+          "target": "pre-I",
+          "sign": "E",
+          "n_cells": 17,
+          "minimal_unexcluded_masks": [
+            5,
+            6
+          ],
+          "individually_required": [
+            "early-I"
+          ],
+          "alternatives": [
+            {
+              "mask": 5,
+              "sources": [
+                "pre-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      940.0,
+                      446
+                    ],
+                    [
+                      954.0,
+                      446
+                    ],
+                    [
+                      980.9163522034968,
+                      431.75
+                    ],
+                    [
+                      994.9163522034968,
+                      431.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      940.0,
+                      392
+                    ],
+                    [
+                      954.0,
+                      392
+                    ],
+                    [
+                      980.9163522034968,
+                      406.25
+                    ],
+                    [
+                      994.9163522034968,
+                      406.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 6,
+              "sources": [
+                "ramp-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      1111.0,
+                      446
+                    ],
+                    [
+                      1125.0,
+                      446
+                    ],
+                    [
+                      1151.916352203497,
+                      431.75
+                    ],
+                    [
+                      1165.916352203497,
+                      431.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      1111.0,
+                      392
+                    ],
+                    [
+                      1125.0,
+                      392
+                    ],
+                    [
+                      1151.916352203497,
+                      406.25
+                    ],
+                    [
+                      1165.916352203497,
+                      406.25
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "pre-I",
+          "sign": "I",
+          "n_cells": 17,
+          "minimal_unexcluded_masks": [
+            1,
+            2,
+            4
+          ],
+          "individually_required": [],
+          "alternatives": [
+            {
+              "mask": 1,
+              "sources": [
+                "pre-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      1273.0,
+                      419
+                    ],
+                    [
+                      1287.0,
+                      419
+                    ],
+                    [
+                      1281.5,
+                      419.0
+                    ],
+                    [
+                      1295.5,
+                      419.0
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 2,
+              "sources": [
+                "ramp-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      1387.0,
+                      419
+                    ],
+                    [
+                      1401.0,
+                      419
+                    ],
+                    [
+                      1395.5,
+                      419.0
+                    ],
+                    [
+                      1409.5,
+                      419.0
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 4,
+              "sources": [
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "early-I",
+                  "target": "pre-I",
+                  "path": [
+                    [
+                      1501.0,
+                      419
+                    ],
+                    [
+                      1515.0,
+                      419
+                    ],
+                    [
+                      1509.5,
+                      419.0
+                    ],
+                    [
+                      1523.5,
+                      419.0
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "ramp-I",
+          "sign": "E",
+          "n_cells": 41,
+          "minimal_unexcluded_masks": [
+            3,
+            6
+          ],
+          "individually_required": [
+            "ramp-I"
+          ],
+          "alternatives": [
+            {
+              "mask": 3,
+              "sources": [
+                "pre-I",
+                "ramp-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "ramp-I",
+                  "path": [
+                    [
+                      940.0,
+                      335
+                    ],
+                    [
+                      954.0,
+                      335
+                    ],
+                    [
+                      980.9163522034968,
+                      320.75
+                    ],
+                    [
+                      994.9163522034968,
+                      320.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "ramp-I",
+                  "target": "ramp-I",
+                  "path": [
+                    [
+                      940.0,
+                      281
+                    ],
+                    [
+                      954.0,
+                      281
+                    ],
+                    [
+                      980.9163522034968,
+                      295.25
+                    ],
+                    [
+                      994.9163522034968,
+                      295.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 6,
+              "sources": [
+                "ramp-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "ramp-I",
+                  "path": [
+                    [
+                      1111.0,
+                      335
+                    ],
+                    [
+                      1125.0,
+                      335
+                    ],
+                    [
+                      1151.916352203497,
+                      320.75
+                    ],
+                    [
+                      1165.916352203497,
+                      320.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "ramp-I",
+                  "path": [
+                    [
+                      1111.0,
+                      281
+                    ],
+                    [
+                      1125.0,
+                      281
+                    ],
+                    [
+                      1151.916352203497,
+                      295.25
+                    ],
+                    [
+                      1165.916352203497,
+                      295.25
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "ramp-I",
+          "sign": "I",
+          "n_cells": 41,
+          "minimal_unexcluded_masks": [
+            4
+          ],
+          "individually_required": [
+            "early-I"
+          ],
+          "alternatives": [
+            {
+              "mask": 4,
+              "sources": [
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "early-I",
+                  "target": "ramp-I",
+                  "path": [
+                    [
+                      1350.13,
+                      308
+                    ],
+                    [
+                      1364.13,
+                      308
+                    ],
+                    [
+                      1434.37,
+                      308.0
+                    ],
+                    [
+                      1448.37,
+                      308.0
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "early-I",
+          "sign": "E",
+          "n_cells": 8,
+          "minimal_unexcluded_masks": [
+            1,
+            6
+          ],
+          "individually_required": [],
+          "alternatives": [
+            {
+              "mask": 1,
+              "sources": [
+                "pre-I"
+              ],
+              "paths": [
+                {
+                  "source": "pre-I",
+                  "target": "early-I",
+                  "path": [
+                    [
+                      940.0,
+                      197
+                    ],
+                    [
+                      954.0,
+                      197
+                    ],
+                    [
+                      977.5,
+                      197.0
+                    ],
+                    [
+                      991.5,
+                      197.0
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "mask": 6,
+              "sources": [
+                "ramp-I",
+                "early-I"
+              ],
+              "paths": [
+                {
+                  "source": "ramp-I",
+                  "target": "early-I",
+                  "path": [
+                    [
+                      1111.0,
+                      224
+                    ],
+                    [
+                      1125.0,
+                      224
+                    ],
+                    [
+                      1151.916352203497,
+                      209.75
+                    ],
+                    [
+                      1165.916352203497,
+                      209.75
+                    ]
+                  ]
+                },
+                {
+                  "source": "early-I",
+                  "target": "early-I",
+                  "path": [
+                    [
+                      1111.0,
+                      170
+                    ],
+                    [
+                      1125.0,
+                      170
+                    ],
+                    [
+                      1151.916352203497,
+                      184.25
+                    ],
+                    [
+                      1165.916352203497,
+                      184.25
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "early-I",
+          "sign": "I",
+          "n_cells": 8,
+          "minimal_unexcluded_masks": [
+            0
+          ],
+          "individually_required": [],
+          "alternatives": []
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "overview": "15 grouped display relations preserving all 20 supported target-specific relations; no new tests",
+    "six_nodes": "Three timing groups times two possible source signs, not six identified anatomical populations",
+    "source_sign_encoding": "Red for excitation, blue for inhibition; no standalone E/I node labels",
+    "receiving_endpoint": "Group boundary or neutral phenotype; transmitter identity remains unresolved",
+    "source_alternatives": "Inclusion-minimal unexcluded inspiratory sets, with both expiratory sources retained",
+    "overview_width": "0.6 + 9 * equal-phenotype mean of primary fitted area shares; all three inspiratory targets included regardless of support",
+    "incoming_width": "Original primary equal-cell mean share of total fitted phasic E+I area",
+    "motif_width": "Uniform source-set membership, not allocated strength",
+    "scope": "Fixed-zero saved evidence only; no adoption of a baseline policy or jointly validated circuit"
+  },
+  "display": {
+    "names": [
+      "pre-I",
+      "ramp-I",
+      "early-I",
+      "post-I",
+      "aug-E"
+    ],
+    "coarse": [
+      {
+        "source": "Inspiratory",
+        "target": "pre-I",
+        "sign": "E",
+        "share_mean": 0.3237048458119825,
+        "width_points": 3.5133436123078425,
+        "supported_primary": true,
+        "p_primary": 3.3681030432383696e-08
+      },
+      {
+        "source": "post-I",
+        "target": "pre-I",
+        "sign": "E",
+        "share_mean": 0.019750266965737607,
+        "width_points": 0.7777524026916385,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "aug-E",
+        "target": "pre-I",
+        "sign": "E",
+        "share_mean": 0.08896677178895977,
+        "width_points": 1.400700946100638,
+        "supported_primary": true,
+        "p_primary": 4.09690094699977e-05
+      },
+      {
+        "source": "Inspiratory",
+        "target": "pre-I",
+        "sign": "I",
+        "share_mean": 0.12997633976557943,
+        "width_points": 1.7697870578902148,
+        "supported_primary": true,
+        "p_primary": 0.022904298203337347
+      },
+      {
+        "source": "post-I",
+        "target": "pre-I",
+        "sign": "I",
+        "share_mean": 0.4018434897696659,
+        "width_points": 4.216591407926993,
+        "supported_primary": true,
+        "p_primary": 3.759527350104535e-05
+      },
+      {
+        "source": "aug-E",
+        "target": "pre-I",
+        "sign": "I",
+        "share_mean": 0.035758285898074726,
+        "width_points": 0.9218245730826725,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "Inspiratory",
+        "target": "ramp-I",
+        "sign": "E",
+        "share_mean": 0.2715279602326565,
+        "width_points": 3.0437516420939086,
+        "supported_primary": true,
+        "p_primary": 4.2083265533856584e-17
+      },
+      {
+        "source": "post-I",
+        "target": "ramp-I",
+        "sign": "E",
+        "share_mean": 0.023423163761401442,
+        "width_points": 0.8108084738526129,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "aug-E",
+        "target": "ramp-I",
+        "sign": "E",
+        "share_mean": 0.023147421576680198,
+        "width_points": 0.8083267941901218,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "Inspiratory",
+        "target": "ramp-I",
+        "sign": "I",
+        "share_mean": 0.13568724063886908,
+        "width_points": 1.8211851657498217,
+        "supported_primary": true,
+        "p_primary": 6.442350326842955e-07
+      },
+      {
+        "source": "post-I",
+        "target": "ramp-I",
+        "sign": "I",
+        "share_mean": 0.44443562007645127,
+        "width_points": 4.599920580688061,
+        "supported_primary": true,
+        "p_primary": 1.6027166690436348e-16
+      },
+      {
+        "source": "aug-E",
+        "target": "ramp-I",
+        "sign": "I",
+        "share_mean": 0.10177859371394149,
+        "width_points": 1.5160073434254735,
+        "supported_primary": true,
+        "p_primary": 4.436473013181754e-07
+      },
+      {
+        "source": "Inspiratory",
+        "target": "early-I",
+        "sign": "E",
+        "share_mean": 0.3120754583705575,
+        "width_points": 3.4086791253350177,
+        "supported_primary": true,
+        "p_primary": 0.007646852818442913
+      },
+      {
+        "source": "post-I",
+        "target": "early-I",
+        "sign": "E",
+        "share_mean": 0.011556295575533884,
+        "width_points": 0.704006660179805,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "aug-E",
+        "target": "early-I",
+        "sign": "E",
+        "share_mean": 0.04436332228623891,
+        "width_points": 0.9992699005761502,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "Inspiratory",
+        "target": "early-I",
+        "sign": "I",
+        "share_mean": 0.13442250168259404,
+        "width_points": 1.8098025151433461,
+        "supported_primary": false,
+        "p_primary": 0.4839839513924446
+      },
+      {
+        "source": "post-I",
+        "target": "early-I",
+        "sign": "I",
+        "share_mean": 0.4395855853513686,
+        "width_points": 4.556270268162317,
+        "supported_primary": true,
+        "p_primary": 0.0068024614781709404
+      },
+      {
+        "source": "aug-E",
+        "target": "early-I",
+        "sign": "I",
+        "share_mean": 0.05799683673370706,
+        "width_points": 1.1219715306033635,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "Inspiratory",
+        "target": "post-I",
+        "sign": "E",
+        "share_mean": 0.05497693950973041,
+        "width_points": 1.0947924555875737,
+        "supported_primary": true,
+        "p_primary": 4.13098594379493e-12
+      },
+      {
+        "source": "post-I",
+        "target": "post-I",
+        "sign": "E",
+        "share_mean": 0.1442239332187409,
+        "width_points": 1.8980153989686683,
+        "supported_primary": true,
+        "p_primary": 1.229115950743499e-06
+      },
+      {
+        "source": "aug-E",
+        "target": "post-I",
+        "sign": "E",
+        "share_mean": 0.010603982574563397,
+        "width_points": 0.6954358431710705,
+        "supported_primary": false,
+        "p_primary": 1.0
+      },
+      {
+        "source": "Inspiratory",
+        "target": "post-I",
+        "sign": "I",
+        "share_mean": 0.5128099808441944,
+        "width_points": 5.215289827597749,
+        "supported_primary": true,
+        "p_primary": 1.0229148132649413e-41
+      },
+      {
+        "source": "post-I",
+        "target": "post-I",
+        "sign": "I",
+        "share_mean": 0.11469807264072666,
+        "width_points": 1.63228265376654,
+        "supported_primary": true,
+        "p_primary": 3.1343482978698296e-05
+      },
+      {
+        "source": "aug-E",
+        "target": "post-I",
+        "sign": "I",
+        "share_mean": 0.1626870912120441,
+        "width_points": 2.064183820908397,
+        "supported_primary": true,
+        "p_primary": 4.258335595130249e-09
+      },
+      {
+        "source": "Inspiratory",
+        "target": "aug-E",
+        "sign": "E",
+        "share_mean": 0.04273777753792963,
+        "width_points": 0.9846399978413667,
+        "supported_primary": true,
+        "p_primary": 0.0006728003086558063
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "E",
+        "share_mean": 0.09128892456549048,
+        "width_points": 1.4216003210894144,
+        "supported_primary": true,
+        "p_primary": 0.005430418919145233
+      },
+      {
+        "source": "aug-E",
+        "target": "aug-E",
+        "sign": "E",
+        "share_mean": 0.15136843947514864,
+        "width_points": 1.9623159552763378,
+        "supported_primary": true,
+        "p_primary": 4.075398811761778e-06
+      },
+      {
+        "source": "Inspiratory",
+        "target": "aug-E",
+        "sign": "I",
+        "share_mean": 0.4566389125174309,
+        "width_points": 4.7097502126568775,
+        "supported_primary": true,
+        "p_primary": 6.496908240552449e-23
+      },
+      {
+        "source": "post-I",
+        "target": "aug-E",
+        "sign": "I",
+        "share_mean": 0.22270640815930814,
+        "width_points": 2.6043576734337734,
+        "supported_primary": true,
+        "p_primary": 3.9328237596589626e-07
+      },
+      {
+        "source": "aug-E",
+        "target": "aug-E",
+        "sign": "I",
+        "share_mean": 0.035259537744692246,
+        "width_points": 0.9173358397022302,
+        "supported_primary": false,
+        "p_primary": 1.0
+      }
+    ],
+    "fine": [
+      {
+        "target": "pre-I",
+        "sign": "E",
+        "n_cells": 17,
+        "minimal_unexcluded_masks": [
+          5,
+          6
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      },
+      {
+        "target": "pre-I",
+        "sign": "I",
+        "n_cells": 17,
+        "minimal_unexcluded_masks": [
+          1,
+          2,
+          4
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "ramp-I",
+        "sign": "E",
+        "n_cells": 41,
+        "minimal_unexcluded_masks": [
+          3,
+          6
+        ],
+        "individually_required": [
+          "ramp-I"
+        ]
+      },
+      {
+        "target": "ramp-I",
+        "sign": "I",
+        "n_cells": 41,
+        "minimal_unexcluded_masks": [
+          4
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      },
+      {
+        "target": "early-I",
+        "sign": "E",
+        "n_cells": 8,
+        "minimal_unexcluded_masks": [
+          1,
+          6
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "early-I",
+        "sign": "I",
+        "n_cells": 8,
+        "minimal_unexcluded_masks": [
+          0
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "post-I",
+        "sign": "E",
+        "n_cells": 54,
+        "minimal_unexcluded_masks": [
+          1,
+          2
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "post-I",
+        "sign": "I",
+        "n_cells": 54,
+        "minimal_unexcluded_masks": [
+          5,
+          6
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      },
+      {
+        "target": "aug-E",
+        "sign": "E",
+        "n_cells": 30,
+        "minimal_unexcluded_masks": [
+          1,
+          4
+        ],
+        "individually_required": []
+      },
+      {
+        "target": "aug-E",
+        "sign": "I",
+        "n_cells": 30,
+        "minimal_unexcluded_masks": [
+          5,
+          6
+        ],
+        "individually_required": [
+          "early-I"
+        ]
+      }
+    ],
+    "counts": {
+      "coarse_total": 30,
+      "fine_total": 10,
+      "supported_primary": 20,
+      "supported_excitation": 9,
+      "supported_inhibition": 11,
+      "not_established": 10
+    }
+  }
+}

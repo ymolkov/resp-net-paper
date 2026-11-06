@@ -1,0 +1,61 @@
+{
+  "release_templates.py": {
+    "compare_connectome_alternatives.py": {
+      "source_sha256": "b265ca40afafd680e9cba82b5c279df3f25725b9686bf7ac034c76d27c4d2cf2",
+      "definitions": [
+        "CorrectedBasis"
+      ],
+      "definitions_sha256": "8d3f3d7c72876baa96cee0d740f4c02e39e0821e29cf87ccf10294902563f810"
+    },
+    "analyze_source_allocation_consistency.py": {
+      "source_sha256": "d02aaf5ce909023a2d0968860f66a204e5596c6c54c0990f02e553d2cbe531fb",
+      "definitions": [
+        "holm"
+      ],
+      "definitions_sha256": "d8cbed1fb24d79a2fcea0842fbab037173a8a3611207e0117df3d3cf0626a213"
+    }
+  },
+  "release_coarse.py": {
+    "analyze_coarse_connection_contrasts.py": {
+      "source_sha256": "d775ad382ee2206de197010291b27b686786f6609675261e71fb21b0fd4d947a",
+      "definitions": [
+        "sha",
+        "save",
+        "csv_save",
+        "make_contrasts",
+        "one_sided_test",
+        "describe",
+        "collapse_cells",
+        "fit_record",
+        "summarize"
+      ],
+      "definitions_sha256": "c4cc49ccd29e2ac8e398c95ee29193354b59d0eff3e2feaffacf16e6117ffdf0"
+    }
+  },
+  "release_subsets.py": {
+    "analyze_inspiratory_subset_contrasts.py": {
+      "source_sha256": "03709e9aa761a283294a9da357350081ac24eb583decb07655437120b5a1ec38",
+      "definitions": [
+        "members",
+        "label",
+        "make_directions",
+        "closed_pvalues",
+        "minimal_masks",
+        "logical_summary",
+        "analyze_record",
+        "aggregate",
+        "summarize"
+      ],
+      "definitions_sha256": "cde25de248b215fc8ba51c03746816cf714a3b20e1ad0c3e4ab2a3a4a07024fa"
+    }
+  },
+  "release_cell_influence.py": {
+    "analyze_cell_influence_uncertainty.py": {
+      "source_sha256": "4117016cb0c42ebc065420dceb922abbd92f7d1f75b34d195b4774e64383e68b",
+      "definitions": [
+        "panel_tests"
+      ],
+      "definitions_sha256": "be99a041462110affdb45d4617848e6d610031f863566d8add44e7c0892f3f06"
+    }
+  }
+}

@@ -1,0 +1,1178 @@
+[
+  {
+    "source_path": "int0/29091001_a5550",
+    "parse": {
+      "bytes_used": 1495067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/29091001_a6750",
+    "parse": {
+      "bytes_used": 1625067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_b1774",
+    "parse": {
+      "bytes_used": 1072567,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_b2142",
+    "parse": {
+      "bytes_used": 2002067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_c647",
+    "parse": {
+      "bytes_used": 1969567,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_c1122",
+    "parse": {
+      "bytes_used": 1059567,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_c1412",
+    "parse": {
+      "bytes_used": 962067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_c1594",
+    "parse": {
+      "bytes_used": 884067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_c1806",
+    "parse": {
+      "bytes_used": 3796067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_d1198",
+    "parse": {
+      "bytes_used": 793067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/14101001_d1650",
+    "parse": {
+      "bytes_used": 1235067,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int0/15101001_a2703",
+    "parse": {
+      "bytes_used": 2385567,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int1/12011101_e856",
+    "parse": {
+      "bytes_used": 1625002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int1/12011101_d711",
+    "parse": {
+      "bytes_used": 1300002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int1/12011101_d1107",
+    "parse": {
+      "bytes_used": 520002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int1/13011101_b2846",
+    "parse": {
+      "bytes_used": 1625002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int1/19011101_c516",
+    "parse": {
+      "bytes_used": 2600002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int1/20011101_b4403",
+    "parse": {
+      "bytes_used": 975002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_a6213",
+    "parse": {
+      "bytes_used": 1755132,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_b592",
+    "parse": {
+      "bytes_used": 1495002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_c122",
+    "parse": {
+      "bytes_used": 2145132,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_c5092",
+    "parse": {
+      "bytes_used": 845002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_c5402",
+    "parse": {
+      "bytes_used": 975002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_d1223",
+    "parse": {
+      "bytes_used": 455002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/02021101_d1361",
+    "parse": {
+      "bytes_used": 1235002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/17021101_b2493",
+    "parse": {
+      "bytes_used": 975002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/17021101_b2830",
+    "parse": {
+      "bytes_used": 962132,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/17021101_c9",
+    "parse": {
+      "bytes_used": 877632,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/17021101_c1964",
+    "parse": {
+      "bytes_used": 325002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/17021101_c2058",
+    "parse": {
+      "bytes_used": 520002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int2/17021101_c2352",
+    "parse": {
+      "bytes_used": 325002,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int3/15031101_a898",
+    "parse": {
+      "bytes_used": 2146697,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int3/15031101_b1020",
+    "parse": {
+      "bytes_used": 1285216,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int3/15031101_b588",
+    "parse": {
+      "bytes_used": 1041207,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int3/15031101_c3974",
+    "parse": {
+      "bytes_used": 1612689,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int3/16031101_b1078",
+    "parse": {
+      "bytes_used": 2071123,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int4/120416-Post-I",
+    "parse": {
+      "bytes_used": 1677441,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int4/120420-Post-I",
+    "parse": {
+      "bytes_used": 2156427,
+      "quarantined_suffix_bytes": 46
+    }
+  },
+  {
+    "source_path": "int4/120424-Post-I-3",
+    "parse": {
+      "bytes_used": 2370180,
+      "quarantined_suffix_bytes": 46
+    }
+  },
+  {
+    "source_path": "int4/120426-Pre-I",
+    "parse": {
+      "bytes_used": 1164100,
+      "quarantined_suffix_bytes": 46
+    }
+  },
+  {
+    "source_path": "int4/120417-Post-I",
+    "parse": {
+      "bytes_used": 1403068,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int4/120424-Post-I-1",
+    "parse": {
+      "bytes_used": 1879248,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int4/120419-Pre-I",
+    "parse": {
+      "bytes_used": 1124570,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int4/120424-Post-I-2",
+    "parse": {
+      "bytes_used": 1076650,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int4/120426-Aug-E",
+    "parse": {
+      "bytes_used": 597861,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120424-Aug-E",
+    "parse": {
+      "bytes_used": 1829743,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120425-I",
+    "parse": {
+      "bytes_used": 1127717,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120425-Post-I",
+    "parse": {
+      "bytes_used": 1483620,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120426-I",
+    "parse": {
+      "bytes_used": 1143783,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120427-Aug-E",
+    "parse": {
+      "bytes_used": 191327,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120427-Post-I",
+    "parse": {
+      "bytes_used": 914291,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120430-I-Post-I",
+    "parse": {
+      "bytes_used": 392019,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120430-Post-I",
+    "parse": {
+      "bytes_used": 832153,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120430-Ramp-I",
+    "parse": {
+      "bytes_used": 584410,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120502-I",
+    "parse": {
+      "bytes_used": 514229,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120502-Post-I",
+    "parse": {
+      "bytes_used": 446587,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120504-I-Cont",
+    "parse": {
+      "bytes_used": 1877619,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120504-Post-I-1",
+    "parse": {
+      "bytes_used": 562550,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120504-Post-I-2",
+    "parse": {
+      "bytes_used": 798496,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120504-Pre-I",
+    "parse": {
+      "bytes_used": 688296,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120504-Pre-I-I",
+    "parse": {
+      "bytes_used": 1007541,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120514-Aug-E-cVRG",
+    "parse": {
+      "bytes_used": 287246,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120515-Post-I",
+    "parse": {
+      "bytes_used": 840376,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120515-Pre-I-2",
+    "parse": {
+      "bytes_used": 3814236,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120515-Ramp-Late-I",
+    "parse": {
+      "bytes_used": 1368175,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120516-I-Cont",
+    "parse": {
+      "bytes_used": 1893730,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120516-Post-I",
+    "parse": {
+      "bytes_used": 354505,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120517-Post-I-cVRG",
+    "parse": {
+      "bytes_used": 3282326,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120524-Aug-E-1",
+    "parse": {
+      "bytes_used": 661344,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120524-Aug-E-2",
+    "parse": {
+      "bytes_used": 1076382,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120524-I-Cont",
+    "parse": {
+      "bytes_used": 563095,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120524-Post-I",
+    "parse": {
+      "bytes_used": 604055,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120525-Aug-E-1",
+    "parse": {
+      "bytes_used": 832050,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120525-Aug-E-2",
+    "parse": {
+      "bytes_used": 1413758,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120525-Post-I-1",
+    "parse": {
+      "bytes_used": 180244,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int5/120525-Post-I-2",
+    "parse": {
+      "bytes_used": 652285,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-Post-I-161123",
+    "parse": {
+      "bytes_used": 1599793,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-Post-I-161118",
+    "parse": {
+      "bytes_used": 319563,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-Post-I-161228",
+    "parse": {
+      "bytes_used": 1386925,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-I-161123-1",
+    "parse": {
+      "bytes_used": 652441,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-I-161123-2",
+    "parse": {
+      "bytes_used": 626871,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-Post-I-161130",
+    "parse": {
+      "bytes_used": 905868,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-pre-I-161120",
+    "parse": {
+      "bytes_used": 340528,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-aug-E-170201-3",
+    "parse": {
+      "bytes_used": 1192814,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-aug-E-170202-1",
+    "parse": {
+      "bytes_used": 954405,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-post-I-170202-2",
+    "parse": {
+      "bytes_used": 576297,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-E-170127",
+    "parse": {
+      "bytes_used": 688217,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-E-170201-1",
+    "parse": {
+      "bytes_used": 1046719,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-I-170117",
+    "parse": {
+      "bytes_used": 403291,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-I-170118",
+    "parse": {
+      "bytes_used": 628896,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-post-I-170104",
+    "parse": {
+      "bytes_used": 997668,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-post-I-170201-2",
+    "parse": {
+      "bytes_used": 1086471,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-post-I-170202-3",
+    "parse": {
+      "bytes_used": 784768,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/BC-aug-E-170210-1",
+    "parse": {
+      "bytes_used": 417594,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-I-170207",
+    "parse": {
+      "bytes_used": 869989,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-I-170214",
+    "parse": {
+      "bytes_used": 1268191,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-post-I-170210-3",
+    "parse": {
+      "bytes_used": 839210,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-post-I-170213-1",
+    "parse": {
+      "bytes_used": 1069681,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/pBC-post-I-170213-2",
+    "parse": {
+      "bytes_used": 869245,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/rVRG-aug-E-170210-4",
+    "parse": {
+      "bytes_used": 878805,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int6/rVRG-post-I-170203-3",
+    "parse": {
+      "bytes_used": 726951,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-aug-E-170410-2-CC",
+    "parse": {
+      "bytes_used": 466112,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-aug-E-170410-2-VC",
+    "parse": {
+      "bytes_used": 593511,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-aug-E-170412-2-CC",
+    "parse": {
+      "bytes_used": 518343,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-aug-E-170412-2-VC",
+    "parse": {
+      "bytes_used": 619909,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-E-170331-2-CC",
+    "parse": {
+      "bytes_used": 668336,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-E-170331-2-VC",
+    "parse": {
+      "bytes_used": 817728,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-I-170328-4-CC",
+    "parse": {
+      "bytes_used": 517871,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-I-170328-4-VC",
+    "parse": {
+      "bytes_used": 1038487,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-I-170412-1-CC",
+    "parse": {
+      "bytes_used": 566164,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-I-170412-1-VC",
+    "parse": {
+      "bytes_used": 538953,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-I-170413-1-CC",
+    "parse": {
+      "bytes_used": 868081,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-I-170413-1-VC",
+    "parse": {
+      "bytes_used": 433167,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170328-3-CC",
+    "parse": {
+      "bytes_used": 407177,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170410-1-CC",
+    "parse": {
+      "bytes_used": 581568,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170410-1-VC",
+    "parse": {
+      "bytes_used": 450406,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170411-1-CC",
+    "parse": {
+      "bytes_used": 505693,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170411-1-VC",
+    "parse": {
+      "bytes_used": 628653,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170413-2-CC",
+    "parse": {
+      "bytes_used": 573468,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int7/pBC-post-I-170413-2-VC",
+    "parse": {
+      "bytes_used": 543674,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-aug-E-170424-5-CC",
+    "parse": {
+      "bytes_used": 455229,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-aug-E-170424-5-VC",
+    "parse": {
+      "bytes_used": 333390,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-early-I-170425-CC",
+    "parse": {
+      "bytes_used": 539222,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-early-I-170425-VC",
+    "parse": {
+      "bytes_used": 682031,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-I-170417-4-CC",
+    "parse": {
+      "bytes_used": 658143,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-I-170417-4-VC",
+    "parse": {
+      "bytes_used": 579677,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-I-170420-2-CC",
+    "parse": {
+      "bytes_used": 455344,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-I-170420-2-VC",
+    "parse": {
+      "bytes_used": 462450,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-I-170424-2-CC",
+    "parse": {
+      "bytes_used": 747113,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-I-170424-2-VC",
+    "parse": {
+      "bytes_used": 496903,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-post-I-170417-1-CC",
+    "parse": {
+      "bytes_used": 986492,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-post-I-170417-1-VC",
+    "parse": {
+      "bytes_used": 947469,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-ramp-I-170417-2-CC",
+    "parse": {
+      "bytes_used": 674066,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-ramp-I-170417-2-VC",
+    "parse": {
+      "bytes_used": 822627,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-ramp-I-170420-1-CC",
+    "parse": {
+      "bytes_used": 634165,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/pBC-ramp-I-170420-1-VC",
+    "parse": {
+      "bytes_used": 724622,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/rVRG-aug-I-170424-3-CC",
+    "parse": {
+      "bytes_used": 282001,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int8/rVRG-aug-I-170424-3-VC",
+    "parse": {
+      "bytes_used": 355624,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/BC-aug-E-170323",
+    "parse": {
+      "bytes_used": 1027795,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-aug-E-170327",
+    "parse": {
+      "bytes_used": 396094,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-E-170328-1",
+    "parse": {
+      "bytes_used": 1032528,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-early-I-170324",
+    "parse": {
+      "bytes_used": 742822,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-I-170328-2",
+    "parse": {
+      "bytes_used": 729699,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-I-170331-1",
+    "parse": {
+      "bytes_used": 981392,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-post-I-170320",
+    "parse": {
+      "bytes_used": 662022,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-post-I-170321-1",
+    "parse": {
+      "bytes_used": 959994,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-post-I-170321-3",
+    "parse": {
+      "bytes_used": 510876,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-post-I-170330-1",
+    "parse": {
+      "bytes_used": 596590,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-post-I-170330-2",
+    "parse": {
+      "bytes_used": 669611,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int9/pBC-post-I-170330-3",
+    "parse": {
+      "bytes_used": 534589,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/BC-aug-E-170403-1",
+    "parse": {
+      "bytes_used": 327523,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-aug-E-170411-2",
+    "parse": {
+      "bytes_used": 499974,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-early-I-170407-1",
+    "parse": {
+      "bytes_used": 687806,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170403-2",
+    "parse": {
+      "bytes_used": 541086,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170406-2",
+    "parse": {
+      "bytes_used": 400404,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170407-2",
+    "parse": {
+      "bytes_used": 488307,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170410-3",
+    "parse": {
+      "bytes_used": 301371,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170410-4",
+    "parse": {
+      "bytes_used": 654476,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170412-3",
+    "parse": {
+      "bytes_used": 471281,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170414-1",
+    "parse": {
+      "bytes_used": 1004915,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170414-2",
+    "parse": {
+      "bytes_used": 1029060,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170417-3",
+    "parse": {
+      "bytes_used": 618189,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-I-170424-1",
+    "parse": {
+      "bytes_used": 587833,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-post-I-170403-3",
+    "parse": {
+      "bytes_used": 535548,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-post-I-170413-4",
+    "parse": {
+      "bytes_used": 704092,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-pre-I-170413-3",
+    "parse": {
+      "bytes_used": 1425065,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/pBC-ramp-I-170417-5",
+    "parse": {
+      "bytes_used": 552889,
+      "quarantined_suffix_bytes": 0
+    }
+  },
+  {
+    "source_path": "int10/rVRG-aug-I-170424-4",
+    "parse": {
+      "bytes_used": 392723,
+      "quarantined_suffix_bytes": 0
+    }
+  }
+]
