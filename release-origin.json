@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "28d5cebfadc745547e481703b08cc7cea8b245e2",
+  "source_commit": "b188be65f1c34cc11077c1a4af79f26e46d0e302",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1211,7 +1211,7 @@
     },
     "README.md": {
       "source_path": "release/paper/templates/README.md",
-      "source_sha256": "c4c4fd8ab045dadd5e6add0f67b5d0514ac0b2da470c11a3a75d999bf04da7d5",
+      "source_sha256": "a5db8f75558a1a06667e806ba0c1301606955952a46b5205e7a8687198645e87",
       "transformation": "byte-identical copy"
     },
     "THIRD_PARTY_NOTICES.md": {
@@ -1221,7 +1221,7 @@
     },
     "apps/connectome-explorer/README.md": {
       "source_path": "release/paper/templates/apps/connectome-explorer/README.md",
-      "source_sha256": "b48cb8199d5c76cc2f80aff0cbf8ab1b83aa08822aeab584ae00f6cd1deafb16",
+      "source_sha256": "c29428db53d14910f72f2eff8c724042e5d0a0461860620765fb74d590c7238a",
       "transformation": "byte-identical copy"
     },
     "companion/companion.css": {
@@ -1231,7 +1231,7 @@
     },
     "companion/index.html": {
       "source_path": "release/paper/templates/companion/index.html",
-      "source_sha256": "2f8f6d891e4864e13b392a1bc112b76aad1cafc9d383901bb1ccd74fc309077a",
+      "source_sha256": "f4167ea066593dab08c61163e89d563ec6384625a385c027b74b25e18823715f",
       "transformation": "byte-identical copy"
     },
     "docs/data_dictionary.md": {
@@ -1251,7 +1251,7 @@
     },
     "docs/reproduction.md": {
       "source_path": "release/paper/templates/docs/reproduction.md",
-      "source_sha256": "b139dfdfc1c440bf721746e8967486e5cb61d1a9a38f2eac87bf2dc3943d92d7",
+      "source_sha256": "d33b835028d6043da5fc6bc9ef0043cfc9b77821bf9be9ea4f57544b1d8e32bc",
       "transformation": "byte-identical copy"
     },
     "docs/verification.md": {
@@ -1271,7 +1271,7 @@
     },
     "scripts/build_paper_companion.py": {
       "source_path": "release/paper/templates/scripts/build_paper_companion.py",
-      "source_sha256": "9b45d4e0e56e5e632fd1e9ca3a22b2ee844e91ff2492e51ad142f348d150e2ec",
+      "source_sha256": "8e9d7b97796063eb55f139bb9e407a94253b1c12f76fba6fe5f25d7ee20f726a",
       "transformation": "byte-identical copy"
     },
     "scripts/connectome_graph_utils.py": {
@@ -1326,7 +1326,7 @@
     },
     "scripts/test_paper_companion.py": {
       "source_path": "release/paper/templates/scripts/test_paper_companion.py",
-      "source_sha256": "8388711ae9aec375c2ea1a787056902c2b519e0f277761270cbd5faa6c438c64",
+      "source_sha256": "5046a1cf464248aba7d6679a250bc2f13ad36f30a6d9f542c597afe1c43a92b0",
       "transformation": "byte-identical copy"
     },
     "scripts/verify_release.py": {

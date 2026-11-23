@@ -120,18 +120,16 @@ python scripts/build_paper_companion.py ../preview/resp-net-paper --preview-pdf 
 Open the resulting `index.html` directly. Do not upload this preview.
 For a public companion **before the preprint is posted**, use a fresh output
 directory and `--preprint-pending` instead of `--preview-pdf`. This includes
-the overview, methods figures and explorer but omits the manuscript,
-supporting workbook and repository links. To publish on GitHub Pages once
-the preprint has a public URL, copy the inactive
-[workflow template](pages-workflow.yml.example) to `.github/workflows/pages.yml`
-using an account authorized to manage workflows, configure Pages to use GitHub
-Actions, and run **Publish paper companion** from the Actions tab with the
-paper's public bioRxiv or DOI URL. It builds a fresh artifact without a
-manuscript PDF. Verify the home page, paper link, explorer and workbook while
-signed out. Its trigger is manual; a normal push does not publish the site.
-Preserve the vendor notices when redistributing the
-standalone HTML. The existing hosted atlas is managed separately; this
-repository does not contain its service credentials or deployment identity.
+the overview, explorer, supporting workbook and repository links, but no
+manuscript PDF or paper link. Once the article is public, build into a fresh
+directory with `--paper-url` and the public bioRxiv or DOI URL instead.
+
+The [live companion](https://ymolkov.github.io/resp-net-paper/) is served from
+the root of the `gh-pages` branch of this repository. Publish only the generated
+public build to that branch, retaining its empty `.nojekyll` file and the vendor
+licences. A push to `main` alone does not deploy. Verify the homepage, explorer,
+workbook and (once available) paper link signed out. Do not publish a private
+preview or enable a second deployment workflow.
 
 ## Interpretation and citation
 

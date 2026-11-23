@@ -12,8 +12,9 @@ are sensitivity checks of the same recordings.
 
 ## Start here
 
-Open the [paper companion](https://resp-net-connectome.yaroslav-molkov.chatgpt.site/)
-to explore the reconstructed circuit and inspect the individual cell profiles.
+Open the [paper companion](https://ymolkov.github.io/resp-net-paper/) for the
+study overview, or go directly to the [interactive circuit atlas](https://ymolkov.github.io/resp-net-paper/explorer/)
+to inspect connections and individual cell profiles.
 
 - Open [the interactive atlas](apps/connectome-explorer/index.html) in a browser
   after downloading or cloning the repository. It also works offline.

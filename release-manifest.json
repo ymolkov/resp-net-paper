@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3451,
-      "sha256": "c4c4fd8ab045dadd5e6add0f67b5d0514ac0b2da470c11a3a75d999bf04da7d5"
+      "bytes": 3535,
+      "sha256": "a5db8f75558a1a06667e806ba0c1301606955952a46b5205e7a8687198645e87"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "apps/connectome-explorer/README.md",
-      "bytes": 5903,
-      "sha256": "b48cb8199d5c76cc2f80aff0cbf8ab1b83aa08822aeab584ae00f6cd1deafb16"
+      "bytes": 5646,
+      "sha256": "c29428db53d14910f72f2eff8c724042e5d0a0461860620765fb74d590c7238a"
     },
     {
       "path": "apps/connectome-explorer/app.js",
@@ -180,8 +180,8 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 5995,
-      "sha256": "2f8f6d891e4864e13b392a1bc112b76aad1cafc9d383901bb1ccd74fc309077a"
+      "bytes": 5948,
+      "sha256": "f4167ea066593dab08c61163e89d563ec6384625a385c027b74b25e18823715f"
     },
     {
       "path": "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json",
@@ -1150,8 +1150,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 6276,
-      "sha256": "b139dfdfc1c440bf721746e8967486e5cb61d1a9a38f2eac87bf2dc3943d92d7"
+      "bytes": 6095,
+      "sha256": "d33b835028d6043da5fc6bc9ef0043cfc9b77821bf9be9ea4f57544b1d8e32bc"
     },
     {
       "path": "docs/verification.md",
@@ -1246,7 +1246,7 @@
     {
       "path": "release-origin.json",
       "bytes": 76020,
-      "sha256": "b86d5a6f68088619086c771c6afb3e3002e47a2788004b0638b023c5cd5c5ee8"
+      "sha256": "c30b6a6683e838761231b579beafb9127ec1bce8b7ac02885f4dc9fc7f6418ab"
     },
     {
       "path": "requirements.txt",
@@ -1265,8 +1265,8 @@
     },
     {
       "path": "scripts/build_paper_companion.py",
-      "bytes": 6984,
-      "sha256": "9b45d4e0e56e5e632fd1e9ca3a22b2ee844e91ff2492e51ad142f348d150e2ec"
+      "bytes": 6995,
+      "sha256": "8e9d7b97796063eb55f139bb9e407a94253b1c12f76fba6fe5f25d7ee20f726a"
     },
     {
       "path": "scripts/connectome_graph_utils.py",
@@ -1345,8 +1345,8 @@
     },
     {
       "path": "scripts/test_paper_companion.py",
-      "bytes": 5182,
-      "sha256": "8388711ae9aec375c2ea1a787056902c2b519e0f277761270cbd5faa6c438c64"
+      "bytes": 5509,
+      "sha256": "5046a1cf464248aba7d6679a250bc2f13ad36f30a6d9f542c597afe1c43a92b0"
     },
     {
       "path": "scripts/verify_release.py",

@@ -72,14 +72,19 @@ class Companion(unittest.TestCase):
                         self.assertGreater(pixels.shape[0], 300)
                         self.assertGreater(pixels[..., :3].std(), .03)
 
-    def test_preprint_pending_shares_only_the_companion(self):
+    def test_preprint_pending_shares_public_data_but_no_manuscript(self):
         with tempfile.TemporaryDirectory() as tmp:
             site = Path(tmp) / "site"
             build(ROOT, site, preprint_pending=True)
             page = (site/"index.html").read_text()
-            for unavailable in ("github.com/", "overleaf.com", "downloads/", "{{", "Read the paper"):
+            for unavailable in ("overleaf.com", "manuscript-preview", "{{", "Read the paper"):
                 self.assertNotIn(unavailable, page)
-            self.assertFalse(list(site.rglob("*.pdf")) or list(site.rglob("*.xlsx")))
+            self.assertFalse(list(site.rglob("*.pdf")))
+            links = Page(site/"index.html").links
+            self.assertIn("https://github.com/ymolkov/resp-net-paper", links)
+            workbook = "downloads/Supporting_Data_S1.xlsx"
+            self.assertIn(workbook, links)
+            self.assertEqual((site/workbook).read_bytes(), (ROOT/"paper/supporting/Supporting_Data_S1.xlsx").read_bytes())
             self.assertTrue((site/"explorer/index.html").is_file())
             self.assertIn("explorer/index.html", Page(site/"index.html").links)
             (site/"draft.pdf").touch()

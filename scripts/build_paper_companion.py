@@ -75,7 +75,7 @@ def build(root, dest, paper_url=None, preview_pdf=None, preprint_pending=False):
     if dest.resolve() == root.resolve() or root.resolve() in dest.resolve().parents:
         raise ValueError("Build the site outside the release checkout")
     copies = {src: dst for src, dst in COPIES.items()
-              if not (preprint_pending and src.startswith("paper/"))}
+              if not (preprint_pending and src.startswith("paper/figures/"))}
     allowed = set(copies.values()) | {"index.html", "explorer/index.html", "assets/conductance.png",
                                      "assets/figure-1.png", "assets/figure-4a.png"}
     if preview_pdf is not None:
@@ -109,7 +109,7 @@ def build(root, dest, paper_url=None, preview_pdf=None, preprint_pending=False):
     (dest/"explorer").mkdir(exist_ok=True)
     (dest/"explorer/index.html").write_text(atlas)
     page = (root/"companion/index.html").read_text()
-    page = re.sub(r"<!-- release-only -->(.*?)<!-- /release-only -->",
+    page = re.sub(r"<!-- paper-link -->(.*?)<!-- /paper-link -->",
                   lambda m: "" if preprint_pending else m[1], page, flags=re.S)
     page = page.replace("{{PAPER_URL}}", html.escape(paper_url or "", quote=True))
     page = page.replace("{{EXPLORER}}", "explorer/index.html" if preprint_pending or preview_pdf is not None else "explorer/")
@@ -124,6 +124,6 @@ if __name__ == "__main__":
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--paper-url", help="Published preprint or paper DOI URL")
     mode.add_argument("--preview-pdf", type=Path, help="For local review only; never deploy this output")
-    mode.add_argument("--preprint-pending", action="store_true", help="Public companion without manuscript, workbook or release links")
+    mode.add_argument("--preprint-pending", action="store_true", help="Public data, workbook and atlas, without a manuscript or article link")
     args = parser.parse_args()
     build(ROOT, args.output, args.paper_url, args.preview_pdf, args.preprint_pending)
