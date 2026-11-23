@@ -175,13 +175,13 @@
     },
     {
       "path": "companion/companion.css",
-      "bytes": 5263,
-      "sha256": "c6ddbb55610a16d14f5a311f0523da105a34556bc35397cf1ca217a85b92f2d0"
+      "bytes": 6305,
+      "sha256": "1e94d3580f5fd20b288aefceca785dc9344ba8f773aa5ac4afbc39c82dab612f"
     },
     {
       "path": "companion/index.html",
-      "bytes": 5311,
-      "sha256": "d0bf8dbd60ad828b00222d0fee223d323a7717110bab8fa1c9644da1f749ee26"
+      "bytes": 6093,
+      "sha256": "dc4cfc355f61563dca53147ddb6e5da2dac0caa7c7bdc0ffdb1867de3020dd4f"
     },
     {
       "path": "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json",
@@ -1150,8 +1150,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 5999,
-      "sha256": "ec4e1d51efd1c24567ffb98b90d6e878d5e34655f7a011d31f346697156aa1eb"
+      "bytes": 6084,
+      "sha256": "d4a421f6c263616de13a01a465e63213fac229e77374ef38d9daf67b3f96179c"
     },
     {
       "path": "docs/verification.md",
@@ -1246,7 +1246,7 @@
     {
       "path": "release-origin.json",
       "bytes": 76020,
-      "sha256": "cd6dcd449eb39427deeb49964bb2dae81c31a20e9ec8d2cd94074c75a0312609"
+      "sha256": "a27c27443379ef2aad24533cdf417540140a839bcb34fdcf6f3bcbc7e62081bf"
     },
     {
       "path": "requirements.txt",
@@ -1265,8 +1265,8 @@
     },
     {
       "path": "scripts/build_paper_companion.py",
-      "bytes": 5779,
-      "sha256": "134e518f36d88350b6be667bf87e44618dc687482ccceece0ddd93174f632764"
+      "bytes": 6318,
+      "sha256": "38f2885fa594ca9ac3ce8cf2ab7c4e83db2352c2071db9ae298e76f70c5d4e96"
     },
     {
       "path": "scripts/connectome_graph_utils.py",
@@ -1345,8 +1345,8 @@
     },
     {
       "path": "scripts/test_paper_companion.py",
-      "bytes": 4109,
-      "sha256": "c7b1805df12754681eec0598f409e9dd02743990e574a9d85dd35eb19cf5f544"
+      "bytes": 4369,
+      "sha256": "02334b41cc0bcd3bb30e4230aa4ca56d175e429fb9392cf6d9ac9a0bd1faaf73"
     },
     {
       "path": "scripts/verify_release.py",

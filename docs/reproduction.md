@@ -102,8 +102,9 @@ The site source, builder, browser regression script, and licenses are included.
 
 ### Paper companion and GitHub Pages
 
-The companion home page includes the study, Figure 1 and Supporting Data S1.
-The atlas is under `explorer/`. The header plot shows the mean of the two
+The companion opens with the inferred circuit from Figure 4A, cropped from the
+packaged Figure 4 PDF without redrawing connections. The atlas is under
+`explorer/`. The methods section includes Figure 1 and a plot of the mean of the two
 normalized conductance profiles of the 17 pre-I/I cells in the primary analysis
 (the same profiles used for Figure 2). No inference is run during site assembly.
 

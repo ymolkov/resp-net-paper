@@ -61,11 +61,13 @@ class Companion(unittest.TestCase):
                         with self.assertRaisesRegex(ValueError, "Unexpected file"):
                             build(ROOT, site, paper_url=url)
                     else:
-                        self.assertEqual(list(site.rglob("*.pdf")), [site/"assets/figure-1.pdf"])
+                        self.assertEqual(set(site.rglob("*.pdf")), {site/"assets/figure-1.pdf", site/"assets/figure-4.pdf"})
                     for src, dest in (("paper/figures/inference_overview.pdf", "assets/figure-1.pdf"),
+                                      ("paper/figures/expanded_circuit.pdf", "assets/figure-4.pdf"),
                                       ("paper/supporting/Supporting_Data_S1.xlsx", "downloads/Supporting_Data_S1.xlsx")):
                         self.assertEqual((ROOT/src).read_bytes(), (site/dest).read_bytes())
-                    for name in ("figure-1", "conductance"):
+                    self.assertLess(page.links.index("assets/figure-4a.png"), page.links.index("assets/figure-1.png"))
+                    for name in ("figure-1", "figure-4a", "conductance"):
                         pixels = image.imread(site/f"assets/{name}.png")
                         self.assertGreater(pixels.shape[0], 300)
                         self.assertGreater(pixels[..., :3].std(), .03)

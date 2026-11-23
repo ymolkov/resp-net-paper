@@ -19,22 +19,33 @@
         <p class="eyebrow">Respiratory neurophysiology</p>
         <h1 id="title">From cellular synaptic input profiles to population-level respiratory circuitry</h1>
         <p class="authors">Yaroslav I. Molkov, Ilya A. Rybak, and Jeffrey C. Smith</p>
-        <div class="actions"><a class="primary" href="{{EXPLORER}}"><img src="assets/scan.svg" alt="">Explore the circuit</a>
-          <a class="read" href="{{PAPER_URL}}">Read the paper</a></div>
       </div>
-      <figure class="signal">
-        <figcaption>Synaptic inputs to pre-I/I neurons</figcaption>
-        <p>Mean normalized conductance across 17 cells</p>
-        <img class="plot" src="assets/conductance.png" width="880" height="440"
-          alt="Excitation rises toward inspiration, whereas inhibition is greatest shortly after inspiration ends and then declines.">
-        <div class="key"><span>Excitation</span><span>Inhibition</span></div>
+      <figure class="circuit">
+        <figcaption>Reconstructed population circuit</figcaption>
+        <img class="network" src="assets/figure-4a.png" width="1494" height="900"
+          alt="Figure 4A: an overview of inferred excitatory and inhibitory inputs among inspiratory, post-inspiratory and augmenting-expiratory populations.">
+        <div class="signs"><span><i class="exc" aria-hidden="true"></i>Excitation</span><span><i class="inh" aria-hidden="true"></i>Inhibition</span></div>
+        <p class="group-note">Thicker lines indicate larger mean fitted contributions. Insp. combines pre-I/I, ramp-I and early-I; an incoming line represents input to at least one of the three.</p>
+        <div class="actions"><a class="primary" href="{{EXPLORER}}"><img src="assets/scan.svg" alt="">Explore the circuit</a><a href="assets/figure-4.pdf">Full Figure 4 (PDF)</a></div>
       </figure>
+      <div class="takeaway"><p>The reconstruction supports excitation across respiratory phases in both directions: from inspiratory populations to both expiratory populations, and from augmenting-expiratory sources to pre-I/I neurons.</p>
+        <a class="read" href="{{PAPER_URL}}">Read the paper</a></div>
     </div></section>
 
     <section class="wrap approach" id="approach" aria-labelledby="approach-heading">
       <p class="eyebrow">The approach</p>
-      <h2 id="approach-heading">From individual cells to a population circuit</h2>
-      <p class="lead">Discharge patterns tell us when respiratory neurons fire. To ask which populations might supply their synaptic inputs, we compared the timing of excitation and inhibition in 150 cells with five independently recorded patterns of population activity.</p>
+      <h2 id="approach-heading">How did we infer these connections?</h2>
+      <div class="observations">
+        <div><p class="lead">Discharge patterns tell us when respiratory neurons fire. Synaptic conductances tell us when those neurons receive excitation and inhibition.</p>
+        <p>In pre-I/I neurons, for example, inhibition peaks near the start of expiration and then declines. To ask which populations could supply inputs with that timing, we compared conductance profiles from 150 cells with five independently recorded discharge patterns.</p></div>
+        <figure class="signal">
+          <figcaption>Synaptic inputs to pre-I/I neurons</figcaption>
+          <p>Mean normalized conductance across 17 cells</p>
+          <img class="plot" src="assets/conductance.png" width="880" height="440"
+            alt="Excitation rises toward inspiration, whereas inhibition is greatest shortly after inspiration ends and then declines.">
+          <div class="key"><span>Excitation</span><span>Inhibition</span></div>
+        </figure>
+      </div>
       <div class="plate">
         <figure class="schematic"><a href="assets/figure-1.pdf" aria-label="Open Figure 1 at full resolution (PDF)"><img src="assets/figure-1.png" width="1450" height="1040" alt="Schematic: cellular conductance profiles grouped by discharge pattern, fits with candidate sources omitted, and a circuit with distinguished and alternative connections."></a>
           <figcaption>Figure 1. Schematic of the inference procedure. <a href="assets/figure-1.pdf">Full-size figure (PDF)</a></figcaption>
@@ -46,11 +57,6 @@
         </div>
       </div>
     </section>
-    <section class="finding"><div class="wrap">
-      <p class="eyebrow">Circuit interpretation</p>
-      <h2>Excitation links populations active in different phases.</h2>
-      <p>Both expiratory populations received inspiratory excitation alongside inhibition. In pre-I/I neurons, excitation with an augmenting-expiratory pattern rose as post-inspiratory inhibition declined. These inputs could help recruit the next inspiration.</p>
-    </div></section>
     <section class="wrap resources" id="resources" aria-labelledby="resources-heading">
       <p class="eyebrow">Study materials</p><h2 id="resources-heading">Data and resources</h2>
       <dl>

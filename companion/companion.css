@@ -19,25 +19,39 @@ a:focus-visible { outline:3px solid #b95617; outline-offset:4px; }
 .mast nav { gap:1.6rem; font-size:.95rem; }
 .mast nav a { color:var(--ink); text-decoration:none; }
 .mast nav a:hover { text-decoration:underline; }
-.hero { background:#163c40; color:white; border-bottom:.35rem solid #a6cdb3; }
-.hero .wrap { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:5%; align-items:center; padding-block:3.4rem 3.65rem; }
+.hero { background:white; border-bottom:.25rem solid #a6cdb3; }
+.hero .wrap { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.06fr); grid-template-areas:"paper circuit" "takeaway circuit"; gap:1.3rem 6%; padding-block:2.75rem 2.9rem; }
+.paper { grid-area:paper; align-self:end; }
+.takeaway { grid-area:takeaway; align-self:start; max-width:36rem; }
+.takeaway p { font:1.17rem/1.5 Georgia,serif; }
+.read { display:inline-block; margin-top:1.15rem; font-weight:650; }
+.circuit { grid-area:circuit; align-self:center; text-align:center; }
+.circuit figcaption { font:normal 1.65rem/1.25 Georgia,serif; }
+.network { display:block; width:100%; max-width:33rem; height:auto; margin:.4rem auto; }
+.signs,.signs span { display:flex; justify-content:center; align-items:center; gap:.55rem; }
+.signs { gap:1.5rem; font-size:.9rem; }
+.signs i { position:relative; width:1.45rem; height:2px; background:currentColor; color:#b83e3d; }
+.signs .inh { color:#287ba5; }
+.signs i::after { content:""; position:absolute; right:-2px; top:50%; transform:translateY(-50%); }
+.exc::after { border-block:4px solid transparent; border-left:7px solid currentColor; }
+.inh::after { background:currentColor; border-radius:100%; width:7px; height:7px; }
+.group-note { max-width:31rem; margin:.5rem auto 0; font-size:.88rem; color:#43585a; }
 .eyebrow { font-size:.85rem; font-weight:700; color:var(--green); margin-bottom:.65rem; }
-.hero .eyebrow { color:#c5e2d3; }
-.authors { color:#e2eae6; margin-top:1.15rem; }
-.actions { flex-wrap:wrap; gap:1rem 1.6rem; margin-top:1.6rem; }
+.authors { color:#415659; margin-top:1.15rem; }
+.actions { justify-content:center; flex-wrap:wrap; gap:.7rem 1.2rem; margin-top:1.1rem; }
 .primary { display:inline-flex; align-items:center; gap:.6rem; padding:.68rem 1rem; background:#d1eda2; color:#19332f; text-decoration:none; font-weight:650; border-radius:4px; }
 .primary:hover { background:#e1f6bf; }
 .primary img { width:1.15rem; height:1.15rem; }
-.read,.hero a:focus-visible { color:white; }
-.hero a:focus-visible { outline-color:#ffcf90; }
-.hero .primary:focus-visible { color:#19332f; }
-.signal { align-self:end; padding:1rem 0 .4rem; min-width:0; }
-.signal figcaption { color:white; font-weight:650; font-size:1rem; }
-.signal p { color:#bfd5d6; font-size:.88rem; }
+.observations { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); align-items:center; gap:7%; margin-top:1.35rem; }
+.observations .lead { margin:0 0 1rem; }
+.observations p:not(.lead) { color:#405457; }
+.signal { min-width:0; max-width:25rem; width:100%; }
+.signal figcaption { font-weight:650; font-size:1rem; }
+.signal p { font-size:.88rem; }
 .plot { display:block; width:100%; height:auto; margin:.4rem 0; }
-.key { gap:1.4rem; color:#e2ece8; font-size:.86rem; }
-.key span::before { content:''; display:inline-block; width:1.4rem; border-top:3px solid #ffab95; vertical-align:middle; margin-right:.4rem; }
-.key span+span::before { border-color:#89cdec; border-top-style:dashed; }
+.key { gap:1.4rem; font-size:.86rem; }
+.key span::before { content:''; display:inline-block; width:1.4rem; border-top:3px solid #b83e3d; vertical-align:middle; margin-right:.4rem; }
+.key span+span::before { border-color:#287ba5; border-top-style:dashed; }
 .approach,.resources { padding-block:3.35rem; }
 .lead { max-width:57rem; margin-top:.9rem; font:1.18rem/1.55 Georgia,serif; }
 .plate { margin-top:1.9rem; padding-top:1.35rem; border-top:1px solid var(--hair); display:grid; grid-template-columns:minmax(0,1.85fr) minmax(0,1fr); gap:4%; align-items:center; }
@@ -49,10 +63,7 @@ a:focus-visible { outline:3px solid #b95617; outline-offset:4px; }
 .guide b { color:var(--green); font-size:1.05rem; }
 h3 { font-size:1.05rem; line-height:1.55; }
 .guide p { grid-column:2; color:#405457; }
-.finding { border-block:1px solid var(--hair); background:#e9f2ed; }
-.finding .wrap { padding-block:2.35rem; }
-.finding h2 { max-width:52rem; font-size:2.05rem; }
-.finding p:last-child { margin-top:.85rem; max-width:53rem; }
+.resources { border-top:1px solid var(--hair); }
 .resources dl { margin:1.35rem 0 0; }
 .resources dl>div { border-top:1px solid var(--hair); padding:.95rem 0; display:grid; grid-template-columns: minmax(13rem,1fr) 2fr; gap:2rem; }
 dt a { font-weight:650; } dd { color:#445b5d; } small { font-size:.77rem; font-weight:650; }
@@ -61,10 +72,10 @@ footer .wrap { padding-block:1rem; min-height:3.8rem; gap:.5rem 1.5rem; flex-wra
 footer span { font:bold 1.15rem Georgia,serif; margin-right:auto; }
 @media (max-width: 62rem) { h1 { font-size:2.7rem; } .hero .wrap { gap:3%; } .plate { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); } }
 @media (max-width: 45rem) {
-  .hero .wrap { grid-template-columns:1fr; padding-block:1.8rem; }
-  h1 { font-size:2.15rem; } h2 { font-size:1.85rem; } .finding h2 { font-size:1.7rem; }
-  .signal { width:min(100%,21rem); margin-top:1.1rem; padding:0; }
-  .hero .wrap { row-gap:.2rem; } .authors { margin-top:.75rem; } .actions { margin-top:1.05rem; }
+  .hero .wrap { grid-template-columns:1fr; grid-template-areas:"paper" "circuit" "takeaway"; gap:1.35rem; padding-block:1.4rem; }
+  h1 { font-size:1.9rem; } h2 { font-size:1.85rem; } .circuit figcaption { font-size:1.35rem; }
+  .observations { grid-template-columns:1fr; gap:1rem; } .signal { width:min(100%,21rem); }
+  .authors { margin-top:.6rem; } .actions { margin-top:.7rem; } .takeaway p { font-size:1.06rem; }
   .approach,.resources { padding-block:2rem; } .lead { font-size:1.08rem; } .plate { grid-template-columns:1fr; gap:1.3rem; margin-top:1.2rem; }
   .guide { gap:.9rem; } .resources dl>div { grid-template-columns:1fr; gap:.25rem; }
 }

@@ -19,6 +19,7 @@ COPIES = {
     "companion/companion.css": "assets/companion.css",
     EXPLORER + "/vendor/lucide/scan.svg": "assets/scan.svg",
     "paper/figures/inference_overview.pdf": "assets/figure-1.pdf",
+    "paper/figures/expanded_circuit.pdf": "assets/figure-4.pdf",
     "paper/supporting/Supporting_Data_S1.xlsx": "downloads/Supporting_Data_S1.xlsx",
     **{p: p for p in ("LICENSE", "LICENSE-DATA.md", "THIRD_PARTY_NOTICES.md",
                        *(f"{EXPLORER}/vendor/{v}/LICENSE" for v in ("lucide", "d3")))},
@@ -37,20 +38,20 @@ def conductance_image(root, target):
     fig.patch.set_alpha(0)
     ax.patch.set_alpha(0)
     fig.subplots_adjust(left=.1, right=.965, bottom=.22, top=.82)
-    ax.axvspan(0, offset, color="#c1d9d4", alpha=.08)
-    ax.axvline(offset, color="#8fa9a7", lw=.8, linestyle=":")
+    ax.axvspan(0, offset, color="#c1d9d4", alpha=.22)
+    ax.axvline(offset, color="#658280", lw=.8, linestyle=":")
     for a, b, label in ((0, offset, "Inspiration"), (offset, 1, "Expiration")):
-        ax.text((a+b)/2, 1.08, label, transform=ax.transAxes, ha="center", size=10, color="#d7e8e4")
+        ax.text((a+b)/2, 1.08, label, transform=ax.transAxes, ha="center", size=10, color="#324e50")
     x = np.arange(100) / 100
-    ax.plot(x, mean[0], color="#ffab95", lw=2.1)
-    ax.plot(x, mean[1], color="#89cdec", lw=2.1, linestyle="--")
+    ax.plot(x, mean[0], color="#b83e3d", lw=2.1)
+    ax.plot(x, mean[1], color="#287ba5", lw=2.1, linestyle="--")
     ax.set(xlim=(0, 1), ylim=(0, 1), xticks=(0,.5,1), yticks=(0,.5,1))
     ax.set_xticklabels(("0", "Cycle phase", "1"))
     ax.set_yticklabels(("0", "0.5", "1"))
-    ax.grid(axis="y", color="#527575", linewidth=.55)
+    ax.grid(axis="y", color="#d1dfdc", linewidth=.55)
     for spine in ax.spines.values():
         spine.set_visible(False)
-    ax.tick_params(length=0, pad=4, labelsize=9, colors="#cedeDE")
+    ax.tick_params(length=0, pad=4, labelsize=9, colors="#40595b")
     fig.savefig(target, transparent=True)
     plt.close(fig)
 
@@ -74,7 +75,7 @@ def build(root, dest, paper_url=None, preview_pdf=None):
     if dest.resolve() == root.resolve() or root.resolve() in dest.resolve().parents:
         raise ValueError("Build the site outside the release checkout")
     allowed = set(COPIES.values()) | {"index.html", "explorer/index.html", "assets/conductance.png",
-                                     "assets/figure-1.png"}
+                                     "assets/figure-1.png", "assets/figure-4a.png"}
     if preview_pdf is not None:
         allowed.add(paper_url)
     if dest.exists():
@@ -90,6 +91,12 @@ def build(root, dest, paper_url=None, preview_pdf=None):
         shutil.copyfile(preview_pdf, dest / paper_url)
     subprocess.run(["pdftocairo", "-png", "-singlefile", "-scale-to", "1450",
                     dest/"assets/figure-1.pdf", dest/"assets/figure-1"], check=True)
+    # Published panel A between its header and the shared legend, in PDF points
+    # from the top-left. Crop the original artwork, preserving all routes and widths.
+    box = (6, 23, 249, 150)
+    crop = [v for flag, pt in zip(("-x", "-y", "-W", "-H"), box) for v in (flag, str(6*pt))]
+    subprocess.run(["pdftocairo", "-png", "-singlefile", "-r", "432", *crop,
+                    dest/"assets/figure-4.pdf", dest/"assets/figure-4a"], check=True)
     conductance_image(root, dest/"assets/conductance.png")
     atlas = (root/EXPLORER/"index.html").read_text()
     brand = '<div class="brand">resp-net <span>Circuit atlas</span></div>'
