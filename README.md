@@ -4,10 +4,7 @@ This repository accompanies **From cellular synaptic input profiles to
 population-level respiratory circuitry**, by Yaroslav I. Molkov, Ilya A.
 Rybak, and Jeffrey C. Smith.
 
-The [GitHub repository](https://github.com/ymolkov/resp-net-paper) is private
-during preparation and will be made public with the preprint.
-
-It contains the **168 archived recordings from 150 cells** used in the paper,
+This public repository contains the **168 archived recordings from 150 cells** used in the paper,
 the accepted preprocessing settings, conductance reconstruction and source
 inference code, frozen results, figure code, and the companion interactive site.
 The primary analysis is `fixed_fall50`; the two accompanying timing scenarios
@@ -15,10 +12,8 @@ are sensitivity checks of the same recordings.
 
 ## Start here
 
-The paper companion is prepared for GitHub Pages. At preprint release the
-study page will be at `https://ymolkov.github.io/resp-net-paper/` and the
-interactive circuit at `https://ymolkov.github.io/resp-net-paper/explorer/`.
-The site is not published by an ordinary push.
+Open the [paper companion](https://resp-net-connectome.yaroslav-molkov.chatgpt.site/)
+to explore the reconstructed circuit and inspect the individual cell profiles.
 
 - Open [the interactive atlas](apps/connectome-explorer/index.html) in a browser
   after downloading or cloning the repository. It also works offline.

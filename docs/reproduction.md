@@ -121,8 +121,8 @@ Open the resulting `index.html` directly. Do not upload this preview.
 For a public companion **before the preprint is posted**, use a fresh output
 directory and `--preprint-pending` instead of `--preview-pdf`. This includes
 the overview, methods figures and explorer but omits the manuscript,
-supporting workbook and private repository links. For the
-public release, make the repository public, copy the inactive
+supporting workbook and repository links. To publish on GitHub Pages once
+the preprint has a public URL, copy the inactive
 [workflow template](pages-workflow.yml.example) to `.github/workflows/pages.yml`
 using an account authorized to manage workflows, configure Pages to use GitHub
 Actions, and run **Publish paper companion** from the Actions tab with the
@@ -139,8 +139,7 @@ Verification means reproduction of the selected computation, not validation of
 the fixed-template, reversal, independence, or sampling assumptions. See
 [methods.md](methods.md) and [data_dictionary.md](data_dictionary.md).
 
-The repository is private during preparation and will be made public with the
-preprint, together with a versioned release. A permanent archive
+The repository is publicly accessible. A permanent archive
 DOI and the paper's final bibliographic citation should be added when assigned;
 none is fabricated in `CITATION.cff`. Retain versioned checksums when archiving a
 release so readers can identify exactly which inputs and outputs they used.

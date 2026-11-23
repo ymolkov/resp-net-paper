@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "9906de6fd84c9f6a065d2bbf1c81b335109f22d8",
+  "source_commit": "28d5cebfadc745547e481703b08cc7cea8b245e2",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1211,7 +1211,7 @@
     },
     "README.md": {
       "source_path": "release/paper/templates/README.md",
-      "source_sha256": "94594842a10387c0a7941e5adfc8d2b6451c501a7dffaf6824f565bdc9fd3a16",
+      "source_sha256": "c4c4fd8ab045dadd5e6add0f67b5d0514ac0b2da470c11a3a75d999bf04da7d5",
       "transformation": "byte-identical copy"
     },
     "THIRD_PARTY_NOTICES.md": {
@@ -1251,7 +1251,7 @@
     },
     "docs/reproduction.md": {
       "source_path": "release/paper/templates/docs/reproduction.md",
-      "source_sha256": "f02e16789db99f81373e1f75ac1c27c09edb41b282c1268b7d47b8e44afce3ea",
+      "source_sha256": "b139dfdfc1c440bf721746e8967486e5cb61d1a9a38f2eac87bf2dc3943d92d7",
       "transformation": "byte-identical copy"
     },
     "docs/verification.md": {
