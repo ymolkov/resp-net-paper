@@ -137,8 +137,7 @@ Verification means reproduction of the selected computation, not validation of
 the fixed-template, reversal, independence, or sampling assumptions. See
 [methods.md](methods.md) and [data_dictionary.md](data_dictionary.md).
 
-The repository is publicly accessible. A permanent archive
-DOI and the paper's final bibliographic citation should be added when assigned;
-none is fabricated in `CITATION.cff`. Retain versioned checksums when archiving a
-release so readers can identify exactly which inputs and outputs they used.
+Use the [current repository](https://github.com/ymolkov/resp-net-paper) for
+updates. To reproduce the preprint from the exact files used, use the
+[`preprint-v1` archive](https://doi.org/10.5281/zenodo.24477107).
 

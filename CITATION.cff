@@ -1,5 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite this data/software release and the accompanying paper. A permanent archive DOI has not yet been assigned."
+message: "Please cite the archived preprint-v1 data and code (10.5281/zenodo.24477107) and the accompanying paper."
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24477107"
+    description: "Version preprint-v1, used in the submitted preprint."
 type: software
 repository-code: "https://github.com/ymolkov/resp-net-paper"
 title: "Resp-net: data and code for population-level respiratory circuit inference"

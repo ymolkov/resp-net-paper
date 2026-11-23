@@ -59,8 +59,11 @@ separately.
 
 ## Citation and reuse
 
-See [CITATION.cff](CITATION.cff). This release preparation does not yet have a
-permanent archive DOI. Cite a released version and its DOI once one is assigned.
+Cite the version used in the preprint: Molkov YI, Rybak IA, Smith JC (2026).
+*Resp-net: data and code for population-level respiratory circuit inference*,
+version `preprint-v1`. Zenodo. [doi:10.5281/zenodo.24477107](https://doi.org/10.5281/zenodo.24477107).
+The DOI identifies the archived files; the [current repository](https://github.com/ymolkov/resp-net-paper)
+contains subsequent updates. See [CITATION.cff](CITATION.cff).
 The earlier conductance method is described in
 [Molkov et al. (2025)](https://doi.org/10.7554/eLife.101959.4); the source activity
 patterns are from [Smith et al. (2007)](https://doi.org/10.1152/jn.00985.2007).
