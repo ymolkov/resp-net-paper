@@ -13,7 +13,7 @@
     "data/extended_dataset/full_qc/run_config.json": "70e6d86e68789a8186fe98289ab3c26d4200340c89f4ae1987243cf8c3fa2601",
     "data/model_analyses/postI_figure_registration/results.json": "0fab77a0f174fc253c97b83089de659e96377663ecb01736007163c95b1c10b4"
   },
-  "builder_sha256": "0560eb32cab8d436350e0cee6b989b8748bd79a56c2c9d46643e9379fd52ad6d",
+  "builder_sha256": "fc2cf6c602fed9f793e1588d89cb1c8cbb866177e4eb6c41658fbb1cb6cd2152",
   "scenario": "fixed_fall50",
   "prior_comparison": {
     "reference": "Smith et al. 2007 Figure 7 / Table 3; pattern-level projection",
@@ -402,13 +402,13 @@
     ]
   },
   "output_sha256": {
-    "expanded_profiles.pdf": "e7ccdf758cb5865afff810cb1ccda543cbf25793cc02fe5438fac77a0124276d",
-    "expanded_fits.pdf": "311e82ea0d5e4a35631a25bdcfa0e52a9e1350afeca74e323b577864bf6d6a5f",
-    "expanded_circuit.pdf": "9cd2bc0b98c91d81b65e207eb003af149f06985d983586bc1190608bcc44e7af",
-    "expanded_prior_circuit.pdf": "f0b6cd4e13a88572a56e404e6e9c8fef42e6a3848e13ef8b3eca2a6337e75167",
-    "expanded_evidence.pdf": "0a8d8dc7e6b736ca334623de93a0d5ba8869c0446fb3fa46c1c9346109dea794",
-    "expanded_score_diagnostics.pdf": "b6cea01d788f9aa0dedf491460fbc25d54372b841102df7d0ae73288b48afe43",
-    "expanded_alternatives.pdf": "1a0eb0fac814038c72c11722e76e0d70b44db837ab120c529af54a5e4cfb306e",
+    "expanded_profiles.pdf": "c8880eda72a02fed284d54e69e3b13f70cdee83bba799162294ee53121c11f5d",
+    "expanded_fits.pdf": "6c35c99b788d4a24ab2ecbd9beca9ffb42b16f71bc22aafd27b25abadb04ec1e",
+    "expanded_circuit.pdf": "00d5e980d8ba8896e2596955c4643f9c7e9ee10a8cefc492627564913995b26f",
+    "expanded_prior_circuit.pdf": "ae83e4ea7daaa35831a5640e96d4d83c7060d43e3cdaa05af44f57fb9df9997a",
+    "expanded_evidence.pdf": "d4d4cc605bc87435d74595eecacba25e4384d2dd8684a79157082dd0edea2da2",
+    "expanded_score_diagnostics.pdf": "e1a30602db0488379b2ad909ee04e68f3e18df812ec3a70a1cd62d9c4755044a",
+    "expanded_alternatives.pdf": "de9dcedf9931287b86f24f923a8d3c038123e5c453e20b5ba70cc6dd16217812",
     "expanded_template_alignment.pdf": "4551d1297583503fca989bf8ad72702c4a4b30032dbbf5fbeae453ec3f28ee95"
   },
   "table_sha256": {
@@ -419,7 +419,7 @@
   },
   "reporting_sha256": {
     "records": "52e0379fea1ba274e3084a4f23bc090b5b6f48122da474cfb8489288efa8b749",
-    "tests": "8e8fedf88d298535c83c23a1b802a0f900c2a3130874b8746fdce4dcc9ce7442",
+    "tests": "df123047dcf03c8c64732a7acdb2e1c527da673ddc2decc6e87c3bad8656bd6c",
     "elementary": "cca556e6566cbade69e415e0c9c0cb02b87d111224d0569c110837540535a823",
     "magnitudes": "67657531b215d98c290491d9d338e885ada0819d84d11b638b76b28bee581181"
   }

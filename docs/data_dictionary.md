@@ -96,6 +96,9 @@ code paths; they contain empirical analyses, not dynamical-model outputs.
 
 Convenient CSVs in `data/manuscript_reporting/` contain recording metadata,
 all 90 tests, 140 elementary contrast summaries, and contribution magnitudes.
+The reader-facing workbook is `paper/supporting/Supporting_Data_S1.xlsx`.
+To repeat the recording-day sensitivity check on the packaged scores, run
+`python3 scripts/audit_recording_day_clustering.py`; recording dates are not animal IDs.
 The full LaTeX tables and figure PDFs are under `paper/`; manuscript text is
 not included. The cell-removal reference summary is under
 `data/model_analyses/cell_influence_uncertainty/`.

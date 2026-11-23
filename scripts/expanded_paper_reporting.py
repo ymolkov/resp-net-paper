@@ -11,6 +11,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ("pre-I", "ramp-I", "early-I", "post-I", "aug-E")
+DISPLAY_NAMES = {name: "pre-I/I" if name == "pre-I" else name for name in NAMES}
 TABLE_NAMES = {name: r"\preII{}" if name == "pre-I" else name for name in NAMES}
 REPORT_INPUTS = {
     "subset_cells": "data/model_analyses/inspiratory_subset_contrasts/cells.json",
@@ -53,7 +54,7 @@ def load_reports(d):
             median_phase_r2=r["diagnostics"]["median_phase_r2"],
             calibration_status=r["calibration_status"], source_sha256=r["source_sha256"]))
     tests = [dict(target=r["target"], sign=r["sign"], omitted_mask=r["omitted_mask"],
-                  omitted=" + ".join(r["omitted_sources"]), n=r["n_cells"],
+                  omitted=r["omitted_sources"], n=r["n_cells"],
                   p_local=r["p_local"], p_closed=r["p_closed"], p_adjusted=r["p_joint"])
              for r in d["summary"]["tests"]]
     coarse = {(r["target"], r["sign"], r["source"]): r for r in d["summary"]["coarse_policy"]}
@@ -206,9 +207,10 @@ def score_figure(d, report):
         ax.axhline(0, color="#777777", lw=.8, ls="--")
         ax.set(xlim=(-.22, .46), xticks=[], ylabel="Contrast score")
         ax.spines[["top", "right", "bottom"]].set_visible(False)
-        omitted = "All inspiratory" if mask == 7 else chosen["omitted"]
+        omitted = "All inspiratory" if mask == 7 else " + ".join(
+            DISPLAY_NAMES[NAMES[j]] for j in range(3) if mask & (1 << j))
         label = "Excitation" if sign == "E" else "Inhibition"
-        ax.set_title(f"{target}: {label}\nOmit {omitted}", fontsize=8.5)
+        ax.set_title(f"{DISPLAY_NAMES[target]}: {label}\nOmit {omitted}", fontsize=8.5)
         p = chosen["p_adjusted"]
         ptext = "<0.001" if p < .001 else f"= {p:.3f}"
         ax.set_xlabel(f"n = {len(values)}; P {ptext}\nSE = {chosen['sem']:.3f}", fontsize=8)
@@ -244,7 +246,7 @@ def alternatives_figure(d, report):
     predictions = [np.array(panel["mean_subset_predictions"][m]) for m in (0, 1, 2)]
     conductance_max = 1.08*max(np.max(v) for v in [observed, full, *predictions])
     residual_max = 1.12*max(np.max(np.abs(observed-v)) for v in [full, *predictions])
-    for j, (mask, name) in enumerate(((0, "No inspiratory input"), (1, "pre-I only"), (2, "ramp-I only"))):
+    for j, (mask, name) in enumerate(((0, "No inspiratory input"), (1, "pre-I/I only"), (2, "ramp-I only"))):
         prediction = np.array(panel["mean_subset_predictions"][mask])
         ax = fig.add_subplot(grid[0, j])
         residual = fig.add_subplot(grid[1, j], sharex=ax)
@@ -295,7 +297,7 @@ def alternatives_figure(d, report):
     node((.10, .47), "Inspiratory", True)
     node((.37, .47), "post-I")
     edge((.185, .47), (.278, .47))
-    node((.64, .67), "pre-I", True)
+    node((.64, .67), DISPLAY_NAMES["pre-I"], True)
     node((.64, .27), "ramp-I", True)
     node((.91, .47), "post-I")
     edge((.715, .615), (.830, .51), True)

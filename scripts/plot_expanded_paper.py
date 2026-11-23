@@ -16,7 +16,7 @@ from matplotlib.patches import Circle, Ellipse, FancyArrowPatch
 from matplotlib.path import Path as MplPath
 import numpy as np
 from expanded_paper_reporting import (
-    REPORT_INPUTS, TABLES, load_reports, write_tables, write_data,
+    DISPLAY_NAMES, REPORT_INPUTS, TABLES, load_reports, write_tables, write_data,
     score_figure, alternatives_figure, alignment_figure,
 )
 
@@ -157,7 +157,7 @@ def profiles_figure(d, out):
         ax = fig.add_subplot(grid[0, i*2:i*2+2])
         axes_style(ax, d["ti"])
         ax.plot(x, d["matrix"][:, i], color="#25343b", lw=1.7)
-        ax.set_title(name, fontsize=10)
+        ax.set_title(DISPLAY_NAMES[name], fontsize=10)
         ax.set_xticks((0, 1), ("0", "1"))
         if i:
             ax.set_yticklabels([])
@@ -175,7 +175,7 @@ def profiles_figure(d, out):
             if i == 0:
                 ax.set_title("Excitatory conductance" if si == 0 else "Inhibitory conductance", fontsize=10)
             if si == 0:
-                ax.set_ylabel(f"{name}\nn = {group['n']}")
+                ax.set_ylabel(f"{DISPLAY_NAMES[name]}\nn = {group['n']}")
     save(fig, out, FIGURES[0])
 
 
@@ -193,7 +193,7 @@ def fits_figure(d, out):
             ax.plot(x, group["profiles"].mean(axis=0)[si], color="#20282b", lw=1.8)
             ax.plot(x, group["prediction"][si], color="#6a757c", lw=1.5, ls="--")
             if si == 0:
-                ax.set_ylabel(name)
+                ax.set_ylabel(DISPLAY_NAMES[name])
             if i == 0:
                 ax.set_title("Excitatory conductance" if si == 0 else "Inhibitory conductance", fontsize=10)
     legend = [Line2D([], [], color="#20282b", lw=1.8, label="Sample mean"),
@@ -307,11 +307,11 @@ def inspiratory_graph(ax, panels):
         for name, y in source_y[sign].items():
             ax.add_patch(Circle((x, y), 39, fc="#fff7f5" if sign == "E" else "#f2f8fb",
                                 ec=COLORS[sign], lw=.9, zorder=5))
-            ax.text(x, y, name, color=COLORS[sign], fontsize=8.2, weight="bold",
+            ax.text(x, y, DISPLAY_NAMES[name], color=COLORS[sign], fontsize=8.2, weight="bold",
                     ha="center", va="center", zorder=6)
     for name, y in target_y.items():
         ax.add_patch(Circle((500, y), 39, fc="#f7f8f9", ec="#8798a0", lw=.8, zorder=5))
-        ax.text(500, y, name+"*" if name == "early-I" else name,
+        ax.text(500, y, name+"*" if name == "early-I" else DISPLAY_NAMES[name],
                 fontsize=8.0, ha="center", va="center", zorder=6)
     for x, label, color in ((82, "Excitatory sources", COLORS["E"]),
                              (500, "Receiving populations", "#25343b"),
@@ -408,7 +408,7 @@ def circuit_figure(d, out):
         b.text(*xy, name, ha="center", va="center", fontsize=8.2, color=COLORS[sign], weight="bold", zorder=5)
     for name, xy in target_centers.items():
         b.add_patch(Circle(xy, radius, fc="#f5f7f8", ec="#8798a0", lw=.8, zorder=4))
-        b.text(*xy, name, ha="center", va="center", fontsize=8.2, zorder=5)
+        b.text(*xy, DISPLAY_NAMES[name], ha="center", va="center", fontsize=8.2, zorder=5)
     b.text(90, 369, "Expiratory", ha="center", fontsize=9)
     b.text(450, 369, "Inspiratory", ha="center", fontsize=9)
     b.set(xlim=(0, 540), ylim=(0, 395))
@@ -435,8 +435,9 @@ def prior_figure(out):
     draw_connectome_graph(ax, e, i, "", threshold=.5, max_weight=3,
         label_threshold=2, layout="pentagon", straight_edges=True,
         active_nodes=["pre-I", "ramp-I", "early-I", "post-I^E", "post-I^I", "aug-E^I"],
-        reciprocal_offset=.008,
-        node_label_overrides={"aug-E^I": "aug-E", "post-I^I": "post-I", "post-I^E": ""},
+        node_radius=.080, reciprocal_offset=.008,
+        node_label_overrides={"pre-I": DISPLAY_NAMES["pre-I"], "aug-E^I": "aug-E",
+                              "post-I^I": "post-I", "post-I^E": ""},
         show_legend=False)
     for patch in ax.patches:
         rgb = patch.get_facecolor() if isinstance(patch, Circle) else patch.get_edgecolor()
@@ -465,7 +466,7 @@ def p_label(p):
 def matrix_axes(ax, rows, sign, field, title):
     indexed = {key(r): r for r in rows}
     ax.set(xlim=(-.5, 4.5), ylim=(2.5, -.5))
-    ax.set_xticks(range(5), NAMES, fontsize=9)
+    ax.set_xticks(range(5), [DISPLAY_NAMES[n] for n in NAMES], fontsize=9)
     ax.set_yticks(range(3), ("Inspiratory", "post-I", "aug-E"), fontsize=9)
     ax.tick_params(length=0)
     ax.xaxis.tick_top()

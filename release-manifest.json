@@ -1060,8 +1060,13 @@
     },
     {
       "path": "data/manuscript_reporting/tests.csv",
-      "bytes": 9265,
-      "sha256": "8e8fedf88d298535c83c23a1b802a0f900c2a3130874b8746fdce4dcc9ce7442"
+      "bytes": 6865,
+      "sha256": "df123047dcf03c8c64732a7acdb2e1c527da673ddc2decc6e87c3bad8656bd6c"
+    },
+    {
+      "path": "data/model_analyses/cell_influence_uncertainty/cell_evidence.csv",
+      "bytes": 103643,
+      "sha256": "99348918ca70e374e300802ed31c698f5c7240c46cd9cdf9fb314ca89cfd96fb"
     },
     {
       "path": "data/model_analyses/cell_influence_uncertainty/summary.json",
@@ -1094,6 +1099,11 @@
       "sha256": "f98ff995a5cbf5be0a686ecf4c3229da8092adb4ccbc39583fef056e0efa2130"
     },
     {
+      "path": "data/model_analyses/inspiratory_subset_contrasts/coarse_policy.csv",
+      "bytes": 1637,
+      "sha256": "a80b7e75d863bdc72f1d41b9ba571a4cabbb3849fb2bf238cb778931f5ce9a05"
+    },
+    {
       "path": "data/model_analyses/inspiratory_subset_contrasts/contrasts.json",
       "bytes": 15794928,
       "sha256": "942d02fc94097e8b79253cf00a89703143acc56cee15135e24671a57a99b526d"
@@ -1115,8 +1125,8 @@
     },
     {
       "path": "docs/data_dictionary.md",
-      "bytes": 5896,
-      "sha256": "cd80927558ac59baf3019096a2cff7b7d1e1dd0132ea1b5739e9bab78a56c0ad"
+      "bytes": 6133,
+      "sha256": "2ee3f7ad22ed04b73cbdcd9d6719b8ed52fe3823b65b4bb7faf02fa7b82f62a6"
     },
     {
       "path": "docs/methods.md",
@@ -1150,43 +1160,43 @@
     },
     {
       "path": "paper/figures/expanded_alternatives.pdf",
-      "bytes": 32914,
-      "sha256": "1a0eb0fac814038c72c11722e76e0d70b44db837ab120c529af54a5e4cfb306e"
+      "bytes": 33003,
+      "sha256": "de9dcedf9931287b86f24f923a8d3c038123e5c453e20b5ba70cc6dd16217812"
     },
     {
       "path": "paper/figures/expanded_circuit.pdf",
-      "bytes": 30409,
-      "sha256": "9cd2bc0b98c91d81b65e207eb003af149f06985d983586bc1190608bcc44e7af"
+      "bytes": 30530,
+      "sha256": "00d5e980d8ba8896e2596955c4643f9c7e9ee10a8cefc492627564913995b26f"
     },
     {
       "path": "paper/figures/expanded_evidence.pdf",
-      "bytes": 25282,
-      "sha256": "0a8d8dc7e6b736ca334623de93a0d5ba8869c0446fb3fa46c1c9346109dea794"
+      "bytes": 25321,
+      "sha256": "d4d4cc605bc87435d74595eecacba25e4384d2dd8684a79157082dd0edea2da2"
     },
     {
       "path": "paper/figures/expanded_figure_manifest.json",
       "bytes": 12360,
-      "sha256": "558f89f16fb8b1b8733ed9ae35bf0386c94b9c6e0f58a5fb5738edb1078c5c01"
+      "sha256": "908cb243b4c90e9ef4559e1c4f3166303f40d0479a6ad06658c1b3b4099836a0"
     },
     {
       "path": "paper/figures/expanded_fits.pdf",
-      "bytes": 48722,
-      "sha256": "311e82ea0d5e4a35631a25bdcfa0e52a9e1350afeca74e323b577864bf6d6a5f"
+      "bytes": 48730,
+      "sha256": "6c35c99b788d4a24ab2ecbd9beca9ffb42b16f71bc22aafd27b25abadb04ec1e"
     },
     {
       "path": "paper/figures/expanded_prior_circuit.pdf",
-      "bytes": 12176,
-      "sha256": "f0b6cd4e13a88572a56e404e6e9c8fef42e6a3848e13ef8b3eca2a6337e75167"
+      "bytes": 12170,
+      "sha256": "ae83e4ea7daaa35831a5640e96d4d83c7060d43e3cdaa05af44f57fb9df9997a"
     },
     {
       "path": "paper/figures/expanded_profiles.pdf",
-      "bytes": 245759,
-      "sha256": "e7ccdf758cb5865afff810cb1ccda543cbf25793cc02fe5438fac77a0124276d"
+      "bytes": 245768,
+      "sha256": "c8880eda72a02fed284d54e69e3b13f70cdee83bba799162294ee53121c11f5d"
     },
     {
       "path": "paper/figures/expanded_score_diagnostics.pdf",
-      "bytes": 20483,
-      "sha256": "b6cea01d788f9aa0dedf491460fbc25d54372b841102df7d0ae73288b48afe43"
+      "bytes": 20530,
+      "sha256": "e1a30602db0488379b2ad909ee04e68f3e18df812ec3a70a1cd62d9c4755044a"
     },
     {
       "path": "paper/figures/expanded_template_alignment.pdf",
@@ -1197,6 +1207,11 @@
       "path": "paper/figures/inference_overview.pdf",
       "bytes": 42745,
       "sha256": "96a1cff5631ef1837678d137408a7a9bcc9ca441cdd6bd704c48d2cb51d07777"
+    },
+    {
+      "path": "paper/supporting/Supporting_Data_S1.xlsx",
+      "bytes": 21091,
+      "sha256": "5270b31f8db0c2977001e40de50b2d979e00c3ad1542c6149a2a40e9fbf0d4fb"
     },
     {
       "path": "paper/tables/archive_summary.tex",
@@ -1220,13 +1235,18 @@
     },
     {
       "path": "release-origin.json",
-      "bytes": 73752,
-      "sha256": "89209b194e9274f308e7c30c13293641dd763beff1416177a636a40b555d1758"
+      "bytes": 74996,
+      "sha256": "0c4dbd0fa51b436cd43eca4d619375fa35eabd14f07ba105dc754d720d1d390c"
     },
     {
       "path": "requirements.txt",
       "bytes": 130,
       "sha256": "5b2e309ffd626de5117616343ff3912d88e8ffd71da8fcbdca7a857e4bf70e09"
+    },
+    {
+      "path": "scripts/audit_recording_day_clustering.py",
+      "bytes": 6325,
+      "sha256": "72df20e67989b01d658c6b45664e97cd113e49a254806f1581d31d896eaed3b7"
     },
     {
       "path": "scripts/build_connectome_explorer.py",
@@ -1240,8 +1260,8 @@
     },
     {
       "path": "scripts/expanded_paper_reporting.py",
-      "bytes": 17494,
-      "sha256": "257563a894e92a01ca83bb6c22f8ad0fa70bea7f93d884f364e8dea0b52496d9"
+      "bytes": 17663,
+      "sha256": "c9abff0374f8f334ab303ef1f09170b4716373766e782c93d3415afd191d696a"
     },
     {
       "path": "scripts/plot_cells_to_circuit_preview.py",
@@ -1260,8 +1280,8 @@
     },
     {
       "path": "scripts/plot_expanded_paper.py",
-      "bytes": 31210,
-      "sha256": "0560eb32cab8d436350e0cee6b989b8748bd79a56c2c9d46643e9379fd52ad6d"
+      "bytes": 31424,
+      "sha256": "fc2cf6c602fed9f793e1588d89cb1c8cbb866177e4eb6c41658fbb1cb6cd2152"
     },
     {
       "path": "scripts/prepare_conductance_reconstruction_figure.py",
