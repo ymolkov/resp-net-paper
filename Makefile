@@ -1,7 +1,7 @@
 PYTHON ?= python3
 NODE ?= node
 
-.PHONY: verify reconstruct inference reproduce figures site site-test serve
+.PHONY: verify reconstruct inference reproduce figures site site-test companion-test serve
 
 verify:
 	$(PYTHON) scripts/verify_release.py
@@ -25,6 +25,9 @@ site:
 
 site-test:
 	$(NODE) --test apps/connectome-explorer/test-core.cjs
+
+companion-test:
+	$(PYTHON) -B scripts/test_paper_companion.py
 
 serve:
 	$(PYTHON) -m http.server 8000 --bind 127.0.0.1 --directory apps/connectome-explorer

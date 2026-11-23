@@ -35,6 +35,12 @@ def main():
             and not any(x in ignored_parts for x in p.relative_to(ROOT).parts)
             and not str(p.relative_to(ROOT)).startswith(('output/reproduced/','output/playwright/'))
             and p.name!='release-manifest.json'}
+    workflow='.github/workflows/pages.yml'
+    if workflow in actual:
+        path=ROOT/workflow
+        if path.is_symlink() or path.read_bytes()!=(ROOT/'docs/pages-workflow.yml.example').read_bytes():
+            raise ValueError('Active Pages workflow differs from the verified template')
+        actual.remove(workflow)
     if actual!=seen:
         raise ValueError(f'Unexpected release files: {sorted(actual-seen)}; missing: {sorted(seen-actual)}')
     with (ROOT/'data/manuscript_reporting/records.csv').open() as stream:

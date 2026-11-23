@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A companion to the study of respiratory circuitry by Molkov, Rybak and Smith: explore the circuit, read the paper and access the recordings and supporting data.">
+  <title>Resp-net | From cellular synaptic input profiles to population-level respiratory circuitry</title>
+  <link rel="stylesheet" href="assets/companion.css">
+</head>
+<body>
+  <a class="skip" href="#study">Skip to study</a>
+  <header class="mast"><div class="wrap">
+    <a class="brand" href="#study">resp-net<span>Research companion</span></a>
+    <nav aria-label="Page sections"><a href="#approach">Approach</a><a href="#resources">Resources</a></nav>
+  </div></header>
+  <main id="study">
+    <section class="hero" aria-labelledby="title"><div class="wrap">
+      <div class="paper">
+        <p class="eyebrow">Respiratory neurophysiology</p>
+        <h1 id="title">From cellular synaptic input profiles to population-level respiratory circuitry</h1>
+        <p class="authors">Yaroslav I. Molkov, Ilya A. Rybak, and Jeffrey C. Smith</p>
+        <div class="actions"><a class="primary" href="{{EXPLORER}}"><img src="assets/scan.svg" alt="">Explore the circuit</a>
+          <a class="read" href="{{PAPER_URL}}">Read the paper</a></div>
+      </div>
+      <figure class="signal">
+        <figcaption>Synaptic inputs to pre-I/I neurons</figcaption>
+        <p>Mean normalized conductance across 17 cells</p>
+        <img class="plot" src="assets/conductance.png" width="880" height="440"
+          alt="Excitation rises toward inspiration, whereas inhibition is greatest shortly after inspiration ends and then declines.">
+        <div class="key"><span>Excitation</span><span>Inhibition</span></div>
+      </figure>
+    </div></section>
+
+    <section class="wrap approach" id="approach" aria-labelledby="approach-heading">
+      <p class="eyebrow">The approach</p>
+      <h2 id="approach-heading">From individual cells to a population circuit</h2>
+      <p class="lead">Discharge patterns tell us when respiratory neurons fire. To ask which populations might supply their synaptic inputs, we compared the timing of excitation and inhibition in 150 cells with five independently recorded patterns of population activity.</p>
+      <div class="plate">
+        <figure class="schematic"><a href="assets/figure-1.pdf" aria-label="Open Figure 1 at full resolution (PDF)"><img src="assets/figure-1.png" width="1450" height="1040" alt="Schematic: cellular conductance profiles grouped by discharge pattern, fits with candidate sources omitted, and a circuit with distinguished and alternative connections."></a>
+          <figcaption>Figure 1. Schematic of the inference procedure. <a href="assets/figure-1.pdf">Full-size figure (PDF)</a></figcaption>
+        </figure>
+        <div class="guide" aria-label="Guide to Figure 1">
+          <div><b>A</b><h3>Reconstruct each cell’s inputs</h3><p>For each neuron, we estimated how excitation and inhibition change over a breath. We grouped neurons by when they fire.</p></div>
+          <div><b>B</b><h3>Ask which sources are needed</h3><p>We treated the same populations as possible sources. If we leave one out, can the others still reproduce the timing of the input across cells?</p></div>
+          <div><b>C</b><h3>Assemble the circuit</h3><p>A solid connection identifies a source the recordings distinguish. Dashed connections show alternatives: different sources can produce similar inputs.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="finding"><div class="wrap">
+      <p class="eyebrow">Circuit interpretation</p>
+      <h2>Excitation links populations active in different phases.</h2>
+      <p>Both expiratory populations received inspiratory excitation alongside inhibition. In pre-I/I neurons, excitation with an augmenting-expiratory pattern rose as post-inspiratory inhibition declined. These inputs could help recruit the next inspiration.</p>
+    </div></section>
+    <section class="wrap resources" id="resources" aria-labelledby="resources-heading">
+      <p class="eyebrow">Study materials</p><h2 id="resources-heading">Data and resources</h2>
+      <dl>
+        <div><dt><a href="{{EXPLORER}}">Interactive circuit explorer</a></dt><dd>Inspect population inputs, alternative sources and individual cell profiles.</dd></div>
+        <div><dt><a download href="downloads/Supporting_Data_S1.xlsx">Download Supporting Data S1</a></dt><dd>Fitted contributions, omission decisions and underlying timing contrasts. <small>XLSX</small></dd></div>
+        <div><dt><a href="https://github.com/ymolkov/resp-net-paper">Data &amp; code</a></dt><dd>168 recordings from 150 neurons, activity templates, analysis scripts and frozen results.</dd></div>
+        <div><dt><a href="https://github.com/ymolkov/resp-net-paper/blob/main/docs/reproduction.md">Reproduce the analysis</a></dt><dd>Reconstruct the conductances, repeat the inference and regenerate the figures.</dd></div>
+      </dl>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>resp-net</span><a href="LICENSE-DATA.md">Data and figure licence</a><a href="THIRD_PARTY_NOTICES.md">Attribution</a></div></footer>
+</body>
+</html>

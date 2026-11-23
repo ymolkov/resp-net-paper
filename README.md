@@ -15,6 +15,11 @@ are sensitivity checks of the same recordings.
 
 ## Start here
 
+The paper companion is prepared for GitHub Pages. At preprint release the
+study page will be at `https://ymolkov.github.io/resp-net-paper/` and the
+interactive circuit at `https://ymolkov.github.io/resp-net-paper/explorer/`.
+The site is not published by an ordinary push.
+
 - Open [the interactive atlas](apps/connectome-explorer/index.html) in a browser
   after downloading or cloning the repository. It also works offline.
 - Read [reproduction instructions](docs/reproduction.md) to verify files, rebuild
@@ -23,6 +28,8 @@ are sensitivity checks of the same recordings.
   channels, identifiers, units, accepted epochs, and result formats.
 - Read [the method reference](docs/methods.md) for preprocessing, assumptions,
   statistical tests, and interpretive limits.
+- Download [Supporting Data S1](paper/supporting/Supporting_Data_S1.xlsx) for
+  fitted contributions, omission decisions and underlying contrasts.
 
 ```sh
 python3 -m venv .venv

@@ -99,13 +99,33 @@ the browser. The build verifies all 80 group-mean retained-set predictions;
 13 Node tests check the saved fits, alternatives, transformations, and packaging.
 
 The site source, builder, browser regression script, and licenses are included.
-An inactive [GitHub Pages workflow template](pages-workflow.yml.example) is
-included for the public release. When ready to publish, copy it to
-`.github/workflows/pages.yml` using an account authorized to manage workflows,
-configure Pages to use GitHub Actions, and run **Publish circuit atlas** from
-the Actions tab. Its trigger is manual; a normal push does not publish the site.
+
+### Paper companion and GitHub Pages
+
+The companion home page includes the study, Figure 1 and Supporting Data S1.
+The atlas is under `explorer/`. The header plot shows the mean of the two
+normalized conductance profiles of the 17 pre-I/I cells in the primary analysis
+(the same profiles used for Figure 2). No inference is run during site assembly.
+
+The page builder needs Poppler's `pdftocairo` in addition to the Python
+dependencies above. Run `make companion-test` to check the two publication
+modes, packaged resources and project-relative links. For a private preview,
+supply a local manuscript PDF:
+
+```sh
+python scripts/build_paper_companion.py ../preview/resp-net-paper --preview-pdf /path/to/manuscript.pdf
+```
+
+Open the resulting `index.html` directly. Do not upload this preview. For the
+public release, make the repository public, copy the inactive
+[workflow template](pages-workflow.yml.example) to `.github/workflows/pages.yml`
+using an account authorized to manage workflows, configure Pages to use GitHub
+Actions, and run **Publish paper companion** from the Actions tab with the
+paper's public bioRxiv or DOI URL. It builds a fresh artifact without a
+manuscript PDF. Verify the home page, paper link, explorer and workbook while
+signed out. Its trigger is manual; a normal push does not publish the site.
 Preserve the vendor notices when redistributing the
-standalone HTML. The existing hosted companion is managed separately; this
+standalone HTML. The existing hosted atlas is managed separately; this
 repository does not contain its service credentials or deployment identity.
 
 ## Interpretation and citation

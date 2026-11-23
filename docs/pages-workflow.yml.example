@@ -1,7 +1,12 @@
-name: Publish circuit atlas
+name: Publish paper companion
 
 on:
   workflow_dispatch:
+    inputs:
+      paper_url:
+        description: Public bioRxiv article or DOI URL for this paper
+        required: true
+        type: string
 
 permissions: {}
 
@@ -11,6 +16,7 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,24 +34,24 @@ jobs:
         with:
           node-version: '22'
           package-manager-cache: false
-      - name: Install atlas builder dependency
-        run: python -m pip install numpy==2.4.2
+      - name: Install site build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install numpy==2.4.2 matplotlib==3.10.8
       - name: Build from frozen data
         run: python scripts/build_connectome_explorer.py
-      - name: Verify atlas
-        run: node --test apps/connectome-explorer/test-core.cjs
-      - name: Prepare static artifact
+      - name: Verify atlas and companion
+        run: make site-test companion-test PYTHON=python
+      - name: Build paper page and explorer
+        env:
+          PAPER_URL: ${{ inputs.paper_url }}
         run: |
-          mkdir -p dist
-          cp apps/connectome-explorer/index.html dist/index.html
-          cp LICENSE LICENSE-DATA.md THIRD_PARTY_NOTICES.md dist/
-          mkdir -p dist/apps/connectome-explorer/vendor/d3 dist/apps/connectome-explorer/vendor/lucide
-          cp apps/connectome-explorer/vendor/d3/LICENSE dist/apps/connectome-explorer/vendor/d3/LICENSE
-          cp apps/connectome-explorer/vendor/lucide/LICENSE dist/apps/connectome-explorer/vendor/lucide/LICENSE
+          python scripts/build_paper_companion.py "$RUNNER_TEMP/resp-net-paper" --paper-url "$PAPER_URL"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: ${{ runner.temp }}/resp-net-paper
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -58,6 +64,6 @@ jobs:
     steps:
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Deploy atlas
+      - name: Deploy companion and explorer
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "c0631a9f888add00a98a4189d1ddd68adbc3f4c8",
+  "source_commit": "8189ac43b0a11a44ab0672a811fc3aaf7437c3b1",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1206,12 +1206,12 @@
     },
     "Makefile": {
       "source_path": "release/paper/templates/Makefile",
-      "source_sha256": "da11007dd0aeb030a71cb9c12f3b081da5e323b253230077dddefb8257df3375",
+      "source_sha256": "32d668f5807ed5a5b00ea531022c55010a966ba421e24108656b5ec7e5ce6e32",
       "transformation": "byte-identical copy"
     },
     "README.md": {
       "source_path": "release/paper/templates/README.md",
-      "source_sha256": "39d2ac9bb20eb3fb1998795d2e52f64ea4e0de618f9278529794efd712084a0d",
+      "source_sha256": "94594842a10387c0a7941e5adfc8d2b6451c501a7dffaf6824f565bdc9fd3a16",
       "transformation": "byte-identical copy"
     },
     "THIRD_PARTY_NOTICES.md": {
@@ -1222,6 +1222,16 @@
     "apps/connectome-explorer/README.md": {
       "source_path": "release/paper/templates/apps/connectome-explorer/README.md",
       "source_sha256": "b48cb8199d5c76cc2f80aff0cbf8ab1b83aa08822aeab584ae00f6cd1deafb16",
+      "transformation": "byte-identical copy"
+    },
+    "companion/companion.css": {
+      "source_path": "release/paper/templates/companion/companion.css",
+      "source_sha256": "c6ddbb55610a16d14f5a311f0523da105a34556bc35397cf1ca217a85b92f2d0",
+      "transformation": "byte-identical copy"
+    },
+    "companion/index.html": {
+      "source_path": "release/paper/templates/companion/index.html",
+      "source_sha256": "d0bf8dbd60ad828b00222d0fee223d323a7717110bab8fa1c9644da1f749ee26",
       "transformation": "byte-identical copy"
     },
     "docs/data_dictionary.md": {
@@ -1236,12 +1246,12 @@
     },
     "docs/pages-workflow.yml.example": {
       "source_path": "release/paper/templates/docs/pages-workflow.yml.example",
-      "source_sha256": "75f303b74d9b8620a8ecd62a5521287c6fc294f69e67a0774758136ba0a9ac0d",
+      "source_sha256": "4648c8981ea3a471ce822a7bedff2603de8550ff344acd79b612c3f8978e90c0",
       "transformation": "byte-identical copy"
     },
     "docs/reproduction.md": {
       "source_path": "release/paper/templates/docs/reproduction.md",
-      "source_sha256": "bcc22cff764229e64feae85a74b043223fd2a403594987db36b7285cb139f433",
+      "source_sha256": "ec4e1d51efd1c24567ffb98b90d6e878d5e34655f7a011d31f346697156aa1eb",
       "transformation": "byte-identical copy"
     },
     "docs/verification.md": {
@@ -1257,6 +1267,11 @@
     "scripts/build_connectome_explorer.py": {
       "source_path": "release/paper/templates/scripts/build_connectome_explorer.py",
       "source_sha256": "c6d952c55549fe8d028764fe6cb7c70c3a9cb5891c5a457c9d06116056b59e93",
+      "transformation": "byte-identical copy"
+    },
+    "scripts/build_paper_companion.py": {
+      "source_path": "release/paper/templates/scripts/build_paper_companion.py",
+      "source_sha256": "134e518f36d88350b6be667bf87e44618dc687482ccceece0ddd93174f632764",
       "transformation": "byte-identical copy"
     },
     "scripts/connectome_graph_utils.py": {
@@ -1309,9 +1324,14 @@
       "source_sha256": "38b12888255e1b408d969ddad757b661bce9f157c373fa578cdc3ef255ae817e",
       "transformation": "byte-identical copy"
     },
+    "scripts/test_paper_companion.py": {
+      "source_path": "release/paper/templates/scripts/test_paper_companion.py",
+      "source_sha256": "c7b1805df12754681eec0598f409e9dd02743990e574a9d85dd35eb19cf5f544",
+      "transformation": "byte-identical copy"
+    },
     "scripts/verify_release.py": {
       "source_path": "release/paper/templates/scripts/verify_release.py",
-      "source_sha256": "b8d4afbf85900ecf1be6929017fcbebb6ba636fc1cc13c7e856eb4270ac7c74c",
+      "source_sha256": "4328bdd54b2fc4a829e21f09ee529eaa30691e93d65d4f1babaaeb5058f7bba1",
       "transformation": "byte-identical copy"
     },
     "apps/connectome-explorer/index.html": {
