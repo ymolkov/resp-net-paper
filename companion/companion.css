@@ -20,12 +20,10 @@ a:focus-visible { outline:3px solid #b95617; outline-offset:4px; }
 .mast nav a { color:var(--ink); text-decoration:none; }
 .mast nav a:hover { text-decoration:underline; }
 .hero { background:white; border-bottom:.25rem solid #a6cdb3; }
-.hero .wrap { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.06fr); grid-template-areas:"paper circuit" "takeaway circuit"; gap:1.3rem 6%; padding-block:2.75rem 2.9rem; }
-.paper { grid-area:paper; align-self:end; }
-.takeaway { grid-area:takeaway; align-self:start; max-width:36rem; }
-.takeaway p { font:1.17rem/1.5 Georgia,serif; }
+.hero .wrap { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.06fr); align-items:center; gap:1.3rem 6%; padding-block:2.75rem 2.9rem; }
+.study-goal { margin-top:1.3rem; max-width:36rem; font:1.17rem/1.5 Georgia,serif; }
 .read { display:inline-block; margin-top:1.15rem; font-weight:650; }
-.circuit { grid-area:circuit; align-self:center; text-align:center; }
+.circuit { text-align:center; }
 .circuit figcaption { font:normal 1.65rem/1.25 Georgia,serif; }
 .network { display:block; width:100%; max-width:33rem; height:auto; margin:.4rem auto; }
 .signs,.signs span { display:flex; justify-content:center; align-items:center; gap:.55rem; }
@@ -57,7 +55,6 @@ a:focus-visible { outline:3px solid #b95617; outline-offset:4px; }
 .plate { margin-top:1.9rem; padding-top:1.35rem; border-top:1px solid var(--hair); display:grid; grid-template-columns:minmax(0,1.85fr) minmax(0,1fr); gap:4%; align-items:center; }
 .schematic img { display:block; background:white; width:100%; height:auto; }
 .schematic figcaption { margin-top:.6rem; color:#4f6061; font-size:.88rem; }
-.schematic figcaption a { white-space:nowrap; }
 .guide { display:grid; gap:1.35rem; }
 .guide>div { display:grid; grid-template-columns:1.5rem 1fr; gap:.25rem .45rem; }
 .guide b { color:var(--green); font-size:1.05rem; }
@@ -72,10 +69,10 @@ footer .wrap { padding-block:1rem; min-height:3.8rem; gap:.5rem 1.5rem; flex-wra
 footer span { font:bold 1.15rem Georgia,serif; margin-right:auto; }
 @media (max-width: 62rem) { h1 { font-size:2.7rem; } .hero .wrap { gap:3%; } .plate { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); } }
 @media (max-width: 45rem) {
-  .hero .wrap { grid-template-columns:1fr; grid-template-areas:"paper" "circuit" "takeaway"; gap:1.35rem; padding-block:1.4rem; }
+  .hero .wrap { grid-template-columns:1fr; gap:1.35rem; padding-block:1.4rem; }
   h1 { font-size:1.9rem; } h2 { font-size:1.85rem; } .circuit figcaption { font-size:1.35rem; }
   .observations { grid-template-columns:1fr; gap:1rem; } .signal { width:min(100%,21rem); }
-  .authors { margin-top:.6rem; } .actions { margin-top:.7rem; } .takeaway p { font-size:1.06rem; }
+  .authors { margin-top:.6rem; } .actions { margin-top:.7rem; } .study-goal { font-size:1.06rem; margin-top:.85rem; }
   .approach,.resources { padding-block:2rem; } .lead { font-size:1.08rem; } .plate { grid-template-columns:1fr; gap:1.3rem; margin-top:1.2rem; }
   .guide { gap:.9rem; } .resources dl>div { grid-template-columns:1fr; gap:.25rem; }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "422e638173315349780d30c5707f3625afeecb13",
+  "source_commit": "a85afd35b0896940d457a8d994361ba6f5d8732e",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1226,12 +1226,12 @@
     },
     "companion/companion.css": {
       "source_path": "release/paper/templates/companion/companion.css",
-      "source_sha256": "1e94d3580f5fd20b288aefceca785dc9344ba8f773aa5ac4afbc39c82dab612f",
+      "source_sha256": "beef75ea204cfdb9c3cf71bec3bbd2a780e55c371df34e6bbd72c795df779695",
       "transformation": "byte-identical copy"
     },
     "companion/index.html": {
       "source_path": "release/paper/templates/companion/index.html",
-      "source_sha256": "dc4cfc355f61563dca53147ddb6e5da2dac0caa7c7bdc0ffdb1867de3020dd4f",
+      "source_sha256": "1d95dbe650f044f09c5e8c2accb387867f1847dcc7afdb79aa52b576193259ea",
       "transformation": "byte-identical copy"
     },
     "docs/data_dictionary.md": {
