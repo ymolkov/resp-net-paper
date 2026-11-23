@@ -72,6 +72,20 @@ class Companion(unittest.TestCase):
                         self.assertGreater(pixels.shape[0], 300)
                         self.assertGreater(pixels[..., :3].std(), .03)
 
+    def test_preprint_pending_shares_only_the_companion(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            site = Path(tmp) / "site"
+            build(ROOT, site, preprint_pending=True)
+            page = (site/"index.html").read_text()
+            for unavailable in ("github.com/", "overleaf.com", "downloads/", "{{", "Read the paper"):
+                self.assertNotIn(unavailable, page)
+            self.assertFalse(list(site.rglob("*.pdf")) or list(site.rglob("*.xlsx")))
+            self.assertTrue((site/"explorer/index.html").is_file())
+            self.assertIn("explorer/index.html", Page(site/"index.html").links)
+            (site/"draft.pdf").touch()
+            with self.assertRaisesRegex(ValueError, "Unexpected file"):
+                build(ROOT, site, preprint_pending=True)
+
     def test_requires_public_article_or_private_pdf(self):
         for url in (None, "file:///tmp/draft.pdf", "https://www.biorxiv.org/", "https://doi.org/about",
                     "https://doi.org.example/10.1101/test", "http://doi.org/10.1101/test"):

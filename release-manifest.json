@@ -180,8 +180,8 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 5915,
-      "sha256": "1d95dbe650f044f09c5e8c2accb387867f1847dcc7afdb79aa52b576193259ea"
+      "bytes": 5995,
+      "sha256": "2f8f6d891e4864e13b392a1bc112b76aad1cafc9d383901bb1ccd74fc309077a"
     },
     {
       "path": "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json",
@@ -1150,8 +1150,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 6084,
-      "sha256": "d4a421f6c263616de13a01a465e63213fac229e77374ef38d9daf67b3f96179c"
+      "bytes": 6357,
+      "sha256": "f02e16789db99f81373e1f75ac1c27c09edb41b282c1268b7d47b8e44afce3ea"
     },
     {
       "path": "docs/verification.md",
@@ -1246,7 +1246,7 @@
     {
       "path": "release-origin.json",
       "bytes": 76020,
-      "sha256": "7d9b4e4e83499a65a7eecdc4547333c9c3e42a917aa64ffc5da68f5cc851be82"
+      "sha256": "72763f4b51287f0e6f50d24b8c4fae2d359c812ec6d80613787ea982c5b4b083"
     },
     {
       "path": "requirements.txt",
@@ -1265,8 +1265,8 @@
     },
     {
       "path": "scripts/build_paper_companion.py",
-      "bytes": 6318,
-      "sha256": "38f2885fa594ca9ac3ce8cf2ab7c4e83db2352c2071db9ae298e76f70c5d4e96"
+      "bytes": 6984,
+      "sha256": "9b45d4e0e56e5e632fd1e9ca3a22b2ee844e91ff2492e51ad142f348d150e2ec"
     },
     {
       "path": "scripts/connectome_graph_utils.py",
@@ -1345,8 +1345,8 @@
     },
     {
       "path": "scripts/test_paper_companion.py",
-      "bytes": 4369,
-      "sha256": "02334b41cc0bcd3bb30e4230aa4ca56d175e429fb9392cf6d9ac9a0bd1faaf73"
+      "bytes": 5182,
+      "sha256": "8388711ae9aec375c2ea1a787056902c2b519e0f277761270cbd5faa6c438c64"
     },
     {
       "path": "scripts/verify_release.py",

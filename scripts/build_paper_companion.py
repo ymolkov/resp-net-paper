@@ -56,10 +56,10 @@ def conductance_image(root, target):
     plt.close(fig)
 
 
-def build(root, dest, paper_url=None, preview_pdf=None):
-    if (paper_url is None) == (preview_pdf is None):
-        raise ValueError("Choose either a public paper URL or a local preview PDF")
-    if preview_pdf is None:
+def build(root, dest, paper_url=None, preview_pdf=None, preprint_pending=False):
+    if sum((paper_url is not None, preview_pdf is not None, preprint_pending)) != 1:
+        raise ValueError("Choose a public paper URL, a local preview PDF or preprint-pending mode")
+    if paper_url is not None:
         url = urlsplit(paper_url)
         doi = r"/10\.[0-9]{4,9}/[^\s/]+(?:/[^\s/]+)*"
         valid_article = ((url.netloc == "doi.org" and re.fullmatch(doi, url.path)) or
@@ -67,14 +67,16 @@ def build(root, dest, paper_url=None, preview_pdf=None):
                           and re.fullmatch("/content" + doi, url.path)))
         if url.scheme != "https" or not valid_article:
             raise ValueError("Use the paper's HTTPS DOI or bioRxiv article URL")
-    else:
+    elif preview_pdf is not None:
         with preview_pdf.open("rb") as f:
             if f.read(5) != b"%PDF-":
                 raise ValueError("Preview requires a local manuscript PDF")
         paper_url = "downloads/manuscript-preview.pdf"
     if dest.resolve() == root.resolve() or root.resolve() in dest.resolve().parents:
         raise ValueError("Build the site outside the release checkout")
-    allowed = set(COPIES.values()) | {"index.html", "explorer/index.html", "assets/conductance.png",
+    copies = {src: dst for src, dst in COPIES.items()
+              if not (preprint_pending and src.startswith("paper/"))}
+    allowed = set(copies.values()) | {"index.html", "explorer/index.html", "assets/conductance.png",
                                      "assets/figure-1.png", "assets/figure-4a.png"}
     if preview_pdf is not None:
         allowed.add(paper_url)
@@ -83,20 +85,20 @@ def build(root, dest, paper_url=None, preview_pdf=None):
         for p in dest.rglob("*"):
             if p.is_symlink() or (p.is_file() and p.relative_to(dest).as_posix() not in allowed):
                 raise ValueError(f"Unexpected file in site output: {p}")
-    for src, dst in COPIES.items():
+    for src, dst in copies.items():
         path = dest / dst
         path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(root / src, path)
     if preview_pdf is not None:
         shutil.copyfile(preview_pdf, dest / paper_url)
     subprocess.run(["pdftocairo", "-png", "-singlefile", "-scale-to", "1450",
-                    dest/"assets/figure-1.pdf", dest/"assets/figure-1"], check=True)
+                    root/"paper/figures/inference_overview.pdf", dest/"assets/figure-1"], check=True)
     # Published panel A between its header and the shared legend, in PDF points
     # from the top-left. Crop the original artwork, preserving all routes and widths.
     box = (6, 23, 249, 150)
     crop = [v for flag, pt in zip(("-x", "-y", "-W", "-H"), box) for v in (flag, str(6*pt))]
     subprocess.run(["pdftocairo", "-png", "-singlefile", "-r", "432", *crop,
-                    dest/"assets/figure-4.pdf", dest/"assets/figure-4a"], check=True)
+                    root/"paper/figures/expanded_circuit.pdf", dest/"assets/figure-4a"], check=True)
     conductance_image(root, dest/"assets/conductance.png")
     atlas = (root/EXPLORER/"index.html").read_text()
     brand = '<div class="brand">resp-net <span>Circuit atlas</span></div>'
@@ -106,10 +108,14 @@ def build(root, dest, paper_url=None, preview_pdf=None):
                           'aria-label="Return to the paper companion">resp-net</a> <span>Circuit atlas</span></div>')
     (dest/"explorer").mkdir(exist_ok=True)
     (dest/"explorer/index.html").write_text(atlas)
-    page = (root/"companion/index.html").read_text().replace("{{PAPER_URL}}", html.escape(paper_url, quote=True))
-    page = page.replace("{{EXPLORER}}", "explorer/index.html" if preview_pdf is not None else "explorer/")
+    page = (root/"companion/index.html").read_text()
+    page = re.sub(r"<!-- release-only -->(.*?)<!-- /release-only -->",
+                  lambda m: "" if preprint_pending else m[1], page, flags=re.S)
+    page = page.replace("{{PAPER_URL}}", html.escape(paper_url or "", quote=True))
+    page = page.replace("{{EXPLORER}}", "explorer/index.html" if preprint_pending or preview_pdf is not None else "explorer/")
     (dest/"index.html").write_text(page)
-    print(f"Built {'private preview' if preview_pdf else 'public-link artifact'}: {dest/'index.html'}")
+    mode = "preprint pending" if preprint_pending else "private preview" if preview_pdf else "public-link artifact"
+    print(f"Built {mode}: {dest/'index.html'}")
 
 
 if __name__ == "__main__":
@@ -118,5 +124,6 @@ if __name__ == "__main__":
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--paper-url", help="Published preprint or paper DOI URL")
     mode.add_argument("--preview-pdf", type=Path, help="For local review only; never deploy this output")
+    mode.add_argument("--preprint-pending", action="store_true", help="Public companion without manuscript, workbook or release links")
     args = parser.parse_args()
-    build(ROOT, args.output, args.paper_url, args.preview_pdf)
+    build(ROOT, args.output, args.paper_url, args.preview_pdf, args.preprint_pending)

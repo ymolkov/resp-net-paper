@@ -117,7 +117,11 @@ supply a local manuscript PDF:
 python scripts/build_paper_companion.py ../preview/resp-net-paper --preview-pdf /path/to/manuscript.pdf
 ```
 
-Open the resulting `index.html` directly. Do not upload this preview. For the
+Open the resulting `index.html` directly. Do not upload this preview.
+For a public companion **before the preprint is posted**, use a fresh output
+directory and `--preprint-pending` instead of `--preview-pdf`. This includes
+the overview, methods figures and explorer but omits the manuscript,
+supporting workbook and private repository links. For the
 public release, make the repository public, copy the inactive
 [workflow template](pages-workflow.yml.example) to `.github/workflows/pages.yml`
 using an account authorized to manage workflows, configure Pages to use GitHub

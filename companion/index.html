@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A companion to the study of respiratory circuitry by Molkov, Rybak and Smith: explore the circuit, read the paper and access the recordings and supporting data.">
+  <meta name="description" content="Explore the respiratory circuit reconstructed by Molkov, Rybak and Smith, from population connections to the synaptic inputs received by individual cells.">
   <title>Resp-net | From cellular synaptic input profiles to population-level respiratory circuitry</title>
   <link rel="stylesheet" href="assets/companion.css">
 </head>
@@ -20,7 +20,7 @@
         <h1 id="title">From cellular synaptic input profiles to population-level respiratory circuitry</h1>
         <p class="authors">Yaroslav I. Molkov, Ilya A. Rybak, and Jeffrey C. Smith</p>
         <p class="study-goal">Which brainstem populations supply the synaptic inputs that shape each phase of breathing? We compared when these populations fire with when individual neurons receive excitation and inhibition to reconstruct a candidate circuit.</p>
-        <a class="read" href="{{PAPER_URL}}">Read the paper</a>
+        <!-- release-only --><a class="read" href="{{PAPER_URL}}">Read the paper</a><!-- /release-only -->
       </div>
       <figure class="circuit">
         <figcaption>Reconstructed population circuit</figcaption>
@@ -61,9 +61,9 @@
       <p class="eyebrow">Study materials</p><h2 id="resources-heading">Data and resources</h2>
       <dl>
         <div><dt><a href="{{EXPLORER}}">Interactive circuit explorer</a></dt><dd>Inspect population inputs, alternative sources and individual cell profiles.</dd></div>
-        <div><dt><a download href="downloads/Supporting_Data_S1.xlsx">Download Supporting Data S1</a></dt><dd>Fitted contributions, omission decisions and underlying timing contrasts. <small>XLSX</small></dd></div>
+        <!-- release-only --><div><dt><a download href="downloads/Supporting_Data_S1.xlsx">Download Supporting Data S1</a></dt><dd>Fitted contributions, omission decisions and underlying timing contrasts. <small>XLSX</small></dd></div>
         <div><dt><a href="https://github.com/ymolkov/resp-net-paper">Data &amp; code</a></dt><dd>168 recordings from 150 neurons, activity templates, analysis scripts and frozen results.</dd></div>
-        <div><dt><a href="https://github.com/ymolkov/resp-net-paper/blob/main/docs/reproduction.md">Reproduce the analysis</a></dt><dd>Reconstruct the conductances, repeat the inference and regenerate the figures.</dd></div>
+        <div><dt><a href="https://github.com/ymolkov/resp-net-paper/blob/main/docs/reproduction.md">Reproduce the analysis</a></dt><dd>Reconstruct the conductances, repeat the inference and regenerate the figures.</dd></div><!-- /release-only -->
       </dl>
     </section>
   </main>
