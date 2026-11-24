@@ -8,6 +8,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / "apps/connectome-explorer"
+PAGE = ROOT / "explorer/index.html"
 INPUTS = {
     "summary": "data/model_analyses/inspiratory_subset_contrasts/summary.json",
     "cells": "data/model_analyses/inspiratory_subset_contrasts/cells.json",
@@ -89,17 +90,23 @@ def main():
     assert template.count("</body>") == 1
     template = template.replace("</body>",
         f'<script id="third-party-licenses" type="text/plain">\n{notices}\n</script>\n  </body>')
-    (APP/"index.html").write_text(template)
+    # The served atlas sits beside the study homepage and links back to it.
+    brand = '<div class="brand">resp-net <span>Circuit atlas</span></div>'
+    assert template.count(brand) == 1
+    template = template.replace(brand, '<div class="brand"><a href="../index.html" style="color:inherit" '
+                                'aria-label="Return to the study homepage">resp-net</a> <span>Circuit atlas</span></div>')
+    PAGE.parent.mkdir(exist_ok=True)
+    PAGE.write_text(template)
     source_assets = [APP/"app.js", APP/"core.js", APP/"style.css", APP/"index.template.html",
                      APP/"vendor/d3/d3.min.js", *sorted((APP/"vendor/lucide").glob("*.svg")),
                      *(p for _, p in licenses if p.is_relative_to(APP))]
     manifest = dict(analysis_run=False, source_sha256=data["meta"]["sourceHashes"],
-                    builder_sha256=sha(Path(__file__)), output_sha256=sha(APP/"index.html"),
+                    builder_sha256=sha(Path(__file__)), output_sha256=sha(PAGE),
                     license_sha256={"LICENSE": sha(ROOT/"LICENSE")},
                     assets_sha256={str(p.relative_to(APP)): sha(p) for p in source_assets})
     (APP/"manifest.json").write_text(json.dumps(manifest, indent=2)+"\n")
     assert before == {str(p): sha(p) for p in protected}
-    print(f"Built {APP/'index.html'} ({len(template.encode()):,} bytes).")
+    print(f"Built {PAGE} ({len(template.encode()):,} bytes).")
     print("150 cells, 168 recordings, all 80 mean subset predictions verified; frozen inputs unchanged.")
 
 

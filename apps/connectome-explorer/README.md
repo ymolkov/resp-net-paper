@@ -1,9 +1,11 @@
 # Respiratory circuit atlas
 
-This is the interactive companion to the empirical circuit analysis in
-`resp-net-paper`. Open `index.html` directly in a browser, or serve it with an
-ordinary static web server. Data, styles, icons, libraries, and their notices
-are embedded; no account, backend, or network connection is required.
+This is the source of the interactive companion to the empirical circuit
+analysis in `resp-net-paper`. The finished atlas is one file,
+[`explorer/index.html`](../../explorer/index.html). Open it directly in a
+browser, or serve it with an ordinary static web server. Data, styles, icons,
+libraries, and their notices are embedded; no account, backend, or network
+connection is required.
 
 The [reproduction guide](../../docs/reproduction.md) describes the released
 analysis, files, and manuscript workflow.
@@ -90,22 +92,25 @@ the Node unit-test command and requires a separate browser automation setup.
 For local viewing over HTTP:
 
 ```sh
-python3 -m http.server 8768 --bind 127.0.0.1 --directory apps/connectome-explorer
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8768/`. Any static host can serve the generated
-`index.html`; retain the vendor license files alongside a distributed copy.
+Run this from the repository root and open `http://127.0.0.1:8000/explorer/`.
+Any static host can serve `explorer/index.html`; retain the vendor license
+files alongside a distributed copy.
 
-The [live atlas](https://ymolkov.github.io/resp-net-paper/explorer/) is part of
-the GitHub Pages paper companion. See the [companion build and publication
-instructions](../../docs/reproduction.md#paper-companion-and-github-pages)
-for updating the `gh-pages` branch. No hosting credentials are bundled here.
+The [live atlas](https://ymolkov.github.io/resp-net-paper/explorer/) is that
+same file, served by GitHub Pages from the `main` branch. Pushing to `main`
+updates it. See the [study page and atlas
+instructions](../../docs/reproduction.md#study-page-and-atlas). No hosting
+credentials are bundled here.
 
 ## Files and licensing
 
 `index.template.html`, `style.css`, `app.js`, and `core.js` are interface source.
-`scripts/build_connectome_explorer.py` exports saved results; `index.html` is
-the generated standalone application. Rebuild it after changing any source.
+`scripts/build_connectome_explorer.py` exports saved results;
+`explorer/index.html` is the generated standalone application. Rebuild it
+after changing any source.
 
 Project code is released under MIT; project data and documentation are under
 CC BY 4.0, as described in the repository's top-level notices. Third-party

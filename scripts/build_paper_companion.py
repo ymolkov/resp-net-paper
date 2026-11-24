@@ -1,11 +1,22 @@
-"""Build the self-contained GitHub Pages artifact from the paper-only checkout."""
+"""Write the study homepage as one self-contained file at the repository root.
+
+The page is generated from `companion/index.html` and `companion/companion.css`.
+Its three images are made from the packaged figures and data and embedded in
+the page, so `index.html` needs no other file to display. GitHub Pages serves
+it, and the atlas beside it at `explorer/index.html`, straight from `main`.
+
+No inference is run. The paper's public address is read from
+`companion/paper_url.txt`; while that file has no address, the page carries no
+paper link.
+"""
 import argparse
+import base64
 import html
 import json
 from pathlib import Path
 import re
-import shutil
 import subprocess
+import tempfile
 from urllib.parse import urlsplit
 
 import matplotlib
@@ -14,16 +25,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPLORER = "apps/connectome-explorer"
-COPIES = {
-    "companion/companion.css": "assets/companion.css",
-    EXPLORER + "/vendor/lucide/scan.svg": "assets/scan.svg",
-    "paper/figures/inference_overview.pdf": "assets/figure-1.pdf",
-    "paper/figures/expanded_circuit.pdf": "assets/figure-4.pdf",
-    "paper/supporting/Supporting_Data_S1.xlsx": "downloads/Supporting_Data_S1.xlsx",
-    **{p: p for p in ("LICENSE", "LICENSE-DATA.md", "THIRD_PARTY_NOTICES.md",
-                       *(f"{EXPLORER}/vendor/{v}/LICENSE" for v in ("lucide", "d3")))},
-}
+TEMPLATE = "companion/index.html"
+STYLE = "companion/companion.css"
+PAPER_URL = "companion/paper_url.txt"
+ICON = "apps/connectome-explorer/vendor/lucide/scan.svg"
+IMAGES = ("figure-4a", "figure-1", "conductance")
+EMBEDDED = re.compile(r"data:image/[a-z+]+;base64,[A-Za-z0-9+/=]+")
 
 
 def conductance_image(root, target):
@@ -52,78 +59,84 @@ def conductance_image(root, target):
     for spine in ax.spines.values():
         spine.set_visible(False)
     ax.tick_params(length=0, pad=4, labelsize=9, colors="#40595b")
-    fig.savefig(target, transparent=True)
+    fig.savefig(target, transparent=True, metadata={"Software": None})
     plt.close(fig)
 
 
-def build(root, dest, paper_url=None, preview_pdf=None, preprint_pending=False):
-    if sum((paper_url is not None, preview_pdf is not None, preprint_pending)) != 1:
-        raise ValueError("Choose a public paper URL, a local preview PDF or preprint-pending mode")
-    if paper_url is not None:
-        url = urlsplit(paper_url)
-        doi = r"/10\.[0-9]{4,9}/[^\s/]+(?:/[^\s/]+)*"
-        valid_article = ((url.netloc == "doi.org" and re.fullmatch(doi, url.path)) or
-                         (url.netloc in {"www.biorxiv.org", "biorxiv.org"}
-                          and re.fullmatch("/content" + doi, url.path)))
-        if url.scheme != "https" or not valid_article:
-            raise ValueError("Use the paper's HTTPS DOI or bioRxiv article URL")
-    elif preview_pdf is not None:
-        with preview_pdf.open("rb") as f:
-            if f.read(5) != b"%PDF-":
-                raise ValueError("Preview requires a local manuscript PDF")
-        paper_url = "downloads/manuscript-preview.pdf"
-    if dest.resolve() == root.resolve() or root.resolve() in dest.resolve().parents:
-        raise ValueError("Build the site outside the release checkout")
-    copies = {src: dst for src, dst in COPIES.items()
-              if not (preprint_pending and src.startswith("paper/figures/"))}
-    allowed = set(copies.values()) | {"index.html", "explorer/index.html", "assets/conductance.png",
-                                     "assets/figure-1.png", "assets/figure-4a.png"}
-    if preview_pdf is not None:
-        allowed.add(paper_url)
-    if dest.exists():
-        # Never package leftover files (in particular, a preview manuscript).
-        for p in dest.rglob("*"):
-            if p.is_symlink() or (p.is_file() and p.relative_to(dest).as_posix() not in allowed):
-                raise ValueError(f"Unexpected file in site output: {p}")
-    for src, dst in copies.items():
-        path = dest / dst
-        path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(root / src, path)
-    if preview_pdf is not None:
-        shutil.copyfile(preview_pdf, dest / paper_url)
+def stored_paper_url(root):
+    """The first line of companion/paper_url.txt that is not blank or a comment."""
+    for line in (root / PAPER_URL).read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#"):
+            return line
+    return None
+
+
+def check_paper_url(paper_url):
+    url = urlsplit(paper_url)
+    doi = r"/10\.[0-9]{4,9}/[^\s/]+(?:/[^\s/]+)*"
+    valid_article = ((url.netloc == "doi.org" and re.fullmatch(doi, url.path)) or
+                     (url.netloc in {"www.biorxiv.org", "biorxiv.org"}
+                      and re.fullmatch("/content" + doi, url.path)))
+    if url.scheme != "https" or not valid_article:
+        raise ValueError("Use the paper's HTTPS DOI or bioRxiv article URL")
+
+
+def make_images(root, folder):
+    """Figure 4A, Figure 1 and the pre-I/I conductance plot as PNG bytes."""
     subprocess.run(["pdftocairo", "-png", "-singlefile", "-scale-to", "1450",
-                    root/"paper/figures/inference_overview.pdf", dest/"assets/figure-1"], check=True)
+                    root/"paper/figures/inference_overview.pdf", folder/"figure-1"], check=True)
     # Published panel A between its header and the shared legend, in PDF points
     # from the top-left. Crop the original artwork, preserving all routes and widths.
     box = (6, 23, 249, 150)
     crop = [v for flag, pt in zip(("-x", "-y", "-W", "-H"), box) for v in (flag, str(6*pt))]
     subprocess.run(["pdftocairo", "-png", "-singlefile", "-r", "432", *crop,
-                    root/"paper/figures/expanded_circuit.pdf", dest/"assets/figure-4a"], check=True)
-    conductance_image(root, dest/"assets/conductance.png")
-    atlas = (root/EXPLORER/"index.html").read_text()
-    brand = '<div class="brand">resp-net <span>Circuit atlas</span></div>'
-    if atlas.count(brand) != 1:
-        raise ValueError("Atlas masthead changed; check the companion return link")
-    atlas = atlas.replace(brand, '<div class="brand"><a href="../index.html" style="color:inherit" '
-                          'aria-label="Return to the paper companion">resp-net</a> <span>Circuit atlas</span></div>')
-    (dest/"explorer").mkdir(exist_ok=True)
-    (dest/"explorer/index.html").write_text(atlas)
-    page = (root/"companion/index.html").read_text()
+                    root/"paper/figures/expanded_circuit.pdf", folder/"figure-4a"], check=True)
+    conductance_image(root, folder/"conductance.png")
+    return {name: (folder/f"{name}.png").read_bytes() for name in IMAGES}
+
+
+def data_uri(content, mime):
+    return f"data:{mime};base64,{base64.b64encode(content).decode()}"
+
+
+def render(root, paper_url=None):
+    """Return the homepage with its stylesheet, icon and images embedded."""
+    if paper_url is not None:
+        check_paper_url(paper_url)
+    page = (root/TEMPLATE).read_text()
     page = re.sub(r"<!-- paper-link -->(.*?)<!-- /paper-link -->",
-                  lambda m: "" if preprint_pending else m[1], page, flags=re.S)
+                  lambda m: m[1] if paper_url else "", page, flags=re.S)
     page = page.replace("{{PAPER_URL}}", html.escape(paper_url or "", quote=True))
-    page = page.replace("{{EXPLORER}}", "explorer/index.html" if preprint_pending or preview_pdf is not None else "explorer/")
-    (dest/"index.html").write_text(page)
-    mode = "preprint pending" if preprint_pending else "private preview" if preview_pdf else "public-link artifact"
-    print(f"Built {mode}: {dest/'index.html'}")
+    with tempfile.TemporaryDirectory() as tmp:
+        images = make_images(root, Path(tmp))
+    embedded = {f'src="assets/{name}.png"': f'src="{data_uri(content, "image/png")}"'
+                for name, content in images.items()}
+    embedded['src="assets/scan.svg"'] = f'src="{data_uri((root/ICON).read_bytes(), "image/svg+xml")}"'
+    embedded['<link rel="stylesheet" href="assets/companion.css">'] = (
+        f"<style>\n{(root/STYLE).read_text()}</style>")
+    for reference, replacement in embedded.items():
+        if page.count(reference) != 1:
+            raise ValueError(f"Homepage template changed; expected one {reference}")
+        page = page.replace(reference, replacement)
+    if "{{" in page or "assets/" in page:
+        raise ValueError("Homepage still refers to a separate asset or placeholder")
+    return page
+
+
+def text_of(page):
+    """The page with embedded images blanked, for comparing its wording and links."""
+    return EMBEDDED.sub("data:embedded", page)
+
+
+def build(root, paper_url=None):
+    paper_url = paper_url or stored_paper_url(root)
+    (root/"index.html").write_text(render(root, paper_url))
+    mode = f"linking {paper_url}" if paper_url else "without a paper link"
+    print(f"Wrote {root/'index.html'} ({(root/'index.html').stat().st_size:,} bytes), {mode}.")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("output", type=Path)
-    mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--paper-url", help="Published preprint or paper DOI URL")
-    mode.add_argument("--preview-pdf", type=Path, help="For local review only; never deploy this output")
-    mode.add_argument("--preprint-pending", action="store_true", help="Public data, workbook and atlas, without a manuscript or article link")
-    args = parser.parse_args()
-    build(ROOT, args.output, args.paper_url, args.preview_pdf, args.preprint_pending)
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    parser.add_argument("--paper-url", help="Override the address stored in companion/paper_url.txt")
+    build(ROOT, parser.parse_args().paper_url)

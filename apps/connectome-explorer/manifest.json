@@ -6,8 +6,8 @@
     "data/model_analyses/coarse_connection_contrasts/contrasts.json": "c95ee759e9d3fafa8d301149099f60c1fd8cabcde8f30cb02a77ffdaff3181d6",
     "output/circuit_previews/six_population_2026-09-26/manifest.json": "c298ca6a92afdd43788e0b9fce0960b36973676c955c9f6f09613344b5bbd032"
   },
-  "builder_sha256": "c6d952c55549fe8d028764fe6cb7c70c3a9cb5891c5a457c9d06116056b59e93",
-  "output_sha256": "16e1e28b9370584f53b2ee9abcb4df29b495e7beb90849efddd31684a7396e52",
+  "builder_sha256": "a7118d96df0dc50304bb265ea1ae58da4ed70f616c83b298af046aa61d9c6949",
+  "output_sha256": "4b62cc9ca899677adcebe40b6a9bf26da765b307c8a08875bf0c0875b7bea2d4",
   "license_sha256": {
     "LICENSE": "da041068e555105508e1f55668796656140471d2f93fe71c88d36083ad847a4c"
   },

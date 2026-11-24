@@ -84,7 +84,26 @@ graphics on different library/font versions may change PDF bytes without changin
 numerical results; investigate any checksum difference and use the numerical
 reproduction checks to assess the science.
 
-## Companion site
+## Study page and atlas
+
+The repository holds the two published pages as finished files:
+
+- `index.html` is the study homepage.
+- `explorer/index.html` is the interactive circuit atlas.
+
+Each is one self-contained file. The atlas embeds its data, code, icons and
+licence notices. The homepage embeds its stylesheet and its three images.
+Either opens directly from a download and works offline. No fitting or
+statistical testing takes place in the browser.
+
+GitHub Pages serves the `main` branch as it is, so the
+[live homepage](https://ymolkov.github.io/resp-net-paper/) and
+[live atlas](https://ymolkov.github.io/resp-net-paper/explorer/) are these two
+files. Pushing to `main` updates the site. There is no separate site branch
+and no build step on GitHub; the empty `.nojekyll` file tells Pages to serve
+the files unchanged.
+
+To regenerate the pages after changing their sources:
 
 ```sh
 make site
@@ -92,44 +111,26 @@ make site-test
 make serve
 ```
 
-Open `http://127.0.0.1:8000/`, or open
-`apps/connectome-explorer/index.html` directly. It contains the data and vendored
-libraries and runs offline. No fitting or statistical testing takes place in
-the browser. The build verifies all 80 group-mean retained-set predictions;
-13 Node tests check the saved fits, alternatives, transformations, and packaging.
+`make serve` shows the repository at `http://127.0.0.1:8000/`, as Pages does.
 
-The site source, builder, browser regression script, and licenses are included.
+- **Atlas.** `scripts/build_connectome_explorer.py` assembles
+  `explorer/index.html` from `apps/connectome-explorer/` and the saved fits.
+  It verifies all 80 group-mean retained-set predictions. Thirteen Node tests
+  check the saved fits, alternatives, transformations and packaging.
+- **Homepage.** `scripts/build_paper_companion.py` writes `index.html` from
+  `companion/index.html` and `companion/companion.css`. It crops the inferred
+  circuit from the packaged Figure 4 PDF without redrawing connections,
+  renders Figure 1, and plots the mean of the two normalized conductance
+  profiles of the 17 pre-I/I cells in the primary analysis (the profiles used
+  for Figure 2). It needs Poppler's `pdftocairo` in addition to the Python
+  dependencies above. No inference is run.
+- **Paper link.** The homepage links the paper only when
+  `companion/paper_url.txt` holds its public bioRxiv or DOI address. Put the
+  address on its own line there, run `make site`, and commit `index.html`.
 
-### Paper companion and GitHub Pages
-
-The companion opens with the inferred circuit from Figure 4A, cropped from the
-packaged Figure 4 PDF without redrawing connections. The atlas is under
-`explorer/`. The methods section includes Figure 1 and a plot of the mean of the two
-normalized conductance profiles of the 17 pre-I/I cells in the primary analysis
-(the same profiles used for Figure 2). No inference is run during site assembly.
-
-The page builder needs Poppler's `pdftocairo` in addition to the Python
-dependencies above. Run `make companion-test` to check the two publication
-modes, packaged resources and project-relative links. For a private preview,
-supply a local manuscript PDF:
-
-```sh
-python scripts/build_paper_companion.py ../preview/resp-net-paper --preview-pdf /path/to/manuscript.pdf
-```
-
-Open the resulting `index.html` directly. Do not upload this preview.
-For a public companion **before the preprint is posted**, use a fresh output
-directory and `--preprint-pending` instead of `--preview-pdf`. This includes
-the overview, explorer, supporting workbook and repository links, but no
-manuscript PDF or paper link. Once the article is public, build into a fresh
-directory with `--paper-url` and the public bioRxiv or DOI URL instead.
-
-The [live companion](https://ymolkov.github.io/resp-net-paper/) is served from
-the root of the `gh-pages` branch of this repository. Publish only the generated
-public build to that branch, retaining its empty `.nojekyll` file and the vendor
-licences. A push to `main` alone does not deploy. Verify the homepage, explorer,
-workbook and (once available) paper link signed out. Do not publish a private
-preview or enable a second deployment workflow.
+`make site-test` checks that the committed homepage still matches its sources,
+that it refers to no separate stylesheet, script or image file, and that every
+link leads to a file in the repository.
 
 ## Interpretation and citation
 

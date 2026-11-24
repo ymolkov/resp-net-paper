@@ -9,6 +9,11 @@
       "sha256": "69af059587130dd96cc870cbabdca6b3abfa6544419f79223830562e9392e490"
     },
     {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "CITATION.cff",
       "bytes": 957,
       "sha256": "bac7937afba545bba632c3cb471df525fb0db473a93a38485527b10a886a4bfc"
@@ -25,13 +30,13 @@
     },
     {
       "path": "Makefile",
-      "bytes": 854,
-      "sha256": "32d668f5807ed5a5b00ea531022c55010a966ba421e24108656b5ec7e5ce6e32"
+      "bytes": 892,
+      "sha256": "b8e2366d360ed0c01a53122d6ce50950ec362186520a3bc851968bf3984f1ad5"
     },
     {
       "path": "README.md",
-      "bytes": 3870,
-      "sha256": "b573e4f0d66043d194a018944fd88fe30ef8564e11b9e4da7c2b734796b1a147"
+      "bytes": 3988,
+      "sha256": "ca49494fd827f2ec6e699dd0ff9f9f356ca9d89fcccc2378b9e464513256b717"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -40,8 +45,8 @@
     },
     {
       "path": "apps/connectome-explorer/README.md",
-      "bytes": 6287,
-      "sha256": "4bfc9969b538268a41111555935d3387255ece151af9626d38f4c20195935abd"
+      "bytes": 6382,
+      "sha256": "fca2a6e03095ee85e42699c7fd7bcece715758d3e9178302cde7a844b4fdfe6b"
     },
     {
       "path": "apps/connectome-explorer/app.js",
@@ -54,11 +59,6 @@
       "sha256": "eeb43fb9dd95bc1388ee9a7d11dda0145ae46b0d8d036b48b0daeacb86baab9d"
     },
     {
-      "path": "apps/connectome-explorer/index.html",
-      "bytes": 1313576,
-      "sha256": "16e1e28b9370584f53b2ee9abcb4df29b495e7beb90849efddd31684a7396e52"
-    },
-    {
       "path": "apps/connectome-explorer/index.template.html",
       "bytes": 4402,
       "sha256": "5ac83fda5bc16b86d5751c918d62d18afb843db7c27bcea05dd84bf42d72a519"
@@ -66,7 +66,7 @@
     {
       "path": "apps/connectome-explorer/manifest.json",
       "bytes": 3045,
-      "sha256": "a5e28d6edf3d15011cfe4dacc03636b6e54d9cb7f90cddc475875069b836d798"
+      "sha256": "8327b6c92c492f3c6e22c133382e6b86ee96ec72901a1dcff8397ee0d8334e1c"
     },
     {
       "path": "apps/connectome-explorer/smoke-browser.js",
@@ -80,8 +80,8 @@
     },
     {
       "path": "apps/connectome-explorer/test-core.cjs",
-      "bytes": 10290,
-      "sha256": "63808c3d9fd3f6b172ddf165e159d574414ec0fe5962ae248736eb60d5483e19"
+      "bytes": 10473,
+      "sha256": "5d845961ee43614fc8f79a46c773c7c77df3522b95c6a7e5827e8da1789f8574"
     },
     {
       "path": "apps/connectome-explorer/vendor/d3/LICENSE",
@@ -180,8 +180,13 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 6222,
-      "sha256": "17f686ee1b175a72f2dd855efc0b4ddd47a95fc7bea1b0aef83512a81c17a449"
+      "bytes": 6264,
+      "sha256": "858caff600553134ea1c34ee222768309130cc151cb374e226e61c7e62c18937"
+    },
+    {
+      "path": "companion/paper_url.txt",
+      "bytes": 217,
+      "sha256": "28aeacf58a661214bd9f9120665f641257606266b4fa361e3b32865c6fd32202"
     },
     {
       "path": "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json",
@@ -1144,19 +1149,24 @@
       "sha256": "421197a0e95b1b7f376b740f1151be8b20283e07aa222712c6e33c784e43eee2"
     },
     {
-      "path": "docs/pages-workflow.yml.example",
-      "bytes": 1944,
-      "sha256": "4648c8981ea3a471ce822a7bedff2603de8550ff344acd79b612c3f8978e90c0"
-    },
-    {
       "path": "docs/reproduction.md",
-      "bytes": 6010,
-      "sha256": "15fd232eeaec7fb33debfe568239267c123bb2de68487878131c361702d33ecb"
+      "bytes": 6003,
+      "sha256": "e53890d448b3188e9e5dbc61c77754e54f723fb786f97acd0198ed5521d99792"
     },
     {
       "path": "docs/verification.md",
       "bytes": 2245,
       "sha256": "a101f6e5ba40e09476ab3e8c37162309a646680fdbd8a48a8dd25951808e01e0"
+    },
+    {
+      "path": "explorer/index.html",
+      "bytes": 1313668,
+      "sha256": "4b62cc9ca899677adcebe40b6a9bf26da765b307c8a08875bf0c0875b7bea2d4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 493918,
+      "sha256": "d5e7021d0bcb24f165ae0534e58e66d464f98fc1a3dbb20db23e2d59b8f27803"
     },
     {
       "path": "output/circuit_previews/six_population_2026-09-26/manifest.json",
@@ -1245,8 +1255,8 @@
     },
     {
       "path": "release-origin.json",
-      "bytes": 76020,
-      "sha256": "283fcf0dbc64d0fe57e60fd6c86eb025cd8d9cb6b06f695de42bd9be83cf1187"
+      "bytes": 76305,
+      "sha256": "cc429b99d445ef54986df69e42f53109f9d25624f7b379f73ef95a8b520262ab"
     },
     {
       "path": "requirements.txt",
@@ -1260,13 +1270,13 @@
     },
     {
       "path": "scripts/build_connectome_explorer.py",
-      "bytes": 6014,
-      "sha256": "c6d952c55549fe8d028764fe6cb7c70c3a9cb5891c5a457c9d06116056b59e93"
+      "bytes": 6468,
+      "sha256": "a7118d96df0dc50304bb265ea1ae58da4ed70f616c83b298af046aa61d9c6949"
     },
     {
       "path": "scripts/build_paper_companion.py",
-      "bytes": 6995,
-      "sha256": "8e9d7b97796063eb55f139bb9e407a94253b1c12f76fba6fe5f25d7ee20f726a"
+      "bytes": 6355,
+      "sha256": "eb3f2a7a8726bb33684bc572326f62ffb60d9b451d5716c9d980bd06268d1fe7"
     },
     {
       "path": "scripts/connectome_graph_utils.py",
@@ -1345,13 +1355,13 @@
     },
     {
       "path": "scripts/test_paper_companion.py",
-      "bytes": 5527,
-      "sha256": "b88f93f5a8bc2705754a1fd0465f7bb36c2cc45b4229cf45355063b201e027e9"
+      "bytes": 4511,
+      "sha256": "427409374e0bc69de23825a6e3ee442d3fb45e8aebc8a2e691a9f26b9ec592dc"
     },
     {
       "path": "scripts/verify_release.py",
-      "bytes": 4658,
-      "sha256": "4328bdd54b2fc4a829e21f09ee529eaa30691e93d65d4f1babaaeb5058f7bba1"
+      "bytes": 4334,
+      "sha256": "b8d4afbf85900ecf1be6929017fcbebb6ba636fc1cc13c7e856eb4270ac7c74c"
     }
   ]
 }

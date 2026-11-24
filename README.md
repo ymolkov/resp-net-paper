@@ -16,8 +16,10 @@ Open the [paper companion](https://ymolkov.github.io/resp-net-paper/) for the
 study overview, or go directly to the [interactive circuit atlas](https://ymolkov.github.io/resp-net-paper/explorer/)
 to inspect connections and individual cell profiles.
 
-- Open [the interactive atlas](apps/connectome-explorer/index.html) in a browser
-  after downloading or cloning the repository. It also works offline.
+- After downloading or cloning the repository, open [the study page](index.html)
+  or [the interactive atlas](explorer/index.html) in a browser. Each is a single
+  self-contained file and works offline. The live site is these same two files,
+  served from this branch.
 - Read [reproduction instructions](docs/reproduction.md) to verify files, rebuild
   the figures/site, or recompute the analysis.
 - Read [data and file descriptions](docs/data_dictionary.md) for recording

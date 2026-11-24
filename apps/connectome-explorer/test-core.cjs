@@ -5,7 +5,13 @@ const path = require("node:path");
 const crypto = require("node:crypto");
 const C = require("./core.js");
 const root = path.resolve(__dirname, "../..");
-const html = fs.readFileSync(path.join(__dirname, "index.html"), "utf8");
+// The research checkout keeps the built page beside its source; the paper
+// repository serves it from explorer/.
+const page = [
+  path.join(__dirname, "index.html"),
+  path.join(root, "explorer/index.html"),
+].find((p) => fs.existsSync(p));
+const html = fs.readFileSync(page, "utf8");
 const D = JSON.parse(
   html.match(
     /<script id="dataset" type="application\/json">(.*?)<\/script>/s,
@@ -215,7 +221,7 @@ test("standalone page and manifest match sources without remote dependencies", (
   const manifest = read("apps/connectome-explorer/manifest.json");
   const sha = (p) =>
     crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex");
-  assert.equal(manifest.output_sha256, sha(path.join(__dirname, "index.html")));
+  assert.equal(manifest.output_sha256, sha(page));
   assert.equal(
     manifest.builder_sha256,
     sha(path.join(root, "scripts/build_connectome_explorer.py")),

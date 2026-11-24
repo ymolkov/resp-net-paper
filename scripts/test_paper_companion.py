@@ -1,103 +1,111 @@
-"""Integration checks for the private preview and the GitHub Pages artifact."""
+"""Checks that the two published pages are self-contained and in step with their sources."""
+import base64
 from html.parser import HTMLParser
+import io
 from pathlib import Path
-import tempfile
+import re
 import unittest
 from urllib.parse import urlsplit
 
 import matplotlib.image as image
 
-from build_paper_companion import ROOT, build
+from build_paper_companion import ROOT, render, stored_paper_url, text_of
 
 
 class Page(HTMLParser):
-    def __init__(self, path):
+    def __init__(self, text):
         super().__init__()
         self.links = []
+        self.sources = []
+        self.stylesheets = []
         self.ids = set()
-        self.feed(path.read_text())
+        self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if "id" in attrs:
             self.ids.add(attrs["id"])
-        for key in ("href", "src"):
-            if key in attrs:
-                self.links.append(attrs[key])
+        if tag == "link":
+            if attrs.get("rel") == "stylesheet":
+                self.stylesheets.append(attrs.get("href"))
+        elif "href" in attrs:
+            self.links.append(attrs["href"])
+        if "src" in attrs:
+            self.sources.append(attrs["src"])
 
 
-class Companion(unittest.TestCase):
-    def test_preview_and_public_artifacts(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            base = Path(tmp)
-            pdf = base / "test-only.pdf"
-            pdf.write_bytes(b"%PDF-1.4\nTest fixture, not a paper.")
-            url = "https://doi.org/10.1101/companion-test"
-            for preview in (True, False):
-                with self.subTest(preview=preview):
-                    site = base / ("preview" if preview else "public") / "resp-net-paper"
-                    build(ROOT, site, preview_pdf=pdf if preview else None,
-                          paper_url=None if preview else url)
-                    home = site / "index.html"
-                    self.assertNotIn("{{", home.read_text())
-                    page = Page(home)
-                    self.assertIn("explorer/index.html" if preview else "explorer/", page.links)
-                    self.assertIn("downloads/manuscript-preview.pdf" if preview else url, page.links)
-                    for href in page.links:
-                        link = urlsplit(href)
-                        if link.scheme == "https":
-                            continue
-                        self.assertFalse(link.scheme or link.netloc or link.path.startswith("/"), href)
-                        if link.fragment and not link.path:
-                            self.assertIn(link.fragment, page.ids)
-                        if link.path:
-                            p = site / link.path
-                            self.assertTrue((p/"index.html" if p.is_dir() else p).is_file(), href)
-                    self.assertIn("../index.html", Page(site/"explorer/index.html").links)
-                    manuscript = site/"downloads/manuscript-preview.pdf"
-                    self.assertEqual(manuscript.exists(), preview)
-                    if preview:
-                        self.assertEqual(manuscript.read_bytes(), pdf.read_bytes())
-                        with self.assertRaisesRegex(ValueError, "Unexpected file"):
-                            build(ROOT, site, paper_url=url)
-                    else:
-                        self.assertEqual(set(site.rglob("*.pdf")), {site/"assets/figure-1.pdf", site/"assets/figure-4.pdf"})
-                    for src, dest in (("paper/figures/inference_overview.pdf", "assets/figure-1.pdf"),
-                                      ("paper/figures/expanded_circuit.pdf", "assets/figure-4.pdf"),
-                                      ("paper/supporting/Supporting_Data_S1.xlsx", "downloads/Supporting_Data_S1.xlsx")):
-                        self.assertEqual((ROOT/src).read_bytes(), (site/dest).read_bytes())
-                    self.assertLess(page.links.index("assets/figure-4a.png"), page.links.index("assets/figure-1.png"))
-                    for name in ("figure-1", "figure-4a", "conductance"):
-                        pixels = image.imread(site/f"assets/{name}.png")
-                        self.assertGreater(pixels.shape[0], 300)
-                        self.assertGreater(pixels[..., :3].std(), .03)
+class Homepage(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.committed = (ROOT/"index.html").read_text()
+        cls.fresh = render(ROOT, stored_paper_url(ROOT))
 
-    def test_preprint_pending_shares_public_data_but_no_manuscript(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            site = Path(tmp) / "site"
-            build(ROOT, site, preprint_pending=True)
-            page = (site/"index.html").read_text()
-            for unavailable in ("overleaf.com", "manuscript-preview", "{{", "Read the paper"):
-                self.assertNotIn(unavailable, page)
-            self.assertFalse(list(site.rglob("*.pdf")))
-            links = Page(site/"index.html").links
-            self.assertIn("https://github.com/ymolkov/resp-net-paper", links)
-            workbook = "downloads/Supporting_Data_S1.xlsx"
-            self.assertIn(workbook, links)
-            self.assertEqual((site/workbook).read_bytes(), (ROOT/"paper/supporting/Supporting_Data_S1.xlsx").read_bytes())
-            self.assertTrue((site/"explorer/index.html").is_file())
-            self.assertIn("explorer/index.html", Page(site/"index.html").links)
-            (site/"draft.pdf").touch()
-            with self.assertRaisesRegex(ValueError, "Unexpected file"):
-                build(ROOT, site, preprint_pending=True)
+    def test_committed_page_matches_its_sources(self):
+        # Images are compared separately: PNG bytes can differ between machines.
+        self.assertEqual(text_of(self.committed), text_of(self.fresh))
 
-    def test_requires_public_article_or_private_pdf(self):
-        for url in (None, "file:///tmp/draft.pdf", "https://www.biorxiv.org/", "https://doi.org/about",
+    def test_page_needs_no_other_file_to_display(self):
+        page = Page(self.committed)
+        self.assertEqual(page.stylesheets, [])
+        self.assertNotIn("<script", self.committed)
+        self.assertNotIn("{{", self.committed)
+        self.assertIn("<style>", self.committed)
+        self.assertEqual(len(page.sources), 4)
+        for source in page.sources:
+            self.assertTrue(source.startswith("data:image/"), source[:40])
+
+    def test_embedded_figures_are_real_images(self):
+        pictures = re.findall(r'src="data:image/png;base64,([^"]+)"', self.committed)
+        self.assertEqual(len(pictures), 3)
+        for encoded in pictures:
+            pixels = image.imread(io.BytesIO(base64.b64decode(encoded)), format="png")
+            self.assertGreater(pixels.shape[0], 300)
+            self.assertGreater(pixels[..., :3].std(), .03)
+        self.assertLess(self.committed.index("Figure 4A:"), self.committed.index("Schematic: cellular"))
+
+    def test_every_link_leads_somewhere(self):
+        page = Page(self.committed)
+        for wanted in ("explorer/index.html", "explorer/index.html#guide",
+                       "paper/supporting/Supporting_Data_S1.xlsx",
+                       "https://github.com/ymolkov/resp-net-paper"):
+            self.assertIn(wanted, page.links)
+        for href in page.links:
+            link = urlsplit(href)
+            if link.scheme == "https":
+                continue
+            self.assertFalse(link.scheme or link.netloc or link.path.startswith("/"), href)
+            if link.fragment and not link.path:
+                self.assertIn(link.fragment, page.ids)
+            if link.path:
+                self.assertTrue((ROOT/link.path).is_file(), href)
+
+    def test_paper_link_appears_only_with_a_public_address(self):
+        without = render(ROOT)
+        self.assertNotIn("Read the paper", without)
+        url = "https://doi.org/10.1101/companion-test"
+        with_link = render(ROOT, url)
+        self.assertIn("Read the paper", with_link)
+        self.assertIn(url, Page(with_link).links)
+        for bad in ("file:///tmp/draft.pdf", "https://www.biorxiv.org/", "https://doi.org/about",
                     "https://doi.org.example/10.1101/test", "http://doi.org/10.1101/test"):
-            with self.subTest(url=url), self.assertRaisesRegex(ValueError, "paper URL|HTTPS DOI"):
-                build(ROOT, ROOT, paper_url=url)
-        with self.assertRaisesRegex(ValueError, "outside the release checkout"):
-            build(ROOT, ROOT, paper_url="https://www.biorxiv.org/content/10.1101/testv1")
+            with self.subTest(url=bad), self.assertRaisesRegex(ValueError, "HTTPS DOI"):
+                render(ROOT, bad)
+        stored = stored_paper_url(ROOT)
+        self.assertEqual("Read the paper" in self.committed, stored is not None)
+
+
+class Atlas(unittest.TestCase):
+    def test_atlas_is_one_file_beside_the_homepage(self):
+        atlas = (ROOT/"explorer/index.html").read_text()
+        page = Page(atlas)
+        self.assertIn("../index.html", page.links)
+        self.assertEqual(page.stylesheets, [])
+        self.assertFalse(re.search(r"<script[^>]+src=", atlas))
+        self.assertFalse((ROOT/"apps/connectome-explorer/index.html").exists())
+
+    def test_pages_are_served_as_they_are(self):
+        self.assertTrue((ROOT/".nojekyll").is_file())
+        self.assertFalse((ROOT/".github/workflows").exists())
 
 
 if __name__ == "__main__":

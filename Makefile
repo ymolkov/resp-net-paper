@@ -1,7 +1,7 @@
 PYTHON ?= python3
 NODE ?= node
 
-.PHONY: verify reconstruct inference reproduce figures site site-test companion-test serve
+.PHONY: verify reconstruct inference reproduce figures site site-test serve
 
 verify:
 	$(PYTHON) scripts/verify_release.py
@@ -20,15 +20,15 @@ figures:
 	$(PYTHON) scripts/plot_expanded_paper.py
 	$(PYTHON) scripts/plot_cells_to_circuit_variability_preview.py --paper
 
+# The two published pages: explorer/index.html and index.html.
 site:
 	$(PYTHON) scripts/build_connectome_explorer.py
+	$(PYTHON) scripts/build_paper_companion.py
 
 site-test:
 	$(NODE) --test apps/connectome-explorer/test-core.cjs
-
-companion-test:
 	$(PYTHON) -B scripts/test_paper_companion.py
 
 serve:
-	$(PYTHON) -m http.server 8000 --bind 127.0.0.1 --directory apps/connectome-explorer
+	$(PYTHON) -m http.server 8000 --bind 127.0.0.1
 
