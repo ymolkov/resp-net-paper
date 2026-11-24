@@ -136,7 +136,7 @@ footer span { font:bold 1.15rem Georgia,serif; margin-right:auto; }
           <figcaption>Figure 1. Schematic of the inference procedure.</figcaption>
         </figure>
         <div class="guide" aria-label="Guide to Figure 1">
-          <div><b>A</b><h3>Reconstruct each cell’s inputs</h3><p>For each neuron, we estimated how excitation and inhibition change over a respiratory cycle. We grouped neurons by when they fire.</p></div>
+          <div><b>A</b><h3>Reconstruct each cell’s inputs</h3><p>At each phase of the respiratory cycle, we fitted the relation between current and membrane potential across many cycles. From it we separated the excitatory and inhibitory conductance at that phase (<a href="https://doi.org/10.7554/eLife.101959.4">Molkov et al., 2025</a>). We grouped neurons by when they fire.</p></div>
           <div><b>B</b><h3>Ask which sources are needed</h3><p>We treated the same populations as possible sources. If we leave one out, can the others still reproduce the timing of the input across cells?</p></div>
           <div><b>C</b><h3>Assemble the circuit</h3><p>A solid connection identifies a source the recordings distinguish. Dashed connections show alternatives: different sources can produce similar inputs.</p></div>
         </div>
@@ -149,6 +149,7 @@ footer span { font:bold 1.15rem Georgia,serif; margin-right:auto; }
         <div><dt><a download href="paper/supporting/Supporting_Data_S1.xlsx">Download Supporting Data S1</a></dt><dd>Fitted contributions, omission decisions and underlying timing contrasts. <small>XLSX</small></dd></div>
         <div><dt><a href="https://github.com/ymolkov/resp-net-paper">Data &amp; code</a></dt><dd>168 recordings from 150 neurons, activity templates, analysis scripts and frozen results.</dd></div>
         <div><dt><a href="https://github.com/ymolkov/resp-net-paper/blob/main/docs/reproduction.md">Reproduce the analysis</a></dt><dd>Reconstruct the conductances, repeat the inference and regenerate the figures.</dd></div>
+        <div><dt><a href="https://ymolkov.github.io/synaptic-inputs-slices/">Conductance inference method (SCION)</a></dt><dd>The same approach as a general tool for rhythmically active networks, with a worked example from rhythmic slices (<a href="https://doi.org/10.1152/jn.00235.2026">Molkov et al., 2026</a>).</dd></div>
       </dl>
     </section>
   </main>

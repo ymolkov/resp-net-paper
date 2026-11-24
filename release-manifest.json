@@ -180,8 +180,8 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 6264,
-      "sha256": "858caff600553134ea1c34ee222768309130cc151cb374e226e61c7e62c18937"
+      "bytes": 6771,
+      "sha256": "34d397f0414bb5aeb30e70acd1f1fa0bea5503adb9dd193dc01b244fff12677a"
     },
     {
       "path": "companion/paper_url.txt",
@@ -1165,8 +1165,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 493918,
-      "sha256": "d5e7021d0bcb24f165ae0534e58e66d464f98fc1a3dbb20db23e2d59b8f27803"
+      "bytes": 494425,
+      "sha256": "60eff0997c2e5d310d4eadf6f4f45ec581fc1841029d2aff536da51265443832"
     },
     {
       "path": "output/circuit_previews/six_population_2026-09-26/manifest.json",
@@ -1256,7 +1256,7 @@
     {
       "path": "release-origin.json",
       "bytes": 76305,
-      "sha256": "cc429b99d445ef54986df69e42f53109f9d25624f7b379f73ef95a8b520262ab"
+      "sha256": "3a307f5eebc776fa28a5b54436bb656a58899773c36c87530b9e67e31b50aa9b"
     },
     {
       "path": "requirements.txt",
