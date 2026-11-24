@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3803,
-      "sha256": "edc8b30bfbfa97738f266676fc4263ff214cfa5b841f37479687b039faf3b193"
+      "bytes": 3870,
+      "sha256": "b573e4f0d66043d194a018944fd88fe30ef8564e11b9e4da7c2b734796b1a147"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -40,13 +40,13 @@
     },
     {
       "path": "apps/connectome-explorer/README.md",
-      "bytes": 5646,
-      "sha256": "c29428db53d14910f72f2eff8c724042e5d0a0461860620765fb74d590c7238a"
+      "bytes": 6287,
+      "sha256": "4bfc9969b538268a41111555935d3387255ece151af9626d38f4c20195935abd"
     },
     {
       "path": "apps/connectome-explorer/app.js",
-      "bytes": 42391,
-      "sha256": "1a6f93f92d822e68a3241721826fc703db9054cc5acf3c222591f2e7bb61f20e"
+      "bytes": 64348,
+      "sha256": "9db6db04b725a8db25b0fda96e2dbb59e60842e45fca0a58434ffc1741410be1"
     },
     {
       "path": "apps/connectome-explorer/core.js",
@@ -55,28 +55,28 @@
     },
     {
       "path": "apps/connectome-explorer/index.html",
-      "bytes": 1287939,
-      "sha256": "f439ab9e3829af4d43146b4b122def857c9adc7b118b11d769129230623ee046"
+      "bytes": 1313576,
+      "sha256": "16e1e28b9370584f53b2ee9abcb4df29b495e7beb90849efddd31684a7396e52"
     },
     {
       "path": "apps/connectome-explorer/index.template.html",
-      "bytes": 5256,
-      "sha256": "7ee2d624dad24362a8cc35ed0655152ac21761023919680bffbf37682c364d39"
+      "bytes": 4402,
+      "sha256": "5ac83fda5bc16b86d5751c918d62d18afb843db7c27bcea05dd84bf42d72a519"
     },
     {
       "path": "apps/connectome-explorer/manifest.json",
       "bytes": 3045,
-      "sha256": "01f38a999eb405bc6791242f79fc5f453ef401d053b0fe5c3b8f226fb7791dfd"
+      "sha256": "a5e28d6edf3d15011cfe4dacc03636b6e54d9cb7f90cddc475875069b836d798"
     },
     {
       "path": "apps/connectome-explorer/smoke-browser.js",
-      "bytes": 11988,
-      "sha256": "f289e29e29923a8786401c411aab50a172fe88a8e045eaee7e18ece81761ca59"
+      "bytes": 17005,
+      "sha256": "4c2fea98f53527b7d54d29394fa604c21f051c3de7fe248165a8cc46cb51617c"
     },
     {
       "path": "apps/connectome-explorer/style.css",
-      "bytes": 13152,
-      "sha256": "993d33b2853b25f7b5318a4c467a21c2a0180630d0c16a2cc5816485d034a189"
+      "bytes": 17686,
+      "sha256": "c878fb5341ff872993c9b60f94576344b78b0c1fbe0a0ee2220166ab33aa9cc2"
     },
     {
       "path": "apps/connectome-explorer/test-core.cjs",
@@ -175,13 +175,13 @@
     },
     {
       "path": "companion/companion.css",
-      "bytes": 6075,
-      "sha256": "beef75ea204cfdb9c3cf71bec3bbd2a780e55c371df34e6bbd72c795df779695"
+      "bytes": 6211,
+      "sha256": "0cc735d32f7ec1b7667c927573540f46c9e30cf8d33ac5bb0a705cf13cd96e7c"
     },
     {
       "path": "companion/index.html",
-      "bytes": 5948,
-      "sha256": "f4167ea066593dab08c61163e89d563ec6384625a385c027b74b25e18823715f"
+      "bytes": 6222,
+      "sha256": "17f686ee1b175a72f2dd855efc0b4ddd47a95fc7bea1b0aef83512a81c17a449"
     },
     {
       "path": "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json",
@@ -1246,7 +1246,7 @@
     {
       "path": "release-origin.json",
       "bytes": 76020,
-      "sha256": "5f7d83780a82c9c6e135e6c1aa59ba5ae60467e93a24bbcc29c3b6d2fb75eeba"
+      "sha256": "283fcf0dbc64d0fe57e60fd6c86eb025cd8d9cb6b06f695de42bd9be83cf1187"
     },
     {
       "path": "requirements.txt",
@@ -1345,8 +1345,8 @@
     },
     {
       "path": "scripts/test_paper_companion.py",
-      "bytes": 5509,
-      "sha256": "5046a1cf464248aba7d6679a250bc2f13ad36f30a6d9f542c597afe1c43a92b0"
+      "bytes": 5527,
+      "sha256": "b88f93f5a8bc2705754a1fd0465f7bb36c2cc45b4229cf45355063b201e027e9"
     },
     {
       "path": "scripts/verify_release.py",

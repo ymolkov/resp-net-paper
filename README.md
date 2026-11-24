@@ -49,7 +49,8 @@ identifier and are averaged within mode and then across modes for inference.
 The repository includes the five digitized source activity patterns, the
 post-inspiratory alignment diagnostic, all omission-test tables, and the
 cell-removal and timing checks discussed in the paper. The atlas displays
-saved empirical fits; its phase replay is not a dynamical simulation.
+saved empirical fits and contains no simulation. Its guide leads from the
+circuit to the individual cell records behind each connection.
 
 Excluded recordings, unrelated experiments, exploratory model fits, internal
 correspondence, and the working repository's Git history are outside this

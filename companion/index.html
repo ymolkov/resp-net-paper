@@ -28,7 +28,7 @@
           alt="Figure 4A: an overview of inferred excitatory and inhibitory inputs among inspiratory, post-inspiratory and augmenting-expiratory populations.">
         <div class="signs"><span><i class="exc" aria-hidden="true"></i>Excitation</span><span><i class="inh" aria-hidden="true"></i>Inhibition</span></div>
         <p class="group-note">Thicker lines indicate larger mean fitted contributions. Insp. combines pre-I/I, ramp-I and early-I; an incoming line represents input to at least one of the three.</p>
-        <div class="actions"><a class="primary" href="{{EXPLORER}}"><img src="assets/scan.svg" alt="">Explore the circuit</a></div>
+        <div class="actions"><a class="primary" href="{{EXPLORER}}"><img src="assets/scan.svg" alt="">Explore the circuit</a><a class="secondary" href="{{EXPLORER}}#guide">Take the one-minute guide</a></div>
       </figure>
     </div></section>
 
@@ -44,6 +44,7 @@
           <img class="plot" src="assets/conductance.png" width="880" height="440"
             alt="Excitation rises toward inspiration, whereas inhibition is greatest shortly after inspiration ends and then declines.">
           <div class="key"><span>Excitation</span><span>Inhibition</span></div>
+          <p class="more"><a href="{{EXPLORER}}#open=pre-I&amp;cells=pre-I">See the 17 cells behind this mean</a></p>
         </figure>
       </div>
       <div class="plate">
@@ -51,7 +52,7 @@
           <figcaption>Figure 1. Schematic of the inference procedure.</figcaption>
         </figure>
         <div class="guide" aria-label="Guide to Figure 1">
-          <div><b>A</b><h3>Reconstruct each cell’s inputs</h3><p>For each neuron, we estimated how excitation and inhibition change over a breath. We grouped neurons by when they fire.</p></div>
+          <div><b>A</b><h3>Reconstruct each cell’s inputs</h3><p>For each neuron, we estimated how excitation and inhibition change over a respiratory cycle. We grouped neurons by when they fire.</p></div>
           <div><b>B</b><h3>Ask which sources are needed</h3><p>We treated the same populations as possible sources. If we leave one out, can the others still reproduce the timing of the input across cells?</p></div>
           <div><b>C</b><h3>Assemble the circuit</h3><p>A solid connection identifies a source the recordings distinguish. Dashed connections show alternatives: different sources can produce similar inputs.</p></div>
         </div>
@@ -60,7 +61,7 @@
     <section class="wrap resources" id="resources" aria-labelledby="resources-heading">
       <p class="eyebrow">Study materials</p><h2 id="resources-heading">Data and resources</h2>
       <dl>
-        <div><dt><a href="{{EXPLORER}}">Interactive circuit explorer</a></dt><dd>Inspect population inputs, alternative sources and individual cell profiles.</dd></div>
+        <div><dt><a href="{{EXPLORER}}">Interactive circuit explorer</a></dt><dd>Inspect population inputs, alternative sources and individual cell profiles. A <a href="{{EXPLORER}}#guide">one-minute guide</a> shows the route.</dd></div>
         <div><dt><a download href="downloads/Supporting_Data_S1.xlsx">Download Supporting Data S1</a></dt><dd>Fitted contributions, omission decisions and underlying timing contrasts. <small>XLSX</small></dd></div>
         <div><dt><a href="https://github.com/ymolkov/resp-net-paper">Data &amp; code</a></dt><dd>168 recordings from 150 neurons, activity templates, analysis scripts and frozen results.</dd></div>
         <div><dt><a href="https://github.com/ymolkov/resp-net-paper/blob/main/docs/reproduction.md">Reproduce the analysis</a></dt><dd>Reconstruct the conductances, repeat the inference and regenerate the figures.</dd></div>

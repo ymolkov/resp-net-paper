@@ -7,15 +7,15 @@
     "output/circuit_previews/six_population_2026-09-26/manifest.json": "c298ca6a92afdd43788e0b9fce0960b36973676c955c9f6f09613344b5bbd032"
   },
   "builder_sha256": "c6d952c55549fe8d028764fe6cb7c70c3a9cb5891c5a457c9d06116056b59e93",
-  "output_sha256": "f439ab9e3829af4d43146b4b122def857c9adc7b118b11d769129230623ee046",
+  "output_sha256": "16e1e28b9370584f53b2ee9abcb4df29b495e7beb90849efddd31684a7396e52",
   "license_sha256": {
     "LICENSE": "da041068e555105508e1f55668796656140471d2f93fe71c88d36083ad847a4c"
   },
   "assets_sha256": {
-    "app.js": "1a6f93f92d822e68a3241721826fc703db9054cc5acf3c222591f2e7bb61f20e",
+    "app.js": "9db6db04b725a8db25b0fda96e2dbb59e60842e45fca0a58434ffc1741410be1",
     "core.js": "eeb43fb9dd95bc1388ee9a7d11dda0145ae46b0d8d036b48b0daeacb86baab9d",
-    "style.css": "993d33b2853b25f7b5318a4c467a21c2a0180630d0c16a2cc5816485d034a189",
-    "index.template.html": "7ee2d624dad24362a8cc35ed0655152ac21761023919680bffbf37682c364d39",
+    "style.css": "c878fb5341ff872993c9b60f94576344b78b0c1fbe0a0ee2220166ab33aa9cc2",
+    "index.template.html": "5ac83fda5bc16b86d5751c918d62d18afb843db7c27bcea05dd84bf42d72a519",
     "vendor/d3/d3.min.js": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539",
     "vendor/lucide/arrow-left.svg": "e31ed0af85ffbed2b54f78f37af197c3b84b24e776cba1d27613d6a9ad555a16",
     "vendor/lucide/download.svg": "f68a21e11115edc0aef51ac6f8f4618e14d2b92055f1cb9f5d670efc696bea85",

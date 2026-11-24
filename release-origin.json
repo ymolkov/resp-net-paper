@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "d9d33286dfd4e09798a8c62aaeb50cb1d8002870",
+  "source_commit": "ff4cc1d27160c1cd6d6dc89d82696f4093aa2ce7",
   "recordings": 168,
   "cells": 150,
   "files": {
@@ -1066,7 +1066,7 @@
     },
     "apps/connectome-explorer/app.js": {
       "source_path": "apps/connectome-explorer/app.js",
-      "source_sha256": "1a6f93f92d822e68a3241721826fc703db9054cc5acf3c222591f2e7bb61f20e",
+      "source_sha256": "9db6db04b725a8db25b0fda96e2dbb59e60842e45fca0a58434ffc1741410be1",
       "transformation": "byte-identical copy"
     },
     "apps/connectome-explorer/core.js": {
@@ -1076,12 +1076,12 @@
     },
     "apps/connectome-explorer/style.css": {
       "source_path": "apps/connectome-explorer/style.css",
-      "source_sha256": "993d33b2853b25f7b5318a4c467a21c2a0180630d0c16a2cc5816485d034a189",
+      "source_sha256": "c878fb5341ff872993c9b60f94576344b78b0c1fbe0a0ee2220166ab33aa9cc2",
       "transformation": "byte-identical copy"
     },
     "apps/connectome-explorer/index.template.html": {
       "source_path": "apps/connectome-explorer/index.template.html",
-      "source_sha256": "7ee2d624dad24362a8cc35ed0655152ac21761023919680bffbf37682c364d39",
+      "source_sha256": "5ac83fda5bc16b86d5751c918d62d18afb843db7c27bcea05dd84bf42d72a519",
       "transformation": "byte-identical copy"
     },
     "apps/connectome-explorer/test-core.cjs": {
@@ -1091,7 +1091,7 @@
     },
     "apps/connectome-explorer/smoke-browser.js": {
       "source_path": "apps/connectome-explorer/smoke-browser.js",
-      "source_sha256": "f289e29e29923a8786401c411aab50a172fe88a8e045eaee7e18ece81761ca59",
+      "source_sha256": "4c2fea98f53527b7d54d29394fa604c21f051c3de7fe248165a8cc46cb51617c",
       "transformation": "byte-identical copy"
     },
     "apps/connectome-explorer/vendor/d3/LICENSE": {
@@ -1211,7 +1211,7 @@
     },
     "README.md": {
       "source_path": "release/paper/templates/README.md",
-      "source_sha256": "edc8b30bfbfa97738f266676fc4263ff214cfa5b841f37479687b039faf3b193",
+      "source_sha256": "b573e4f0d66043d194a018944fd88fe30ef8564e11b9e4da7c2b734796b1a147",
       "transformation": "byte-identical copy"
     },
     "THIRD_PARTY_NOTICES.md": {
@@ -1221,17 +1221,17 @@
     },
     "apps/connectome-explorer/README.md": {
       "source_path": "release/paper/templates/apps/connectome-explorer/README.md",
-      "source_sha256": "c29428db53d14910f72f2eff8c724042e5d0a0461860620765fb74d590c7238a",
+      "source_sha256": "4bfc9969b538268a41111555935d3387255ece151af9626d38f4c20195935abd",
       "transformation": "byte-identical copy"
     },
     "companion/companion.css": {
       "source_path": "release/paper/templates/companion/companion.css",
-      "source_sha256": "beef75ea204cfdb9c3cf71bec3bbd2a780e55c371df34e6bbd72c795df779695",
+      "source_sha256": "0cc735d32f7ec1b7667c927573540f46c9e30cf8d33ac5bb0a705cf13cd96e7c",
       "transformation": "byte-identical copy"
     },
     "companion/index.html": {
       "source_path": "release/paper/templates/companion/index.html",
-      "source_sha256": "f4167ea066593dab08c61163e89d563ec6384625a385c027b74b25e18823715f",
+      "source_sha256": "17f686ee1b175a72f2dd855efc0b4ddd47a95fc7bea1b0aef83512a81c17a449",
       "transformation": "byte-identical copy"
     },
     "docs/data_dictionary.md": {
@@ -1326,7 +1326,7 @@
     },
     "scripts/test_paper_companion.py": {
       "source_path": "release/paper/templates/scripts/test_paper_companion.py",
-      "source_sha256": "5046a1cf464248aba7d6679a250bc2f13ad36f30a6d9f542c597afe1c43a92b0",
+      "source_sha256": "b88f93f5a8bc2705754a1fd0465f7bb36c2cc45b4229cf45355063b201e027e9",
       "transformation": "byte-identical copy"
     },
     "scripts/verify_release.py": {

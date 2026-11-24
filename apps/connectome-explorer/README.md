@@ -10,19 +10,29 @@ analysis, files, and manuscript workflow.
 
 ## Explore the circuit
 
-- Open the inspiratory group to reveal pre-I, ramp-I, and early-I receiving
-  populations. Their outgoing sources remain grouped by discharge timing.
-- Open a population to see its excitatory and inhibitory conductance profiles.
-  The grid button opens individual cells; selecting a cell changes the curves
-  while statistical evidence remains at the population level.
-- Open a connection to inspect its evidence and saved restricted fits. Source
-  switches select among all eight inspiratory subsets, including excluded
-  combinations. Post-I and aug-E templates remain available in these fits.
-- Pan and zoom, use keyboard focus and Enter/Space, or use the population
-  selector to explore. Back restores the previous view; Whole circuit resets
-  it. The download button exports the current graph as SVG.
-- Replay and scrubbing move through the saved respiratory phase. Replay is
-  empirical playback, not a dynamical simulation.
+- **Guide** in the header walks through the route from the circuit to the
+  individual cell records and the evidence for a connection. It is offered
+  once on a first visit. Adding `#guide` to the address starts it.
+- The first view follows Figure 4A. **Show 3 populations** separates pre-I/I,
+  ramp-I, and early-I as receiving populations. Their outputs stay grouped
+  and are drawn from the dashed outline around them.
+- **Show inputs** opens a population's mean excitatory and inhibitory
+  conductance over one respiratory cycle. **Browse N cells** opens the
+  individual cells; clicking one shows it against the mean, and **Compare**
+  overlays a second cell. Statistical evidence remains at the population level.
+- Click a connection to see its evidence: the test result in one sentence,
+  the adjusted P value, the mean fitted share, and the saved fit. For an
+  inspiratory input, three checkboxes select among all eight inspiratory
+  subsets, including excluded combinations. Post-I and aug-E templates remain
+  available in these fits. Plot colors follow Figure 3 of the paper.
+- Hover a connection to follow it; the others fade. With a panel open, its
+  inputs are bright and its outputs dimmed.
+- Pan and zoom, or use keyboard focus and Enter/Space. Zooming opens and
+  closes nothing. Back restores the previous view; Whole circuit resets it;
+  Fit shows everything. The address records the current view, so a link
+  reproduces it.
+- The atlas shows saved empirical fits. It contains no simulation and no
+  playback through the respiratory cycle.
 
 ## Scientific scope
 
@@ -40,7 +50,7 @@ inspiratory connections have uniform widths: solid means individually
 identified; dashed means an unresolved alternative. Width is neither synaptic
 weight nor significance.
 
-Early-I excitation retains **pre-I alone or ramp-I and early-I together**.
+Early-I excitation retains **pre-I/I alone or ramp-I and early-I together**.
 These are alternatives, and additional sources remain possible. Selecting a
 restricted fit changes the displayed curves, not the saved support decisions.
 Fits, test evidence, and anatomical connectivity are distinct interpretations.
@@ -71,8 +81,8 @@ alternatives, graph transformations, offline packaging, and source hashes.
 `manifest.json` records data, source, icon, license, builder, and HTML hashes.
 
 The optional `smoke-browser.js` is a Playwright browser-test function. It
-exercises graph navigation, source subsets, cell selection, phase replay,
-SVG export, responsive layouts, and offline initialization. It is not run by
+exercises the guide, graph navigation, source subsets, cell selection and
+comparison, view links, responsive layouts, and offline initialization. It is not run by
 the Node unit-test command and requires a separate browser automation setup.
 
 ## Serve or publish

@@ -13,29 +13,15 @@
     <header>
       <div class="brand">resp-net <span>Circuit atlas</span></div>
       <div class="header-tools">
-        <label class="sr-only" for="find">Find a population</label>
-        <select id="find" title="Find a population">
-          <option value="">Find a population</option>
-          <option>Inspiratory</option>
-          <option>pre-I</option>
-          <option>ramp-I</option>
-          <option>early-I</option>
-          <option>post-I</option>
-          <option>aug-E</option>
-        </select>
-        <button
-          class="icon"
-          id="download"
-          data-icon="download"
-          title="Download current graph"
-          aria-label="Download current graph"
-        ></button>
+        <button id="guide-open" class="guide-open" title="Step-by-step guide">
+          Guide
+        </button>
         <button
           class="icon"
           id="about"
           data-icon="info"
-          title="Evidence and methods"
-          aria-label="Evidence and methods"
+          title="About this atlas"
+          aria-label="About this atlas"
         ></button>
       </div>
     </header>
@@ -87,22 +73,22 @@
           title="Zoom in"
           aria-label="Zoom in"
         ></button>
-        <output id="zoom-level">100%</output>
         <button
           class="icon"
           id="zoom-out"
           data-icon="zoom-out"
-          title="Zoom out and fold detail"
-          aria-label="Zoom out and fold detail"
+          title="Zoom out"
+          aria-label="Zoom out"
         ></button>
         <span class="tool-divider"></span>
         <button
-          class="icon"
           id="fit"
-          data-icon="scan"
-          title="Fit expanded graph"
-          aria-label="Fit expanded graph"
-        ></button>
+          class="fit-text"
+          title="Fit everything in view"
+          aria-label="Fit everything in view"
+        >
+          Fit
+        </button>
         <button
           class="icon"
           id="fullscreen"
@@ -111,62 +97,44 @@
           aria-label="Full screen"
         ></button>
       </div>
-      <svg
-        id="minimap"
-        viewBox="-260 -70 1680 980"
-        role="button"
-        tabindex="0"
-        aria-label="Recenter on the whole graph"
-      >
-        <rect
-          class="map-ground"
-          x="-260"
-          y="-70"
-          width="1680"
-          height="980"
-          rx="6"
-        />
-        <g id="map-nodes"></g>
-        <rect id="map-window" />
-      </svg>
-      <div id="selection-caption" aria-live="polite"></div>
+      <div id="tip" role="tooltip" hidden></div>
+      <aside id="guide" class="guide" aria-label="Guide" aria-live="polite" hidden>
+        <div class="guide-text">
+          <div id="guide-step" class="guide-step"></div>
+          <h2 id="guide-title"></h2>
+          <p id="guide-body"></p>
+        </div>
+        <div class="guide-actions">
+          <button id="guide-back">Back</button>
+          <button id="guide-next" class="primary">Next</button>
+          <button
+            id="guide-exit"
+            class="icon"
+            data-icon="x"
+            title="Close the guide"
+            aria-label="Close the guide"
+          ></button>
+        </div>
+      </aside>
     </main>
     <footer>
       <div class="legend">
         <span><i class="red line"></i>Excitation</span
         ><span><i class="blue line"></i>Inhibition</span
-        ><span id="detail-legend">Width: full-fit area</span
+        ><span id="detail-legend">Width: mean fitted share</span
+        ><span id="hint" class="hint" aria-live="polite"></span
         ><span class="cohort">150 cells · 168 recordings</span>
-      </div>
-      <div class="playback">
-        <button
-          id="play"
-          class="icon"
-          data-icon="play"
-          title="Play empirical phase replay"
-          aria-label="Play empirical phase replay"
-        ></button
-        ><span id="phase-name">Inspiration</span
-        ><input
-          id="phase"
-          aria-label="Respiratory phase"
-          type="range"
-          min="0"
-          max="99"
-          value="12"
-        /><output id="phase-readout">0.12</output
-        ><span class="replay-label">Empirical phase replay</span>
       </div>
     </footer>
     <dialog id="methods">
       <div class="dialog-heading">
-        <h2>Evidence and methods</h2>
+        <h2>About this atlas</h2>
         <button
           id="close-methods"
           class="icon"
           data-icon="x"
           title="Close"
-          aria-label="Close methods"
+          aria-label="Close"
         ></button>
       </div>
       <div id="methods-body"></div>

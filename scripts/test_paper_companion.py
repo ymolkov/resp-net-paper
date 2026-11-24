@@ -48,7 +48,7 @@ class Companion(unittest.TestCase):
                         if link.scheme == "https":
                             continue
                         self.assertFalse(link.scheme or link.netloc or link.path.startswith("/"), href)
-                        if link.fragment:
+                        if link.fragment and not link.path:
                             self.assertIn(link.fragment, page.ids)
                         if link.path:
                             p = site / link.path

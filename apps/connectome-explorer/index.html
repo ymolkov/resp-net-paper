@@ -122,10 +122,12 @@ select {
   min-height: 32px;
   max-width: 100%;
 }
-#find {
+.guide-open {
+  padding: 7px 14px;
   font-size: 12px;
-  width: 170px;
-  margin-right: 8px;
+  font-weight: 600;
+  color: var(--green);
+  border-color: #b9d3c7;
 }
 main {
   position: relative;
@@ -177,8 +179,8 @@ main {
 }
 .zoom-tools {
   position: absolute;
-  left: 20px;
-  bottom: 18px;
+  right: 18px;
+  top: 14px;
   display: flex;
   gap: 2px;
   align-items: center;
@@ -187,48 +189,17 @@ main {
   background: #fff;
   padding: 3px;
 }
-.zoom-tools output {
-  font-size: 11px;
-  font-variant-numeric: tabular-nums;
-  width: 43px;
-  text-align: center;
-}
 .tool-divider {
   height: 20px;
   border-left: 1px solid var(--line);
   margin: 0 4px;
 }
-#minimap {
-  position: absolute;
-  right: 20px;
-  bottom: 18px;
-  width: 140px;
-  height: 85px;
-  cursor: pointer;
-}
-.map-ground {
-  fill: #ffffffed;
-  stroke: #d5dfdc;
-  stroke-width: 10;
-}
-#map-window {
-  fill: #2779610b;
-  stroke: #277961;
-  stroke-width: 10;
-  pointer-events: none;
-}
-#selection-caption {
-  position: absolute;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 11px;
-  color: var(--muted);
-  background: #fafcfbe8;
-  padding: 7px 10px;
-  max-width: 40%;
-  text-align: center;
-  pointer-events: none;
+.fit-text {
+  height: 36px;
+  padding: 0 10px;
+  border-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
 }
 .family-hull {
   fill: #edf3ef;
@@ -238,9 +209,13 @@ main {
   stroke-dasharray: 5 5;
 }
 .family-title {
-  font-size: 14px;
-  fill: #6a8275;
-  font-weight: 600;
+  font-size: 17px;
+  fill: #54705f;
+  font-weight: 650;
+}
+.family-note {
+  font-size: 13px;
+  fill: #6d7b78;
 }
 .population {
   cursor: pointer;
@@ -257,7 +232,8 @@ main {
   stroke: #9fafaa;
   stroke-width: 1.6;
 }
-.population:hover .node-shape {
+.population:not(.is-open):hover .node-shape,
+.population.hot .node-shape {
   stroke: #277961;
   stroke-width: 2.5;
 }
@@ -271,17 +247,44 @@ main {
   fill: #263638;
   pointer-events: none;
 }
+.node-caption {
+  font-size: 11.5px;
+  fill: #7b8986;
+  pointer-events: none;
+}
 .node-meta {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
   fill: #6d7b78;
   pointer-events: none;
 }
-.port {
-  stroke-width: 1.5;
+.pill {
+  cursor: pointer;
 }
-.source-hub text {
-  font-size: 11px;
-  fill: #6d7b78;
+.pill rect {
+  fill: #eaf4ee;
+  stroke: #8fb9a4;
+  stroke-width: 1.4;
+}
+.pill text {
+  font-size: 14px;
+  font-weight: 600;
+  fill: #1f6b55;
+  pointer-events: none;
+}
+.population:hover .pill rect,
+.pill.fold:hover rect,
+.pill:focus rect {
+  fill: #277961;
+  stroke: #277961;
+}
+.population:hover .pill text,
+.pill.fold:hover text,
+.pill:focus text {
+  fill: #fff;
+}
+.pill:focus {
+  outline: none;
 }
 .edge-hit {
   fill: none;
@@ -294,6 +297,12 @@ main {
   outline: none;
   stroke: #76b5a83b;
 }
+#edges.hovering .connection {
+  opacity: 0.12;
+}
+#edges.hovering .connection.hot {
+  opacity: 1;
+}
 .edge-line {
   fill: none;
   pointer-events: none;
@@ -303,6 +312,13 @@ main {
 }
 .node-action:focus {
   outline: none;
+}
+.node-action rect {
+  fill: #f3f7f4;
+  stroke: #d8e4dc;
+}
+.node-action:hover rect {
+  fill: #e3efe8;
 }
 .node-action:focus rect {
   stroke: #277961;
@@ -316,21 +332,15 @@ main {
   height: 16px;
 }
 .chart-label {
-  font-size: 10px;
+  font-size: 11.5px;
   fill: #697b7a;
-}
-.phase-cursor {
-  stroke: #8b9c97;
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-  pointer-events: none;
 }
 foreignObject {
   overflow: visible;
 }
 .node-content {
   font:
-    12px -apple-system,
+    13px -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
@@ -347,26 +357,67 @@ foreignObject {
 .sample-row select {
   flex: 1;
   min-width: 0;
-  font-size: 11px;
-  padding: 4px;
-  min-height: 27px;
+  font-size: 13px;
+  padding: 5px 6px;
+  min-height: 32px;
 }
-.sample-row .icon {
-  width: 28px;
-  height: 28px;
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  min-height: 32px;
+  padding: 5px 11px;
+  font-weight: 600;
+  color: #1f6b55;
+  background: #eaf4ee;
+  border-color: #8fb9a4;
+  white-space: nowrap;
 }
-.node-content svg {
+.text-button:hover,
+.text-button[aria-pressed="true"] {
+  background: #277961;
+  border-color: #277961;
+  color: #fff;
+}
+.text-button svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+}
+.compare-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: -2px 0 4px;
+}
+.compare-row strong {
+  color: #263638;
+}
+.link-button {
+  border: 0;
+  background: none;
+  padding: 0 2px;
+  color: var(--green);
+  text-decoration: underline;
+}
+.node-content > svg {
   display: block;
   width: 100%;
   height: auto;
-  cursor: crosshair;
-  touch-action: none;
 }
 .chart-heading {
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
   margin: 4px 0 0;
+}
+.chart-heading span:last-child:not(:first-child) {
+  font-weight: 400;
+  color: var(--muted);
 }
 .chart-heading .red {
   color: var(--red);
@@ -374,20 +425,25 @@ foreignObject {
 .chart-heading .blue {
   color: var(--blue);
 }
-.node-content .sample-note {
-  font-size: 9px;
-  color: var(--muted);
-  margin-top: 4px;
-}
 .node-content button {
-  font-size: 11px;
+  font-size: 13px;
 }
 .node-content .chart-legend {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   display: flex;
-  gap: 12px;
-  padding-top: 4px;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  padding-top: 5px;
+}
+.chart-legend .line.two {
+  border-image: linear-gradient(90deg, var(--red) 50%, var(--blue) 50%) 1;
+}
+.chart-legend .line.dark {
+  border-color: #263638;
+}
+.chart-legend .line.pale {
+  border-color: #b9c5c1;
 }
 .chart-legend span {
   display: flex;
@@ -397,19 +453,21 @@ foreignObject {
 .component-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px 9px;
-  margin: 9px 0;
+  gap: 4px 12px;
+  margin: 6px 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 .component-legend span {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  white-space: nowrap;
 }
-.component-legend i {
-  width: 10px;
-  height: 2px;
+.component-legend .swatch {
+  width: 22px;
+  height: 6px;
+  flex-shrink: 0;
 }
 .detail-shell {
   fill: #fff;
@@ -424,9 +482,9 @@ foreignObject {
   pointer-events: none;
 }
 .evidence-content {
-  padding: 16px;
+  padding: 18px 20px;
   font:
-    12px -apple-system,
+    14px/1.45 -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
@@ -434,13 +492,76 @@ foreignObject {
   letter-spacing: 0;
 }
 .evidence-content h2 {
-  font-size: 17px;
-  margin: 0 32px 4px 0;
+  font-size: 19px;
+  margin: 0 36px 2px 0;
 }
 .evidence-content .subhead {
   color: var(--muted);
-  font-size: 10px;
-  margin-bottom: 12px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.evidence-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 20px;
+  align-items: start;
+}
+.evidence-columns.coarse {
+  grid-template-columns: minmax(0, 1fr);
+}
+.coarse .evidence-figure {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.coarse .component-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 10px;
+  font-size: 13px;
+}
+.evidence-content.stacked .evidence-columns {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+.evidence-content.stacked {
+  padding: 14px 16px;
+  font-size: 13px;
+}
+.evidence-content.stacked .lead {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.evidence-content.stacked .evidence-figure {
+  display: block;
+}
+.evidence-content.stacked .component-legend {
+  display: flex;
+  font-size: 12px;
+}
+.evidence-content .lead {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.evidence-content .numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0 0 10px;
+}
+.evidence-content dt {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.evidence-content dd {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .evidence-content .close-detail {
   position: absolute;
@@ -449,71 +570,54 @@ foreignObject {
 }
 .evidence-content .relation-status {
   color: #277961;
-  font-size: 11px;
-  margin: 10px 0;
-  line-height: 1.5;
+  font-size: 12.5px;
+  margin: 6px 0 0;
 }
 .evidence-content .relation-status.excluded {
   color: #a06425;
 }
-.evidence-content .relation-status strong {
-  font-weight: 600;
-}
 .evidence-content .combination {
-  line-height: 1.5;
   margin-bottom: 8px;
-  font-size: 12px;
 }
 .evidence-content fieldset {
   padding: 0;
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   border: 0;
+}
+.evidence-content legend {
+  padding: 0;
+  font-size: 11.5px;
+  color: var(--muted);
 }
 .evidence-content .option {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 0;
-  font-size: 11px;
+  padding: 3px 0;
 }
 .evidence-content input {
   accent-color: #277961;
 }
 .evidence-content .switches {
   display: flex;
-  gap: 10px;
-  padding: 8px 0;
+  gap: 12px;
+  padding: 4px 0;
   flex-wrap: wrap;
 }
 .switches label {
   display: flex;
   align-items: center;
-  gap: 3px;
-  font-size: 11px;
-}
-.evidence-content .fixed {
-  font-size: 9px;
-  color: var(--muted);
-  margin-bottom: 6px;
+  gap: 4px;
 }
 .evidence-content .fit-chart {
   width: 100%;
-  height: 94px;
+  height: auto;
   display: block;
-  cursor: crosshair;
-  touch-action: none;
-}
-.evidence-content .error-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 6px;
-  font-size: 10px;
-  margin: 6px 0;
-  color: #617570;
 }
 .evidence-content details {
-  font-size: 10px;
+  font-size: 12px;
   padding-top: 7px;
+  margin-top: 7px;
   border-top: 1px solid #e6ece8;
 }
 .evidence-content summary {
@@ -522,70 +626,124 @@ foreignObject {
 .evidence-content table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 8px;
+  margin-top: 6px;
+}
+.evidence-content th {
+  text-align: left;
+  font-weight: 400;
+  color: var(--muted);
+  padding: 2px 3px;
 }
 .evidence-content td {
-  padding: 3px;
+  padding: 2px 3px;
   border-bottom: 1px solid #e6ece8;
 }
-.evidence-content td:last-child {
+.evidence-content td:last-child,
+.evidence-content th:last-child {
   text-align: right;
 }
 .evidence-content .evidence-scroll {
-  max-height: 100px;
+  max-height: 88px;
   overflow: auto;
 }
 .evidence-content .small-note {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.4;
-  margin-top: 6px;
+}
+.red {
+  color: var(--red);
+}
+.blue {
+  color: var(--blue);
 }
 .cell-content {
-  padding: 14px;
+  padding: 16px 18px;
   font:
-    12px -apple-system,
+    13px/1.4 -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+  color: #263638;
 }
 .cell-content h2 {
-  font-size: 15px;
-  margin: 0 30px 8px 0;
+  font-size: 19px;
+  margin: 0 36px 2px 0;
+}
+.cell-content .subhead {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-bottom: 9px;
 }
 .cell-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 7px;
-  max-height: 290px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  max-height: 322px;
   overflow: auto;
   padding: 3px;
 }
-.cell-tile {
-  padding: 6px;
-  font-size: 10px;
-  min-width: 0;
-  text-align: left;
+.cell-content.stacked .cell-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-height: 280px;
 }
-.cell-tile[aria-pressed="true"] {
+.cell-tile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+.cell-tile.shown {
   border-color: #277961;
+  box-shadow: 0 0 0 1px #277961;
+}
+.cell-tile.compared {
+  border-color: #263638;
+  box-shadow: 0 0 0 1px #263638;
+}
+.cell-main {
+  border: 0;
+  border-radius: 0;
+  padding: 6px 6px 2px;
+  font-size: 12px;
+  text-align: left;
+  min-width: 0;
+}
+.cell-main svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 3px;
+}
+.cell-compare {
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  padding: 3px 6px;
+  font-size: 11.5px;
+  color: var(--green);
+}
+.cell-compare:disabled {
+  opacity: 1;
+  color: #277961;
+  font-weight: 600;
   background: #eff7f1;
 }
-.cell-tile svg {
-  width: 100%;
-  height: 48px;
-  display: block;
-  stroke: none;
+.cell-tile.compared .cell-compare {
+  color: #fff;
+  background: #263638;
+  font-weight: 600;
 }
 .cell-content .close-cells {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 9px;
+  top: 9px;
 }
 .cell-content .mean-button {
-  font-size: 10px;
-  margin: 8px 3px 0;
-  padding: 5px 8px;
+  margin: 9px 3px 0;
+  padding: 5px 11px;
 }
 footer {
   background: white;
@@ -605,6 +763,104 @@ footer {
   display: flex;
   gap: 7px;
   align-items: center;
+}
+.hint {
+  flex: 1;
+  text-align: center;
+  font-size: 12.5px;
+  color: #3f5552;
+}
+#tip {
+  position: absolute;
+  z-index: 4;
+  padding: 5px 9px;
+  background: #263638;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.guide {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  width: min(780px, calc(100% - 28px));
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 14px 14px 20px;
+  background: #fff;
+  border: 1px solid #9cc3b1;
+  border-left: 5px solid var(--green);
+  border-radius: 8px;
+  box-shadow: 0 6px 22px #24393622;
+}
+.guide-text {
+  flex: 1;
+  min-width: 0;
+}
+.guide-step {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.guide h2 {
+  font-size: 16px;
+  margin: 2px 0 4px;
+}
+.guide p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.guide-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.guide-actions button:not(.icon) {
+  padding: 8px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.guide-actions .primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  font-weight: 600;
+}
+.guide-actions .primary:hover {
+  background: #1f6b55;
+}
+@keyframes guide-pulse {
+  50% {
+    stroke-width: 7;
+    stroke-opacity: 0.4;
+  }
+}
+@keyframes guide-ring {
+  50% {
+    box-shadow: 0 0 0 7px #e0932f44;
+  }
+}
+.pill.guide-target rect {
+  stroke: #e0932f;
+  stroke-width: 3;
+  animation: guide-pulse 1.4s ease-in-out infinite;
+}
+.connection.guide-target .edge-hit {
+  stroke: #e0932f66;
+  animation: guide-pulse 1.4s ease-in-out infinite;
+}
+button.guide-target {
+  box-shadow: 0 0 0 3px #e0932f;
+  animation: guide-ring 1.4s ease-in-out infinite;
 }
 .cohort {
   margin-left: auto;
@@ -633,30 +889,6 @@ footer {
 }
 .line.dash {
   border-top-style: dashed;
-}
-.playback {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  margin-top: 8px;
-  font-size: 12px;
-}
-#phase {
-  flex: 1;
-  min-width: 50px;
-  accent-color: #277961;
-}
-#phase-name {
-  width: 74px;
-  color: var(--green);
-}
-#phase-readout {
-  font-variant-numeric: tabular-nums;
-  width: 30px;
-}
-.replay-label {
-  font-size: 10px;
-  color: var(--muted);
 }
 dialog {
   width: calc(100% - 30px);
@@ -725,15 +957,6 @@ dialog code {
   .header-tools {
     gap: 0;
   }
-  #find {
-    width: 38px;
-    font-size: 0;
-    padding: 3px;
-    margin-right: 2px;
-  }
-  #find option {
-    font-size: 13px;
-  }
   .icon {
     width: 32px;
     height: 32px;
@@ -747,6 +970,8 @@ dialog code {
   }
   .zoom-tools {
     left: 10px;
+    right: auto;
+    top: auto;
     bottom: 12px;
     padding: 2px;
   }
@@ -754,18 +979,10 @@ dialog code {
     width: 29px;
     height: 30px;
   }
-  .zoom-tools output {
-    width: 35px;
-    font-size: 10px;
-  }
-  #minimap {
-    right: 10px;
-    bottom: 12px;
-    width: 82px;
-    height: 51px;
-  }
-  #selection-caption {
-    display: none;
+  .fit-text {
+    height: 30px;
+    padding: 0 6px;
+    font-size: 11px;
   }
   footer {
     padding: 10px 12px;
@@ -777,15 +994,10 @@ dialog code {
   .cohort {
     display: none;
   }
-  .playback {
-    gap: 6px;
-    font-size: 11px;
-  }
-  #phase-name {
-    width: 62px;
-  }
-  .replay-label {
-    display: none;
+  .hint {
+    order: 5;
+    flex-basis: 100%;
+    text-align: left;
   }
   .tool-divider {
     margin: 0 1px;
@@ -794,20 +1006,34 @@ dialog code {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+    animation: none !important;
     scroll-behavior: auto !important;
   }
 }
 @media (max-width: 680px) {
-  #find {
-    width: 105px;
-    font-size: 10px;
-    padding: 4px;
+  .guide {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    bottom: 8px;
+    padding: 12px 12px 12px 14px;
   }
+  .guide-actions {
+    justify-content: flex-end;
+  }
+  .guide-open {
+    padding: 6px 9px;
+  }
+}
+@media (max-width: 680px) {
   .population:not(:has(foreignObject)) .node-title {
     font-size: 30px;
   }
   .population:not(:has(foreignObject)) .node-meta {
     font-size: 17px;
+  }
+  .population:not(:has(foreignObject)) .node-caption {
+    font-size: 13px;
   }
 }
 @media (max-width: 380px) {
@@ -822,29 +1048,15 @@ dialog code {
     <header>
       <div class="brand">resp-net <span>Circuit atlas</span></div>
       <div class="header-tools">
-        <label class="sr-only" for="find">Find a population</label>
-        <select id="find" title="Find a population">
-          <option value="">Find a population</option>
-          <option>Inspiratory</option>
-          <option>pre-I</option>
-          <option>ramp-I</option>
-          <option>early-I</option>
-          <option>post-I</option>
-          <option>aug-E</option>
-        </select>
-        <button
-          class="icon"
-          id="download"
-          data-icon="download"
-          title="Download current graph"
-          aria-label="Download current graph"
-        ></button>
+        <button id="guide-open" class="guide-open" title="Step-by-step guide">
+          Guide
+        </button>
         <button
           class="icon"
           id="about"
           data-icon="info"
-          title="Evidence and methods"
-          aria-label="Evidence and methods"
+          title="About this atlas"
+          aria-label="About this atlas"
         ></button>
       </div>
     </header>
@@ -896,22 +1108,22 @@ dialog code {
           title="Zoom in"
           aria-label="Zoom in"
         ></button>
-        <output id="zoom-level">100%</output>
         <button
           class="icon"
           id="zoom-out"
           data-icon="zoom-out"
-          title="Zoom out and fold detail"
-          aria-label="Zoom out and fold detail"
+          title="Zoom out"
+          aria-label="Zoom out"
         ></button>
         <span class="tool-divider"></span>
         <button
-          class="icon"
           id="fit"
-          data-icon="scan"
-          title="Fit expanded graph"
-          aria-label="Fit expanded graph"
-        ></button>
+          class="fit-text"
+          title="Fit everything in view"
+          aria-label="Fit everything in view"
+        >
+          Fit
+        </button>
         <button
           class="icon"
           id="fullscreen"
@@ -920,62 +1132,44 @@ dialog code {
           aria-label="Full screen"
         ></button>
       </div>
-      <svg
-        id="minimap"
-        viewBox="-260 -70 1680 980"
-        role="button"
-        tabindex="0"
-        aria-label="Recenter on the whole graph"
-      >
-        <rect
-          class="map-ground"
-          x="-260"
-          y="-70"
-          width="1680"
-          height="980"
-          rx="6"
-        />
-        <g id="map-nodes"></g>
-        <rect id="map-window" />
-      </svg>
-      <div id="selection-caption" aria-live="polite"></div>
+      <div id="tip" role="tooltip" hidden></div>
+      <aside id="guide" class="guide" aria-label="Guide" aria-live="polite" hidden>
+        <div class="guide-text">
+          <div id="guide-step" class="guide-step"></div>
+          <h2 id="guide-title"></h2>
+          <p id="guide-body"></p>
+        </div>
+        <div class="guide-actions">
+          <button id="guide-back">Back</button>
+          <button id="guide-next" class="primary">Next</button>
+          <button
+            id="guide-exit"
+            class="icon"
+            data-icon="x"
+            title="Close the guide"
+            aria-label="Close the guide"
+          ></button>
+        </div>
+      </aside>
     </main>
     <footer>
       <div class="legend">
         <span><i class="red line"></i>Excitation</span
         ><span><i class="blue line"></i>Inhibition</span
-        ><span id="detail-legend">Width: full-fit area</span
+        ><span id="detail-legend">Width: mean fitted share</span
+        ><span id="hint" class="hint" aria-live="polite"></span
         ><span class="cohort">150 cells · 168 recordings</span>
-      </div>
-      <div class="playback">
-        <button
-          id="play"
-          class="icon"
-          data-icon="play"
-          title="Play empirical phase replay"
-          aria-label="Play empirical phase replay"
-        ></button
-        ><span id="phase-name">Inspiration</span
-        ><input
-          id="phase"
-          aria-label="Respiratory phase"
-          type="range"
-          min="0"
-          max="99"
-          value="12"
-        /><output id="phase-readout">0.12</output
-        ><span class="replay-label">Empirical phase replay</span>
       </div>
     </footer>
     <dialog id="methods">
       <div class="dialog-heading">
-        <h2>Evidence and methods</h2>
+        <h2>About this atlas</h2>
         <button
           id="close-methods"
           class="icon"
           data-icon="x"
           title="Close"
-          aria-label="Close methods"
+          aria-label="Close"
         ></button>
       </div>
       <div id="methods-body"></div>
@@ -1126,15 +1320,40 @@ dialog code {
   const C = window.ConnectomeCore,
     $ = (id) => document.getElementById(id);
   const color = { E: "#b83e3d", I: "#287ba5" };
-  const pattern = ["#277e68", "#b86182", "#ac8424", "#6775ad", "#916635"];
-  const anchors = {
-    Inspiratory: [270, 410],
-    "pre-I": [260, 120],
-    "ramp-I": [230, 410],
-    "early-I": [260, 700],
-    "post-I": [1160, 200],
-    "aug-E": [1160, 650],
+  // Component colors follow Figure 3 of the paper: inspiratory, post-I, aug-E.
+  // Validated against the excitation red and inhibition blue, which are
+  // reserved for the conductances themselves.
+  const family = ["#10803a", "#10803a", "#10803a", "#8e44ad", "#c98500"];
+  const dash = ["", "7 4", "1.5 4", "", ""];
+  const INK = "#25343b";
+  const MEMBERS = D.names.slice(0, 3);
+  const isMember = (id) => MEMBERS.includes(id);
+  // The manuscript calls the first inspiratory population pre-I/I.
+  const show = (s) => String(s).replace(/pre-I(?!\/)/g, "pre-I/I");
+  const signWord = { E: "excitation", I: "inhibition" };
+  const SignWord = { E: "Excitation", I: "Inhibition" };
+  // Figure 4A arrangement: inspiratory group above, post-I left, aug-E right.
+  const layout = {
+    wide: {
+      Inspiratory: [750, 150],
+      "pre-I": [270, 150],
+      "ramp-I": [750, 150],
+      "early-I": [1230, 150],
+      "post-I": [320, 640],
+      "aug-E": [1180, 640],
+    },
+    narrow: {
+      Inspiratory: [320, 130],
+      "pre-I": [-160, 130],
+      "ramp-I": [320, 130],
+      "early-I": [800, 130],
+      "post-I": [80, 640],
+      "aug-E": [560, 640],
+    },
   };
+  const PANEL = { rx: 215, ry: 186 };
+  const LANE = 0.19;
+  const SEEN_KEY = "resp-net-atlas-guide";
   const fresh = () => ({
     expanded: false,
     open: [],
@@ -1143,22 +1362,19 @@ dialog code {
     cellsFor: null,
     testsOpen: false,
     samples: {},
+    compare: {},
     masks: {},
   });
   let state = fresh(),
-    history = [],
-    phase = 12,
-    playing = false,
-    frame,
-    lastTime = 0,
-    accumulated = 0;
+    history = [];
   let width = 1,
     height = 1,
-    baseScale = 1,
     edges = [],
     nodes = [],
-    wheelPoint = null,
-    zoomStart = 1;
+    geometry = new Map(),
+    reserveBottom = 0,
+    hover = null,
+    guide = null;
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const duration = () => (reduced.matches ? 0 : 380);
   const esc = (s) =>
@@ -1174,8 +1390,12 @@ dialog code {
         })[c],
     );
   const pct = (v) => (v * 100).toFixed(1) + "%";
-  const pval = (v) =>
-    v === null ? "Not tested" : v < 0.001 ? v.toExponential(2) : v.toFixed(3);
+  const pval = (v) => {
+    if (v === null) return "not tested";
+    if (v >= 0.001) return v.toFixed(3);
+    const [m, e] = v.toExponential(2).split("e");
+    return `${m} × 10<sup>−${Math.abs(+e)}</sup>`;
+  };
   const icon = (name) =>
     icons[name].replace("<svg ", '<svg aria-hidden="true" ');
   document
@@ -1189,26 +1409,36 @@ dialog code {
       )
       .join(" ");
   const sample = (target) => state.samples[target] || "mean";
+  const compared = (target) => {
+    const id = state.compare[target];
+    return id && id !== sample(target)
+      ? D.groups[target].cells.find((c) => c.id === id)
+      : null;
+  };
   const mask = (target, sign) => state.masks[`${target}|${sign}`] ?? 7;
   const curve = (target, sign) =>
     C.series(D, target, sign, sample(target), mask(target, sign));
+  const modeName = { CC: "current clamp", VC: "voltage clamp" };
+  const cellLabel = (target, id) =>
+    id === "mean"
+      ? `Mean of ${D.groups[target].n} cells`
+      : D.groups[target].cells.find((c) => c.id === id).label;
   const svg = d3.select("#atlas"),
     world = d3.select("#world");
   const transform = () => d3.zoomTransform($("atlas"));
   const mobile = () => width < 700;
-  const position = (id) =>
-    mobile()
-      ? {
-          Inspiratory: [320, 130],
-          "pre-I": [-140, 130],
-          "ramp-I": [320, 130],
-          "early-I": [780, 130],
-          "post-I": [100, 620],
-          "aug-E": [550, 620],
-        }[id]
-      : anchors[id];
+  const position = (id) => layout[mobile() ? "narrow" : "wide"][id];
   const rootBounds = () =>
-    mobile() ? [-115, -80, 785, 880] : [65, 15, 1350, 850];
+    mobile() ? [-170, -95, 810, 810] : [45, -50, 1455, 790];
+  const insets = () => ({
+    top: mobile() ? 58 : 64,
+    bottom: (mobile() ? 64 : 18) + reserveBottom,
+  });
+  const add = (p, q) => [p[0] + q[0], p[1] + q[1]];
+  const scale = (p, k) => [p[0] * k, p[1] * k];
+  const dir = (a) => [Math.cos(a), Math.sin(a)];
+  const fmt = (p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`;
+
   function checkpoint() {
     const t = transform();
     history.push({
@@ -1219,160 +1449,122 @@ dialog code {
   }
   const zoom = d3
     .zoom()
-    .scaleExtent([0.12, 3.8])
+    .scaleExtent([0.15, 3.8])
     .clickDistance(5)
     .filter(
       (e) =>
         !e.target.closest("foreignObject") && (!e.button || e.type === "wheel"),
     )
-    .on("start", (e) => {
-      zoomStart = e.transform.k;
-    })
-    .on("zoom", (e) => {
-      world.attr("transform", e.transform);
-      $("zoom-level").textContent =
-        Math.round((e.transform.k / baseScale) * 100) + "%";
-      updateMap();
-    })
-    .on("end", (e) => {
-      if (!e.sourceEvent || !["wheel", "touchend"].includes(e.sourceEvent.type))
-        return;
-      const ratio = e.transform.k / baseScale;
-      if (
-        e.transform.k < zoomStart &&
-        ratio < 0.91 &&
-        (state.expanded || state.open.length || state.edge)
-      ) {
-        checkpoint();
-        state = fresh();
-        render();
-        return;
-      }
-      if (
-        e.transform.k < zoomStart &&
-        ratio < 1.1 &&
-        (state.edge || state.open.length)
-      ) {
-        checkpoint();
-        state.edge = null;
-        state.cellsFor = null;
-        state.open = [];
-        state.focus = state.expanded ? "Inspiratory" : null;
-        render();
-        return;
-      }
-      if (e.transform.k <= zoomStart || ratio < 1.32) return;
-      const point = wheelPoint || [width / 2, height / 2];
-      const p = e.transform.invert(point);
-      const near = nodes.find(
-        (n) =>
-          Math.abs(p[0] - n.x) < n.rx + 50 && Math.abs(p[1] - n.y) < n.ry + 50,
-      );
-      if (
-        near &&
-        ((near.id === "Inspiratory" && !state.expanded) ||
-          (near.id !== "Inspiratory" && !state.open.includes(near.id)))
-      )
-        openNode(near.id, false);
-    });
+    .on("zoom", (e) => world.attr("transform", e.transform));
   svg.call(zoom).on("dblclick.zoom", null);
-  $("atlas").addEventListener(
-    "wheel",
-    (e) => {
-      const r = $("atlas").getBoundingClientRect();
-      wheelPoint = [e.clientX - r.left, e.clientY - r.top];
-    },
-    { passive: true, capture: true },
-  );
-  $("atlas").addEventListener(
-    "touchmove",
-    (e) => {
-      if (!e.touches.length) return;
-      const r = $("atlas").getBoundingClientRect();
-      const touches = [...e.touches];
-      wheelPoint = [
-        d3.mean(touches, (t) => t.clientX) - r.left,
-        d3.mean(touches, (t) => t.clientY) - r.top,
-      ];
-    },
-    { passive: true, capture: true },
-  );
+
+  // ---------- Camera ----------
   function moveCamera(t, animate = true) {
     svg.interrupt();
     const selection = animate ? svg.transition().duration(duration()) : svg;
     selection.call(zoom.transform, t);
   }
-  function fitBounds(bounds, animate = true, maxScale = 1.3) {
-    const [x0, y0, x1, y1] = bounds;
-    const k = Math.max(
+  function scaleFor([x0, y0, x1, y1], maxScale) {
+    const i = insets();
+    return Math.max(
       0.12,
-      Math.min(maxScale, (width - 50) / (x1 - x0), (height - 125) / (y1 - y0)),
+      Math.min(
+        maxScale,
+        (width - 50) / (x1 - x0),
+        (height - i.top - i.bottom) / (y1 - y0),
+      ),
     );
+  }
+  function fitBounds(bounds, animate = true, maxScale = 1.3) {
+    const [x0, y0, x1, y1] = bounds,
+      i = insets(),
+      k = scaleFor(bounds, maxScale);
     moveCamera(
       d3.zoomIdentity
         .translate(
           width / 2 - ((x0 + x1) / 2) * k,
-          62 + (height - 125) / 2 - ((y0 + y1) / 2) * k,
+          i.top + (height - i.top - i.bottom) / 2 - ((y0 + y1) / 2) * k,
         )
         .scale(k),
       animate,
     );
   }
-  function boundsFor(items) {
+  // Show as much of the graph as possible while the focused object stays
+  // fully visible and is never drawn below its natural reading size.
+  function fitWithFocus(all, focus, animate = true) {
+    const i = insets();
+    const k = Math.max(
+      scaleFor(all, 1.3),
+      Math.min(scaleFor(focus, 1.15), guide ? 0.8 : 0.9),
+    );
+    let tx = width / 2 - ((all[0] + all[2]) / 2) * k,
+      ty =
+        i.top + (height - i.top - i.bottom) / 2 - ((all[1] + all[3]) / 2) * k;
+    if (focus[2] * k + tx > width - 25) tx = width - 25 - focus[2] * k;
+    if (focus[0] * k + tx < 25) tx = 25 - focus[0] * k;
+    if (focus[3] * k + ty > height - i.bottom)
+      ty = height - i.bottom - focus[3] * k;
+    if (focus[1] * k + ty < i.top) ty = i.top - focus[1] * k;
+    moveCamera(d3.zoomIdentity.translate(tx, ty).scale(k), animate);
+  }
+  function boundsFor(items, pad = 35) {
     return [
-      Math.min(...items.map((n) => n.x - n.rx - 35)),
-      Math.min(...items.map((n) => n.y - n.ry - 35)),
-      Math.max(...items.map((n) => n.x + n.rx + 35)),
-      Math.max(...items.map((n) => n.y + n.ry + 35)),
+      Math.min(...items.map((n) => n.x - n.rx - pad)),
+      Math.min(...items.map((n) => n.y - n.ry - pad)),
+      Math.max(...items.map((n) => n.x + n.rx + pad)),
+      Math.max(...items.map((n) => n.y + n.ry + pad)),
     ];
   }
-  function evidenceBox() {
-    return {
-      x: mobile() ? 325 : 735,
-      y: mobile() ? 1030 : 420,
-      rx: 180,
-      ry:
-        state.edge?.source === "Inspiratory"
-          ? state.testsOpen
-            ? 312
-            : 257
-          : 197,
-    };
-  }
-  function cellBox() {
-    const n = nodeFor(state.cellsFor);
-    return {
-      x: n.x + (D.names.indexOf(n.id) < 3 ? -375 : 375),
-      y: n.y,
-      rx: 145,
-      ry: 202,
-    };
-  }
   function visibleBounds() {
-    return boundsFor([
-      ...nodes,
-      ...(state.edge ? [evidenceBox()] : []),
-      ...(state.cellsFor ? [cellBox()] : []),
-    ]);
-  }
-  function frameFocus() {
-    if (width < 700) {
-      if (state.cellsFor) return fitBounds(boundsFor([cellBox()]), true, 1.15);
-      if (state.edge) return fitBounds(boundsFor([evidenceBox()]), true, 1.15);
-      const n = nodes.find((n) => n.id === state.focus);
-      if (n && n.open) return fitBounds(boundsFor([n]), true, 1.4);
+    const items = [...nodes];
+    const s = satellite();
+    if (s) items.push(s);
+    if (state.expanded) {
+      const h = hull();
+      items.push({
+        x: (h.x0 + h.x1) / 2,
+        y: (h.y0 - 36 + h.y1) / 2,
+        rx: (h.x1 - h.x0) / 2,
+        ry: (h.y1 - h.y0 + 36) / 2,
+      });
     }
-    fitBounds(visibleBounds());
+    for (const g of geometry.values())
+      if (g.loop)
+        for (const p of g.pts) items.push({ x: p[0], y: p[1], rx: 0, ry: 0 });
+    return boundsFor(items, 30);
   }
-  function nodeFor(id, role = "target") {
-    if (id === "Inspiratory" && state.expanded && role === "source")
-      return {
-        id,
-        x: mobile() ? 320 : 520,
-        y: mobile() ? 335 : 410,
-        rx: 25,
-        ry: 25,
-      };
+  function frameFocus(animate = true) {
+    const s = satellite(),
+      n = nodes.find((n) => n.id === state.focus && n.open);
+    if (mobile()) {
+      if (s) return fitBounds(boundsFor([s]), animate, 1.15);
+      if (n) return fitBounds(boundsFor([n]), animate, 1.4);
+      return fitBounds(visibleBounds(), animate);
+    }
+    if (!s && !n)
+      return state.expanded
+        ? fitBounds(visibleBounds(), animate)
+        : fitBounds(rootBounds(), animate, 1.3);
+    const target = s ? nodes.find((m) => m.id === s.id) : n;
+    const near = [...(target ? [target] : []), ...(s ? [s] : [])];
+    // Keep the sources of a selected input in view when that still leaves
+    // the evidence at a readable size.
+    const sources = edges
+      .filter((e) => selectedEdge(e) && e.source !== "Inspiratory")
+      .map((e) => nodes.find((m) => m.id === e.source))
+      .filter(Boolean);
+    const wider = boundsFor([...near, ...sources], 14);
+    fitWithFocus(
+      visibleBounds(),
+      sources.length && scaleFor(wider, 1) >= 0.74
+        ? wider
+        : boundsFor(near, 14),
+      animate,
+    );
+  }
+
+  // ---------- Geometry ----------
+  function nodeFor(id) {
     const [x, y] = position(id);
     const open = state.open.includes(id);
     return {
@@ -1380,16 +1572,260 @@ dialog code {
       x,
       y,
       open,
-      rx: open ? 172 : id === "Inspiratory" ? 132 : 104,
-      ry: open ? 133 : id === "Inspiratory" ? 92 : 82,
+      rx: open ? PANEL.rx : id === "Inspiratory" ? 140 : 112,
+      ry: open ? PANEL.ry : id === "Inspiratory" ? 96 : 88,
     };
   }
+  // The dashed outline around the three inspiratory populations. Outputs of
+  // the group as a whole leave from this outline.
+  function hull() {
+    const ms = MEMBERS.map((id) => nodeFor(id));
+    return {
+      x0: Math.min(...ms.map((n) => n.x - n.rx)) - 46,
+      x1: Math.max(...ms.map((n) => n.x + n.rx)) + 46,
+      y0: Math.min(...ms.map((n) => n.y - n.ry)) - 72,
+      y1: Math.max(...ms.map((n) => n.y + n.ry)) + 36,
+    };
+  }
+  // Direction pointing away from the rest of the circuit; self-connections
+  // are drawn on this side so that they never cross other connections.
+  function outward(id) {
+    if (state.expanded && isMember(id)) return -Math.PI / 2;
+    const ids = ["Inspiratory", "post-I", "aug-E"];
+    const cx = d3.mean(ids, (i) => position(i)[0]),
+      cy = d3.mean(ids, (i) => position(i)[1]),
+      p = position(id);
+    return Math.atan2(p[1] - cy, p[0] - cx);
+  }
+  function port(n, angle, gap = 0) {
+    const [dx, dy] = dir(angle);
+    const t = n.open
+      ? Math.min(
+          n.rx / Math.max(1e-6, Math.abs(dx)),
+          n.ry / Math.max(1e-6, Math.abs(dy)),
+        )
+      : 1 / Math.hypot(dx / n.rx, dy / n.ry);
+    return [n.x + dx * (t + gap), n.y + dy * (t + gap)];
+  }
+  const cubic = (s, c1, c2, t) => `M${fmt(s)} C${fmt(c1)} ${fmt(c2)} ${fmt(t)}`;
+  function layoutEdges() {
+    geometry = new Map();
+    const gapOf = (e) => (e.sign === "I" ? 6 : 2);
+    const pairs = new Map();
+    for (const e of edges) {
+      if (e.source === e.target) {
+        const n = nodeFor(e.source),
+          out = outward(n.id);
+        const sides = [out - 0.5, out + 0.5].sort((a, b) =>
+          Math.abs(Math.sin(a) - Math.sin(b)) > 1e-9
+            ? Math.sin(a) - Math.sin(b)
+            : Math.cos(a) - Math.cos(b),
+        );
+        const phi = e.sign === "E" ? sides[0] : sides[1];
+        const s = port(n, phi - 0.2),
+          t = port(n, phi + 0.2, gapOf(e)),
+          c1 = add(s, scale(dir(phi - 0.8), 105)),
+          c2 = add(t, scale(dir(phi + 0.8), 105));
+        geometry.set(e.id, {
+          d: cubic(s, c1, c2, t),
+          end: t,
+          pts: [s, c1, c2, t],
+          loop: true,
+        });
+      } else if (state.expanded && e.source === "Inspiratory") {
+        const T = nodeFor(e.target),
+          H = hull(),
+          lane = e.sign === "E" ? -1 : 1;
+        if (isMember(e.target)) {
+          const x = T.x + lane * 26;
+          const y = T.open
+            ? T.y - T.ry - gapOf(e)
+            : T.y - T.ry * Math.sqrt(1 - (26 / T.rx) ** 2) - gapOf(e);
+          geometry.set(e.id, {
+            d: `M${x},${H.y0} L${x},${y.toFixed(1)}`,
+            end: [x, y],
+            pts: [
+              [x, H.y0],
+              [x, y],
+            ],
+          });
+        } else {
+          const inward = Math.sign((H.x0 + H.x1) / 2 - T.x) || 1;
+          const a =
+            Math.atan2(H.y1 - T.y, inward * 80) + lane * 0.85 * LANE;
+          const t = port(T, a, gapOf(e));
+          const s = [t[0] + (t[0] - T.x) * 1.5, H.y1];
+          const L = Math.max(20, (t[1] - s[1]) * 0.38);
+          const c1 = [s[0], s[1] + L],
+            c2 = add(t, scale(dir(a), L));
+          geometry.set(e.id, {
+            d: cubic(s, c1, c2, t),
+            end: t,
+            pts: [s, c1, c2, t],
+          });
+        }
+      } else {
+        const key = [e.source, e.target].sort().join("~");
+        if (!pairs.has(key)) pairs.set(key, []);
+        pairs.get(key).push(e);
+      }
+    }
+    // Connections between the same two populations run in parallel lanes:
+    // the two directions never share a side, so they cannot cross.
+    for (const [key, list] of pairs) {
+      const [p, q] = key.split("~"),
+        P = nodeFor(p),
+        Q = nodeFor(q);
+      // The outer two inspiratory populations have the third between them:
+      // arch over it instead of passing through it.
+      const between =
+        isMember(p) &&
+        isMember(q) &&
+        MEMBERS.map((id) => nodeFor(id)).find(
+          (m) =>
+            m.id !== p &&
+            m.id !== q &&
+            (m.x - P.x) * (m.x - Q.x) < 0 &&
+            Math.abs(m.y - P.y) < 1,
+        );
+      if (between) {
+        const [left, right] = P.x < Q.x ? [P, Q] : [Q, P];
+        list.forEach((e, i) => {
+          const leftToRight = e.source === left.id,
+            shift = (i - (list.length - 1) / 2) * LANE;
+          const aL = -Math.PI / 6 - shift,
+            aR = (-5 * Math.PI) / 6 + shift;
+          const s = leftToRight ? port(left, aL) : port(right, aR),
+            t = leftToRight
+              ? port(right, aR, gapOf(e))
+              : port(left, aL, gapOf(e));
+          const apex = between.y - between.ry - 42 - i * 14,
+            yc = (y) => y + (apex - y) / 0.75,
+            dx = (t[0] - s[0]) * 0.22;
+          const c1 = [s[0] + dx, yc(s[1])],
+            c2 = [t[0] - dx, yc(t[1])];
+          geometry.set(e.id, {
+            d: cubic(s, c1, c2, t),
+            end: t,
+            pts: [s, c1, c2, t],
+            loop: true,
+          });
+        });
+        continue;
+      }
+      const theta = Math.atan2(Q.y - P.y, Q.x - P.x);
+      const rank = (e) =>
+        e.source === p ? (e.sign === "I" ? 0 : 1) : e.sign === "E" ? 2 : 3;
+      list
+        .sort((a, b) => rank(a) - rank(b))
+        .forEach((e, i) => {
+          const k = i - (list.length - 1) / 2;
+          const aP = theta + k * LANE,
+            aQ = theta + Math.PI - k * LANE;
+          const fromP = e.source === p;
+          const sA = fromP ? aP : aQ,
+            tA = fromP ? aQ : aP;
+          const s = port(fromP ? P : Q, sA),
+            t = port(fromP ? Q : P, tA, gapOf(e));
+          const L = Math.max(
+            30,
+            Math.min(230, Math.hypot(t[0] - s[0], t[1] - s[1]) * 0.36),
+          );
+          const c1 = add(s, scale(dir(sA), L)),
+            c2 = add(t, scale(dir(tA), L));
+          geometry.set(e.id, {
+            d: cubic(s, c1, c2, t),
+            end: t,
+            pts: [s, c1, c2, t],
+          });
+        });
+    }
+  }
+  // A card is first drawn at a nominal height, then fitted to its content so
+  // that text never overflows whatever the reader's fonts are.
+  let cardHeight = { key: "", h: 0 };
+  const cardKey = () =>
+    JSON.stringify([
+      state.cellsFor,
+      state.edge,
+      state.testsOpen,
+      state.masks,
+      state.samples,
+      mobile(),
+    ]);
+  function fitCard(layer, redraw) {
+    const el = layer.select(".evidence-content, .cell-content").node(),
+      s = satellite();
+    if (!el || !s) return;
+    const need = Math.ceil(el.scrollHeight) + 4;
+    if (Math.abs(need - s.ry * 2) < 3) return;
+    cardHeight = { key: cardKey(), h: need };
+    redraw();
+  }
+  // Evidence and cell records unfold beside their population, outside the
+  // circuit, so that they never cover a population or a selected connection.
+  function satellite() {
+    const id = state.cellsFor || state.edge?.target;
+    if (!id) return null;
+    const wide = !mobile(),
+      fine = state.edge?.source === "Inspiratory",
+      kind = state.cellsFor ? "cells" : "evidence";
+    const w = wide ? (kind === "cells" ? 600 : 520) : 360;
+    const h =
+      kind === "cells"
+        ? wide
+          ? 468
+          : 440
+        : fine
+          ? wide
+            ? state.testsOpen
+              ? 590
+              : 486
+            : state.testsOpen
+              ? 900
+              : 770
+          : wide
+            ? 322
+            : 500;
+    const n = nodeFor(id);
+    const fitted = cardHeight.key === cardKey() ? cardHeight.h : h;
+    return placeCard(id, kind, n, w, fitted, wide);
+  }
+  function placeCard(id, kind, n, w, h, wide) {
+    let x, y;
+    if (!wide) {
+      x = 320;
+      y = 900 + h / 2;
+    } else {
+      const side = { "pre-I": -1, "post-I": -1, "early-I": 1, "aug-E": 1 }[id];
+      if (side) {
+        x = n.x + side * (n.rx + 26 + w / 2);
+        y = n.y;
+      } else {
+        x = n.x;
+        y = hull().y1 + 28 + h / 2;
+      }
+    }
+    return { id, kind, x, y, rx: w / 2, ry: h / 2 };
+  }
+  function leader(s) {
+    const n = nodeFor(s.id);
+    if (mobile())
+      return `M${n.x},${n.y + n.ry} L${s.x},${s.y - s.ry}`;
+    if (Math.abs(s.x - n.x) > 1) {
+      const side = Math.sign(s.x - n.x);
+      return `M${n.x + side * n.rx},${n.y} L${s.x - side * s.rx},${n.y}`;
+    }
+    return `M${n.x},${n.y + n.ry} L${s.x},${s.y - s.ry}`;
+  }
+
+  // ---------- State changes ----------
   function openNode(id, reframe = true) {
     checkpoint();
     state.focus = id;
     if (id === "Inspiratory") state.expanded = true;
     else {
-      if (D.names.indexOf(id) < 3) state.expanded = true;
+      if (isMember(id)) state.expanded = true;
       if (!state.open.includes(id)) state.open.push(id);
     }
     render();
@@ -1399,14 +1835,18 @@ dialog code {
     checkpoint();
     if (id === "Inspiratory") {
       state.expanded = false;
-      state.open = state.open.filter((n) => D.names.indexOf(n) > 2);
-      state.edge = null;
-      state.cellsFor = null;
+      state.open = state.open.filter((n) => !isMember(n));
+      if (state.edge && isMember(state.edge.target)) state.edge = null;
+      if (state.edge?.source === "Inspiratory") state.edge = null;
+      if (isMember(state.cellsFor)) state.cellsFor = null;
       state.focus = "Inspiratory";
     } else {
       state.open = state.open.filter((n) => n !== id);
       if (state.cellsFor === id) state.cellsFor = null;
       if (state.edge?.target === id) state.edge = null;
+      if (state.focus === id)
+        state.focus =
+          state.open.at(-1) || (state.expanded ? "Inspiratory" : null);
     }
     render();
     frameFocus();
@@ -1416,12 +1856,22 @@ dialog code {
     const target =
       edge.target === "Inspiratory" ? edge.members[0].target : edge.target;
     const source = edge.fine ? "Inspiratory" : edge.source;
-    if (source === "Inspiratory" || D.names.indexOf(target) < 3)
-      state.expanded = true;
+    if (source === "Inspiratory" || isMember(target)) state.expanded = true;
     state.edge = { source, target, sign: edge.sign };
+    state.cellsFor = null;
     state.focus = target;
     state.testsOpen = false;
     if (!state.open.includes(target)) state.open.push(target);
+    render();
+    frameFocus();
+  }
+  function openCells(id) {
+    checkpoint();
+    if (isMember(id)) state.expanded = true;
+    if (!state.open.includes(id)) state.open.push(id);
+    state.cellsFor = id;
+    state.edge = null;
+    state.focus = id;
     render();
     frameFocus();
   }
@@ -1434,91 +1884,52 @@ dialog code {
         (e.fine && state.edge.source === "Inspiratory"))
     );
   }
-  function boundary(n, dx, dy, gap = 0) {
-    const t = n.open
-      ? Math.min(
-          n.rx / Math.max(0.001, Math.abs(dx)),
-          n.ry / Math.max(0.001, Math.abs(dy)),
-        )
-      : 1 / Math.sqrt((dx / n.rx) ** 2 + (dy / n.ry) ** 2);
-    const length = Math.hypot(dx, dy) || 1;
-    return [
-      n.x + dx * t + (gap * dx) / length,
-      n.y + dy * t + (gap * dy) / length,
-    ];
+
+  // ---------- Populations ----------
+  function pill(id, label, y, w) {
+    return `<g class="pill" data-action="expand" data-pop="${id}" transform="translate(0,${y})${mobile() ? " scale(1.25)" : ""}"><rect x="${-w / 2}" y="-14" width="${w}" height="28" rx="14"/><text y="5" text-anchor="middle">${label}</text></g>`;
   }
-  function pathFor(e) {
-    const a = nodeFor(e.source, "source"),
-      b = nodeFor(e.target),
-      sign = e.sign === "E" ? -1 : 1;
-    if (selectedEdge(e)) {
-      const box = evidenceBox(),
-        rank = e.fine ? D.names.indexOf(e.source) : 1;
-      const end = [box.x - box.rx, box.y - 60 + rank * 42];
-      const start = boundary(a, end[0] - a.x, end[1] - a.y);
-      return {
-        d: `M${start} C${start[0] + 100},${start[1]} ${end[0] - 70},${end[1]} ${end}`,
-        end,
-        terminal: false,
-      };
-    }
-    if (e.source === e.target) {
-      const start = [a.x + sign * a.rx * 0.5, a.y - a.ry * 0.85],
-        end = boundary(
-          a,
-          sign * a.rx * 0.88,
-          -a.ry * 0.42,
-          e.sign === "I" ? 6 : 2,
-        );
-      return {
-        d: `M${start} C${a.x + sign * (a.rx + 110)},${a.y - a.ry - 150} ${a.x + sign * (a.rx + 170)},${a.y - a.ry + 20} ${end}`,
-        end,
-        terminal: true,
-      };
-    }
-    const dx = b.x - a.x,
-      dy = b.y - a.y,
-      len = Math.hypot(dx, dy),
-      bend = 50 + sign * 22;
-    const nx = -dy / len,
-      ny = dx / len;
-    const p1 = [a.x + dx * 0.34 + nx * bend, a.y + dy * 0.34 + ny * bend];
-    const p2 = [a.x + dx * 0.66 + nx * bend, a.y + dy * 0.66 + ny * bend];
-    const start = boundary(a, p1[0] - a.x, p1[1] - a.y),
-      end = boundary(b, p2[0] - b.x, p2[1] - b.y, e.sign === "I" ? 6 : 2);
-    return { d: `M${start} C${p1} ${p2} ${end}`, end, terminal: true };
+  function closeButton(id, title, x, y) {
+    return `<g class="node-action" role="button" tabindex="0" data-action="fold" data-pop="${id}" aria-label="${title}" transform="translate(${x},${y})"><title>${title}</title><rect x="-14" y="-14" width="28" height="28" rx="5"/><g class="small-icon" transform="translate(-8,-8)">${icon("x")}</g></g>`;
   }
-  function nodeAction(id, name, title, x, y) {
-    return `<g class="node-action" role="button" tabindex="0" data-action="${name}" data-pop="${id}" aria-label="${title}" transform="translate(${x},${y})"><title>${title}</title><rect x="-13" y="-13" width="26" height="26" rx="4" fill="#f3f7f4" stroke="#d8e4dc"/><g class="small-icon" transform="translate(-8,-8)">${icon(name === "fold" ? "minus" : "plus")}</g></g>`;
+  function profilePlot(target, sign) {
+    const si = sign === "E" ? 0 : 1,
+      s = curve(target, sign),
+      isCell = sample(target) !== "mean",
+      other = compared(target),
+      mean = D.groups[target].mean.profiles[si];
+    const max = Math.max(
+      1.05,
+      ...s.observed,
+      ...(other ? other.profiles[si] : s.fit),
+      ...(isCell ? mean : []),
+    );
+    const X = 34,
+      W = 356,
+      B = 70,
+      Hh = 60,
+      split = X + W * D.ti;
+    return `<svg viewBox="0 0 400 92" data-chart="${target}|${sign}" role="img" aria-label="${show(target)} ${signWord[sign]} over one respiratory cycle"><rect x="${X}" y="6" width="${W * D.ti}" height="${B - 6}" fill="#edf3ef"/><line x1="${X}" x2="${X + W}" y1="${B}" y2="${B}" stroke="#d7e2dd"/><text x="${X - 6}" y="${B - Hh / max + 4}" text-anchor="end" class="chart-label">100</text><text x="${X - 6}" y="${B + 3}" text-anchor="end" class="chart-label">0</text>${isCell ? `<path d="${chartLine(mean, X, B, W, Hh, max)}" fill="none" stroke="#b9c5c1" stroke-width="1.8"/>` : ""}${other ? `<path d="${chartLine(other.profiles[si], X, B, W, Hh, max)}" fill="none" stroke="#263638" stroke-width="1.7"/>` : `<path d="${chartLine(s.fit, X, B, W, Hh, max)}" fill="none" stroke="#75827e" stroke-width="1.5" stroke-dasharray="4 3"/>`}<path d="${chartLine(s.observed, X, B, W, Hh, max)}" fill="none" stroke="${color[sign]}" stroke-width="2.2"/><text x="${(X + split) / 2}" y="${B + 16}" text-anchor="middle" class="chart-label">Inspiration</text><text x="${(split + X + W) / 2}" y="${B + 16}" text-anchor="middle" class="chart-label">Expiration</text></svg>`;
   }
-  function profilePlot(target, sign, x = 0, y = 0) {
-    const s = curve(target, sign),
-      max = Math.max(1.05, ...s.fit, ...s.observed);
-    return `<svg viewBox="0 0 316 67" data-chart="${target}|${sign}" aria-label="${target} ${sign === "E" ? "excitatory" : "inhibitory"} conductance"><rect x="22" y="3" width="${284 * D.ti}" height="48" fill="#edf3ef"/><line x1="22" x2="306" y1="51" y2="51" stroke="#d7e2dd"/><text x="17" y="${55 - 43 / max}" text-anchor="end" class="chart-label">100</text><text x="17" y="54" text-anchor="end" class="chart-label">0</text><path d="${chartLine(s.observed, 22, 51, 284, 43, max)}" fill="none" stroke="${color[sign]}" stroke-width="1.9"/><path d="${chartLine(s.fit, 22, 51, 284, 43, max)}" fill="none" stroke="#75827e" stroke-width="1.5" stroke-dasharray="4 3"/><line class="phase-cursor" data-cursor-x="22" data-cursor-width="284" y1="3" y2="52"/><text x="22" y="65" class="chart-label">0</text><text x="${22 + 284 * D.ti}" y="65" text-anchor="middle" class="chart-label">I/E</text><text x="306" y="65" text-anchor="end" class="chart-label">1</text></svg>`;
+  function panelLegend(id) {
+    const isCell = sample(id) !== "mean",
+      other = compared(id),
+      main = isCell ? cellLabel(id, sample(id)) : "Mean of cells";
+    return `<div class="chart-legend"><span><i class="line two"></i>${main}</span>${other ? `<span><i class="line dark"></i>${other.label}</span>` : ""}${isCell ? '<span><i class="line pale"></i>Mean</span>' : ""}${other ? "" : '<span><i class="line dash"></i>Fit from five patterns</span>'}</div>`;
   }
   function nodeContent(n) {
     const id = n.id,
       group = D.groups[id];
     if (n.open) {
-      return `<rect class="node-shape" x="-${n.rx}" y="-${n.ry}" width="${n.rx * 2}" height="${n.ry * 2}" rx="8"/><text class="node-title" x="${-n.rx + 17}" y="${-n.ry + 29}">${id}</text><text class="node-meta" x="${-n.rx + 105}" y="${-n.ry + 26}">${group.n} cells</text>${nodeAction(id, "fold", `Fold ${id}`, n.rx - 21, -n.ry + 23)}
-        <foreignObject x="-${n.rx}" y="${-n.ry + 42}" width="${n.rx * 2}" height="${n.ry * 2 - 44}"><div xmlns="http://www.w3.org/1999/xhtml" class="node-content"><div class="sample-row"><select data-sample="${id}" aria-label="${id} conductance sample"><option value="mean">Group mean</option>${group.cells.map((c) => `<option value="${c.id}" ${sample(id) === c.id ? "selected" : ""}>${c.label} · ${c.modes.join(" + ")}</option>`).join("")}</select><button class="icon" data-cells="${id}" title="Browse ${id} cells" aria-label="Browse ${id} cells">${icon("grid-2x2")}</button></div><div class="chart-heading"><span class="red">Excitation</span><span>% of joint peak</span></div>${profilePlot(id, "E")}<div class="chart-heading"><span class="blue">Inhibition</span></div>${profilePlot(id, "I")}<div class="chart-legend"><span><i class="line"></i>Reconstructed</span><span><i class="line dash"></i>Saved fit</span></div></div></foreignObject>`;
+      const other = compared(id);
+      return `<rect class="node-shape" x="-${n.rx}" y="-${n.ry}" width="${n.rx * 2}" height="${n.ry * 2}" rx="10"/><text class="node-title" x="${-n.rx + 18}" y="${-n.ry + 33}">${show(id)}<tspan class="node-meta" dx="10">synaptic inputs</tspan></text>${closeButton(id, `Close ${show(id)} inputs`, n.rx - 24, -n.ry + 25)}
+        <foreignObject x="-${n.rx}" y="${-n.ry + 46}" width="${n.rx * 2}" height="${n.ry * 2 - 48}"><div xmlns="http://www.w3.org/1999/xhtml" class="node-content"><div class="sample-row"><select data-sample="${id}" aria-label="Record shown for ${show(id)}"><option value="mean">Mean of ${group.n} cells</option>${group.cells.map((c) => `<option value="${c.id}" ${sample(id) === c.id ? "selected" : ""}>${c.label} · ${c.modes.map((m) => modeName[m] || m).join(" + ")}</option>`).join("")}</select><button class="text-button" data-cells="${id}" aria-label="Browse ${show(id)} cells" aria-pressed="${state.cellsFor === id}">${icon("grid-2x2")}<span>Browse ${group.n} cells</span></button></div>${other ? `<div class="compare-row">Compared with <strong>${other.label}</strong><button class="link-button" data-clear-compare="${id}">Remove</button></div>` : ""}<div class="chart-heading"><span class="red">Excitation</span><span>% of peak conductance</span></div>${profilePlot(id, "E")}<div class="chart-heading"><span class="blue">Inhibition</span></div>${profilePlot(id, "I")}${panelLegend(id)}</div></foreignObject>`;
     }
-    const family = id === "Inspiratory",
-      js = family ? [0, 1, 2] : [D.names.indexOf(id)];
-    return `<ellipse class="node-shape" rx="${n.rx}" ry="${n.ry}"/><text class="node-title" y="-28" text-anchor="middle">${id}</text><text class="node-meta" y="-8" text-anchor="middle">${family ? "pre-I · ramp-I · early-I" : `${group.n} cells`}</text><rect x="-58" y="4" width="${116 * D.ti}" height="30" fill="#edf3ef"/>${js
-      .map(
-        (j) =>
-          `<path d="${chartLine(
-            D.matrix.map((r) => r[j]),
-            -58,
-            33,
-            116,
-            27,
-          )}" stroke="${pattern[j]}" fill="none" stroke-width="1.8"/>`,
-      )
-      .join(
-        "",
-      )}<circle class="port" data-phase-pop="${id}" cx="-15" cy="53" r="7" fill="${color.E}" stroke="${color.E}"/><circle class="port" data-phase-pop="${id}" cx="15" cy="53" r="7" fill="${color.I}" stroke="${color.I}"/>${nodeAction(id, "expand", `Expand ${id}`, n.rx - 19, -n.ry + 20)}`;
+    const grouped = id === "Inspiratory",
+      top = grouped ? -52 : -46,
+      j = D.names.indexOf(id),
+      trace = D.matrix.map((r) => (grouped ? Math.max(r[0], r[1], r[2]) : r[j]));
+    return `<ellipse class="node-shape" rx="${n.rx}" ry="${n.ry}"/><text class="node-title" y="${top}" text-anchor="middle">${show(id)}</text><text class="node-meta" y="${top + 19}" text-anchor="middle">${grouped ? "pre-I/I · ramp-I · early-I" : `${group.n} cells`}</text><rect x="-58" y="${top + 28}" width="${116 * D.ti}" height="29" fill="#edf3ef"/><path d="${chartLine(trace, -58, top + 56, 116, 26)}" stroke="${INK}" fill="none" stroke-width="1.7"/><text class="node-caption" y="${top + 72}" text-anchor="middle">${grouped ? "combined discharge pattern" : "discharge pattern"}</text>${grouped ? pill(id, "Show 3 populations", 50, 172) : pill(id, "Show inputs", 46, 122)}`;
   }
   function renderNodes() {
     const ids = state.expanded ? D.names : ["Inspiratory", "post-I", "aug-E"];
@@ -1542,16 +1953,23 @@ dialog code {
       .attr(
         "transform",
         (n) =>
-          `translate(${D.names.indexOf(n.id) < 3 ? position("Inspiratory") : [n.x, n.y]})`,
+          `translate(${isMember(n.id) ? position("Inspiratory") : [n.x, n.y]})`,
       );
     const all = enter.merge(join);
     all
       .attr("data-node", (n) => n.id)
       .attr("role", (n) => (n.open ? "group" : "button"))
       .attr("tabindex", 0)
-      .attr("aria-label", (n) => `${n.open ? "Focus" : "Expand"} ${n.id}`)
+      .attr("aria-label", (n) =>
+        n.open
+          ? `${show(n.id)} synaptic inputs`
+          : n.id === "Inspiratory"
+            ? "Show the three inspiratory populations"
+            : `Show inputs to ${show(n.id)}, ${D.groups[n.id].n} cells`,
+      )
       .attr("aria-expanded", (n) => String(n.open))
-      .classed("selected", (n) => n.id === state.focus)
+      .classed("selected", (n) => n.id === state.focus && n.open)
+      .classed("is-open", (n) => n.open)
       .html(nodeContent);
     all
       .transition()
@@ -1559,26 +1977,31 @@ dialog code {
       .attr("opacity", 1)
       .attr("transform", (n) => `translate(${n.x},${n.y})`);
     const layer = d3.select("#family-layer");
-    const hub = nodeFor("Inspiratory", "source");
+    if (!state.expanded) return layer.html("");
+    const h = hull();
     layer.html(
-      state.expanded
-        ? `<rect class="family-hull" x="${mobile() ? -325 : 25}" y="-45" width="${mobile() ? 1290 : 545}" height="${mobile() ? 440 : 900}" rx="80"/><text class="family-title" x="${mobile() ? -285 : 62}" y="-13">Inspiratory family</text>${nodeAction("Inspiratory", "fold", "Fold inspiratory family", mobile() ? 920 : 528, -16)}<g class="source-hub" transform="translate(${hub.x},${hub.y})"><circle r="25" fill="#edf3ef" stroke="#a6beb1"/><circle cx="-9" r="6" fill="${color.E}" data-phase-pop="Inspiratory"/><circle cx="9" r="6" fill="${color.I}" data-phase-pop="Inspiratory"/><text y="45" text-anchor="middle">Family outputs</text></g>`
-        : "",
+      `<rect class="family-hull" x="${h.x0}" y="${h.y0}" width="${h.x1 - h.x0}" height="${h.y1 - h.y0}" rx="46"/><text class="family-title" x="${h.x0 + 18}" y="${h.y0 - 14}">Inspiratory group</text><text class="family-note" x="${h.x0 + 172}" y="${h.y0 - 14}">lines from the dashed outline come from the group as a whole</text><g class="pill fold" role="button" tabindex="0" data-action="fold" data-pop="Inspiratory" aria-label="Show the inspiratory populations as one group" transform="translate(${h.x1 - 104},${h.y0 - 20})"><rect x="-86" y="-14" width="172" height="28" rx="14"/><text y="5" text-anchor="middle">Show as one group</text></g>`,
     );
   }
+
+  // ---------- Connections ----------
   function edgeOpacity(e) {
     if (state.edge)
       return selectedEdge(e)
         ? e.fine && !(mask(e.target, e.sign) & (1 << D.names.indexOf(e.source)))
-          ? 0.2
+          ? 0.25
           : 1
-        : 0.13;
-    if (state.focus && state.focus !== "Inspiratory")
-      return e.source === state.focus || e.target === state.focus ? 1 : 0.23;
+        : 0.12;
+    const f = state.focus;
+    if (f && f !== "Inspiratory" && state.open.includes(f))
+      return e.target === f ? 1 : e.source === f ? 0.36 : 0.14;
     return 0.85;
   }
+  const edgeName = (e) =>
+    `${state.expanded && e.source === "Inspiratory" ? "Inspiratory group" : show(e.source)} → ${show(e.target)} · ${signWord[e.sign]}${e.fine ? (e.style === "solid" ? " · identified source" : " · possible source") : ""}`;
   function renderEdges() {
     edges = C.networkEdges(D, state.expanded, state.edge);
+    layoutEdges();
     const join = d3
       .select("#edges")
       .selectAll("g.connection")
@@ -1597,22 +2020,20 @@ dialog code {
     all
       .select(".edge-line")
       .attr("stroke", (e) => color[e.sign])
-      .attr("stroke-width", (e) => (e.fine ? 2.5 : 1.2 + 11 * e.share))
+      .attr("stroke-width", (e) => (e.fine ? 2.6 : 1.3 + 11 * e.share))
       .attr("stroke-dasharray", (e) => (e.style === "dashed" ? "7 5" : null))
-      .attr("marker-end", (e) =>
-        e.sign === "E" && pathFor(e).terminal ? "url(#arrowE)" : null,
-      )
+      .attr("marker-end", (e) => (e.sign === "E" ? "url(#arrowE)" : null))
       .transition()
       .duration(duration())
-      .attr("d", (e) => pathFor(e).d);
+      .attr("d", (e) => geometry.get(e.id).d);
     all
       .select(".inhibitory-end")
-      .attr("r", (e) => (e.sign === "I" && pathFor(e).terminal ? 4 : 0))
+      .attr("r", (e) => (e.sign === "I" ? 4.5 : 0))
       .attr("fill", (e) => color[e.sign])
       .transition()
       .duration(duration())
-      .attr("cx", (e) => pathFor(e).end[0])
-      .attr("cy", (e) => pathFor(e).end[1]);
+      .attr("cx", (e) => geometry.get(e.id).end[0])
+      .attr("cy", (e) => geometry.get(e.id).end[1]);
     all
       .select(".edge-hit")
       .attr("role", "button")
@@ -1621,15 +2042,78 @@ dialog code {
       .attr(
         "aria-label",
         (e) =>
-          `${e.source} to ${e.target}, ${e.sign === "E" ? "excitation" : "inhibition"}${e.fine ? `, ${e.style === "solid" ? "identified" : "alternative"}` : ""}`,
+          `${e.source} to ${e.target}, ${signWord[e.sign]}${e.fine ? `, ${e.style === "solid" ? "identified" : "alternative"}` : ""}`,
       )
-      .attr("d", (e) => pathFor(e).d);
+      .attr("d", (e) => geometry.get(e.id).d);
+    applyHover();
+  }
+  function applyHover() {
+    const active = hover && edges.some((e) => hot(e));
+    d3.select("#edges")
+      .classed("hovering", !!active)
+      .selectAll("g.connection")
+      .classed("hot", (e) => !!active && hot(e));
+    d3.select("#nodes")
+      .selectAll("g.population")
+      .classed(
+        "hot",
+        (n) =>
+          !!active &&
+          edges.some(
+            (e) =>
+              hot(e) &&
+              hover.edge &&
+              (e.source === n.id || e.target === n.id),
+          ),
+      );
+  }
+  const hot = (e) =>
+    hover.edge ? e.id === hover.edge : e.target === hover.node;
+
+  // ---------- Evidence ----------
+  // Contributions drawn in an evidence plot. A single input shows the three
+  // inspiratory patterns as one line, as Figure 3 of the paper does; an
+  // inspiratory input shows them separately, told apart by line style.
+  function contributions(s, fine) {
+    const present = (v) => v.some((x) => x > 1e-9);
+    const lines = [];
+    if (fine)
+      MEMBERS.forEach((name, j) => {
+        if (present(s.components[j]))
+          lines.push({ v: s.components[j], color: family[j], dash: dash[j], label: show(name) });
+      });
+    else {
+      const sum = s.components[0].map(
+        (_, k) => s.components[0][k] + s.components[1][k] + s.components[2][k],
+      );
+      if (present(sum))
+        lines.push({ v: sum, color: family[0], dash: "", label: "Inspiratory" });
+    }
+    for (const j of [3, 4])
+      if (present(s.components[j]))
+        lines.push({ v: s.components[j], color: family[j], dash: "", label: D.names[j] });
+    return lines;
+  }
+  const swatch = (color, dashes = "") =>
+    `<svg class="swatch" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" x2="22" y1="3" y2="3" stroke="${color}" stroke-width="2.5" ${dashes ? `stroke-dasharray="${dashes}"` : ""}/></svg>`;
+  function fitChart(r, s, lines) {
+    const max = Math.max(1.05, ...s.fit, ...s.observed),
+      X = 34,
+      W = 280,
+      B = 104,
+      Hh = 92,
+      split = X + W * D.ti;
+    return `<svg class="fit-chart" viewBox="0 0 324 126" role="img" aria-label="Fit to ${show(r.target)} ${signWord[r.sign]}"><rect x="${X}" y="6" width="${W * D.ti}" height="${B - 6}" fill="#edf3ef"/><line x1="${X}" x2="${X + W}" y1="${B}" y2="${B}" stroke="#d7e2dd"/><text x="${X - 6}" y="${B - Hh / max + 4}" text-anchor="end" class="chart-label">100</text><text x="${X - 6}" y="${B + 3}" text-anchor="end" class="chart-label">0</text>${lines.map((l) => `<path d="${chartLine(l.v, X, B, W, Hh, max)}" fill="none" stroke="${l.color}" stroke-width="1.7" ${l.dash ? `stroke-dasharray="${l.dash}"` : ""}/>`).join("")}<path d="${chartLine(s.observed, X, B, W, Hh, max)}" fill="none" stroke="${INK}" stroke-width="2"/><path d="${chartLine(s.fit, X, B, W, Hh, max)}" fill="none" stroke="#6a757c" stroke-width="1.8" stroke-dasharray="5 3"/><text x="${(X + split) / 2}" y="${B + 16}" text-anchor="middle" class="chart-label">Inspiration</text><text x="${(split + X + W) / 2}" y="${B + 16}" text-anchor="middle" class="chart-label">Expiration</text></svg>`;
   }
   function relationContent() {
     const r = state.edge,
       p = D.panels[`${r.target}|${r.sign}`],
       fine = r.source === "Inspiratory",
-      s = curve(r.target, r.sign);
+      s = curve(r.target, r.sign),
+      target = show(r.target),
+      n = D.groups[r.target].n,
+      mean = sample(r.target) === "mean",
+      lines = contributions(s, fine);
     const fitState = C.fitStatus(D, r.target, r.sign, mask(r.target, r.sign));
     const row = D.coarse.find(
       (e) =>
@@ -1638,71 +2122,82 @@ dialog code {
     const combinations = p.minima
       .map((m) =>
         C.members(m).length > 1
-          ? `(${C.label(m, D.names)})`
-          : C.label(m, D.names),
+          ? `(${show(C.label(m, D.names))})`
+          : show(C.label(m, D.names)),
       )
       .join(" or ");
-    return `<div xmlns="http://www.w3.org/1999/xhtml" class="evidence-content"><button class="close-detail icon" data-close-edge title="Fold connection detail" aria-label="Fold connection detail">${icon("x")}</button><h2>${r.source} → ${r.target}</h2><div class="subhead">${r.sign === "E" ? "Excitatory" : "Inhibitory"} input · ${D.groups[r.target].n} cells · group evidence</div>
-      ${
-        fine
-          ? `<div class="combination">Smallest sets not ruled out:<br><strong>${combinations}</strong></div><fieldset aria-label="Retained inspiratory combinations">${C.alternatives(
-              D,
-              r.target,
-              r.sign,
-            )
-              .map(
-                (m) =>
-                  `<label class="option"><input type="radio" name="subset" value="${m}" ${m === mask(r.target, r.sign) ? "checked" : ""}/>${m === 7 ? "All three inspiratory sources" : C.label(m, D.names)}</label>`,
-              )
-              .join("")}</fieldset><div class="switches">${D.names
-              .slice(0, 3)
-              .map(
-                (n, j) =>
-                  `<label><input type="checkbox" data-toggle="${j}" aria-label="Include ${n} source" ${mask(r.target, r.sign) & (1 << j) ? "checked" : ""}/>${n}</label>`,
-              )
-              .join(
-                "",
-              )}</div><div class="fixed">Post-I and aug-E remain available in every saved fit.</div><div class="relation-status ${fitState}">${fitState === "full" ? "All-source fit" : fitState === "excluded" ? "This combination is ruled out by group tests" : "This combination is not ruled out by group tests"}</div>`
-          : `<div class="relation-status"><strong>Supported input</strong><br>Adjusted P = ${pval(row.p_joint)}<br>Full-fit area: ${pct(row.share_mean)} of total dynamic excitation + inhibition</div>`
-      }
-      <svg class="fit-chart" viewBox="0 0 328 100" data-chart="${r.target}|${r.sign}" aria-label="Selected input fit"><rect x="8" y="4" width="${310 * D.ti}" height="78" fill="#edf3ef"/>${s.components.map((v, j) => `<path d="${chartLine(v, 8, 82, 310, 71, Math.max(1.05, ...s.fit, ...s.observed))}" fill="none" stroke="${pattern[j]}" stroke-width="1.3" opacity=".55"/>`).join("")}<path d="${chartLine(s.observed, 8, 82, 310, 71, Math.max(1.05, ...s.fit, ...s.observed))}" fill="none" stroke="#263638" stroke-width="1.8"/><path d="${chartLine(s.fit, 8, 82, 310, 71, Math.max(1.05, ...s.fit, ...s.observed))}" fill="none" stroke="#277961" stroke-width="1.8" stroke-dasharray="4 3"/><line class="phase-cursor" data-cursor-x="8" data-cursor-width="310" y1="4" y2="82"/><text x="8" y="96" class="chart-label">0</text><text x="${8 + 310 * D.ti}" y="96" class="chart-label">I/E</text><text x="318" y="96" text-anchor="end" class="chart-label">1</text></svg><div class="error-row"><span>${sample(r.target) === "mean" ? "Mean cell" : "Cell"} RMSE ${pct(s.rmse)}</span><span>Extra error +${(s.delta * 100).toFixed(2)} pts</span></div><div class="small-note">${sample(r.target) === "mean" ? "Equal-cell mean" : "Selected cell"} · black: reconstructed · green dashed: selected fit.<br>Joint conductance peak normalization. Statistical evidence remains group-level.</div>
-      <div class="component-legend">${D.names.map((name, j) => `<span><i style="background:${pattern[j]}"></i>${name}</span>`).join("")}</div>
-      ${fine ? `<details data-test-details ${state.testsOpen ? "open" : ""}><summary>Omission tests · adjusted P</summary><div class="evidence-scroll"><table>${p.tests.map((t) => `<tr><td>${esc(t.omitted_sources)}</td><td>${pval(t.p_joint)}</td></tr>`).join("")}</table></div></details>` : ""}</div>`;
+    const lead = fine
+      ? `Without any inspiratory pattern, the two expiratory patterns do not reproduce the timing of ${signWord[r.sign]} in ${target} cells. An inspiratory input is supported.`
+      : `Without the ${show(r.source)} pattern, the other patterns do not reproduce the timing of ${signWord[r.sign]} in ${target} cells. This input is supported.`;
+    const numbers = `<dl class="numbers"><div><dt>Adjusted P</dt><dd>${pval(row.p_joint)}</dd></div><div><dt>Fitted share</dt><dd>${pct(row.share_mean)}</dd></div><div><dt>Cells</dt><dd>${n}</dd></div></dl>`;
+    const sources = fine
+      ? `<div class="combination">Which inspiratory population? The tests do not rule out:<br><strong>${combinations}</strong></div><fieldset aria-label="Inspiratory sources included in the fit"><legend>Sources included in the fit shown</legend><div class="switches">${MEMBERS.map(
+          (name, j) =>
+            `<label><input type="checkbox" data-toggle="${j}" aria-label="Include ${name} source" ${mask(r.target, r.sign) & (1 << j) ? "checked" : ""}/>${show(name)}</label>`,
+        ).join(
+          "",
+        )}</div></fieldset><div class="relation-status ${fitState}">${fitState === "full" ? "This is the fit with all three." : fitState === "excluded" ? "The group tests rule this combination out." : "The group tests do not rule this combination out."}</div>`
+      : "";
+    const tests = fine
+      ? `<details data-test-details ${state.testsOpen ? "open" : ""}><summary>Each omission test · adjusted P</summary><div class="evidence-scroll"><table><tr><th>Sources left out</th><th>Adjusted P</th></tr>${p.tests.map((t) => `<tr><td>${esc(show(t.omitted_sources))}</td><td>${pval(t.p_joint)}</td></tr>`).join("")}</table></div></details>`
+      : "";
+    const legend = `<div class="component-legend"><span>${swatch(INK)}${mean ? "Mean input" : cellLabel(r.target, sample(r.target))}</span><span>${swatch("#6a757c", "5 3")}Fit</span>${lines.map((l) => `<span>${swatch(l.color, l.dash)}${l.label}</span>`).join("")}</div>`;
+    const note = `<div class="small-note">Fit error: ${pct(s.rmse)} of peak conductance${mean ? ", averaged over cells" : ""}${s.delta > 5e-5 ? `; ${(s.delta * 100).toFixed(2)} points more than with all sources` : ""}. The test result always refers to the whole group.</div>`;
+    return `<div xmlns="http://www.w3.org/1999/xhtml" class="evidence-content ${mobile() ? "stacked" : ""}"><button class="close-detail icon" data-close-edge title="Close evidence" aria-label="Close evidence">${icon("x")}</button><h2>${fine ? "Inspiratory group" : show(r.source)} → ${target}</h2><div class="subhead">${SignWord[r.sign]} · evidence from ${n} cells</div><p class="lead">${lead}</p>${numbers}<div class="evidence-columns ${fine ? "" : "coarse"}">${fine ? `<div class="evidence-text">${sources}</div>` : ""}<div class="evidence-figure">${fitChart(r, s, lines)}${legend}${fine ? note + tests : ""}</div></div>${fine ? "" : note}</div>`;
   }
-  function renderEvidence() {
-    const layer = d3.select("#evidence-layer");
-    if (!state.edge) {
+  function renderEvidence(fit = true) {
+    const layer = d3.select("#evidence-layer"),
+      s = satellite();
+    if (!state.edge || !s) {
       layer.html("");
       return;
     }
-    const b = evidenceBox(),
-      target = nodeFor(state.edge.target),
-      start = [b.x + b.rx, b.y];
-    const end = boundary(
-      target,
-      start[0] - target.x,
-      start[1] - target.y,
-      state.edge.sign === "I" ? 6 : 2,
-    );
-    const d = `M${start} C${start[0] + 65},${start[1]} ${end[0] - 80},${end[1]} ${end}`;
     layer.html(
-      `<path class="edge-line" d="${d}" stroke="${color[state.edge.sign]}" stroke-width="2.8" ${state.edge.sign === "E" ? 'marker-end="url(#arrowE)"' : ""}/>${state.edge.sign === "I" ? `<circle cx="${end[0]}" cy="${end[1]}" r="4" fill="${color.I}"/>` : ""}<g class="connection-detail" transform="translate(${b.x - b.rx},${b.y - b.ry})"><rect class="detail-shell" width="${b.rx * 2}" height="${b.ry * 2}" rx="8"/><foreignObject width="${b.rx * 2}" height="${b.ry * 2}">${relationContent()}</foreignObject></g>`,
+      `<path class="detail-leader" d="${leader(s)}"/><g class="connection-detail" transform="translate(${s.x - s.rx},${s.y - s.ry})"><rect class="detail-shell" width="${s.rx * 2}" height="${s.ry * 2}" rx="10"/><foreignObject width="${s.rx * 2}" height="${s.ry * 2}">${relationContent()}</foreignObject></g>`,
     );
+    if (fit) fitCard(layer, () => renderEvidence(false));
   }
-  function renderCells() {
+
+  // ---------- Cell records ----------
+  function renderCells(fit = true) {
     const layer = d3.select("#cells-layer");
     const scroll = layer.select(".cell-grid").node()?.scrollTop || 0;
-    if (!state.cellsFor) {
+    const s = satellite();
+    if (!state.cellsFor || !s) {
       layer.html("");
       return;
     }
     const id = state.cellsFor,
-      b = cellBox(),
-      n = nodeFor(id);
+      shown = sample(id),
+      other = state.compare[id];
     layer.html(
-      `<path class="detail-leader" d="M${n.x},${n.y} L${b.x},${b.y}"/><g transform="translate(${b.x - b.rx},${b.y - b.ry})"><rect class="detail-shell" width="290" height="404" rx="8"/><foreignObject width="290" height="404"><div xmlns="http://www.w3.org/1999/xhtml" class="cell-content"><button class="close-cells icon" data-close-cells title="Fold cell records" aria-label="Fold cell records">${icon("x")}</button><h2>${id} · ${D.groups[id].n} cells</h2><div class="cell-grid">${D.groups[id].cells.map((c) => `<button class="cell-tile" data-cell="${c.id}" aria-pressed="${sample(id) === c.id}"><span>${c.label} · ${c.modes.join(" + ")}</span><svg viewBox="0 0 125 48" aria-label="${c.label} conductances"><rect x="2" y="2" width="${120 * D.ti}" height="43" fill="#edf3ef"/>${c.profiles.map((v, j) => `<path d="${chartLine(v, 2, 45, 120, 40)}" fill="none" stroke="${color[j === 0 ? "E" : "I"]}" stroke-width="1.4"/>`).join("")}</svg></button>`).join("")}</div><button class="mean-button" data-mean="${id}">Group mean</button></div></foreignObject></g>`,
+      `<path class="detail-leader" d="${leader(s)}"/><g class="cell-detail" transform="translate(${s.x - s.rx},${s.y - s.ry})"><rect class="detail-shell" width="${s.rx * 2}" height="${s.ry * 2}" rx="10"/><foreignObject width="${s.rx * 2}" height="${s.ry * 2}"><div xmlns="http://www.w3.org/1999/xhtml" class="cell-content ${mobile() ? "stacked" : ""}"><button class="close-cells icon" data-close-cells title="Close cell records" aria-label="Close cell records">${icon("x")}</button><h2>${show(id)} · ${D.groups[id].n} cells</h2><div class="subhead">Click a cell to show it in the panel. Use Compare to overlay a second cell. <span class="red">Excitation</span> and <span class="blue">inhibition</span> share one scale. CC: current clamp. VC: voltage clamp.</div><div class="cell-grid">${D.groups[id].cells
+        .map(
+          (c) =>
+            `<div class="cell-tile ${shown === c.id ? "shown" : other === c.id ? "compared" : ""}"><button class="cell-main" data-cell="${c.id}" aria-pressed="${shown === c.id}" aria-label="Show ${c.label}"><span>${c.label} · ${c.modes.join(" + ")}</span><svg viewBox="0 0 130 54" aria-hidden="true"><rect x="2" y="2" width="${126 * D.ti}" height="50" fill="#edf3ef"/>${c.profiles.map((v, j) => `<path d="${chartLine(v, 2, 51, 126, 47)}" fill="none" stroke="${color[j === 0 ? "E" : "I"]}" stroke-width="1.5"/>`).join("")}</svg></button><button class="cell-compare" data-compare-cell="${c.id}" aria-pressed="${other === c.id && shown !== c.id}" aria-label="Compare ${c.label}" ${shown === c.id ? "disabled" : ""}>${shown === c.id ? "Shown" : other === c.id ? "Compared" : "Compare"}</button></div>`,
+        )
+        .join(
+          "",
+        )}</div><button class="mean-button" data-mean="${id}">Back to the mean</button></div></foreignObject></g>`,
     );
     layer.select(".cell-grid").node().scrollTop = scroll;
+    if (fit) fitCard(layer, () => renderCells(false));
+  }
+
+  // ---------- Frame ----------
+  function hint() {
+    if (state.edge)
+      return state.edge.source === "Inspiratory"
+        ? "Solid lines are identified sources. Dashed lines are sources the tests do not rule out."
+        : "Evidence for the selected input. Other connections are dimmed.";
+    if (state.cellsFor)
+      return "Click a cell to show it in the panel. Use Compare to overlay a second cell.";
+    const f = state.focus;
+    if (f && f !== "Inspiratory" && state.open.includes(f))
+      return `Bright lines are inputs to ${show(f)} neurons.${isMember(f) ? "" : " Its outputs are dimmed."}`;
+    if (state.expanded)
+      return "Click a population to see its synaptic inputs. Lines from the dashed outline come from the inspiratory group as a whole.";
+    return "Click a population to see its synaptic inputs. Click a connection to see the evidence for it.";
   }
   function render() {
     renderNodes();
@@ -1711,83 +2206,17 @@ dialog code {
     renderCells();
     $("back").disabled = history.length === 0;
     $("context").textContent = state.edge
-      ? `${state.edge.source} → ${state.edge.target}`
+      ? `${show(state.edge.source)} → ${show(state.edge.target)}`
       : state.cellsFor
-        ? `${state.cellsFor} · cells`
-        : state.focus || "";
+        ? `${show(state.cellsFor)} · cells`
+        : show(state.focus || "");
     $("detail-legend").innerHTML =
       state.edge?.source === "Inspiratory"
-        ? '<i class="line"></i>Identified <i class="line dash"></i>Alternatives'
-        : "Width: full-fit area";
-    $("selection-caption").textContent = state.edge
-      ? "Connection detail · saved evidence"
-      : state.expanded
-        ? "Inspiratory populations · family outputs remain bundled"
-        : "Grouped source patterns · reconstructed functional inputs";
-    d3.select("#map-nodes").html(
-      nodes
-        .map(
-          (n) =>
-            `<ellipse cx="${n.x}" cy="${n.y}" rx="${n.rx}" ry="${n.ry}" fill="${n.id === state.focus ? "#277961" : "#b2c9bd"}"/>`,
-        )
-        .join(""),
-    );
-    updatePhase();
-    updateMap();
-  }
-  function updateMap() {
-    const t = transform();
-    if (nodes.length) {
-      const b = visibleBounds();
-      d3.select("#minimap").attr(
-        "viewBox",
-        `${b[0] - 50} ${b[1] - 50} ${b[2] - b[0] + 100} ${b[3] - b[1] + 100}`,
-      );
-      d3.select(".map-ground")
-        .attr("x", b[0] - 50)
-        .attr("y", b[1] - 50)
-        .attr("width", b[2] - b[0] + 100)
-        .attr("height", b[3] - b[1] + 100);
-    }
-    d3.select("#map-window")
-      .attr("x", -t.x / t.k)
-      .attr("y", -t.y / t.k)
-      .attr("width", width / t.k)
-      .attr("height", height / t.k);
-  }
-  function updatePhase() {
-    $("phase").value = phase;
-    $("phase-readout").textContent = (phase / 100).toFixed(2);
-    $("phase-name").textContent =
-      phase / 100 < D.ti ? "Inspiration" : "Expiration";
-    document.querySelectorAll("[data-cursor-width]").forEach((el) => {
-      const x = +el.dataset.cursorX + (phase / 100) * +el.dataset.cursorWidth;
-      el.setAttribute("x1", x);
-      el.setAttribute("x2", x);
-    });
-    document.querySelectorAll("[data-phase-pop]").forEach((el) => {
-      const j = D.names.indexOf(el.dataset.phasePop),
-        v =
-          j < 0 ? Math.max(...D.matrix[phase].slice(0, 3)) : D.matrix[phase][j];
-      el.setAttribute("fill-opacity", 0.15 + 0.85 * v);
-    });
-  }
-  function stop() {
-    playing = false;
-    cancelAnimationFrame(frame);
-    $("play").innerHTML = icon("play");
-    $("play").setAttribute("aria-label", "Play empirical phase replay");
-  }
-  function tick(time) {
-    if (!playing) return;
-    accumulated += Math.min(time - lastTime, 100) * 0.0125;
-    lastTime = time;
-    if (accumulated >= 1) {
-      phase = (phase + Math.floor(accumulated)) % 100;
-      accumulated %= 1;
-      updatePhase();
-    }
-    frame = requestAnimationFrame(tick);
+        ? '<i class="line"></i>Identified <i class="line dash"></i>Possible'
+        : "Width: mean fitted share";
+    $("hint").textContent = hint();
+    syncHash();
+    if (guide) paintGuide();
   }
   function back() {
     const previous = history.pop();
@@ -1809,28 +2238,8 @@ dialog code {
     render();
     fitBounds(rootBounds(), true, 1.3);
   }
-  function foldLevel() {
-    checkpoint();
-    if (state.cellsFor) state.cellsFor = null;
-    else if (state.edge) state.edge = null;
-    else if (state.open.length) {
-      state.open.pop();
-      state.focus =
-        state.open.at(-1) || (state.expanded ? "Inspiratory" : null);
-    } else if (state.expanded) {
-      state.expanded = false;
-      state.focus = null;
-    } else {
-      history.pop();
-      svg.transition().duration(duration()).call(zoom.scaleBy, 0.8);
-      return;
-    }
-    render();
-    frameFocus();
-  }
   function action(target) {
-    const close = target.closest("[data-close-edge]");
-    if (close) {
+    if (target.closest("[data-close-edge]")) {
       checkpoint();
       state.edge = null;
       render();
@@ -1846,26 +2255,51 @@ dialog code {
     }
     const cell = target.closest("[data-cell]");
     if (cell) {
-      const id = cell.dataset.cell;
-      state.samples[state.cellsFor] = id;
+      const id = cell.dataset.cell,
+        pop = state.cellsFor;
+      state.samples[pop] = id;
+      if (state.compare[pop] === id) delete state.compare[pop];
       render();
       document
         .querySelector(`[data-cell="${id}"]`)
         .focus({ preventScroll: true });
       return;
     }
+    const versus = target.closest("[data-compare-cell]");
+    if (versus) {
+      const id = versus.dataset.compareCell,
+        pop = state.cellsFor;
+      if (state.compare[pop] === id) delete state.compare[pop];
+      else if (sample(pop) === "mean") state.samples[pop] = id;
+      else state.compare[pop] = id;
+      render();
+      document
+        .querySelector(`[data-compare-cell="${id}"]`)
+        ?.focus({ preventScroll: true });
+      return;
+    }
+    const clear = target.closest("[data-clear-compare]");
+    if (clear) {
+      delete state.compare[clear.dataset.clearCompare];
+      render();
+      return;
+    }
     const mean = target.closest("[data-mean]");
     if (mean) {
       state.samples[mean.dataset.mean] = "mean";
+      delete state.compare[mean.dataset.mean];
       render();
       return;
     }
     const cells = target.closest("[data-cells]");
     if (cells) {
-      checkpoint();
-      state.cellsFor = cells.dataset.cells;
-      render();
-      frameFocus();
+      const id = cells.dataset.cells;
+      if (state.cellsFor === id) {
+        checkpoint();
+        state.cellsFor = null;
+        render();
+        frameFocus();
+      } else openCells(id);
       return;
     }
     if (target.closest("foreignObject")) return;
@@ -1928,6 +2362,8 @@ dialog code {
     if (e.target.matches("[data-sample]")) {
       const id = e.target.dataset.sample;
       state.samples[id] = e.target.value;
+      if (e.target.value === "mean" || state.compare[id] === e.target.value)
+        delete state.compare[id];
       render();
       document
         .querySelector(`[data-sample="${id}"]`)
@@ -1937,16 +2373,12 @@ dialog code {
     if (!state.edge) return;
     const r = state.edge,
       key = `${r.target}|${r.sign}`;
-    if (e.target.name === "subset") state.masks[key] = +e.target.value;
-    else if (e.target.matches("[data-toggle]"))
-      state.masks[key] =
-        mask(r.target, r.sign) ^ (1 << +e.target.dataset.toggle);
-    else return;
-    const focus = e.target.matches("[data-toggle]")
-      ? `[data-toggle="${e.target.dataset.toggle}"]`
-      : `input[name="subset"][value="${e.target.value}"]`;
+    if (!e.target.matches("[data-toggle]")) return;
+    state.masks[key] = mask(r.target, r.sign) ^ (1 << +e.target.dataset.toggle);
     render();
-    document.querySelector(focus)?.focus({ preventScroll: true });
+    document
+      .querySelector(`[data-toggle="${e.target.dataset.toggle}"]`)
+      ?.focus({ preventScroll: true });
   });
   $("atlas").addEventListener(
     "toggle",
@@ -1957,76 +2389,66 @@ dialog code {
       ) {
         state.testsOpen = e.target.open;
         renderEvidence();
-        renderEdges();
-        updatePhase();
+        syncHash();
         frameFocus();
       }
     },
     true,
   );
-  let scrubChart = null;
-  function scrub(e) {
-    if (!scrubChart) return;
-    const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(
-      scrubChart.getScreenCTM().inverse(),
-    );
-    const isFit = scrubChart.classList.contains("fit-chart");
-    stop();
-    phase = Math.max(
-      0,
-      Math.min(
-        99,
-        Math.round(((p.x - (isFit ? 8 : 22)) / (isFit ? 310 : 284)) * 100),
-      ),
-    );
-    updatePhase();
-  }
-  $("atlas").addEventListener("pointerdown", (e) => {
-    const chart = e.target.closest("[data-chart]");
-    if (chart) {
-      scrubChart = chart;
-      chart.setPointerCapture(e.pointerId);
-      scrub(e);
+
+  // ---------- Hover: follow one connection, or the inputs of one population
+  function setHover(next, event) {
+    const same =
+      (hover?.edge || null) === (next?.edge || null) &&
+      (hover?.node || null) === (next?.node || null);
+    hover = next;
+    if (!same) applyHover();
+    const tip = $("tip");
+    const e = next?.edge && edges.find((x) => x.id === next.edge);
+    if (!e || !event) {
+      tip.hidden = true;
+      return;
     }
+    tip.textContent = `${edgeName(e)} — click for evidence`;
+    tip.hidden = false;
+    const r = $("workspace").getBoundingClientRect();
+    tip.style.left =
+      Math.min(r.width - tip.offsetWidth - 8, event.clientX - r.left + 14) +
+      "px";
+    tip.style.top = Math.max(4, event.clientY - r.top - 34) + "px";
+  }
+  $("atlas").addEventListener("pointermove", (e) => {
+    if (e.pointerType === "touch") return;
+    const edge = e.target.closest?.("[data-edge]"),
+      node = e.target.closest?.("[data-node]");
+    setHover(
+      edge
+        ? { edge: edge.dataset.edge }
+        : node
+          ? { node: node.dataset.node }
+          : null,
+      e,
+    );
   });
-  $("atlas").addEventListener("pointermove", scrub);
-  $("atlas").addEventListener("pointerup", () => (scrubChart = null));
-  $("atlas").addEventListener("pointercancel", () => (scrubChart = null));
-  $("find").addEventListener("change", (e) => {
-    if (e.target.value) openNode(e.target.value);
-    e.target.value = "";
+  $("atlas").addEventListener("pointerleave", () => setHover(null));
+  $("atlas").addEventListener("focusin", (e) => {
+    const edge = e.target.closest?.("[data-edge]");
+    if (edge) setHover({ edge: edge.dataset.edge });
   });
+  $("atlas").addEventListener("focusout", () => setHover(null));
+
   $("back").addEventListener("click", back);
   $("home").addEventListener("click", home);
   $("fit").addEventListener("click", () => fitBounds(visibleBounds()));
-  $("zoom-out").addEventListener("click", foldLevel);
-  $("zoom-in").addEventListener("click", () => {
-    if (!state.expanded && !state.focus) openNode("Inspiratory");
-    else svg.transition().duration(duration()).call(zoom.scaleBy, 1.35);
-  });
-  $("minimap").addEventListener("click", () => fitBounds(visibleBounds()));
-  $("minimap").addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      fitBounds(visibleBounds());
-    }
-  });
-  $("phase").addEventListener("input", (e) => {
-    stop();
-    phase = +e.target.value;
-    updatePhase();
-  });
-  $("play").addEventListener("click", () => {
-    if (playing) return stop();
-    playing = true;
-    lastTime = performance.now();
-    accumulated = 0;
-    $("play").innerHTML = icon("pause");
-    $("play").setAttribute("aria-label", "Pause phase replay");
-    frame = requestAnimationFrame(tick);
-  });
+  $("zoom-out").addEventListener("click", () =>
+    svg.transition().duration(duration()).call(zoom.scaleBy, 1 / 1.35),
+  );
+  $("zoom-in").addEventListener("click", () =>
+    svg.transition().duration(duration()).call(zoom.scaleBy, 1.35),
+  );
   $("about").addEventListener("click", () => $("methods").showModal());
   $("close-methods").addEventListener("click", () => $("methods").close());
+  if (!document.fullscreenEnabled) $("fullscreen").hidden = true;
   $("fullscreen").addEventListener("click", async () => {
     try {
       if (document.fullscreenElement) await document.exitFullscreen();
@@ -2052,76 +2474,354 @@ dialog code {
     $("toast").classList.add("visible");
     toastTimer = setTimeout(() => $("toast").classList.remove("visible"), 2200);
   }
-  $("download").addEventListener("click", () => {
-    const copy = $("atlas").cloneNode(true);
-    copy.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    copy.setAttribute("width", width);
-    copy.setAttribute("height", height);
-    copy.setAttribute("viewBox", `0 0 ${width} ${height}`);
-    copy
-      .querySelectorAll(".edge-hit,[data-action]")
-      .forEach((el) => el.remove());
-    const style = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "style",
-    );
-    style.textContent = document.querySelector("head style").textContent;
-    copy.prepend(style);
-    const desc = document.createElementNS("http://www.w3.org/2000/svg", "desc");
-    desc.textContent =
-      "Frozen 150-cell respiratory reconstruction. Grouped edges mean support for at least one receiving member. Red arrowheads: excitation; blue filled circles: inhibition. Coarse widths: mean full-fit area divided by total dynamic excitation plus inhibition. Expanded inspiratory inputs have uniform widths: solid individually identified, dashed alternatives. Early-I excitation retains pre-I alone OR ramp-I plus early-I together. The connection-detail rectangle is an evidence expansion, not a neural population. Phase replay is empirical, not dynamical.";
-    copy.prepend(desc);
-    const url = URL.createObjectURL(
-      new Blob([new XMLSerializer().serializeToString(copy)], {
-        type: "image/svg+xml",
-      }),
-    );
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "resp-net-circuit-atlas.svg";
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    toast("Current graph downloaded");
-  });
   $("methods-body").innerHTML =
-    `<p><strong>${D.meta.checkpoint}</strong><br>150 cells; 168 recordings. This atlas displays the frozen empirical reconstruction, not a dynamical simulation.</p><h3>Graph levels</h3><p>The wide view groups inspiratory targets and source patterns. A grouped connection means support for at least one member, not necessarily every member. Width is mean full-fit conductance area relative to total dynamic excitation plus inhibition; grouped widths average all three inspiratory targets. Red arrowheads denote excitation and blue filled circles inhibition. Colored ports denote candidate transmitter modes, not separately identified recorded cell types.</p><p>Opening the inspiratory family resolves receiving populations while keeping its outgoing sources bundled. Opening an inspiratory connection reveals individually identified sources (solid) and retained alternatives (dashed), only for that target and conductance sign. Their widths are uniform, not source weights. Early-I excitation retains pre-I alone OR ramp-I plus early-I together. Additional sources remain possible.</p><h3>Profiles and fits</h3><p>Small activity traces are published Smith et al. (2007) templates, not firing recorded from this conductance cohort. Expanded nodes show reconstructed dynamic excitatory and inhibitory conductance. Both share the recording's normalization peak. Repeat recordings are averaged within mode, then within cell; groups give equal weight to cells. CC and VC denote current and voltage clamp.</p><p>All eight inspiratory subsets use saved restricted NNLS coefficients. Post-I and aug-E remain available in every fit. Browser switches select saved fits, not dynamical interventions or new optimizations. Cell RMSE is computed on each saved fit; group RMSE is the mean of those cell errors, not the error of a group-average curve. Full-fit area, fit error and statistical support are distinct quantities.</p><h3>Statistical evidence</h3><p>Input tests use fixed template-derived contrasts and cell-level one-sided t tests with joint coarse/fine multiple-comparison control at adjusted P &lt; 0.05. Distributional assumptions make calibration approximate. Evidence remains group-level even when an individual cell is selected. Failure to exclude a source combination does not establish equal fit quality or prove an anatomical connection. No baseline policy or threshold was changed.</p><h3>Phase replay</h3><p>Phase traverses the common saved grid. Shading marks inspiration (0 to ${D.ti.toFixed(4)}); source-port brightness follows activity templates. No conduction delays or network dynamics are generated.</p><h3>Provenance</h3><p>Cell labels are stable within-group display indices. Raw identifiers and archive paths are not distributed. Scenario: <code>${D.meta.scenario}</code>.</p><details><summary>Source checksums</summary>${Object.entries(
-      D.meta.sourceHashes,
-    )
-      .map(([p, h]) => `<p><code>${esc(p)}<br>${h}</code></p>`)
-      .join(
+    `<p>This atlas accompanies the paper <em>From cellular synaptic input profiles to population-level respiratory circuitry</em>. It shows the analysis reported there: ${D.meta.nRecords} recordings from ${D.meta.nCells} neurons. Nothing is fitted, tested or simulated in the browser.</p>
+    <h3>The circuit</h3>
+    <p>Each ellipse is a population of neurons with one discharge pattern. Red arrows are excitatory inputs. Blue lines ending in a dot are inhibitory inputs. Line width is the mean fitted share of a population's total fitted excitation and inhibition. It is not a synaptic weight and not a measure of significance.</p>
+    <p>The first view groups the three inspiratory populations, as in Figure 4A of the paper. A line to the group means that the input is supported for at least one of the three, not necessarily all. Its width is the average over the three.</p>
+    <p>When the three inspiratory populations are shown separately, their outputs still start at the dashed outline. The tests often show that an inspiratory input is present without telling which of the three populations supplies it. Selecting such an input shows the candidates. A solid line is a source the tests identify. Dashed lines are alternatives that remain possible. For example, excitation of early-I neurons can be explained by pre-I/I alone, or by ramp-I and early-I together. Other sources are not excluded.</p>
+    <p>A connection is an inferred functional input from neurons with one discharge pattern to neurons with another. It is not a traced anatomical projection. A loop on a population means input with that population's own timing, not a neuron that contacts itself.</p>
+    <h3>Populations and cells</h3>
+    <p>The small trace inside each population is its published discharge pattern (Smith et al., 2007). It is not a recording from the cells shown here. For the inspiratory group it combines the three patterns.</p>
+    <p>A population's panel shows excitatory and inhibitory synaptic conductance over one respiratory cycle. Each is measured from its minimum over the cycle. Both are scaled to the larger of the two peaks in that recording, which is the 100 on the axis. The mean gives every cell equal weight. CC and VC mark cells recorded in current clamp and in voltage clamp.</p>
+    <p>With one cell shown, the pale line is the population mean. A second cell can be overlaid for comparison.</p>
+    <h3>Fits and evidence</h3>
+    <p>Each conductance was fitted as a sum of the five discharge patterns with nonnegative weights. The dashed line is that fit. In an evidence card the colored lines are the contributions of the patterns: green for inspiratory, purple for post-I and orange for aug-E, as in Figure 3 of the paper. For an inspiratory input the three inspiratory patterns are drawn separately in green, with different line styles.</p>
+    <p>An input is called supported when, with its pattern left out, the remaining patterns fail on average across cells to reproduce the timing of the conductance (adjusted P &lt; 0.05, corrected for all the inputs tested). The test concerns the population even when a single cell is displayed.</p>
+    <p>For an inspiratory input, the checkboxes show the fit with any subset of the three inspiratory patterns. Post-I and aug-E are always included. These are fits from the paper's analysis, not new calculations. A combination that the tests do not rule out has not been shown to fit equally well.</p>
+    <p>Fitted share, fit error and statistical support are different quantities. The fit error given for a population is the average of the errors of its cells.</p>
+    <p>The paper gives the full methods, assumptions and limitations.</p>
+    <h3>Software</h3>
+    <p>D3 7.9.0 and Lucide 0.468.0 icons, both under the ISC license. All data and code are embedded in this page, which makes no network requests.</p>`;
+
+  // ---------- Links to a specific view ----------
+  const validCell = (pop, id) =>
+    D.groups[pop]?.cells.some((c) => c.id === id) ? id : null;
+  function encodeState() {
+    const parts = [];
+    if (state.expanded && !state.open.some(isMember)) parts.push("group=open");
+    if (state.open.length) parts.push("open=" + state.open.join(","));
+    if (state.cellsFor) parts.push("cells=" + state.cellsFor);
+    const pairs = (o) =>
+      Object.entries(o)
+        .filter(([, v]) => v && v !== "mean")
+        .map(([k, v]) => `${k}:${v}`)
+        .join(",");
+    if (pairs(state.samples)) parts.push("cell=" + pairs(state.samples));
+    if (pairs(state.compare)) parts.push("compare=" + pairs(state.compare));
+    if (state.edge)
+      parts.push(
+        `input=${state.edge.source}:${state.edge.target}:${state.edge.sign}`,
+      );
+    const masks = Object.entries(state.masks)
+      .filter(([, v]) => v !== 7)
+      .map(([k, v]) => `${k.replace("|", ":")}:${v}`)
+      .join(",");
+    if (masks) parts.push("sources=" + masks);
+    return parts.join("&");
+  }
+  function decodeState(text) {
+    const next = fresh();
+    let q = {};
+    try {
+      q = Object.fromEntries(
+        text
+          .split("&")
+          .map((p) => p.split("=").map(decodeURIComponent))
+          .filter((p) => p.length === 2),
+      );
+    } catch {
+      return next;
+    }
+    if (q.group === "open") next.expanded = true;
+    for (const id of (q.open || "").split(","))
+      if (D.names.includes(id) && !next.open.includes(id)) next.open.push(id);
+    for (const [key, store] of [
+      ["cell", next.samples],
+      ["compare", next.compare],
+    ])
+      for (const item of (q[key] || "").split(",")) {
+        const [pop, id] = item.split(":");
+        if (validCell(pop, id)) store[pop] = id;
+      }
+    for (const item of (q.sources || "").split(",")) {
+      const [pop, sign, m] = item.split(":");
+      if (D.names.includes(pop) && "EI".includes(sign) && /^[0-7]$/.test(m))
+        next.masks[`${pop}|${sign}`] = +m;
+    }
+    if (q.input) {
+      const [source, target, sign] = q.input.split(":");
+      if (
+        D.coarse.some(
+          (r) =>
+            r.supported &&
+            r.source === source &&
+            r.target === target &&
+            r.sign === sign,
+        )
+      ) {
+        next.edge = { source, target, sign };
+        if (!next.open.includes(target)) next.open.push(target);
+        if (source === "Inspiratory") next.expanded = true;
+      }
+    }
+    if (D.names.includes(q.cells) && !next.edge) {
+      next.cellsFor = q.cells;
+      if (!next.open.includes(q.cells)) next.open.push(q.cells);
+    }
+    if (next.open.some(isMember)) next.expanded = true;
+    next.focus =
+      next.edge?.target ||
+      next.cellsFor ||
+      next.open.at(-1) ||
+      (next.expanded ? "Inspiratory" : null);
+    return next;
+  }
+  let lastHash = "";
+  function syncHash() {
+    const text = encodeState();
+    if (text === lastHash) return;
+    lastHash = text;
+    try {
+      window.history.replaceState(
+        null,
         "",
-      )}</details><p>D3 7.9.0 (ISC) handles graph navigation and transitions. Lucide 0.468.0 icons (ISC). All dependencies and data are embedded; no network requests are needed.</p>`;
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) stop();
+        text ? "#" + text : location.pathname + location.search,
+      );
+    } catch {
+      /* Some embedded viewers do not allow the address to change. */
+    }
+  }
+  function applyHash() {
+    const text = location.hash.replace(/^#/, "");
+    if (text === "guide") return "guide";
+    if (!text || text === lastHash) return "";
+    state = decodeState(text);
+    return "state";
+  }
+  window.addEventListener("hashchange", () => {
+    const result = applyHash();
+    if (result === "guide") return startGuide();
+    if (result === "state") {
+      render();
+      frameFocus();
+    }
   });
+
+  // ---------- Guide: from the circuit to the cells behind it ----------
+  const GUIDE_POP = "pre-I",
+    GUIDE_EDGE = "aug-E|pre-I|E";
+  // The cells nearest to and farthest from the group mean, so that the
+  // comparison shows the spread and not a favorable example.
+  function contrastingCells(pop) {
+    const g = D.groups[pop];
+    const ranked = g.cells
+      .map((c) => ({
+        id: c.id,
+        d: c.profiles.reduce(
+          (sum, p, si) =>
+            sum +
+            p.reduce((t, v, k) => t + (v - g.mean.profiles[si][k]) ** 2, 0),
+          0,
+        ),
+      }))
+      .sort((a, b) => a.d - b.d);
+    return [ranked[0].id, ranked.at(-1).id];
+  }
+  const place = (patch) => {
+    state = Object.assign(fresh(), patch);
+    render();
+    if (patch.expanded) frameFocus();
+    else fitBounds(rootBounds(), true, 1.3);
+  };
+  const withPanel = (extra = {}) => ({
+    expanded: true,
+    open: [GUIDE_POP],
+    focus: GUIDE_POP,
+    ...extra,
+  });
+  const nCells = D.groups[GUIDE_POP].n;
+  const steps = [
+    {
+      title: "This is the reconstructed circuit",
+      text: "Each ellipse is a population of neurons with one discharge pattern. Red arrows show excitation. Blue lines ending in a dot show inhibition. Thicker lines are larger fitted contributions.",
+      setup: () => place({}),
+    },
+    {
+      title: "Separate the inspiratory populations",
+      text: "The inspiratory group combines pre-I/I, ramp-I and early-I neurons. Click “Show 3 populations” to see what each one receives.",
+      after:
+        "Each inspiratory population now has its own inputs. Lines that start at the dashed outline come from the group as a whole, because the tests do not always tell which of the three supplies them.",
+      target: '[data-action="expand"][data-pop="Inspiratory"]',
+      done: (s) => s.expanded,
+      act: () => openNode("Inspiratory"),
+      setup: () => place({}),
+    },
+    {
+      title: "Choose a receiving population",
+      text: "To see what the cells receiving these inputs showed, click “Show inputs” on pre-I/I.",
+      after: `The panel shows mean excitation (red) and inhibition (blue) in ${nCells} pre-I/I cells over one respiratory cycle. Shading marks inspiration. The dashed line is the fit from the five discharge patterns. Bright connections are the inputs that explain these curves.`,
+      target: `[data-action="expand"][data-pop="${GUIDE_POP}"]`,
+      done: (s) => s.open.includes(GUIDE_POP),
+      act: () => openNode(GUIDE_POP),
+      setup: () => place({ expanded: true, focus: "Inspiratory" }),
+    },
+    {
+      title: "Open the individual cells",
+      text: `A mean hides the variation between cells. Click “Browse ${nCells} cells” in the panel.`,
+      after:
+        "Every recorded cell is here, including the variable and less clean ones. Red is excitation and blue is inhibition.",
+      target: `[data-cells="${GUIDE_POP}"]`,
+      done: (s) => s.cellsFor === GUIDE_POP,
+      act: () => openCells(GUIDE_POP),
+      setup: () => place(withPanel()),
+    },
+    {
+      title: "Compare two cells",
+      text: "Click a cell to show it in the panel. Then click “Compare” under another cell to overlay the two. “Show me” picks the cell closest to the mean and the cell farthest from it.",
+      after:
+        "The panel now shows both cells: one in color and one in dark gray, with the group mean as a pale line.",
+      done: (s) =>
+        !!s.samples[GUIDE_POP] &&
+        s.samples[GUIDE_POP] !== "mean" &&
+        !!s.compare[GUIDE_POP],
+      act: () => {
+        const [near, far] = contrastingCells(GUIDE_POP);
+        state.samples[GUIDE_POP] = near;
+        state.compare[GUIDE_POP] = far;
+        render();
+      },
+      setup: () => place(withPanel({ cellsFor: GUIDE_POP })),
+    },
+    {
+      title: "See the evidence for a connection",
+      text: "Now ask where an input comes from. Click the red line from aug-E to pre-I/I.",
+      after:
+        "The card says in words what the test showed, then gives the numbers. In the plot, the dark line is the mean input and the gray dashes are the fit. The colored lines are the contributions of the discharge patterns: green for inspiratory, purple for post-I and orange for aug-E.",
+      target: `[data-edge="${GUIDE_EDGE}"]`,
+      done: (s) =>
+        s.edge?.source === "aug-E" &&
+        s.edge?.target === GUIDE_POP &&
+        s.edge?.sign === "E",
+      act: () => openEdge(edges.find((e) => e.id === GUIDE_EDGE)),
+      setup: () => place(withPanel()),
+    },
+    {
+      title: "That is the whole route",
+      text: "Circuit, population, cells, evidence. An input from the inspiratory group also lists which of its three populations could supply it. “Whole circuit” starts over, and “Guide” replays these steps.",
+      setup: () => {},
+    },
+  ];
+  const remember = () => {
+    try {
+      localStorage.setItem(SEEN_KEY, "seen");
+    } catch {
+      /* Private windows may refuse storage; the guide still works. */
+    }
+  };
+  const seen = () => {
+    try {
+      return localStorage.getItem(SEEN_KEY) === "seen";
+    } catch {
+      return false;
+    }
+  };
+  function dock(visible) {
+    $("guide").hidden = !visible;
+    const before = reserveBottom;
+    reserveBottom = visible ? $("guide").offsetHeight + 16 : 0;
+    return before !== reserveBottom;
+  }
+  function paintGuide() {
+    document
+      .querySelectorAll(".guide-target")
+      .forEach((el) => el.classList.remove("guide-target"));
+    if (guide.welcome) {
+      $("guide-step").textContent = "First visit?";
+      $("guide-title").textContent = "Take the one-minute guide";
+      $("guide-body").textContent =
+        "It shows the way from the circuit to the individual cell records behind each connection.";
+      $("guide-back").hidden = false;
+      $("guide-back").disabled = false;
+      $("guide-back").textContent = "Not now";
+      $("guide-next").textContent = "Start guide";
+      dock(true);
+      return;
+    }
+    const step = steps[guide.i],
+      waiting = !!step.done && !step.done(state);
+    $("guide-step").textContent = `Guide · ${guide.i + 1} of ${steps.length}`;
+    $("guide-title").textContent = step.title;
+    $("guide-body").textContent = waiting || !step.after ? step.text : step.after;
+    $("guide-back").hidden = false;
+    $("guide-back").textContent = "Back";
+    $("guide-back").disabled = guide.i === 0;
+    $("guide-next").textContent =
+      guide.i === steps.length - 1 ? "Finish" : waiting ? "Show me" : "Next";
+    if (waiting && step.target) {
+      const el = document.querySelector(step.target);
+      (el?.matches(".edge-hit") ? el.parentNode : el)?.classList.add(
+        "guide-target",
+      );
+    }
+    if (dock(true)) frameFocus();
+  }
+  function showStep(i) {
+    guide = { i };
+    paintGuide();
+    steps[i].setup();
+  }
+  function startGuide() {
+    remember();
+    history = [];
+    showStep(0);
+  }
+  function endGuide() {
+    remember();
+    guide = null;
+    document
+      .querySelectorAll(".guide-target")
+      .forEach((el) => el.classList.remove("guide-target"));
+    if (dock(false)) frameFocus();
+  }
+  $("guide-open").addEventListener("click", startGuide);
+  $("guide-exit").addEventListener("click", endGuide);
+  $("guide-back").addEventListener("click", () => {
+    if (guide.welcome) return endGuide();
+    if (guide.i > 0) showStep(guide.i - 1);
+  });
+  $("guide-next").addEventListener("click", () => {
+    if (guide.welcome) return startGuide();
+    const step = steps[guide.i];
+    if (step.done && !step.done(state)) return step.act();
+    if (guide.i === steps.length - 1) return endGuide();
+    showStep(guide.i + 1);
+  });
+
   function resize() {
     const r = $("workspace").getBoundingClientRect();
     width = r.width;
     height = r.height;
-    const old = baseScale,
-      b = rootBounds();
-    baseScale = Math.max(
-      0.12,
-      Math.min(
-        1.3,
-        (width - 50) / (b[2] - b[0]),
-        (height - 125) / (b[3] - b[1]),
-      ),
-    );
+    if (guide) reserveBottom = $("guide").offsetHeight + 16;
     render();
-    if (old === 1 || (!state.expanded && !state.open.length && !state.edge))
-      fitBounds(b, false, 1.3);
-    else frameFocus();
+    if (!state.expanded && !state.open.length && !state.edge)
+      fitBounds(rootBounds(), false, 1.3);
+    else frameFocus(false);
   }
+  const entry = applyHash();
   render();
   new ResizeObserver(resize).observe($("workspace"));
+  if (entry === "guide") startGuide();
+  else if (!entry && !seen()) {
+    guide = { welcome: true };
+    paintGuide();
+  }
   window.connectome = {
     data: D,
     getState: () => ({
       ...structuredClone(state),
-      phase,
-      playing,
-      zoom: transform().k / baseScale,
+      zoom: transform().k,
+      guide: guide ? (guide.welcome ? "welcome" : guide.i) : null,
     }),
     edges: () => edges.map((e) => ({ ...e })),
     getSeries: (
@@ -2129,6 +2829,8 @@ dialog code {
         (D.names.includes(state.focus) ? state.focus : "post-I"),
       sign = state.edge?.sign || "E",
     ) => curve(target, sign),
+    startGuide,
+    link: encodeState,
   };
 })();
 

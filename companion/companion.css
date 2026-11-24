@@ -40,6 +40,9 @@ a:focus-visible { outline:3px solid #b95617; outline-offset:4px; }
 .primary { display:inline-flex; align-items:center; gap:.6rem; padding:.68rem 1rem; background:#d1eda2; color:#19332f; text-decoration:none; font-weight:650; border-radius:4px; }
 .primary:hover { background:#e1f6bf; }
 .primary img { width:1.15rem; height:1.15rem; }
+.secondary { color:#19332f; font-weight:600; }
+.signal .more { margin:.55rem 0 0; }
+.signal .more a { color:#19332f; font-weight:600; }
 .observations { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); align-items:center; gap:7%; margin-top:1.35rem; }
 .observations .lead { margin:0 0 1rem; }
 .observations p:not(.lead) { color:#405457; }
