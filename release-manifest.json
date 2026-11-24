@@ -185,8 +185,8 @@
     },
     {
       "path": "companion/paper_url.txt",
-      "bytes": 217,
-      "sha256": "28aeacf58a661214bd9f9120665f641257606266b4fa361e3b32865c6fd32202"
+      "bytes": 116,
+      "sha256": "1a7c19cc2eecc56a391152723b316eb8f62613b53ba2b909d491b33ee3a652e8"
     },
     {
       "path": "data/extended_dataset/conductance_reversal_bounded_ee_minus20/records.json",
@@ -1165,8 +1165,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 494425,
-      "sha256": "60eff0997c2e5d310d4eadf6f4f45ec581fc1841029d2aff536da51265443832"
+      "bytes": 494509,
+      "sha256": "f934a543f01686639558960ecb8f4934f864b2391b1e8c41a6c66aa5667b423d"
     },
     {
       "path": "output/circuit_previews/six_population_2026-09-26/manifest.json",
@@ -1256,7 +1256,7 @@
     {
       "path": "release-origin.json",
       "bytes": 76305,
-      "sha256": "3a307f5eebc776fa28a5b54436bb656a58899773c36c87530b9e67e31b50aa9b"
+      "sha256": "9ae3859f24b4819066f0edcab39e2c19eeb22f21e1af84caefa99a44183a1fc2"
     },
     {
       "path": "requirements.txt",

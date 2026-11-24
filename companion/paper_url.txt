@@ -1,3 +1,2 @@
 # Public address of the paper: its bioRxiv article page or its DOI link.
-# Leave the line below empty until the paper is posted. Then put the address
-# on its own line and run: python scripts/build_paper_companion.py
+https://doi.org/10.64898/2026.11.23.768629
